@@ -1,2 +1,2 @@
-# math-quest
-Offline math practice game for Grade 2 - Singapore Math curriculum with Tamagotchi-style pet leveling
+# Learning-Quest
+Offline Learning Quest game for Grade 5-7 Years Old - Math Science Robotic and Many More with Tamagotchi-style pet leveling
