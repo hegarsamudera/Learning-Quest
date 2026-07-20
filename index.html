@@ -7,6 +7,19 @@
 <title>Learning Quest — Math, Science, Coding and Many More</title>
 <meta name="description" content="An offline, mobile-friendly learning game for kids ages 5-7 covering Math, Science, Coding, Reading, Social Studies and Arts.">
 
+<!-- PWA: installability -->
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+<!-- iOS home-screen behavior -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Learning Quest">
+
+<!-- Android/Chrome address-bar color when installed -->
+<meta name="mobile-web-app-capable" content="yes">
+
 <style>
   /* ====================================================================
      TOKENS
@@ -20336,5 +20349,16 @@ initSparkleCompanion();
 <!-- GoatCounter Web Analytics (privacy-friendly, no cookies) -->
 <script data-goatcounter="https://hegarsamudera.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
+<!-- PWA: register service worker for offline play + install prompt -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch((err) => {
+        console.warn('Service worker registration failed:', err);
+      });
+    });
+  }
+</script>
 </body>
 </html>
