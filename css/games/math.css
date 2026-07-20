@@ -1,0 +1,297 @@
+/* ============================================================
+   css/games/math.css — visual mechanics for the numeracy games:
+   place value blocks, multiplication groups, fractions, clock,
+   money, number bonds, comparing, skip counting, word problems,
+   true/false, missing number, doubles/halves.
+   Depends on: tokens.css, base.css, components.css
+   ============================================================ */
+
+.skip-replay-btn { display: block; margin: 8px auto 0; padding: 6px 14px; font-size: 12px; border-radius: var(--radius-sm); width: fit-content; }
+
+
+.disc-hundreds { background: var(--violet); color: white; width: clamp(34px,9vw,44px); height: clamp(34px,9vw,44px); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px; margin: 2px; flex-shrink:0; }
+
+
+.disc-tens { background: var(--amber); color: white; width: clamp(34px,9vw,44px); height: clamp(34px,9vw,44px); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px; margin: 2px; flex-shrink:0; }
+
+
+.disc-ones { background: var(--teal); color: white; width: clamp(34px,9vw,44px); height: clamp(34px,9vw,44px); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px; margin: 2px; flex-shrink:0; }
+
+
+.disc-controls { display:flex; align-items:center; gap:6px; margin-top: 8px; justify-content: center; flex-wrap:wrap; }
+
+
+.money-bill { background:var(--accent); color:#fff; min-width:0; width:clamp(78px,24vw,104px); height:40px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; font-weight:bold; font-size:clamp(11px,3vw,14px); padding:0 6px; box-shadow: var(--shadow-soft); flex-shrink:0; }
+
+
+/* PLACE VALUE: readBlocks mode (count the blocks, type the number) */
+  .pv-blocks-row { display:flex; justify-content:center; align-items:flex-start; gap:10px; flex-wrap:wrap; margin-bottom:6px; }
+
+
+.pv-block-group { display:flex; flex-direction:column; align-items:center; gap:4px; min-width:0; }
+
+
+.pv-block-stack { display:flex; flex-wrap:wrap; justify-content:center; gap:2px; max-width:90px; }
+
+
+.pv-block-stack .disc-hundreds, .pv-block-stack .disc-tens, .pv-block-stack .disc-ones {
+    width:clamp(22px,6vw,28px); height:clamp(22px,6vw,28px); font-size:9px; margin:1px;
+  }
+
+
+.pv-block-label { font-size:11px; color:var(--ink-soft); font-weight:700; font-family:var(--font-display); }
+
+
+.pv-block-zero {
+    width:clamp(22px,6vw,28px); height:clamp(22px,6vw,28px); border-radius:50%;
+    border:2px dashed var(--line); display:flex; align-items:center; justify-content:center;
+    font-size:11px; font-weight:bold; color:var(--ink-soft); margin:1px;
+  }
+
+
+/* PLACE VALUE: digitValue mode (highlight a digit, pick its value) */
+  .pv-number-display { display:flex; justify-content:center; gap:2px; margin:6px 0; }
+
+
+.pv-digit {
+    font-family:var(--font-display); font-weight:800; font-size:clamp(32px,10vw,44px); color:var(--ink-soft);
+    padding:2px 4px; border-radius:8px;
+  }
+
+
+.pv-digit-highlight { color:var(--accent-dark); background:var(--success-bg); }
+
+
+.skip-row { display:flex; align-items:center; gap:4px; flex-wrap:wrap; justify-content:center; margin-top:12px; row-gap:8px; }
+
+
+.skip-box { min-width:clamp(42px,12vw,60px); height:clamp(42px,12vw,60px); padding:0 4px; border:3px solid var(--accent); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:clamp(15px,4.5vw,20px); font-weight:bold; background:var(--card); color:var(--ink); font-family:var(--font-display); flex-shrink:0; }
+
+
+.skip-input { border:3px dashed var(--accent); background:var(--card); -moz-appearance:textfield; }
+
+
+.skip-arrow { font-size:clamp(14px,4vw,18px); color:var(--ink-soft); flex-shrink:0; }
+
+
+.compare-row { display:flex; align-items:center; gap:8px; justify-content:center; margin-top:8px; flex-wrap:wrap; }
+
+
+.compare-symbol { min-width:clamp(44px,13vw,60px); height:clamp(44px,13vw,60px); border:3px dashed var(--accent); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:clamp(20px,6vw,28px); font-weight:bold; color:var(--ink); background:var(--card); flex-shrink:0; }
+
+
+.compare-options { display:flex; gap:8px; justify-content:center; margin-top:16px; flex-wrap:wrap; }
+
+
+.bond-circle { width: clamp(56px,16vw,80px); height: clamp(56px,16vw,80px); border: 3px solid var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(17px,5vw,24px); font-weight: bold; background: var(--card); color: var(--ink); flex-shrink:0; }
+
+
+.bond-parts { display: flex; gap: clamp(16px,8vw,40px); }
+
+
+.bond-input { width: 80px; text-align: center; font-size: 24px; border: 2px dashed var(--line); padding: 8px; border-radius: 12px; font-family: var(--font-display); font-weight: bold; color: var(--ink); }
+
+
+.bond-input:focus { border-color: var(--accent); outline: none; background: var(--card); }
+
+
+/* ── Multiplication renderer ── */
+  .mult-card { padding: 14px 12px 6px; }
+
+
+.mult-prompt { font-size: 17px; font-weight: 800; color: var(--ink); text-align: center; margin: 0 0 10px; }
+
+
+.mult-sub { font-size: 12px; color: var(--ink-soft); text-align: center; margin: -6px 0 8px; }
+
+
+.mult-groups-wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 0 0 12px; }
+
+
+.mult-groups-small .mult-group-box { padding: 5px 6px; }
+
+
+.mult-group-box { background: var(--surface); border: 2px solid var(--border); border-radius: 10px; padding: 8px 10px; display: flex; flex-wrap: wrap; gap: 3px; justify-content: center; max-width: 120px; }
+
+
+.mult-group-sm { max-width: 80px; }
+
+
+.mult-emoji-item { font-size: 20px; line-height: 1; }
+
+
+.mult-dot-grid { display: grid; gap: 5px; margin: 0 auto 10px; width: fit-content; }
+
+
+.mult-dot { width: 16px; height: 16px; border-radius: 50%; }
+
+
+.mult-dot.row-0 { background: var(--indigo, #7A6FCB); }
+
+
+.mult-dot.row-1 { background: var(--coral, #FF6B5B); }
+
+
+.mult-array-label { text-align: center; font-size: 18px; font-weight: 700; margin: 6px 0 10px; }
+
+
+.mult-equation-strip { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 26px; font-weight: 900; margin: 8px 0; flex-wrap: wrap; }
+
+
+.mult-eq-large .mult-factor { font-size: 32px; }
+
+
+.mult-factor { color: var(--ink); }
+
+
+.mult-product { color: var(--teal, #1FA391); }
+
+
+.mult-op { color: var(--ink-soft); font-size: 22px; }
+
+
+.mult-blank-box { min-width: 40px; padding: 2px 8px; background: #EDE9FC; border: 2px dashed var(--indigo, #7A6FCB); border-radius: 8px; text-align: center; color: var(--indigo, #7A6FCB); font-weight: 900; transition: background 0.3s; }
+
+
+.mult-blank-box.mult-missing { font-size: 28px; min-width: 52px; }
+
+
+.mult-ans-correct { background: #D4EDDA !important; border-color: #28a745 !important; color: #28a745 !important; }
+
+
+.mult-ans-wrong   { background: #FDECEA !important; border-color: #e74c3c !important; color: #e74c3c !important; }
+
+
+.mult-repeated-add-wrap { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px; margin: 8px 0 6px; }
+
+
+.mult-addend-chip { background: var(--indigo, #7A6FCB); color: #fff; font-size: 22px; font-weight: 900; border-radius: 8px; padding: 4px 10px; }
+
+
+.mult-plus-sign { font-size: 22px; font-weight: 700; color: var(--ink-soft); }
+
+
+.mult-equals-sign { font-size: 22px; font-weight: 700; color: var(--ink-soft); }
+
+
+.mult-answer-blank { font-size: 24px; font-weight: 900; color: var(--indigo, #7A6FCB); }
+
+
+.mult-connection-note { text-align: center; font-size: 13px; color: var(--ink-soft); margin: 0 0 8px; }
+
+
+.mult-hint-bar { background: #EDE9FC; border-radius: 8px; padding: 7px 12px; font-size: 12px; color: #4A3F8C; text-align: center; margin: 6px 0; }
+
+
+.mult-missing-visual { display: flex; align-items: center; justify-content: center; gap: 4px; flex-wrap: wrap; margin: 4px 0 8px; }
+
+
+.mult-missing-x { font-size: 18px; font-weight: 800; color: var(--indigo, #7A6FCB); margin-left: 6px; }
+
+
+.mult-commute-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 8px 0; flex-wrap: wrap; }
+
+
+.mult-commute-block { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+
+
+.mult-commute-label { font-size: 15px; font-weight: 700; color: var(--ink); }
+
+
+.mult-commute-eq { font-size: 22px; font-weight: 900; color: var(--teal, #1FA391); }
+
+
+.mult-commute-opts { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 10px 0; }
+
+
+.mult-commute-btn { font-size: 22px; font-weight: 900; width: 56px; height: 56px; border-radius: 12px; border: 2px solid var(--border); background: var(--surface); cursor: pointer; color: var(--ink); transition: background 0.15s; }
+
+
+.mult-commute-btn:hover:not(:disabled) { background: #EDE9FC; }
+
+
+.mult-btn-correct { background: #D4EDDA !important; border-color: #28a745 !important; color: #28a745 !important; }
+
+
+.mult-btn-wrong   { background: #FDECEA !important; border-color: #e74c3c !important; color: #e74c3c !important; }
+
+
+.mult-story { font-size: 15px; font-weight: 600; color: var(--ink); text-align: center; line-height: 1.5; margin: 0 0 10px; padding: 10px 12px; background: #F9F5FF; border-radius: 10px; }
+
+
+.mult-hint-toggle { font-size: 12px; color: var(--indigo, #7A6FCB); text-align: center; cursor: pointer; margin: 6px 0 2px; text-decoration: underline; }
+
+
+.mult-hint-box { background: #EDE9FC; border-radius: 8px; padding: 8px 12px; font-size: 12px; color: #4A3F8C; margin: 4px 0; }
+
+
+.mult-fact-bubble { background: #E8F9F5; border-left: 3px solid var(--teal, #1FA391); border-radius: 8px; padding: 8px 12px; font-size: 12px; color: #0D6E57; margin: 8px 0 4px; }
+
+
+/* Telling Time clock: scales fluidly so it never crowds out the
+     options/controls below it on short viewports. */
+  .clock-svg-wrap{ width:100%; display:flex; justify-content:center; }
+
+
+.clock-svg-wrap svg{ width:clamp(120px,38vh,180px); height:clamp(120px,38vh,180px); }
+
+
+/* Fraction shapes (pie / bar): sized the same way as the clock so they
+     scale fluidly and never crowd out the options/Check button below. */
+  .frac-shape-wrap{ width:100%; display:flex; justify-content:center; }
+
+
+.frac-shape-wrap svg{ width:clamp(140px,40vh,220px); }
+
+
+.frac-progress{ margin-top:8px; font-family:var(--font-display); font-weight:800; font-size:14px; color:var(--ink-soft); }
+
+
+.place-eq { margin-top: 16px; font-family: var(--font-mono); font-size: clamp(13px,4vw,18px); background: var(--card); padding: 10px 16px; border-radius: 12px; box-shadow: var(--shadow-soft); display: inline-block; letter-spacing: 0.3px; max-width:100%; overflow-wrap:break-word; }
+
+
+.place-eq-hundreds { color: var(--violet); font-weight: bold; }
+
+
+.place-eq-tens { color: var(--amber-dark); font-weight: bold; }
+
+
+.place-eq-ones { color: var(--teal-dark); font-weight: bold; }
+
+
+.place-eq-total { color: var(--ink); font-weight: bold; }
+
+
+.clock-svg-wrap svg{ width:clamp(100px,28vh,150px); height:clamp(100px,28vh,150px); }
+
+
+.frac-shape-wrap svg{ width:clamp(90px,22vh,130px); }
+
+
+.frac-shape-wrap{ margin-bottom:2px; }
+
+
+.frac-progress{ margin-top:4px; font-size:12px; }
+
+
+.pv-blocks-row{ gap:6px; margin-bottom:4px; }
+
+
+.pv-block-stack{ max-width:76px; gap:1px; }
+
+
+.pv-block-stack .disc-hundreds, .pv-block-stack .disc-tens, .pv-block-stack .disc-ones{
+      width:18px; height:18px; font-size:7px; margin:1px;
+    }
+
+
+.pv-block-zero{ width:18px; height:18px; font-size:9px; margin:1px; }
+
+
+.pv-block-label{ font-size:10px; }
+
+
+.pv-number-display{ margin:4px 0; }
+
+
+.pv-digit{ font-size:28px; padding:1px 3px; }

@@ -1,0 +1,110 @@
+/* ============================================================
+   css/games/science.css — the shared "quiz" visual mechanics
+   (multiple-choice cards, sort-it-out, pattern detective).
+   Reused by Science, English, Social Studies and Arts games —
+   see js/games/QuizGame.js.
+   Depends on: tokens.css, base.css, components.css
+   ============================================================ */
+
+/* PATTERN DETECTIVE */
+  .pd-tiles-row {
+    display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+    margin: 10px 0 4px;
+  }
+
+
+.pd-tile {
+    width: clamp(42px,12vw,56px); height: clamp(42px,12vw,56px);
+    border-radius: 14px; background: var(--card); border: 3px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(20px,6vw,28px); box-shadow: var(--shadow-soft);
+    flex-shrink: 0; font-family: var(--font-display); font-weight: 800; color: var(--ink);
+    transition: border-color .15s ease, background .15s ease;
+  }
+
+
+.pd-tile.pd-blank {
+    border-style: dashed; border-color: var(--accent); background: var(--paper);
+    animation: caretBlink 1.4s step-end infinite;
+  }
+
+
+.pd-tile.pd-blank-filled {
+    border-style: solid; border-color: var(--accent); background: var(--success-bg);
+  }
+
+
+.pd-options {
+    display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 14px;
+  }
+
+
+.pd-option-btn {
+    width: clamp(52px,15vw,68px); height: clamp(52px,15vw,68px);
+    border-radius: 16px; border: 3px solid var(--line); background: var(--card);
+    font-size: clamp(22px,7vw,30px); display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--shadow-soft); transition: all .15s ease; flex-shrink: 0;
+    font-family: var(--font-display); font-weight: 800; color: var(--ink);
+  }
+
+
+.pd-option-btn.selected {
+    border-color: var(--accent); background: var(--accent); color: #fff; transform: scale(1.08);
+  }
+
+
+.pd-option-btn:active { transform: scale(0.93); }
+
+
+.pd-rule-label {
+    font-size: 13px; color: var(--ink-soft); font-weight: 700; margin-top: 6px;
+    font-family: var(--font-display); text-align: center;
+  }
+
+
+/* SCIENCE QUIZ */
+  .sci-question-card {
+    background: var(--card); border-radius: var(--radius-lg); padding: 18px 16px;
+    text-align: center; box-shadow: var(--shadow-card);
+  }
+
+
+.sci-emoji { font-size: 52px; margin-bottom: 8px; display: block; }
+
+
+.sci-question { font-size: 15px; font-weight: 800; color: var(--ink); margin-bottom: 16px; line-height: 1.45; }
+
+
+.sci-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+
+
+.sci-option {
+    background: #F8F6FF; border: 2.5px solid var(--line); border-radius: 14px;
+    padding: 12px 8px; font-size: 13px; font-weight: 700; color: var(--ink);
+    text-align: center; line-height: 1.3; transition: all .12s ease;
+    cursor: pointer; -webkit-tap-highlight-color: transparent;
+  }
+
+
+.sci-option:active { transform: scale(.96); }
+
+
+.sci-option.sci-selected { border-color: var(--accent); background: var(--accent); color: #fff; }
+
+
+.sci-option.sci-correct  { border-color: var(--success); background: var(--success-bg); color: var(--success); }
+
+
+.sci-option.sci-wrong    { border-color: var(--coral); background: #FFF0F0; color: var(--coral); }
+
+
+.sci-fact-bubble {
+    background: linear-gradient(135deg, #F0F4FF, #F8F0FF);
+    border-radius: 14px; padding: 10px 14px; margin-top: 14px;
+    font-size: 12px; font-weight: 700; color: var(--ink-soft);
+    border-left: 4px solid var(--violet); text-align: left; line-height: 1.5;
+    display: block; width: 100%; box-sizing: border-box;
+  }
+
+
+.sci-fact-bubble::before { content: "💡 Fun fact: "; font-weight: 900; color: var(--violet); }

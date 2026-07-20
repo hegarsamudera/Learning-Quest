@@ -1,0 +1,3234 @@
+{
+ "placeValue": [
+  {
+   "id": "pv-rb-1",
+   "mode": "readBlocks",
+   "number": 135,
+   "hundreds": 1,
+   "tens": 3,
+   "ones": 5
+  },
+  {
+   "id": "pv-rb-2",
+   "mode": "readBlocks",
+   "number": 342,
+   "hundreds": 3,
+   "tens": 4,
+   "ones": 2
+  },
+  {
+   "id": "pv-rb-3",
+   "mode": "readBlocks",
+   "number": 407,
+   "hundreds": 4,
+   "tens": 0,
+   "ones": 7
+  },
+  {
+   "id": "pv-rb-4",
+   "mode": "readBlocks",
+   "number": 216,
+   "hundreds": 2,
+   "tens": 1,
+   "ones": 6
+  },
+  {
+   "id": "pv-rb-5",
+   "mode": "readBlocks",
+   "number": 270,
+   "hundreds": 2,
+   "tens": 7,
+   "ones": 0
+  },
+  {
+   "id": "pv-rb-6",
+   "mode": "readBlocks",
+   "number": 503,
+   "hundreds": 5,
+   "tens": 0,
+   "ones": 3
+  },
+  {
+   "id": "pv-rb-7",
+   "mode": "readBlocks",
+   "number": 689,
+   "hundreds": 6,
+   "tens": 8,
+   "ones": 9
+  },
+  {
+   "id": "pv-rb-8",
+   "mode": "readBlocks",
+   "number": 730,
+   "hundreds": 7,
+   "tens": 3,
+   "ones": 0
+  },
+  {
+   "id": "pv-rb-9",
+   "mode": "readBlocks",
+   "number": 845,
+   "hundreds": 8,
+   "tens": 4,
+   "ones": 5
+  },
+  {
+   "id": "pv-rb-10",
+   "mode": "readBlocks",
+   "number": 999,
+   "hundreds": 9,
+   "tens": 9,
+   "ones": 9
+  },
+  {
+   "id": "pv-rb-11",
+   "mode": "readBlocks",
+   "number": 100,
+   "hundreds": 1,
+   "tens": 0,
+   "ones": 0
+  },
+  {
+   "id": "pv-rb-12",
+   "mode": "readBlocks",
+   "number": 308,
+   "hundreds": 3,
+   "tens": 0,
+   "ones": 8
+  },
+  {
+   "id": "pv-rb-13",
+   "mode": "readBlocks",
+   "number": 250,
+   "hundreds": 2,
+   "tens": 5,
+   "ones": 0
+  },
+  {
+   "id": "pv-rb-14",
+   "mode": "readBlocks",
+   "number": 471,
+   "hundreds": 4,
+   "tens": 7,
+   "ones": 1
+  },
+  {
+   "id": "pv-rb-15",
+   "mode": "readBlocks",
+   "number": 916,
+   "hundreds": 9,
+   "tens": 1,
+   "ones": 6
+  },
+  {
+   "id": "pv-rb-16",
+   "mode": "readBlocks",
+   "number": 604,
+   "hundreds": 6,
+   "tens": 0,
+   "ones": 4
+  },
+  {
+   "id": "pv-rb-17",
+   "mode": "readBlocks",
+   "number": 783,
+   "hundreds": 7,
+   "tens": 8,
+   "ones": 3
+  },
+  {
+   "id": "pv-dv-1",
+   "mode": "digitValue",
+   "number": 345,
+   "highlightIndex": 0,
+   "options": [
+    300,
+    3,
+    40,
+    5
+   ],
+   "answer": 300
+  },
+  {
+   "id": "pv-dv-2",
+   "mode": "digitValue",
+   "number": 345,
+   "highlightIndex": 1,
+   "options": [
+    5,
+    300,
+    40,
+    4
+   ],
+   "answer": 40
+  },
+  {
+   "id": "pv-dv-3",
+   "mode": "digitValue",
+   "number": 345,
+   "highlightIndex": 2,
+   "options": [
+    300,
+    40,
+    5,
+    50
+   ],
+   "answer": 5
+  },
+  {
+   "id": "pv-dv-4",
+   "mode": "digitValue",
+   "number": 502,
+   "highlightIndex": 0,
+   "options": [
+    500,
+    5,
+    0,
+    2
+   ],
+   "answer": 500
+  },
+  {
+   "id": "pv-dv-5",
+   "mode": "digitValue",
+   "number": 502,
+   "highlightIndex": 1,
+   "options": [
+    10,
+    2,
+    500,
+    0
+   ],
+   "answer": 0
+  },
+  {
+   "id": "pv-dv-6",
+   "mode": "digitValue",
+   "number": 264,
+   "highlightIndex": 0,
+   "options": [
+    60,
+    200,
+    2,
+    4
+   ],
+   "answer": 200
+  },
+  {
+   "id": "pv-dv-7",
+   "mode": "digitValue",
+   "number": 264,
+   "highlightIndex": 2,
+   "options": [
+    60,
+    4,
+    40,
+    200
+   ],
+   "answer": 4
+  },
+  {
+   "id": "pv-dv-8",
+   "mode": "digitValue",
+   "number": 819,
+   "highlightIndex": 1,
+   "options": [
+    10,
+    800,
+    9,
+    1
+   ],
+   "answer": 10
+  },
+  {
+   "id": "pv-dv-9",
+   "mode": "digitValue",
+   "number": 819,
+   "highlightIndex": 2,
+   "options": [
+    10,
+    90,
+    800,
+    9
+   ],
+   "answer": 9
+  },
+  {
+   "id": "pv-dv-10",
+   "mode": "digitValue",
+   "number": 350,
+   "highlightIndex": 0,
+   "options": [
+    50,
+    300,
+    3,
+    0
+   ],
+   "answer": 300
+  },
+  {
+   "id": "pv-dv-11",
+   "mode": "digitValue",
+   "number": 350,
+   "highlightIndex": 1,
+   "options": [
+    50,
+    0,
+    300,
+    5
+   ],
+   "answer": 50
+  },
+  {
+   "id": "pv-dv-12",
+   "mode": "digitValue",
+   "number": 197,
+   "highlightIndex": 2,
+   "options": [
+    7,
+    100,
+    70,
+    90
+   ],
+   "answer": 7
+  },
+  {
+   "id": "pv-dv-13",
+   "mode": "digitValue",
+   "number": 197,
+   "highlightIndex": 0,
+   "options": [
+    100,
+    7,
+    1,
+    90
+   ],
+   "answer": 100
+  },
+  {
+   "id": "pv-dv-14",
+   "mode": "digitValue",
+   "number": 683,
+   "highlightIndex": 1,
+   "options": [
+    600,
+    80,
+    8,
+    3
+   ],
+   "answer": 80
+  },
+  {
+   "id": "pv-dv-15",
+   "mode": "digitValue",
+   "number": 683,
+   "highlightIndex": 2,
+   "options": [
+    600,
+    3,
+    30,
+    80
+   ],
+   "answer": 3
+  },
+  {
+   "id": "pv-dv-16",
+   "mode": "digitValue",
+   "number": 920,
+   "highlightIndex": 0,
+   "options": [
+    0,
+    9,
+    20,
+    900
+   ],
+   "answer": 900
+  },
+  {
+   "id": "pv-dv-17",
+   "mode": "digitValue",
+   "number": 920,
+   "highlightIndex": 1,
+   "options": [
+    0,
+    20,
+    2,
+    900
+   ],
+   "answer": 20
+  },
+  {
+   "id": "pv-dv-18",
+   "mode": "digitValue",
+   "number": 471,
+   "highlightIndex": 0,
+   "options": [
+    400,
+    1,
+    4,
+    70
+   ],
+   "answer": 400
+  },
+  {
+   "id": "pv-dv-19",
+   "mode": "digitValue",
+   "number": 471,
+   "highlightIndex": 2,
+   "options": [
+    1,
+    400,
+    10,
+    70
+   ],
+   "answer": 1
+  },
+  {
+   "id": "pv-dv-20",
+   "mode": "digitValue",
+   "number": 956,
+   "highlightIndex": 1,
+   "options": [
+    50,
+    5,
+    6,
+    900
+   ],
+   "answer": 50
+  },
+  {
+   "id": "pv-dv-21",
+   "mode": "digitValue",
+   "number": 956,
+   "highlightIndex": 2,
+   "options": [
+    50,
+    60,
+    900,
+    6
+   ],
+   "answer": 6
+  }
+ ],
+ "numberBonds": [
+  {
+   "id": "nb-1",
+   "whole": 10,
+   "part1": 4,
+   "part2": null
+  },
+  {
+   "id": "nb-2",
+   "whole": 20,
+   "part1": null,
+   "part2": 15
+  },
+  {
+   "id": "nb-3",
+   "whole": null,
+   "part1": 25,
+   "part2": 35
+  },
+  {
+   "id": "nb-4",
+   "whole": 100,
+   "part1": 60,
+   "part2": null
+  },
+  {
+   "id": "nb-5",
+   "whole": 50,
+   "part1": null,
+   "part2": 18
+  },
+  {
+   "id": "nb-6",
+   "whole": null,
+   "part1": 42,
+   "part2": 9
+  },
+  {
+   "id": "nb-7",
+   "whole": 30,
+   "part1": 12,
+   "part2": null
+  },
+  {
+   "id": "nb-8",
+   "whole": 90,
+   "part1": null,
+   "part2": 47
+  },
+  {
+   "id": "nb-9",
+   "whole": null,
+   "part1": 66,
+   "part2": 14
+  },
+  {
+   "id": "nb-10",
+   "whole": 100,
+   "part1": null,
+   "part2": 35
+  },
+  {
+   "id": "nb-11",
+   "whole": 75,
+   "part1": 28,
+   "part2": null
+  },
+  {
+   "id": "nb-12",
+   "whole": null,
+   "part1": 51,
+   "part2": 19
+  }
+ ],
+ "addition": [
+  {
+   "id": "ad-1",
+   "a": 23,
+   "b": 15
+  },
+  {
+   "id": "ad-2",
+   "a": 45,
+   "b": 28,
+   "hint": "Regroup the ones!"
+  },
+  {
+   "id": "ad-3",
+   "a": 120,
+   "b": 45
+  },
+  {
+   "id": "ad-4",
+   "a": 34,
+   "b": 19,
+   "hint": "Regroup the ones!"
+  },
+  {
+   "id": "ad-5",
+   "a": 56,
+   "b": 27
+  },
+  {
+   "id": "ad-6",
+   "a": 8,
+   "b": 7
+  },
+  {
+   "id": "ad-7",
+   "a": 215,
+   "b": 130
+  },
+  {
+   "id": "ad-8",
+   "a": 67,
+   "b": 25,
+   "hint": "Regroup the ones!"
+  },
+  {
+   "id": "ad-9",
+   "a": 304,
+   "b": 250
+  },
+  {
+   "id": "ad-10",
+   "a": 49,
+   "b": 38,
+   "hint": "Regroup the ones!"
+  },
+  {
+   "id": "ad-11",
+   "a": 16,
+   "b": 9
+  },
+  {
+   "id": "ad-12",
+   "a": 175,
+   "b": 64
+  }
+ ],
+ "subtraction": [
+  {
+   "id": "sb-1",
+   "a": 40,
+   "b": 15
+  },
+  {
+   "id": "sb-2",
+   "a": 70,
+   "b": 34,
+   "hint": "Try regrouping: borrow a ten!"
+  },
+  {
+   "id": "sb-3",
+   "a": 100,
+   "b": 25
+  },
+  {
+   "id": "sb-4",
+   "a": 52,
+   "b": 27,
+   "hint": "Try regrouping: borrow a ten!"
+  },
+  {
+   "id": "sb-5",
+   "a": 90,
+   "b": 46
+  },
+  {
+   "id": "sb-6",
+   "a": 15,
+   "b": 8
+  },
+  {
+   "id": "sb-7",
+   "a": 340,
+   "b": 120
+  },
+  {
+   "id": "sb-8",
+   "a": 63,
+   "b": 38,
+   "hint": "Try regrouping: borrow a ten!"
+  },
+  {
+   "id": "sb-9",
+   "a": 500,
+   "b": 175
+  },
+  {
+   "id": "sb-10",
+   "a": 81,
+   "b": 29,
+   "hint": "Try regrouping: borrow a ten!"
+  },
+  {
+   "id": "sb-11",
+   "a": 24,
+   "b": 9
+  },
+  {
+   "id": "sb-12",
+   "a": 210,
+   "b": 95
+  }
+ ],
+ "moneyMath": [
+  {
+   "id": "mm-1",
+   "amount": 3500,
+   "denoms": [
+    2000,
+    1000,
+    500
+   ]
+  },
+  {
+   "id": "mm-2",
+   "amount": 7000,
+   "denoms": [
+    5000,
+    1000,
+    500
+   ]
+  },
+  {
+   "id": "mm-3",
+   "amount": 12000,
+   "denoms": [
+    10000,
+    2000,
+    1000
+   ]
+  },
+  {
+   "id": "mm-4",
+   "amount": 17500,
+   "denoms": [
+    10000,
+    5000,
+    2000,
+    500
+   ]
+  },
+  {
+   "id": "mm-5",
+   "amount": 25000,
+   "denoms": [
+    20000,
+    5000,
+    1000
+   ]
+  },
+  {
+   "id": "mm-6",
+   "amount": 8500,
+   "denoms": [
+    5000,
+    2000,
+    1000,
+    500
+   ]
+  },
+  {
+   "id": "mm-7",
+   "amount": 45000,
+   "denoms": [
+    20000,
+    10000,
+    5000
+   ]
+  },
+  {
+   "id": "mm-8",
+   "amount": 13000,
+   "denoms": [
+    10000,
+    2000,
+    1000
+   ]
+  },
+  {
+   "id": "mm-9",
+   "amount": 6500,
+   "denoms": [
+    5000,
+    1000,
+    500
+   ]
+  },
+  {
+   "id": "mm-10",
+   "amount": 32000,
+   "denoms": [
+    20000,
+    10000,
+    2000
+   ]
+  },
+  {
+   "id": "mm-11",
+   "amount": 9500,
+   "denoms": [
+    5000,
+    2000,
+    1000,
+    500
+   ]
+  },
+  {
+   "id": "mm-12",
+   "amount": 50500,
+   "denoms": [
+    50000,
+    1000,
+    500
+   ]
+  }
+ ],
+ "skipCounting": [
+  {
+   "id": "sc-1",
+   "start": 2,
+   "step": 2,
+   "length": 4,
+   "blankIndex": 2
+  },
+  {
+   "id": "sc-2",
+   "start": 5,
+   "step": 5,
+   "length": 5,
+   "blankIndex": 3
+  },
+  {
+   "id": "sc-3",
+   "start": 10,
+   "step": 10,
+   "length": 5,
+   "blankIndex": 1
+  },
+  {
+   "id": "sc-4",
+   "start": 3,
+   "step": 3,
+   "length": 5,
+   "blankIndex": 4
+  },
+  {
+   "id": "sc-5",
+   "start": 100,
+   "step": -10,
+   "length": 5,
+   "blankIndex": 2
+  },
+  {
+   "id": "sc-6",
+   "start": 1,
+   "step": 4,
+   "length": 5,
+   "blankIndex": 0
+  },
+  {
+   "id": "sc-7",
+   "start": 50,
+   "step": -5,
+   "length": 5,
+   "blankIndex": 3
+  },
+  {
+   "id": "sc-8",
+   "start": 6,
+   "step": 6,
+   "length": 4,
+   "blankIndex": 1
+  },
+  {
+   "id": "sc-9",
+   "start": 200,
+   "step": -50,
+   "length": 4,
+   "blankIndex": 2
+  },
+  {
+   "id": "sc-10",
+   "start": 7,
+   "step": 7,
+   "length": 5,
+   "blankIndex": 2
+  },
+  {
+   "id": "sc-11",
+   "start": 9,
+   "step": 3,
+   "length": 6,
+   "blankIndex": 4
+  },
+  {
+   "id": "sc-12",
+   "start": 0,
+   "step": 25,
+   "length": 5,
+   "blankIndex": 3
+  }
+ ],
+ "comparingNumbers": [
+  {
+   "id": "cn-1",
+   "a": 45,
+   "b": 78
+  },
+  {
+   "id": "cn-2",
+   "a": 132,
+   "b": 98
+  },
+  {
+   "id": "cn-3",
+   "a": 60,
+   "b": 60
+  },
+  {
+   "id": "cn-4",
+   "a": 215,
+   "b": 215
+  },
+  {
+   "id": "cn-5",
+   "a": 87,
+   "b": 79
+  },
+  {
+   "id": "cn-6",
+   "a": 34,
+   "b": 43
+  },
+  {
+   "id": "cn-7",
+   "a": 500,
+   "b": 499
+  },
+  {
+   "id": "cn-8",
+   "a": 18,
+   "b": 81
+  },
+  {
+   "id": "cn-9",
+   "a": 276,
+   "b": 267
+  },
+  {
+   "id": "cn-10",
+   "a": 9,
+   "b": 90
+  },
+  {
+   "id": "cn-11",
+   "a": 150,
+   "b": 105
+  },
+  {
+   "id": "cn-12",
+   "a": 63,
+   "b": 63
+  }
+ ],
+ "tellingTime": [
+  {
+   "id": "tm-1",
+   "mode": "read",
+   "hour": 3,
+   "minute": 0,
+   "options": [
+    "3:00",
+    "9:00",
+    "3:30",
+    "12:00"
+   ],
+   "answer": "3:00"
+  },
+  {
+   "id": "tm-2",
+   "mode": "read",
+   "hour": 7,
+   "minute": 30,
+   "options": [
+    "7:00",
+    "7:30",
+    "1:30",
+    "6:30"
+   ],
+   "answer": "7:30"
+  },
+  {
+   "id": "tm-3",
+   "mode": "read",
+   "hour": 10,
+   "minute": 15,
+   "options": [
+    "10:15",
+    "3:10",
+    "10:45",
+    "9:15"
+   ],
+   "answer": "10:15"
+  },
+  {
+   "id": "tm-4",
+   "mode": "read",
+   "hour": 12,
+   "minute": 0,
+   "options": [
+    "12:00",
+    "6:00",
+    "12:30",
+    "11:00"
+   ],
+   "answer": "12:00"
+  },
+  {
+   "id": "tm-5",
+   "mode": "read",
+   "hour": 5,
+   "minute": 45,
+   "options": [
+    "5:45",
+    "9:05",
+    "6:45",
+    "5:15"
+   ],
+   "answer": "5:45"
+  },
+  {
+   "id": "tm-6",
+   "mode": "read",
+   "hour": 2,
+   "minute": 30,
+   "options": [
+    "2:30",
+    "8:02",
+    "2:00",
+    "7:30"
+   ],
+   "answer": "2:30"
+  },
+  {
+   "id": "tm-7",
+   "mode": "set",
+   "hour": 4,
+   "minute": 0
+  },
+  {
+   "id": "tm-8",
+   "mode": "set",
+   "hour": 9,
+   "minute": 30
+  },
+  {
+   "id": "tm-9",
+   "mode": "set",
+   "hour": 1,
+   "minute": 15
+  },
+  {
+   "id": "tm-10",
+   "mode": "set",
+   "hour": 11,
+   "minute": 45
+  },
+  {
+   "id": "tm-11",
+   "mode": "set",
+   "hour": 6,
+   "minute": 0
+  },
+  {
+   "id": "tm-12",
+   "mode": "set",
+   "hour": 8,
+   "minute": 20
+  }
+ ],
+ "fractions": [
+  {
+   "id": "fr-1",
+   "mode": "identify",
+   "shape": "circle",
+   "numerator": 1,
+   "denominator": 2,
+   "options": [
+    "1/2",
+    "1/3",
+    "2/3",
+    "1/4"
+   ]
+  },
+  {
+   "id": "fr-2",
+   "mode": "identify",
+   "shape": "circle",
+   "numerator": 1,
+   "denominator": 4,
+   "options": [
+    "1/4",
+    "1/2",
+    "3/4",
+    "1/3"
+   ]
+  },
+  {
+   "id": "fr-3",
+   "mode": "identify",
+   "shape": "rect",
+   "numerator": 3,
+   "denominator": 4,
+   "options": [
+    "3/4",
+    "1/4",
+    "2/4",
+    "4/4"
+   ]
+  },
+  {
+   "id": "fr-4",
+   "mode": "identify",
+   "shape": "rect",
+   "numerator": 1,
+   "denominator": 3,
+   "options": [
+    "1/3",
+    "2/3",
+    "1/2",
+    "1/4"
+   ]
+  },
+  {
+   "id": "fr-5",
+   "mode": "identify",
+   "shape": "circle",
+   "numerator": 2,
+   "denominator": 3,
+   "options": [
+    "2/3",
+    "1/3",
+    "3/3",
+    "2/4"
+   ]
+  },
+  {
+   "id": "fr-6",
+   "mode": "identify",
+   "shape": "rect",
+   "numerator": 2,
+   "denominator": 4,
+   "options": [
+    "2/4",
+    "1/4",
+    "3/4",
+    "1/2"
+   ]
+  },
+  {
+   "id": "fr-7",
+   "mode": "shade",
+   "shape": "circle",
+   "numerator": 1,
+   "denominator": 2
+  },
+  {
+   "id": "fr-8",
+   "mode": "shade",
+   "shape": "circle",
+   "numerator": 3,
+   "denominator": 4
+  },
+  {
+   "id": "fr-9",
+   "mode": "shade",
+   "shape": "rect",
+   "numerator": 1,
+   "denominator": 3
+  },
+  {
+   "id": "fr-10",
+   "mode": "shade",
+   "shape": "rect",
+   "numerator": 2,
+   "denominator": 3
+  },
+  {
+   "id": "fr-11",
+   "mode": "shade",
+   "shape": "circle",
+   "numerator": 1,
+   "denominator": 4
+  },
+  {
+   "id": "fr-12",
+   "mode": "shade",
+   "shape": "rect",
+   "numerator": 3,
+   "denominator": 5
+  },
+  {
+   "id": "fr-13",
+   "mode": "shade",
+   "shape": "circle",
+   "numerator": 5,
+   "denominator": 6
+  },
+  {
+   "id": "fr-14",
+   "mode": "identify",
+   "shape": "rect",
+   "numerator": 1,
+   "denominator": 5,
+   "options": [
+    "1/5",
+    "2/5",
+    "1/4",
+    "1/3"
+   ]
+  },
+  {
+   "id": "fr-15",
+   "mode": "shade",
+   "shape": "circle",
+   "numerator": 3,
+   "denominator": 8
+  },
+  {
+   "id": "fr-16",
+   "mode": "shade",
+   "shape": "rect",
+   "numerator": 5,
+   "denominator": 8
+  },
+  {
+   "id": "fr-17",
+   "mode": "identify",
+   "shape": "circle",
+   "numerator": 5,
+   "denominator": 6,
+   "options": [
+    "5/6",
+    "1/6",
+    "4/6",
+    "5/8"
+   ]
+  },
+  {
+   "id": "fr-18",
+   "mode": "shade",
+   "shape": "rect",
+   "numerator": 7,
+   "denominator": 8
+  }
+ ],
+ "patternDetective": [
+  {
+   "id": "pd-1",
+   "mode": "extend",
+   "tiles": [
+    "\ud83d\udd34",
+    "\ud83d\udd35",
+    "\ud83d\udd34",
+    "\ud83d\udd35"
+   ],
+   "options": [
+    "\ud83d\udd34",
+    "\ud83d\udd35",
+    "\ud83d\udfe1",
+    "\ud83d\udfe2"
+   ],
+   "answer": "\ud83d\udd35"
+  },
+  {
+   "id": "pd-2",
+   "mode": "extend",
+   "tiles": [
+    "\ud83d\udfe1",
+    "\ud83d\udfe2",
+    "\ud83d\udfe1",
+    "\ud83d\udfe2",
+    "\ud83d\udfe1"
+   ],
+   "options": [
+    "\ud83d\udfe1",
+    "\ud83d\udfe2",
+    "\ud83d\udd34",
+    "\ud83d\udd35"
+   ],
+   "answer": "\ud83d\udfe2"
+  },
+  {
+   "id": "pd-3",
+   "mode": "find-missing",
+   "tiles": [
+    "\ud83d\udd34",
+    "\ud83d\udd34",
+    "?",
+    "\ud83d\udd34",
+    "\ud83d\udd34"
+   ],
+   "options": [
+    "\ud83d\udd34",
+    "\ud83d\udd35",
+    "\ud83d\udfe1",
+    "\ud83d\udfe2"
+   ],
+   "answer": "\ud83d\udd34",
+   "blankIndex": 2
+  },
+  {
+   "id": "pd-4",
+   "mode": "extend",
+   "tiles": [
+    "\u2b50",
+    "\ud83c\udf19",
+    "\u2b50",
+    "\ud83c\udf19",
+    "\u2b50"
+   ],
+   "options": [
+    "\u2b50",
+    "\ud83c\udf19",
+    "\u2600\ufe0f",
+    "\ud83d\udcab"
+   ],
+   "answer": "\ud83c\udf19"
+  },
+  {
+   "id": "pd-5",
+   "mode": "find-missing",
+   "tiles": [
+    "\ud83d\udfe1",
+    "\ud83d\udfe1",
+    "\ud83d\udd35",
+    "\ud83d\udfe1",
+    "\ud83d\udfe1",
+    "?"
+   ],
+   "options": [
+    "\ud83d\udfe1",
+    "\ud83d\udd35",
+    "\ud83d\udd34",
+    "\ud83d\udfe2"
+   ],
+   "answer": "\ud83d\udd35",
+   "blankIndex": 5
+  },
+  {
+   "id": "pd-6",
+   "mode": "rule",
+   "tiles": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "options": [
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "answer": "10"
+  },
+  {
+   "id": "pd-7",
+   "mode": "extend",
+   "tiles": [
+    "\ud83d\udd34",
+    "\ud83d\udd35",
+    "\ud83d\udd35",
+    "\ud83d\udd34",
+    "\ud83d\udd35",
+    "\ud83d\udd35"
+   ],
+   "options": [
+    "\ud83d\udd34",
+    "\ud83d\udd35",
+    "\ud83d\udfe1",
+    "\ud83d\udfe2"
+   ],
+   "answer": "\ud83d\udd34"
+  },
+  {
+   "id": "pd-8",
+   "mode": "rule",
+   "tiles": [
+    5,
+    10,
+    15,
+    20
+   ],
+   "options": [
+    "22",
+    "24",
+    "25",
+    "30"
+   ],
+   "answer": "25"
+  },
+  {
+   "id": "pd-9",
+   "mode": "find-missing",
+   "tiles": [
+    "\u2b50",
+    "\ud83c\udf19",
+    "\u2600\ufe0f",
+    "\u2b50",
+    "?",
+    "\u2600\ufe0f"
+   ],
+   "options": [
+    "\u2b50",
+    "\ud83c\udf19",
+    "\u2600\ufe0f",
+    "\ud83d\udcab"
+   ],
+   "answer": "\ud83c\udf19",
+   "blankIndex": 4
+  },
+  {
+   "id": "pd-10",
+   "mode": "rule",
+   "tiles": [
+    3,
+    6,
+    9,
+    12
+   ],
+   "options": [
+    "13",
+    "14",
+    "15",
+    "16"
+   ],
+   "answer": "15"
+  },
+  {
+   "id": "pd-11",
+   "mode": "extend",
+   "tiles": [
+    "\ud83d\udfe2",
+    "\ud83d\udfe2",
+    "\ud83d\udfe2",
+    "\ud83d\udd34",
+    "\ud83d\udfe2",
+    "\ud83d\udfe2",
+    "\ud83d\udfe2"
+   ],
+   "options": [
+    "\ud83d\udd34",
+    "\ud83d\udfe2",
+    "\ud83d\udd35",
+    "\ud83d\udfe1"
+   ],
+   "answer": "\ud83d\udd34"
+  },
+  {
+   "id": "pd-12",
+   "mode": "find-missing",
+   "tiles": [
+    10,
+    20,
+    "?",
+    40,
+    50
+   ],
+   "options": [
+    "25",
+    "28",
+    "30",
+    "35"
+   ],
+   "answer": "30",
+   "blankIndex": 2
+  },
+  {
+   "id": "pd-13",
+   "mode": "rule",
+   "tiles": [
+    100,
+    90,
+    80,
+    70
+   ],
+   "options": [
+    "55",
+    "60",
+    "65",
+    "50"
+   ],
+   "answer": "60"
+  },
+  {
+   "id": "pd-14",
+   "mode": "extend",
+   "tiles": [
+    "\ud83c\udf38",
+    "\ud83c\udf38",
+    "\ud83c\udf40",
+    "\ud83c\udf38",
+    "\ud83c\udf38",
+    "\ud83c\udf40"
+   ],
+   "options": [
+    "\ud83c\udf38",
+    "\ud83c\udf40",
+    "\ud83c\udf3a",
+    "\ud83c\udf3b"
+   ],
+   "answer": "\ud83c\udf38"
+  },
+  {
+   "id": "pd-15",
+   "mode": "find-missing",
+   "tiles": [
+    1,
+    4,
+    "?",
+    10,
+    13
+   ],
+   "options": [
+    "6",
+    "7",
+    "8",
+    "5"
+   ],
+   "answer": "7",
+   "blankIndex": 2
+  },
+  {
+   "id": "pd-16",
+   "mode": "rule",
+   "tiles": [
+    25,
+    50,
+    75,
+    100
+   ],
+   "options": [
+    "110",
+    "115",
+    "125",
+    "120"
+   ],
+   "answer": "125"
+  },
+  {
+   "id": "pd-17",
+   "mode": "find-missing",
+   "tiles": [
+    "\ud83c\udf38",
+    "\ud83c\udf40",
+    "\ud83c\udf3a",
+    "\ud83c\udf38",
+    "?",
+    "\ud83c\udf3a"
+   ],
+   "options": [
+    "\ud83c\udf38",
+    "\ud83c\udf40",
+    "\ud83c\udf3a",
+    "\ud83c\udf3b"
+   ],
+   "answer": "\ud83c\udf40",
+   "blankIndex": 4
+  },
+  {
+   "id": "pd-18",
+   "mode": "rule",
+   "tiles": [
+    2,
+    4,
+    8,
+    16
+   ],
+   "options": [
+    "18",
+    "24",
+    "32",
+    "28"
+   ],
+   "answer": "32"
+  }
+ ],
+ "sortItOut": [
+  {
+   "id": "si-1",
+   "values": [
+    3,
+    1,
+    2
+   ],
+   "targetOrder": "asc"
+  },
+  {
+   "id": "si-2",
+   "values": [
+    2,
+    3,
+    1
+   ],
+   "targetOrder": "asc"
+  },
+  {
+   "id": "si-3",
+   "values": [
+    5,
+    2,
+    4,
+    1,
+    3
+   ],
+   "targetOrder": "asc"
+  },
+  {
+   "id": "si-4",
+   "values": [
+    4,
+    1,
+    3,
+    2,
+    5
+   ],
+   "targetOrder": "asc"
+  },
+  {
+   "id": "si-5",
+   "values": [
+    3,
+    5,
+    1,
+    4,
+    2
+   ],
+   "targetOrder": "asc"
+  },
+  {
+   "id": "si-6",
+   "values": [
+    6,
+    2,
+    5,
+    1,
+    4,
+    3
+   ],
+   "targetOrder": "asc"
+  },
+  {
+   "id": "si-7",
+   "values": [
+    5,
+    1,
+    6,
+    2,
+    4,
+    3
+   ],
+   "targetOrder": "asc"
+  },
+  {
+   "id": "si-8",
+   "values": [
+    4,
+    6,
+    1,
+    5,
+    2,
+    3
+   ],
+   "targetOrder": "asc"
+  },
+  {
+   "id": "si-9",
+   "values": [
+    7,
+    2,
+    5,
+    1,
+    6,
+    3,
+    4
+   ],
+   "targetOrder": "asc"
+  },
+  {
+   "id": "si-10",
+   "values": [
+    6,
+    3,
+    7,
+    1,
+    5,
+    2,
+    4
+   ],
+   "targetOrder": "asc"
+  },
+  {
+   "id": "si-11",
+   "values": [
+    8,
+    1,
+    5,
+    3,
+    7,
+    2,
+    6,
+    4
+   ],
+   "targetOrder": "asc"
+  },
+  {
+   "id": "si-12",
+   "values": [
+    3,
+    1,
+    2
+   ],
+   "targetOrder": "desc"
+  },
+  {
+   "id": "si-13",
+   "values": [
+    1,
+    3,
+    2
+   ],
+   "targetOrder": "desc"
+  },
+  {
+   "id": "si-14",
+   "values": [
+    2,
+    5,
+    1,
+    4,
+    3
+   ],
+   "targetOrder": "desc"
+  },
+  {
+   "id": "si-15",
+   "values": [
+    3,
+    1,
+    5,
+    2,
+    4
+   ],
+   "targetOrder": "desc"
+  },
+  {
+   "id": "si-16",
+   "values": [
+    1,
+    6,
+    2,
+    5,
+    3,
+    4
+   ],
+   "targetOrder": "desc"
+  },
+  {
+   "id": "si-17",
+   "values": [
+    2,
+    4,
+    1,
+    6,
+    3,
+    5
+   ],
+   "targetOrder": "desc"
+  },
+  {
+   "id": "si-18",
+   "values": [
+    5,
+    7,
+    2,
+    6,
+    1,
+    4,
+    3
+   ],
+   "targetOrder": "desc"
+  }
+ ],
+ "trueOrFalse": [
+  {
+   "id": "tf-1",
+   "gate": "AND",
+   "expected": true,
+   "story": "Can you go to the park?",
+   "rule": "You need BOTH to say YES to go!",
+   "inputs": [
+    {
+     "emoji": "\ud83d\udc69",
+     "label": "Mum",
+     "name": "Mum says",
+     "value": true
+    },
+    {
+     "emoji": "\ud83d\udc68",
+     "label": "Dad",
+     "name": "Dad says",
+     "value": true
+    }
+   ],
+   "trueLabel": "YES",
+   "falseLabel": "NO",
+   "outcomeTrue": "\ud83c\udf89 You can go to the park!",
+   "outcomeFalse": "\ud83d\ude22 You have to stay home."
+  },
+  {
+   "id": "tf-2",
+   "gate": "AND",
+   "expected": false,
+   "story": "Can you go to the park?",
+   "rule": "You need BOTH to say YES to go!",
+   "inputs": [
+    {
+     "emoji": "\ud83d\udc69",
+     "label": "Mum",
+     "name": "Mum says",
+     "value": true
+    },
+    {
+     "emoji": "\ud83d\udc68",
+     "label": "Dad",
+     "name": "Dad says",
+     "value": false
+    }
+   ],
+   "trueLabel": "YES",
+   "falseLabel": "NO",
+   "outcomeTrue": "\ud83c\udf89 You can go to the park!",
+   "outcomeFalse": "\ud83d\ude22 You have to stay home."
+  },
+  {
+   "id": "tf-3",
+   "gate": "AND",
+   "expected": false,
+   "story": "Can you go to the park?",
+   "rule": "You need BOTH to say YES to go!",
+   "inputs": [
+    {
+     "emoji": "\ud83d\udc69",
+     "label": "Mum",
+     "name": "Mum says",
+     "value": false
+    },
+    {
+     "emoji": "\ud83d\udc68",
+     "label": "Dad",
+     "name": "Dad says",
+     "value": true
+    }
+   ],
+   "trueLabel": "YES",
+   "falseLabel": "NO",
+   "outcomeTrue": "\ud83c\udf89 You can go to the park!",
+   "outcomeFalse": "\ud83d\ude22 You have to stay home."
+  },
+  {
+   "id": "tf-4",
+   "gate": "AND",
+   "expected": false,
+   "story": "Can you go to the park?",
+   "rule": "You need BOTH to say YES to go!",
+   "inputs": [
+    {
+     "emoji": "\ud83d\udc69",
+     "label": "Mum",
+     "name": "Mum says",
+     "value": false
+    },
+    {
+     "emoji": "\ud83d\udc68",
+     "label": "Dad",
+     "name": "Dad says",
+     "value": false
+    }
+   ],
+   "trueLabel": "YES",
+   "falseLabel": "NO",
+   "outcomeTrue": "\ud83c\udf89 You can go to the park!",
+   "outcomeFalse": "\ud83d\ude22 You have to stay home."
+  },
+  {
+   "id": "tf-5",
+   "gate": "OR",
+   "expected": true,
+   "story": "Can you have ice cream?",
+   "rule": "If you finished homework OR cleaned your room, you get ice cream!",
+   "inputs": [
+    {
+     "emoji": "\ud83d\udcda",
+     "label": "Homework",
+     "name": "Homework done",
+     "value": true
+    },
+    {
+     "emoji": "\ud83e\uddf9",
+     "label": "Room",
+     "name": "Room clean",
+     "value": true
+    }
+   ],
+   "trueLabel": "DONE",
+   "falseLabel": "NOT DONE",
+   "outcomeTrue": "\ud83c\udf66 Ice cream time!",
+   "outcomeFalse": "\ud83d\ude22 No ice cream yet!"
+  },
+  {
+   "id": "tf-6",
+   "gate": "OR",
+   "expected": true,
+   "story": "Can you have ice cream?",
+   "rule": "If you finished homework OR cleaned your room, you get ice cream!",
+   "inputs": [
+    {
+     "emoji": "\ud83d\udcda",
+     "label": "Homework",
+     "name": "Homework done",
+     "value": true
+    },
+    {
+     "emoji": "\ud83e\uddf9",
+     "label": "Room",
+     "name": "Room clean",
+     "value": false
+    }
+   ],
+   "trueLabel": "DONE",
+   "falseLabel": "NOT DONE",
+   "outcomeTrue": "\ud83c\udf66 Ice cream time!",
+   "outcomeFalse": "\ud83d\ude22 No ice cream yet!"
+  },
+  {
+   "id": "tf-7",
+   "gate": "OR",
+   "expected": true,
+   "story": "Can you have ice cream?",
+   "rule": "If you finished homework OR cleaned your room, you get ice cream!",
+   "inputs": [
+    {
+     "emoji": "\ud83d\udcda",
+     "label": "Homework",
+     "name": "Homework done",
+     "value": false
+    },
+    {
+     "emoji": "\ud83e\uddf9",
+     "label": "Room",
+     "name": "Room clean",
+     "value": true
+    }
+   ],
+   "trueLabel": "DONE",
+   "falseLabel": "NOT DONE",
+   "outcomeTrue": "\ud83c\udf66 Ice cream time!",
+   "outcomeFalse": "\ud83d\ude22 No ice cream yet!"
+  },
+  {
+   "id": "tf-8",
+   "gate": "OR",
+   "expected": false,
+   "story": "Can you have ice cream?",
+   "rule": "If you finished homework OR cleaned your room, you get ice cream!",
+   "inputs": [
+    {
+     "emoji": "\ud83d\udcda",
+     "label": "Homework",
+     "name": "Homework done",
+     "value": false
+    },
+    {
+     "emoji": "\ud83e\uddf9",
+     "label": "Room",
+     "name": "Room clean",
+     "value": false
+    }
+   ],
+   "trueLabel": "DONE",
+   "falseLabel": "NOT DONE",
+   "outcomeTrue": "\ud83c\udf66 Ice cream time!",
+   "outcomeFalse": "\ud83d\ude22 No ice cream yet!"
+  },
+  {
+   "id": "tf-9",
+   "gate": "NOT",
+   "expected": false,
+   "story": "Is the light OFF?",
+   "rule": "NOT flips it! If the light is ON, NOT makes it OFF!",
+   "inputs": [
+    {
+     "emoji": "\ud83d\udca1",
+     "label": "Light",
+     "name": "Light is",
+     "value": true
+    }
+   ],
+   "trueLabel": "ON",
+   "falseLabel": "OFF",
+   "outcomeTrue": "\ud83d\udca1 The light is ON!",
+   "outcomeFalse": "\ud83c\udf11 The light is OFF!"
+  },
+  {
+   "id": "tf-10",
+   "gate": "NOT",
+   "expected": true,
+   "story": "Is the light ON?",
+   "rule": "NOT flips it! If the light is OFF, NOT makes it ON!",
+   "inputs": [
+    {
+     "emoji": "\ud83d\udca1",
+     "label": "Light",
+     "name": "Light is",
+     "value": false
+    }
+   ],
+   "trueLabel": "ON",
+   "falseLabel": "OFF",
+   "outcomeTrue": "\ud83d\udca1 The light is ON!",
+   "outcomeFalse": "\ud83c\udf11 The light is OFF!"
+  },
+  {
+   "id": "tf-11",
+   "gate": "AND",
+   "expected": true,
+   "story": "Can the robot move?",
+   "rule": "The robot needs BOTH batteries to be full to move!",
+   "inputs": [
+    {
+     "emoji": "\ud83d\udd0b",
+     "label": "Battery 1",
+     "name": "Battery 1",
+     "value": true
+    },
+    {
+     "emoji": "\ud83d\udd0b",
+     "label": "Battery 2",
+     "name": "Battery 2",
+     "value": true
+    }
+   ],
+   "trueLabel": "FULL",
+   "falseLabel": "EMPTY",
+   "outcomeTrue": "\ud83e\udd16 The robot can move!",
+   "outcomeFalse": "\ud83d\ude34 The robot can't move."
+  },
+  {
+   "id": "tf-12",
+   "gate": "AND",
+   "expected": false,
+   "story": "Can the robot move?",
+   "rule": "The robot needs BOTH batteries to be full to move!",
+   "inputs": [
+    {
+     "emoji": "\ud83d\udd0b",
+     "label": "Battery 1",
+     "name": "Battery 1",
+     "value": false
+    },
+    {
+     "emoji": "\ud83d\udd0b",
+     "label": "Battery 2",
+     "name": "Battery 2",
+     "value": true
+    }
+   ],
+   "trueLabel": "FULL",
+   "falseLabel": "EMPTY",
+   "outcomeTrue": "\ud83e\udd16 The robot can move!",
+   "outcomeFalse": "\ud83d\ude34 The robot can't move."
+  },
+  {
+   "id": "tf-13",
+   "gate": "OR",
+   "expected": true,
+   "story": "Can you watch TV?",
+   "rule": "You can watch TV if you ate your veggies OR had a nap!",
+   "inputs": [
+    {
+     "emoji": "\ud83e\udd66",
+     "label": "Veggies",
+     "name": "Ate veggies",
+     "value": false
+    },
+    {
+     "emoji": "\ud83d\ude34",
+     "label": "Nap",
+     "name": "Had a nap",
+     "value": true
+    }
+   ],
+   "trueLabel": "YES",
+   "falseLabel": "NO",
+   "outcomeTrue": "\ud83d\udcfa TV time!",
+   "outcomeFalse": "\ud83d\ude22 No TV yet!"
+  },
+  {
+   "id": "tf-14",
+   "gate": "OR",
+   "expected": false,
+   "story": "Can you watch TV?",
+   "rule": "You can watch TV if you ate your veggies OR had a nap!",
+   "inputs": [
+    {
+     "emoji": "\ud83e\udd66",
+     "label": "Veggies",
+     "name": "Ate veggies",
+     "value": false
+    },
+    {
+     "emoji": "\ud83d\ude34",
+     "label": "Nap",
+     "name": "Had a nap",
+     "value": false
+    }
+   ],
+   "trueLabel": "YES",
+   "falseLabel": "NO",
+   "outcomeTrue": "\ud83d\udcfa TV time!",
+   "outcomeFalse": "\ud83d\ude22 No TV yet!"
+  },
+  {
+   "id": "tf-15",
+   "gate": "NOT",
+   "expected": true,
+   "story": "Is it raining?",
+   "rule": "NOT flips it! If it is NOT sunny, then it must be raining!",
+   "inputs": [
+    {
+     "emoji": "\u2600\ufe0f",
+     "label": "Sun",
+     "name": "It is sunny",
+     "value": false
+    }
+   ],
+   "trueLabel": "SUNNY",
+   "falseLabel": "NOT SUNNY",
+   "outcomeTrue": "\ud83c\udf27\ufe0f It is raining!",
+   "outcomeFalse": "\u2600\ufe0f It is sunny!"
+  },
+  {
+   "id": "tf-16",
+   "gate": "NOT",
+   "expected": false,
+   "story": "Is it raining?",
+   "rule": "NOT flips it! If it IS sunny, then it is NOT raining!",
+   "inputs": [
+    {
+     "emoji": "\u2600\ufe0f",
+     "label": "Sun",
+     "name": "It is sunny",
+     "value": true
+    }
+   ],
+   "trueLabel": "SUNNY",
+   "falseLabel": "NOT SUNNY",
+   "outcomeTrue": "\ud83c\udf27\ufe0f It is raining!",
+   "outcomeFalse": "\u2600\ufe0f It is sunny!"
+  },
+  {
+   "id": "tf-17",
+   "gate": "AND",
+   "expected": false,
+   "story": "Can the rocket launch?",
+   "rule": "The rocket needs BOTH the fuel tank full AND the weather clear!",
+   "inputs": [
+    {
+     "emoji": "\u26fd",
+     "label": "Fuel",
+     "name": "Fuel tank",
+     "value": true
+    },
+    {
+     "emoji": "\ud83c\udf29\ufe0f",
+     "label": "Weather",
+     "name": "Weather clear",
+     "value": false
+    }
+   ],
+   "trueLabel": "READY",
+   "falseLabel": "NOT READY",
+   "outcomeTrue": "\ud83d\ude80 Blast off!",
+   "outcomeFalse": "\ud83d\uded1 Hold on \u2014 not yet!"
+  },
+  {
+   "id": "tf-18",
+   "gate": "OR",
+   "expected": true,
+   "story": "Can the rocket launch?",
+   "rule": "The rocket can launch if the fuel is ready OR the backup engine is on!",
+   "inputs": [
+    {
+     "emoji": "\u26fd",
+     "label": "Fuel",
+     "name": "Fuel tank",
+     "value": false
+    },
+    {
+     "emoji": "\u2699\ufe0f",
+     "label": "Backup",
+     "name": "Backup engine",
+     "value": true
+    }
+   ],
+   "trueLabel": "READY",
+   "falseLabel": "NOT READY",
+   "outcomeTrue": "\ud83d\ude80 Blast off!",
+   "outcomeFalse": "\ud83d\uded1 Hold on \u2014 not yet!"
+  }
+ ],
+ "wordProblems": [
+  {
+   "id": "wp-1",
+   "story": "Tom has 5 apples. He eats 2. How many apples does he have left?",
+   "emoji": "\ud83c\udf4e",
+   "answer": 3,
+   "unit": "apples",
+   "hint": "Start with 5, then take away 2."
+  },
+  {
+   "id": "wp-2",
+   "story": "Sara has 4 red balloons and 3 blue balloons. How many balloons altogether?",
+   "emoji": "\ud83c\udf88",
+   "answer": 7,
+   "unit": "balloons",
+   "hint": "Add the red ones and the blue ones together."
+  },
+  {
+   "id": "wp-3",
+   "story": "There are 10 cookies on a plate. The kids eat 6. How many are left?",
+   "emoji": "\ud83c\udf6a",
+   "answer": 4,
+   "unit": "cookies",
+   "hint": "Start with 10 and take away 6."
+  },
+  {
+   "id": "wp-4",
+   "story": "A frog jumps 3 times. Each jump is 4 steps. How many steps in total?",
+   "emoji": "\ud83d\udc38",
+   "answer": 12,
+   "unit": "steps",
+   "hint": "How many groups of 4 do you have?"
+  },
+  {
+   "id": "wp-5",
+   "story": "Mia has 8 stickers. She gives 3 to her friend. How many does she have now?",
+   "emoji": "\u2b50",
+   "answer": 5,
+   "unit": "stickers",
+   "hint": "Start with 8, then take away 3."
+  },
+  {
+   "id": "wp-6",
+   "story": "There are 6 birds in a tree. 4 more birds land. How many birds are there now?",
+   "emoji": "\ud83d\udc26",
+   "answer": 10,
+   "unit": "birds",
+   "hint": "Add the birds that were there and the new ones."
+  },
+  {
+   "id": "wp-7",
+   "story": "Leo has 15 marbles. He loses 7. How many marbles does he have left?",
+   "emoji": "\ud83d\udd35",
+   "answer": 8,
+   "unit": "marbles",
+   "hint": "Start with 15 and take away 7."
+  },
+  {
+   "id": "wp-8",
+   "story": "There are 3 bags with 5 oranges in each bag. How many oranges are there?",
+   "emoji": "\ud83c\udf4a",
+   "answer": 15,
+   "unit": "oranges",
+   "hint": "Count 3 groups of 5."
+  },
+  {
+   "id": "wp-9",
+   "story": "A shop has 20 sweets. They sell 13. How many sweets are left?",
+   "emoji": "\ud83c\udf6c",
+   "answer": 7,
+   "unit": "sweets",
+   "hint": "Start with 20 and take away 13."
+  },
+  {
+   "id": "wp-10",
+   "story": "Anna reads 4 pages every day. How many pages does she read in 5 days?",
+   "emoji": "\ud83d\udcda",
+   "answer": 20,
+   "unit": "pages",
+   "hint": "Count 5 groups of 4."
+  },
+  {
+   "id": "wp-11",
+   "story": "There are 12 eggs. A fox eats 5. How many eggs are left?",
+   "emoji": "\ud83e\udd5a",
+   "answer": 7,
+   "unit": "eggs",
+   "hint": "Start with 12 and take away 5."
+  },
+  {
+   "id": "wp-12",
+   "story": "Jake has 9 toy cars. His mum gives him 6 more. How many cars does he have?",
+   "emoji": "\ud83d\ude97",
+   "answer": 15,
+   "unit": "cars",
+   "hint": "Add 9 and 6 together."
+  },
+  {
+   "id": "wp-13",
+   "story": "A jar has 24 sweets. 4 children share them equally. How many each?",
+   "emoji": "\ud83c\udf6d",
+   "answer": 6,
+   "unit": "sweets",
+   "hint": "Split 24 into 4 equal groups."
+  },
+  {
+   "id": "wp-14",
+   "story": "There are 5 fish tanks with 6 fish each. How many fish altogether?",
+   "emoji": "\ud83d\udc1f",
+   "answer": 30,
+   "unit": "fish",
+   "hint": "Count 5 groups of 6."
+  },
+  {
+   "id": "wp-15",
+   "story": "Maya has 30 cards. She gives 12 to her brother. How many does she keep?",
+   "emoji": "\ud83c\udccf",
+   "answer": 18,
+   "unit": "cards",
+   "hint": "Start with 30 and take away 12."
+  },
+  {
+   "id": "wp-16",
+   "story": "A train has 8 carriages with 10 seats each. How many seats in total?",
+   "emoji": "\ud83d\ude82",
+   "answer": 80,
+   "unit": "seats",
+   "hint": "Count 8 groups of 10."
+  },
+  {
+   "id": "wp-17",
+   "story": "Ben scored 45 points in a game. He scored 28 more. What is his total?",
+   "emoji": "\ud83c\udfae",
+   "answer": 73,
+   "unit": "points",
+   "hint": "Add 45 and 28 together."
+  },
+  {
+   "id": "wp-18",
+   "story": "A garden has 56 flowers. 19 flowers are picked. How many are left?",
+   "emoji": "\ud83c\udf38",
+   "answer": 37,
+   "unit": "flowers",
+   "hint": "Start with 56 and take away 19."
+  }
+ ],
+ "missingNumber": [
+  {
+   "id": "mn-1",
+   "template": "? + 3 = 7",
+   "missing": "left",
+   "op": "+",
+   "a": 4,
+   "b": 3,
+   "result": 7
+  },
+  {
+   "id": "mn-2",
+   "template": "2 + ? = 9",
+   "missing": "right",
+   "op": "+",
+   "a": 2,
+   "b": 7,
+   "result": 9
+  },
+  {
+   "id": "mn-3",
+   "template": "? - 2 = 4",
+   "missing": "left",
+   "op": "-",
+   "a": 6,
+   "b": 2,
+   "result": 4
+  },
+  {
+   "id": "mn-4",
+   "template": "8 - ? = 5",
+   "missing": "right",
+   "op": "-",
+   "a": 8,
+   "b": 3,
+   "result": 5
+  },
+  {
+   "id": "mn-5",
+   "template": "? + 6 = 10",
+   "missing": "left",
+   "op": "+",
+   "a": 4,
+   "b": 6,
+   "result": 10
+  },
+  {
+   "id": "mn-6",
+   "template": "5 + ? = 12",
+   "missing": "right",
+   "op": "+",
+   "a": 5,
+   "b": 7,
+   "result": 12
+  },
+  {
+   "id": "mn-7",
+   "template": "? - 4 = 8",
+   "missing": "left",
+   "op": "-",
+   "a": 12,
+   "b": 4,
+   "result": 8
+  },
+  {
+   "id": "mn-8",
+   "template": "15 - ? = 7",
+   "missing": "right",
+   "op": "-",
+   "a": 15,
+   "b": 8,
+   "result": 7
+  },
+  {
+   "id": "mn-9",
+   "template": "? + 9 = 17",
+   "missing": "left",
+   "op": "+",
+   "a": 8,
+   "b": 9,
+   "result": 17
+  },
+  {
+   "id": "mn-10",
+   "template": "13 + ? = 20",
+   "missing": "right",
+   "op": "+",
+   "a": 13,
+   "b": 7,
+   "result": 20
+  },
+  {
+   "id": "mn-11",
+   "template": "? - 8 = 14",
+   "missing": "left",
+   "op": "-",
+   "a": 22,
+   "b": 8,
+   "result": 14
+  },
+  {
+   "id": "mn-12",
+   "template": "30 - ? = 12",
+   "missing": "right",
+   "op": "-",
+   "a": 30,
+   "b": 18,
+   "result": 12
+  },
+  {
+   "id": "mn-13",
+   "template": "? + 15 = 32",
+   "missing": "left",
+   "op": "+",
+   "a": 17,
+   "b": 15,
+   "result": 32
+  },
+  {
+   "id": "mn-14",
+   "template": "24 + ? = 51",
+   "missing": "right",
+   "op": "+",
+   "a": 24,
+   "b": 27,
+   "result": 51
+  },
+  {
+   "id": "mn-15",
+   "template": "? - 16 = 25",
+   "missing": "left",
+   "op": "-",
+   "a": 41,
+   "b": 16,
+   "result": 25
+  },
+  {
+   "id": "mn-16",
+   "template": "63 - ? = 28",
+   "missing": "right",
+   "op": "-",
+   "a": 63,
+   "b": 35,
+   "result": 28
+  },
+  {
+   "id": "mn-17",
+   "template": "? + 34 = 79",
+   "missing": "left",
+   "op": "+",
+   "a": 45,
+   "b": 34,
+   "result": 79
+  },
+  {
+   "id": "mn-18",
+   "template": "47 + ? = 100",
+   "missing": "right",
+   "op": "+",
+   "a": 47,
+   "b": 53,
+   "result": 100
+  }
+ ],
+ "placeValueExpanded": [
+  {
+   "id": "pve-1",
+   "number": 23,
+   "hundreds": 0,
+   "tens": 2,
+   "ones": 3
+  },
+  {
+   "id": "pve-2",
+   "number": 45,
+   "hundreds": 0,
+   "tens": 4,
+   "ones": 5
+  },
+  {
+   "id": "pve-3",
+   "number": 67,
+   "hundreds": 0,
+   "tens": 6,
+   "ones": 7
+  },
+  {
+   "id": "pve-4",
+   "number": 81,
+   "hundreds": 0,
+   "tens": 8,
+   "ones": 1
+  },
+  {
+   "id": "pve-5",
+   "number": 134,
+   "hundreds": 1,
+   "tens": 3,
+   "ones": 4
+  },
+  {
+   "id": "pve-6",
+   "number": 256,
+   "hundreds": 2,
+   "tens": 5,
+   "ones": 6
+  },
+  {
+   "id": "pve-7",
+   "number": 302,
+   "hundreds": 3,
+   "tens": 0,
+   "ones": 2
+  },
+  {
+   "id": "pve-8",
+   "number": 419,
+   "hundreds": 4,
+   "tens": 1,
+   "ones": 9
+  },
+  {
+   "id": "pve-9",
+   "number": 570,
+   "hundreds": 5,
+   "tens": 7,
+   "ones": 0
+  },
+  {
+   "id": "pve-10",
+   "number": 683,
+   "hundreds": 6,
+   "tens": 8,
+   "ones": 3
+  },
+  {
+   "id": "pve-11",
+   "number": 205,
+   "hundreds": 2,
+   "tens": 0,
+   "ones": 5
+  },
+  {
+   "id": "pve-12",
+   "number": 340,
+   "hundreds": 3,
+   "tens": 4,
+   "ones": 0
+  },
+  {
+   "id": "pve-13",
+   "number": 791,
+   "hundreds": 7,
+   "tens": 9,
+   "ones": 1
+  },
+  {
+   "id": "pve-14",
+   "number": 408,
+   "hundreds": 4,
+   "tens": 0,
+   "ones": 8
+  },
+  {
+   "id": "pve-15",
+   "number": 825,
+   "hundreds": 8,
+   "tens": 2,
+   "ones": 5
+  },
+  {
+   "id": "pve-16",
+   "number": 960,
+   "hundreds": 9,
+   "tens": 6,
+   "ones": 0
+  },
+  {
+   "id": "pve-17",
+   "number": 503,
+   "hundreds": 5,
+   "tens": 0,
+   "ones": 3
+  },
+  {
+   "id": "pve-18",
+   "number": 749,
+   "hundreds": 7,
+   "tens": 4,
+   "ones": 9
+  }
+ ],
+ "doublesHalves": [
+  {
+   "id": "dh-1",
+   "mode": "double",
+   "number": 2,
+   "answer": 4
+  },
+  {
+   "id": "dh-2",
+   "mode": "double",
+   "number": 3,
+   "answer": 6
+  },
+  {
+   "id": "dh-3",
+   "mode": "double",
+   "number": 4,
+   "answer": 8
+  },
+  {
+   "id": "dh-4",
+   "mode": "half",
+   "number": 8,
+   "answer": 4
+  },
+  {
+   "id": "dh-5",
+   "mode": "half",
+   "number": 10,
+   "answer": 5
+  },
+  {
+   "id": "dh-6",
+   "mode": "double",
+   "number": 5,
+   "answer": 10
+  },
+  {
+   "id": "dh-7",
+   "mode": "double",
+   "number": 6,
+   "answer": 12
+  },
+  {
+   "id": "dh-8",
+   "mode": "half",
+   "number": 12,
+   "answer": 6
+  },
+  {
+   "id": "dh-9",
+   "mode": "double",
+   "number": 7,
+   "answer": 14
+  },
+  {
+   "id": "dh-10",
+   "mode": "half",
+   "number": 14,
+   "answer": 7
+  },
+  {
+   "id": "dh-11",
+   "mode": "double",
+   "number": 8,
+   "answer": 16
+  },
+  {
+   "id": "dh-12",
+   "mode": "half",
+   "number": 16,
+   "answer": 8
+  },
+  {
+   "id": "dh-13",
+   "mode": "double",
+   "number": 9,
+   "answer": 18
+  },
+  {
+   "id": "dh-14",
+   "mode": "half",
+   "number": 18,
+   "answer": 9
+  },
+  {
+   "id": "dh-15",
+   "mode": "double",
+   "number": 15,
+   "answer": 30
+  },
+  {
+   "id": "dh-16",
+   "mode": "half",
+   "number": 20,
+   "answer": 10
+  },
+  {
+   "id": "dh-17",
+   "mode": "double",
+   "number": 25,
+   "answer": 50
+  },
+  {
+   "id": "dh-18",
+   "mode": "half",
+   "number": 50,
+   "answer": 25
+  }
+ ],
+ "multiplication": [
+  {
+   "id": "mlt_e_01",
+   "mode": "groups",
+   "a": 2,
+   "b": 2,
+   "emoji": "\ud83d\udc1f",
+   "hint": "Count how many fish in each group, then add the groups",
+   "fact": "2 groups of 2 is the same as 2 \u00d7 2 = 4",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_02",
+   "mode": "groups",
+   "a": 3,
+   "b": 2,
+   "emoji": "\ud83c\udf4e",
+   "hint": "You have 3 groups. How many apples are in each group?",
+   "fact": "3 groups of 2 is 2 + 2 + 2 = 6, and 3 \u00d7 2 = 6",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_03",
+   "mode": "groups",
+   "a": 4,
+   "b": 2,
+   "emoji": "\u2b50",
+   "hint": "Count the stars in one group, then count all groups",
+   "fact": "4 \u00d7 2 means 4 groups of 2. That is 2+2+2+2 = 8",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_04",
+   "mode": "groups",
+   "a": 5,
+   "b": 2,
+   "emoji": "\ud83c\udf38",
+   "hint": "Each group has 2 flowers. Count all 5 groups",
+   "fact": "5 \u00d7 2 = 10. The 2 times table always goes up by 2!",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_05",
+   "mode": "groups",
+   "a": 2,
+   "b": 5,
+   "emoji": "\ud83c\udf6a",
+   "hint": "You have 2 groups. Count the cookies in each group",
+   "fact": "2 \u00d7 5 = 10. This is the same as 5 \u00d7 2 = 10. Order doesn't matter!",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_06",
+   "mode": "groups",
+   "a": 1,
+   "b": 8,
+   "emoji": "\ud83e\udd8b",
+   "hint": "There is only 1 group. How many butterflies are in it?",
+   "fact": "1 \u00d7 8 = 8. Multiplying by 1 always gives the same number back!",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_07",
+   "mode": "groups",
+   "a": 4,
+   "b": 1,
+   "emoji": "\ud83c\udf1f",
+   "hint": "Each group has just 1 star. How many groups are there?",
+   "fact": "4 \u00d7 1 = 4. Multiplying by 1 never changes the number.",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_08",
+   "mode": "repeated_add",
+   "a": 2,
+   "b": 3,
+   "hint": "Count on from 0: +2, +2, +2. Where do you land?",
+   "fact": "2 + 2 + 2 = 6. We added 2 three times, so 3 \u00d7 2 = 6",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_09",
+   "mode": "repeated_add",
+   "a": 5,
+   "b": 2,
+   "hint": "Jump along a number line: +5, +5. Where do you land?",
+   "fact": "5 + 5 = 10. We added 5 twice, so 2 \u00d7 5 = 10",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_10",
+   "mode": "repeated_add",
+   "a": 2,
+   "b": 4,
+   "hint": "Count up four jumps of 2: 2, 4, 6, ...",
+   "fact": "2 + 2 + 2 + 2 = 8. Four jumps of 2 means 4 \u00d7 2 = 8",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_11",
+   "mode": "array",
+   "a": 2,
+   "b": 3,
+   "hint": "Count the dots in one row, then count the rows",
+   "fact": "A 2 by 3 array has 2 rows with 3 in each row. 2 \u00d7 3 = 6",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_12",
+   "mode": "array",
+   "a": 2,
+   "b": 4,
+   "hint": "How many rows? How many dots in each row? Multiply!",
+   "fact": "2 rows of 4 dots = 8 dots. 2 \u00d7 4 = 8",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_13",
+   "mode": "array",
+   "a": 3,
+   "b": 2,
+   "hint": "Count one row at a time: 2, 4, 6",
+   "fact": "3 rows of 2 = 6. Notice 3\u00d72 and 2\u00d73 both equal 6!",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_14",
+   "mode": "missing_factor",
+   "known": 2,
+   "answer": 2,
+   "product": 4,
+   "hint": "Think: how many groups of 2 make 4?",
+   "fact": "2 \u00d7 2 = 4. We need 2 groups of 2 to make 4.",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_15",
+   "mode": "missing_factor",
+   "known": 2,
+   "answer": 3,
+   "product": 6,
+   "hint": "Count up in 2s until you reach 6: 2, 4, 6. How many jumps?",
+   "fact": "2 \u00d7 3 = 6. Three jumps of 2 brings us to 6.",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_16",
+   "mode": "missing_factor",
+   "known": 5,
+   "answer": 2,
+   "product": 10,
+   "hint": "Think: how many groups of 5 make 10?",
+   "fact": "5 \u00d7 2 = 10. Two groups of 5 gives 10.",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_17",
+   "mode": "word_problem",
+   "a": 2,
+   "b": 3,
+   "emoji": "\ud83c\udf4e",
+   "story": "There are {a} baskets. Each basket has {b} apples. How many apples altogether?",
+   "hint": "Draw 2 circles. Put 3 apples in each. Then count them all.",
+   "fact": "2 baskets \u00d7 3 apples = 6 apples. 2 \u00d7 3 = 6",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_e_18",
+   "mode": "word_problem",
+   "a": 5,
+   "b": 2,
+   "emoji": "\ud83d\udc1f",
+   "story": "There are {a} fish tanks. Each tank has {b} fish. How many fish altogether?",
+   "hint": "Think: 5 groups of 2. Count them: 2, 4, 6, 8, 10",
+   "fact": "5 tanks \u00d7 2 fish = 10 fish. 5 \u00d7 2 = 10",
+   "difficulty": "easy"
+  },
+  {
+   "id": "mlt_m_01",
+   "mode": "groups",
+   "a": 3,
+   "b": 4,
+   "emoji": "\ud83c\udf1f",
+   "hint": "Count the stars in one group, then count 3 groups",
+   "fact": "3 \u00d7 4 = 12. Three groups of 4 is 4 + 4 + 4 = 12",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_02",
+   "mode": "groups",
+   "a": 4,
+   "b": 3,
+   "emoji": "\ud83c\udf4e",
+   "hint": "4 groups of 3 apples. Try counting: 3, 6, 9, 12",
+   "fact": "4 \u00d7 3 = 12. Four groups of 3 is 3 + 3 + 3 + 3 = 12",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_03",
+   "mode": "groups",
+   "a": 4,
+   "b": 4,
+   "emoji": "\u2b50",
+   "hint": "Count one group: 4 stars. Now count 4 groups.",
+   "fact": "4 \u00d7 4 = 16. Four groups of 4 is like counting: 4, 8, 12, 16",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_04",
+   "mode": "groups",
+   "a": 3,
+   "b": 6,
+   "emoji": "\ud83e\udd8b",
+   "hint": "3 groups of 6. Try: 6 + 6 + 6 = ?",
+   "fact": "3 \u00d7 6 = 18. Counting by 6: 6, 12, 18",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_05",
+   "mode": "groups",
+   "a": 4,
+   "b": 5,
+   "emoji": "\ud83d\udc20",
+   "hint": "4 groups of 5. Try skip counting by 5: 5, 10, 15, 20",
+   "fact": "4 \u00d7 5 = 20. Counting by 5 four times: 5, 10, 15, 20",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_06",
+   "mode": "groups",
+   "a": 5,
+   "b": 4,
+   "emoji": "\ud83c\udf6a",
+   "hint": "5 groups of 4. Tip: you can also think of it as 4 groups of 5!",
+   "fact": "5 \u00d7 4 = 20. This is the same as 4 \u00d7 5 = 20. Switching order works!",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_07",
+   "mode": "array",
+   "a": 3,
+   "b": 5,
+   "hint": "Count one row at a time: 5, 10, 15",
+   "fact": "3 rows of 5 = 15. 3 \u00d7 5 = 15",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_08",
+   "mode": "array",
+   "a": 4,
+   "b": 4,
+   "hint": "This is a square array! Count rows \u00d7 columns.",
+   "fact": "4 \u00d7 4 = 16. A square array means both sides are equal!",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_09",
+   "mode": "array",
+   "a": 3,
+   "b": 6,
+   "hint": "Count the dots in one row, then multiply by the number of rows",
+   "fact": "3 rows of 6 dots = 18. 3 \u00d7 6 = 18",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_10",
+   "mode": "commutativity",
+   "a": 3,
+   "b": 4,
+   "product": 12,
+   "hint": "Switching the order of multiplication gives the same answer!",
+   "fact": "3 \u00d7 4 = 4 \u00d7 3 = 12. This is called the commutative property!",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_11",
+   "mode": "commutativity",
+   "a": 4,
+   "b": 5,
+   "product": 20,
+   "hint": "Both arrays have the same total dots, just arranged differently",
+   "fact": "4 \u00d7 5 = 5 \u00d7 4 = 20. You can always swap the numbers in multiplication!",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_12",
+   "mode": "commutativity",
+   "a": 6,
+   "b": 3,
+   "product": 18,
+   "hint": "Turn the array on its side \u2014 same dots, different arrangement",
+   "fact": "6 \u00d7 3 = 3 \u00d7 6 = 18. Swapping the order never changes the answer!",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_13",
+   "mode": "missing_factor",
+   "known": 3,
+   "answer": 4,
+   "product": 12,
+   "hint": "Count up in 3s until you reach 12: 3, 6, 9, 12. How many jumps?",
+   "fact": "3 \u00d7 4 = 12. It takes 4 jumps of 3 to reach 12.",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_14",
+   "mode": "missing_factor",
+   "known": 4,
+   "answer": 4,
+   "product": 16,
+   "hint": "Count up in 4s: 4, 8, 12, 16. How many jumps did you make?",
+   "fact": "4 \u00d7 4 = 16. Four jumps of 4 reaches 16.",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_15",
+   "mode": "missing_factor",
+   "known": 6,
+   "answer": 3,
+   "product": 18,
+   "hint": "How many groups of 6 make 18? Try: 6, 12, 18",
+   "fact": "6 \u00d7 3 = 18. Three groups of 6 gives 18.",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_16",
+   "mode": "missing_factor",
+   "known": 5,
+   "answer": 5,
+   "product": 25,
+   "hint": "Count by 5s until you reach 25: 5, 10, 15, 20, 25",
+   "fact": "5 \u00d7 5 = 25. Five groups of 5 gives 25. This is 5 squared!",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_17",
+   "mode": "word_problem",
+   "a": 4,
+   "b": 3,
+   "emoji": "\ud83c\udf88",
+   "story": "There are {a} friends at a party. Each friend gets {b} balloons. How many balloons altogether?",
+   "hint": "Draw 4 groups of 3 balloons each. Then count them all.",
+   "fact": "4 friends \u00d7 3 balloons = 12 balloons. 4 \u00d7 3 = 12",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_18",
+   "mode": "word_problem",
+   "a": 3,
+   "b": 6,
+   "emoji": "\ud83c\udf38",
+   "story": "There are {a} vases on a table. Each vase has {b} flowers. How many flowers altogether?",
+   "hint": "Think: 3 groups of 6. Count by 6: 6, 12, 18",
+   "fact": "3 vases \u00d7 6 flowers = 18 flowers. 3 \u00d7 6 = 18",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_m_19",
+   "mode": "word_problem",
+   "a": 5,
+   "b": 4,
+   "emoji": "\ud83c\udf6d",
+   "story": "There are {a} bags of sweets. Each bag has {b} sweets inside. How many sweets altogether?",
+   "hint": "5 groups of 4. Count: 4, 8, 12, 16, 20",
+   "fact": "5 bags \u00d7 4 sweets = 20 sweets. 5 \u00d7 4 = 20",
+   "difficulty": "medium"
+  },
+  {
+   "id": "mlt_h_01",
+   "mode": "groups",
+   "a": 7,
+   "b": 4,
+   "emoji": "\u2b50",
+   "hint": "7 groups of 4. Try counting by 4: 4, 8, 12, 16, 20, 24, 28",
+   "fact": "7 \u00d7 4 = 28. Seven groups of 4: 4+4+4+4+4+4+4 = 28",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_02",
+   "mode": "groups",
+   "a": 9,
+   "b": 3,
+   "emoji": "\ud83c\udf38",
+   "hint": "9 groups of 3. Tip: try 10\u00d73=30, then subtract 1 group of 3",
+   "fact": "9 \u00d7 3 = 27. Shortcut: 10\u00d73=30, minus one group of 3 = 27",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_03",
+   "mode": "groups",
+   "a": 8,
+   "b": 4,
+   "emoji": "\ud83d\udc1f",
+   "hint": "8 groups of 4. Try: 8 \u00d7 4 = double of (4 \u00d7 4) = double 16",
+   "fact": "8 \u00d7 4 = 32. Doubling trick: 4\u00d74=16, double it to get 8\u00d74=32",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_04",
+   "mode": "groups",
+   "a": 7,
+   "b": 5,
+   "emoji": "\ud83c\udf6a",
+   "hint": "7 groups of 5. Count by 5: 5,10,15,20,25,30,35",
+   "fact": "7 \u00d7 5 = 35. Counting by 5 seven times reaches 35",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_05",
+   "mode": "groups",
+   "a": 9,
+   "b": 4,
+   "emoji": "\ud83c\udf1f",
+   "hint": "Try: 10\u00d74=40, then subtract one group of 4",
+   "fact": "9 \u00d7 4 = 36. The 9s trick: 10\u00d74=40, minus 1\u00d74=4, gives 36",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_06",
+   "mode": "array",
+   "a": 8,
+   "b": 4,
+   "hint": "Count one row of 4, then count 8 rows. Or use the doubling trick!",
+   "fact": "8 rows of 4 = 32. 8 \u00d7 4 = 32. Doubling: 4\u00d74=16, double=32",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_07",
+   "mode": "array",
+   "a": 7,
+   "b": 5,
+   "hint": "Count each row: 5, 10, 15, 20, 25, 30, 35",
+   "fact": "7 rows of 5 = 35. 7 \u00d7 5 = 35",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_08",
+   "mode": "array",
+   "a": 9,
+   "b": 3,
+   "hint": "Count by 3s: 3,6,9,12,15,18,21,24,27. Or try 10\u00d73 minus 1\u00d73!",
+   "fact": "9 rows of 3 = 27. The 9s trick saves counting: 10\u00d73\u22123=27",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_09",
+   "mode": "missing_factor",
+   "known": 7,
+   "answer": 4,
+   "product": 28,
+   "hint": "Count by 7: 7,14,21,28. How many jumps to reach 28?",
+   "fact": "7 \u00d7 4 = 28. Four jumps of 7 reaches 28.",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_10",
+   "mode": "missing_factor",
+   "known": 9,
+   "answer": 3,
+   "product": 27,
+   "hint": "Try: 9\u00d71=9, 9\u00d72=18, 9\u00d73=?",
+   "fact": "9 \u00d7 3 = 27. The 9s pattern: digits in answer always add up to 9! (2+7=9)",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_11",
+   "mode": "missing_factor",
+   "known": 8,
+   "answer": 4,
+   "product": 32,
+   "hint": "Count by 8: 8, 16, 24, 32. How many 8s?",
+   "fact": "8 \u00d7 4 = 32. Doubling trick: 4\u00d74=16, double to get 32.",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_12",
+   "mode": "missing_factor",
+   "known": 7,
+   "answer": 7,
+   "product": 49,
+   "hint": "7 \u00d7 ? = 49. Count by 7: 7,14,21,28,35,42,49. How many jumps?",
+   "fact": "7 \u00d7 7 = 49. This is called 7 squared! 7\u00d77 is a square number.",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_13",
+   "mode": "missing_factor",
+   "known": 9,
+   "answer": 4,
+   "product": 36,
+   "hint": "9 \u00d7 ? = 36. Try: 9\u00d71=9, \u00d72=18, \u00d73=27, \u00d74=?",
+   "fact": "9 \u00d7 4 = 36. The digit trick: 3+6=9. The 9 times table always adds to 9!",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_14",
+   "mode": "commutativity",
+   "a": 7,
+   "b": 4,
+   "product": 28,
+   "hint": "The array stays the same size whether you rotate it or not!",
+   "fact": "7 \u00d7 4 = 4 \u00d7 7 = 28. This always works, no matter how big the numbers!",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_15",
+   "mode": "commutativity",
+   "a": 9,
+   "b": 3,
+   "product": 27,
+   "hint": "Swap the numbers around \u2014 the total never changes!",
+   "fact": "9 \u00d7 3 = 3 \u00d7 9 = 27. Commutativity works for all multiplications.",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_16",
+   "mode": "word_problem",
+   "a": 7,
+   "b": 4,
+   "emoji": "\ud83d\udcda",
+   "story": "There are {a} shelves in a library. Each shelf holds {b} books. How many books altogether?",
+   "hint": "7 groups of 4. Try: count by 4 seven times: 4,8,12,16,20,24,28",
+   "fact": "7 shelves \u00d7 4 books = 28 books. 7 \u00d7 4 = 28",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_17",
+   "mode": "word_problem",
+   "a": 9,
+   "b": 3,
+   "emoji": "\ud83c\udfc0",
+   "story": "There are {a} boxes of balls. Each box has {b} balls inside. How many balls altogether?",
+   "hint": "9 groups of 3. Shortcut: 10\u00d73=30, then take away 1 group of 3",
+   "fact": "9 boxes \u00d7 3 balls = 27 balls. 9 \u00d7 3 = 27",
+   "difficulty": "hard"
+  },
+  {
+   "id": "mlt_h_18",
+   "mode": "word_problem",
+   "a": 8,
+   "b": 5,
+   "emoji": "\ud83c\udfa8",
+   "story": "There are {a} children in art class. Each child gets {b} crayons. How many crayons altogether?",
+   "hint": "8 groups of 5. Tip: count by 5 eight times, or try 8\u00d75=half of 8\u00d710!",
+   "fact": "8 \u00d7 5 = 40. Halving trick: 8\u00d710=80, half of that = 40",
+   "difficulty": "hard"
+  }
+ ]
+}

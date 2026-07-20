@@ -1,0 +1,33 @@
+/* ============================================================
+   base.css — CSS reset, body/app shell, screen transitions.
+   Depends on: tokens.css
+   ============================================================ */
+
+/* ====================================================================
+     RESET & BASE
+     ==================================================================== */
+  *,*::before,*::after{ box-sizing:border-box; }
+
+
+:focus-visible{ outline:3px solid var(--accent-dark); outline-offset:2px; border-radius:6px; }
+
+
+.app{
+    max-width:720px; margin:0 auto; height:100vh; height:100dvh;
+    display:flex; flex-direction:column; position:relative; overflow:hidden;
+    contain:layout;
+  }
+
+
+.screen{
+    flex:1; display:flex; flex-direction:column; min-height:0;
+    padding:14px 16px calc(14px + env(safe-area-inset-bottom));
+    padding-top:calc(14px + env(safe-area-inset-top));
+    animation:screenEnter .45s cubic-bezier(.34,1.56,.64,1) both; overflow-x:hidden;
+    will-change:transform, opacity;
+  }
+
+
+/* Screens that have no sticky footer can scroll vertically if their content
+     genuinely exceeds the viewport (e.g. home grid on a tiny phone). */
+  .screen.scrollable{ overflow-y:auto; -webkit-overflow-scrolling:touch; }

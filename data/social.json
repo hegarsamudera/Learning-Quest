@@ -1,0 +1,1418 @@
+{
+ "mapsDirections": [
+  {
+   "id": "md-1",
+   "question": "What is a map?",
+   "emoji": "\ud83d\uddfa\ufe0f",
+   "options": [
+    "A type of book",
+    "A drawing that shows what a place looks like from above",
+    "A list of directions",
+    "A photograph of a city"
+   ],
+   "answer": 1,
+   "fact": "A map is a flat picture showing what an area looks like from above \u2014 like a bird's eye view!"
+  },
+  {
+   "id": "md-2",
+   "question": "What direction does the sun rise?",
+   "emoji": "\ud83c\udf05",
+   "options": [
+    "North",
+    "South",
+    "East",
+    "West"
+   ],
+   "answer": 2,
+   "fact": "The sun always rises in the East and sets in the West \u2014 these are key compass directions!"
+  },
+  {
+   "id": "md-3",
+   "question": "How many main compass directions are there?",
+   "emoji": "\ud83e\udded",
+   "options": [
+    "2",
+    "4",
+    "6",
+    "8"
+   ],
+   "answer": 1,
+   "fact": "There are 4 main compass directions: North, South, East and West \u2014 remember NEWS!"
+  },
+  {
+   "id": "md-4",
+   "question": "What is a compass used for?",
+   "emoji": "\ud83e\udded",
+   "options": [
+    "To measure distance",
+    "To find North, South, East and West",
+    "To draw maps",
+    "To show where shops are"
+   ],
+   "answer": 1,
+   "fact": "A compass always points North \u2014 it helps explorers and travellers find their direction!"
+  },
+  {
+   "id": "md-5",
+   "question": "What is a map key (legend) for?",
+   "emoji": "\ud83d\udd11",
+   "options": [
+    "To lock the map",
+    "To explain what the symbols on a map mean",
+    "To show the map's title",
+    "To measure distances"
+   ],
+   "answer": 1,
+   "fact": "A map key explains what each symbol means \u2014 a little tree might mean a forest, a dot might mean a town!"
+  },
+  {
+   "id": "md-6",
+   "question": "If you face North, which direction is behind you?",
+   "emoji": "\u2b06\ufe0f",
+   "options": [
+    "East",
+    "West",
+    "South",
+    "North"
+   ],
+   "answer": 2,
+   "fact": "If you face North, South is directly behind you! North and South are opposite directions."
+  },
+  {
+   "id": "md-7",
+   "question": "What does a scale on a map tell us?",
+   "emoji": "\ud83d\udccf",
+   "options": [
+    "What colour things are",
+    "How far apart places really are",
+    "The name of the map",
+    "Which way is North"
+   ],
+   "answer": 1,
+   "fact": "A map scale shows real distances \u2014 for example, 1 cm on the map might equal 1 km in real life!"
+  },
+  {
+   "id": "md-8",
+   "question": "Which of these would you find on a well-made map?",
+   "emoji": "\ud83d\udd35",
+   "options": [
+    "Recipe ingredients",
+    "Compass, scale and key",
+    "Today's weather",
+    "A list of cities only"
+   ],
+   "answer": 1,
+   "fact": "A good map has a compass rose, scale, key and a title to help you understand it!"
+  },
+  {
+   "id": "md-9",
+   "question": "If East is on your right as you face North, what is on your left?",
+   "emoji": "\ud83d\udc48",
+   "options": [
+    "North",
+    "South",
+    "East",
+    "West"
+   ],
+   "answer": 3,
+   "fact": "If East is right and you face North, then West is to your left \u2014 opposite to East!"
+  },
+  {
+   "id": "md-10",
+   "question": "What is a globe?",
+   "emoji": "\ud83c\udf0d",
+   "options": [
+    "A flat map of a country",
+    "A round model of the Earth",
+    "A picture of space",
+    "A map of a city"
+   ],
+   "answer": 1,
+   "fact": "A globe is a round 3D model of Earth \u2014 it shows the true shape of continents and oceans!"
+  },
+  {
+   "id": "md-11",
+   "question": "What symbol usually marks a city on a map?",
+   "emoji": "\ud83c\udfd9\ufe0f",
+   "options": [
+    "A triangle",
+    "A wave",
+    "A dot or circle",
+    "A cross"
+   ],
+   "answer": 2,
+   "fact": "Cities are usually shown with a dot or circle on maps \u2014 bigger cities sometimes have larger dots!"
+  },
+  {
+   "id": "md-12",
+   "question": "Which way does a compass needle always point?",
+   "emoji": "\ud83e\udded",
+   "options": [
+    "South",
+    "East",
+    "West",
+    "North"
+   ],
+   "answer": 3,
+   "fact": "A compass needle always points towards magnetic North \u2014 it is how people have navigated for centuries!"
+  },
+  {
+   "id": "md-13",
+   "question": "What is a street map used for?",
+   "emoji": "\ud83c\udfd9\ufe0f",
+   "options": [
+    "To find your way around a town or city",
+    "To show weather patterns",
+    "To track animals",
+    "To plan farm fields"
+   ],
+   "answer": 0,
+   "fact": "Street maps show roads, buildings and landmarks to help you navigate around a town!"
+  },
+  {
+   "id": "md-14",
+   "question": "What does NE stand for on a compass?",
+   "emoji": "\ud83e\udded",
+   "options": [
+    "New East",
+    "North East",
+    "Northern Edge",
+    "North End"
+   ],
+   "answer": 1,
+   "fact": "NE stands for North East \u2014 it is the direction between North and East on a compass!"
+  },
+  {
+   "id": "md-15",
+   "question": "Which type of map shows where countries are in the world?",
+   "emoji": "\ud83c\udf0d",
+   "options": [
+    "A street map",
+    "A world map",
+    "A weather map",
+    "A treasure map"
+   ],
+   "answer": 1,
+   "fact": "A world map shows all the countries and continents on Earth \u2014 great for geography!"
+  },
+  {
+   "id": "md-16",
+   "question": "What is a landmark?",
+   "emoji": "\ud83d\uddfd",
+   "options": [
+    "The border of a country",
+    "A well-known feature used for navigation",
+    "A type of compass",
+    "A map symbol"
+   ],
+   "answer": 1,
+   "fact": "Landmarks are famous or easily recognised places \u2014 like a tall tower \u2014 used to help find your way!"
+  },
+  {
+   "id": "md-17",
+   "question": "What are continents?",
+   "emoji": "\ud83c\udf0d",
+   "options": [
+    "Very large countries",
+    "The largest areas of land on Earth",
+    "Types of oceans",
+    "Islands in the sea"
+   ],
+   "answer": 1,
+   "fact": "Continents are the seven huge landmasses on Earth: Africa, Asia, Europe, the Americas, Oceania, Antarctica!"
+  },
+  {
+   "id": "md-18",
+   "question": "What is the equator?",
+   "emoji": "\ud83c\udf10",
+   "options": [
+    "The top of the Earth",
+    "An imaginary line around the middle of the Earth",
+    "The edge of a map",
+    "A type of compass"
+   ],
+   "answer": 1,
+   "fact": "The equator is an imaginary line around Earth's middle \u2014 countries near it are hottest because the sun is strongest there!"
+  }
+ ],
+ "communityHelpers": [
+  {
+   "id": "ch-1",
+   "question": "Who helps us when our house is on fire?",
+   "emoji": "\ud83d\ude92",
+   "options": [
+    "Police officer",
+    "Firefighter",
+    "Doctor",
+    "Teacher"
+   ],
+   "answer": 1,
+   "fact": "Firefighters put out fires and rescue people \u2014 they are true heroes in our community!"
+  },
+  {
+   "id": "ch-2",
+   "question": "Who helps keep our community safe from crime?",
+   "emoji": "\ud83d\udc6e",
+   "options": [
+    "Chef",
+    "Plumber",
+    "Police officer",
+    "Gardener"
+   ],
+   "answer": 2,
+   "fact": "Police officers protect people and keep order in our communities \u2014 they help in emergencies!"
+  },
+  {
+   "id": "ch-3",
+   "question": "Who teaches children at school?",
+   "emoji": "\ud83d\udcda",
+   "options": [
+    "Nurse",
+    "Builder",
+    "Teacher",
+    "Dentist"
+   ],
+   "answer": 2,
+   "fact": "Teachers help children learn and grow every day \u2014 one of the most important community helpers!"
+  },
+  {
+   "id": "ch-4",
+   "question": "Who helps us when we are sick or injured?",
+   "emoji": "\ud83c\udfe5",
+   "options": [
+    "Librarian",
+    "Chef",
+    "Doctor or nurse",
+    "Postman"
+   ],
+   "answer": 2,
+   "fact": "Doctors and nurses care for sick and injured people \u2014 they work in hospitals, clinics and surgeries!"
+  },
+  {
+   "id": "ch-5",
+   "question": "Who delivers letters and parcels to our homes?",
+   "emoji": "\ud83d\udcec",
+   "options": [
+    "Firefighter",
+    "Postman",
+    "Builder",
+    "Farmer"
+   ],
+   "answer": 1,
+   "fact": "Postal workers deliver our mail every day \u2014 even in rain and snow!"
+  },
+  {
+   "id": "ch-6",
+   "question": "Who grows the food we eat?",
+   "emoji": "\ud83c\udf3e",
+   "options": [
+    "Doctor",
+    "Farmer",
+    "Pilot",
+    "Singer"
+   ],
+   "answer": 1,
+   "fact": "Farmers grow crops and raise animals for food \u2014 without farmers we would have nothing to eat!"
+  },
+  {
+   "id": "ch-7",
+   "question": "Who builds houses and buildings?",
+   "emoji": "\ud83c\udfd7\ufe0f",
+   "options": [
+    "Pilot",
+    "Dentist",
+    "Builder or construction worker",
+    "Chef"
+   ],
+   "answer": 2,
+   "fact": "Construction workers and builders use tools and materials to build the homes and buildings we live in!"
+  },
+  {
+   "id": "ch-8",
+   "question": "Who flies aeroplanes?",
+   "emoji": "\u2708\ufe0f",
+   "options": [
+    "Engineer",
+    "Pilot",
+    "Driver",
+    "Sailor"
+   ],
+   "answer": 1,
+   "fact": "Pilots fly aeroplanes \u2014 they train for many years to learn to fly safely through the skies!"
+  },
+  {
+   "id": "ch-9",
+   "question": "Who looks after our teeth?",
+   "emoji": "\ud83e\uddb7",
+   "options": [
+    "Doctor",
+    "Vet",
+    "Dentist",
+    "Nurse"
+   ],
+   "answer": 2,
+   "fact": "Dentists check and care for our teeth \u2014 visiting the dentist regularly keeps your teeth healthy!"
+  },
+  {
+   "id": "ch-10",
+   "question": "Who looks after sick animals?",
+   "emoji": "\ud83d\udc3e",
+   "options": [
+    "Dentist",
+    "Vet",
+    "Doctor",
+    "Farmer"
+   ],
+   "answer": 1,
+   "fact": "Vets (veterinarians) are doctors for animals \u2014 they treat pets and farm animals!"
+  },
+  {
+   "id": "ch-11",
+   "question": "Who helps us find books at a library?",
+   "emoji": "\ud83d\udcda",
+   "options": [
+    "Librarian",
+    "Teacher",
+    "Archivist",
+    "Postman"
+   ],
+   "answer": 0,
+   "fact": "Librarians help people find books and information \u2014 they run libraries which are open to everyone!"
+  },
+  {
+   "id": "ch-12",
+   "question": "Who prepares and cooks food in a restaurant?",
+   "emoji": "\ud83d\udc68\u200d\ud83c\udf73",
+   "options": [
+    "Waiter",
+    "Chef",
+    "Farmer",
+    "Cashier"
+   ],
+   "answer": 1,
+   "fact": "Chefs are trained cooks who prepare delicious meals \u2014 they work in restaurants, hotels and schools!"
+  },
+  {
+   "id": "ch-13",
+   "question": "Who helps put out fires in the forest?",
+   "emoji": "\ud83c\udf32",
+   "options": [
+    "Farmer",
+    "Police officer",
+    "Firefighter",
+    "Builder"
+   ],
+   "answer": 2,
+   "fact": "Firefighters tackle all types of fires \u2014 including huge forest fires that can spread very quickly!"
+  },
+  {
+   "id": "ch-14",
+   "question": "Who drives buses and trains?",
+   "emoji": "\ud83d\ude8c",
+   "options": [
+    "Pilot",
+    "Mechanic",
+    "Bus or train driver",
+    "Postman"
+   ],
+   "answer": 2,
+   "fact": "Bus and train drivers take people where they need to go \u2014 public transport helps communities move!"
+  },
+  {
+   "id": "ch-15",
+   "question": "What do community helpers have in common?",
+   "emoji": "\ud83e\udd1d",
+   "options": [
+    "They all earn lots of money",
+    "They all help other people",
+    "They all wear uniforms",
+    "They all work outdoors"
+   ],
+   "answer": 1,
+   "fact": "Community helpers all work to serve and help other people \u2014 their jobs make our community better!"
+  },
+  {
+   "id": "ch-16",
+   "question": "Who fixes broken pipes and water problems in homes?",
+   "emoji": "\ud83d\udd27",
+   "options": [
+    "Electrician",
+    "Plumber",
+    "Builder",
+    "Painter"
+   ],
+   "answer": 1,
+   "fact": "Plumbers fix water pipes, taps and drains \u2014 they make sure we have clean water in our homes!"
+  },
+  {
+   "id": "ch-17",
+   "question": "Who helps at the scene of a car accident?",
+   "emoji": "\ud83d\ude91",
+   "options": [
+    "Teacher only",
+    "Paramedic and police",
+    "Chef and builder",
+    "Farmer and pilot"
+   ],
+   "answer": 1,
+   "fact": "Paramedics and police officers both respond to accidents \u2014 teamwork saves lives!"
+  },
+  {
+   "id": "ch-18",
+   "question": "Why is it important to have community helpers?",
+   "emoji": "\ud83c\udf1f",
+   "options": [
+    "So we don't have to work ourselves",
+    "To keep our community safe, healthy and running smoothly",
+    "So children don't have to go to school",
+    "To make streets look nice"
+   ],
+   "answer": 1,
+   "fact": "Community helpers are essential \u2014 they keep us safe, healthy and educated, and make society function!"
+  }
+ ],
+ "worldContinents": [
+  {
+   "id": "wc-1",
+   "question": "How many continents are there in the world?",
+   "emoji": "\ud83c\udf0d",
+   "options": [
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "answer": 2,
+   "fact": "There are 7 continents: Africa, Asia, Europe, North America, South America, Oceania and Antarctica!"
+  },
+  {
+   "id": "wc-2",
+   "question": "Which is the largest continent?",
+   "emoji": "\ud83c\udf0f",
+   "options": [
+    "Africa",
+    "Europe",
+    "North America",
+    "Asia"
+   ],
+   "answer": 3,
+   "fact": "Asia is the largest continent \u2014 it covers about 30% of Earth's total land area!"
+  },
+  {
+   "id": "wc-3",
+   "question": "Which continent is at the South Pole?",
+   "emoji": "\u2744\ufe0f",
+   "options": [
+    "Australia",
+    "Antarctica",
+    "Africa",
+    "Asia"
+   ],
+   "answer": 1,
+   "fact": "Antarctica is at the South Pole \u2014 it is the coldest, windiest and driest continent on Earth!"
+  },
+  {
+   "id": "wc-4",
+   "question": "Which continent has the most countries?",
+   "emoji": "\ud83c\udf0d",
+   "options": [
+    "Asia",
+    "Europe",
+    "Africa",
+    "North America"
+   ],
+   "answer": 2,
+   "fact": "Africa has 54 countries \u2014 more than any other continent! It is also the second largest continent."
+  },
+  {
+   "id": "wc-5",
+   "question": "Which continent is Indonesia in?",
+   "emoji": "\ud83c\udfdd\ufe0f",
+   "options": [
+    "Africa",
+    "Europe",
+    "Asia",
+    "North America"
+   ],
+   "answer": 2,
+   "fact": "Indonesia is in Asia \u2014 it is the largest archipelago (group of islands) country in the world!"
+  },
+  {
+   "id": "wc-6",
+   "question": "Which ocean lies between Europe and North America?",
+   "emoji": "\ud83c\udf0a",
+   "options": [
+    "Pacific Ocean",
+    "Indian Ocean",
+    "Atlantic Ocean",
+    "Arctic Ocean"
+   ],
+   "answer": 2,
+   "fact": "The Atlantic Ocean separates Europe and North America \u2014 it is the second largest ocean!"
+  },
+  {
+   "id": "wc-7",
+   "question": "What is the smallest continent?",
+   "emoji": "\ud83e\udd98",
+   "options": [
+    "Europe",
+    "Antarctica",
+    "Oceania",
+    "South America"
+   ],
+   "answer": 2,
+   "fact": "Oceania (also called Australia) is the smallest continent \u2014 it includes Australia, New Zealand and Pacific islands!"
+  },
+  {
+   "id": "wc-8",
+   "question": "Which continent is Egypt in?",
+   "emoji": "\ud83c\udfdb\ufe0f",
+   "options": [
+    "Asia",
+    "Europe",
+    "Africa",
+    "South America"
+   ],
+   "answer": 2,
+   "fact": "Egypt is in Africa \u2014 it is famous for its ancient pyramids and the Nile River!"
+  },
+  {
+   "id": "wc-9",
+   "question": "Which continent is Brazil in?",
+   "emoji": "\ud83c\udf3f",
+   "options": [
+    "North America",
+    "Africa",
+    "Asia",
+    "South America"
+   ],
+   "answer": 3,
+   "fact": "Brazil is in South America \u2014 it has the Amazon Rainforest, the world's largest tropical rainforest!"
+  },
+  {
+   "id": "wc-10",
+   "question": "What are the five oceans of the world?",
+   "emoji": "\ud83c\udf0a",
+   "options": [
+    "Atlantic, Pacific, Indian, Arctic, Southern",
+    "Atlantic, Pacific, Indian, Arctic, Mediterranean",
+    "Pacific, Atlantic, Indian, Black, Southern",
+    "Arctic, Atlantic, Pacific, Red, Indian"
+   ],
+   "answer": 0,
+   "fact": "The 5 oceans are Atlantic, Pacific, Indian, Arctic and Southern \u2014 they cover 71% of Earth's surface!"
+  },
+  {
+   "id": "wc-11",
+   "question": "Which continent is France in?",
+   "emoji": "\ud83d\uddfc",
+   "options": [
+    "Asia",
+    "Africa",
+    "North America",
+    "Europe"
+   ],
+   "answer": 3,
+   "fact": "France is in Europe \u2014 Europe is home to 44 countries including the UK, Germany and Spain!"
+  },
+  {
+   "id": "wc-12",
+   "question": "Which continent is Canada in?",
+   "emoji": "\ud83c\udf41",
+   "options": [
+    "Europe",
+    "South America",
+    "North America",
+    "Asia"
+   ],
+   "answer": 2,
+   "fact": "Canada is in North America \u2014 it is the second largest country in the world by area!"
+  },
+  {
+   "id": "wc-13",
+   "question": "Which is the least populated continent?",
+   "emoji": "\ud83e\uddca",
+   "options": [
+    "Oceania",
+    "Antarctica",
+    "Europe",
+    "South America"
+   ],
+   "answer": 1,
+   "fact": "Antarctica has no permanent residents \u2014 only scientists live there temporarily in research stations!"
+  },
+  {
+   "id": "wc-14",
+   "question": "What is the largest country in the world?",
+   "emoji": "\ud83c\udf0d",
+   "options": [
+    "China",
+    "USA",
+    "Canada",
+    "Russia"
+   ],
+   "answer": 3,
+   "fact": "Russia is the largest country in the world \u2014 it spans 11 time zones across Europe and Asia!"
+  },
+  {
+   "id": "wc-15",
+   "question": "Which continent has the Amazon Rainforest?",
+   "emoji": "\ud83c\udf3f",
+   "options": [
+    "Africa",
+    "Asia",
+    "North America",
+    "South America"
+   ],
+   "answer": 3,
+   "fact": "The Amazon Rainforest is in South America \u2014 it produces 20% of the world's oxygen!"
+  },
+  {
+   "id": "wc-16",
+   "question": "On which continent would you find the Sahara Desert?",
+   "emoji": "\ud83c\udfdc\ufe0f",
+   "options": [
+    "Asia",
+    "Australia",
+    "Africa",
+    "North America"
+   ],
+   "answer": 2,
+   "fact": "The Sahara Desert is in Africa \u2014 it is the largest hot desert in the world!"
+  },
+  {
+   "id": "wc-17",
+   "question": "Which ocean is the largest?",
+   "emoji": "\ud83c\udf0a",
+   "options": [
+    "Atlantic Ocean",
+    "Indian Ocean",
+    "Pacific Ocean",
+    "Arctic Ocean"
+   ],
+   "answer": 2,
+   "fact": "The Pacific Ocean is the largest \u2014 it covers more area than all Earth's land put together!"
+  },
+  {
+   "id": "wc-18",
+   "question": "What do we call people who study countries and continents?",
+   "emoji": "\ud83d\udd2d",
+   "options": [
+    "Scientists",
+    "Biologists",
+    "Geographers",
+    "Historians"
+   ],
+   "answer": 2,
+   "fact": "Geographers study the Earth \u2014 including continents, countries, weather, people and environments!"
+  }
+ ],
+ "needsWants": [
+  {
+   "id": "nw-1",
+   "question": "What is a 'need'?",
+   "emoji": "\ud83d\udca7",
+   "options": [
+    "Something we would like to have",
+    "Something we must have to survive",
+    "Something fun to buy",
+    "Something given as a gift"
+   ],
+   "answer": 1,
+   "fact": "A need is something we cannot live without \u2014 like food, water, shelter and clothing!"
+  },
+  {
+   "id": "nw-2",
+   "question": "Which of these is a NEED?",
+   "emoji": "\ud83c\udf5a",
+   "options": [
+    "A toy car",
+    "A video game",
+    "Food to eat",
+    "A new bicycle"
+   ],
+   "answer": 2,
+   "fact": "Food is a need \u2014 without food, our bodies cannot grow or function properly!"
+  },
+  {
+   "id": "nw-3",
+   "question": "What is a 'want'?",
+   "emoji": "\ud83c\udfae",
+   "options": [
+    "Something we must have to live",
+    "Something we would like but do not need to survive",
+    "Food and water",
+    "A place to sleep"
+   ],
+   "answer": 1,
+   "fact": "A want is something nice to have but not essential \u2014 like toys, games or sweets!"
+  },
+  {
+   "id": "nw-4",
+   "question": "Which of these is a WANT?",
+   "emoji": "\ud83c\udfae",
+   "options": [
+    "Clean water",
+    "A warm home",
+    "A video game",
+    "Clothing"
+   ],
+   "answer": 2,
+   "fact": "A video game is a want \u2014 it is fun but we can survive without it!"
+  },
+  {
+   "id": "nw-5",
+   "question": "Which of these is a NEED?",
+   "emoji": "\ud83c\udfe0",
+   "options": [
+    "A swimming pool",
+    "A second car",
+    "Shelter or a home",
+    "A holiday"
+   ],
+   "answer": 2,
+   "fact": "Shelter is a need \u2014 we need protection from cold, heat and rain to stay healthy and safe!"
+  },
+  {
+   "id": "nw-6",
+   "question": "Why is it important to know the difference between needs and wants?",
+   "emoji": "\ud83d\udca1",
+   "options": [
+    "So we can buy everything we want",
+    "To help us make good decisions about money",
+    "To make shopping more fun",
+    "So we never have to work"
+   ],
+   "answer": 1,
+   "fact": "Understanding needs vs wants helps us make smart choices \u2014 meet needs before spending on wants!"
+  },
+  {
+   "id": "nw-7",
+   "question": "Which of these is a NEED?",
+   "emoji": "\ud83e\udde5",
+   "options": [
+    "A fashion hat",
+    "Clothing to keep warm",
+    "Designer shoes",
+    "A new bag"
+   ],
+   "answer": 1,
+   "fact": "Clothing is a basic need \u2014 we need it to protect us from the weather and stay healthy!"
+  },
+  {
+   "id": "nw-8",
+   "question": "A child asks for a toy but the family needs groceries. Which should come first?",
+   "emoji": "\ud83d\uded2",
+   "options": [
+    "The toy",
+    "The groceries",
+    "Both at the same time",
+    "Neither"
+   ],
+   "answer": 1,
+   "fact": "Groceries (food) are a need \u2014 needs should always come before wants when making choices!"
+  },
+  {
+   "id": "nw-9",
+   "question": "Which of these is a WANT?",
+   "emoji": "\ud83d\udc8e",
+   "options": [
+    "Medicine when sick",
+    "Water to drink",
+    "Expensive jewellery",
+    "A coat in winter"
+   ],
+   "answer": 2,
+   "fact": "Jewellery is a want \u2014 it is decorative but not necessary for survival!"
+  },
+  {
+   "id": "nw-10",
+   "question": "What is a budget?",
+   "emoji": "\ud83d\udcb0",
+   "options": [
+    "A type of bank",
+    "A plan for how to spend money",
+    "A type of shop",
+    "A list of wants"
+   ],
+   "answer": 1,
+   "fact": "A budget is a plan for spending money wisely \u2014 it helps make sure needs are covered before wants!"
+  },
+  {
+   "id": "nw-11",
+   "question": "Which of these is a NEED?",
+   "emoji": "\ud83d\udc8a",
+   "options": [
+    "New trainers",
+    "Medicine when you are ill",
+    "A holiday",
+    "A new phone"
+   ],
+   "answer": 1,
+   "fact": "Medicine is a need when you are sick \u2014 keeping healthy is essential for life!"
+  },
+  {
+   "id": "nw-12",
+   "question": "What might happen if a family spends all their money on wants?",
+   "emoji": "\u26a0\ufe0f",
+   "options": [
+    "They become happier",
+    "They might not be able to afford their needs",
+    "They save more money",
+    "Nothing changes"
+   ],
+   "answer": 1,
+   "fact": "If we spend on wants first, we might not have enough for needs \u2014 this is why budgeting matters!"
+  },
+  {
+   "id": "nw-13",
+   "question": "Which of these is a WANT?",
+   "emoji": "\ud83c\udf66",
+   "options": [
+    "A bed to sleep in",
+    "Healthy food",
+    "Ice cream",
+    "Clean drinking water"
+   ],
+   "answer": 2,
+   "fact": "Ice cream is a want \u2014 it is delicious but not essential for staying alive!"
+  },
+  {
+   "id": "nw-14",
+   "question": "Is clean water a need or a want?",
+   "emoji": "\ud83d\udca7",
+   "options": [
+    "A want",
+    "A need",
+    "Neither",
+    "Both equally"
+   ],
+   "answer": 1,
+   "fact": "Clean water is an absolute need \u2014 our bodies are about 60% water and we cannot survive without it!"
+  },
+  {
+   "id": "nw-15",
+   "question": "Which of these is a NEED for a baby?",
+   "emoji": "\ud83d\udc76",
+   "options": [
+    "Expensive toys",
+    "Milk and food",
+    "Designer clothes",
+    "Many gadgets"
+   ],
+   "answer": 1,
+   "fact": "A baby needs milk and food to grow \u2014 this is the most important need for a young child!"
+  },
+  {
+   "id": "nw-16",
+   "question": "Can the same thing be a need for one person and a want for another?",
+   "emoji": "\ud83e\udd14",
+   "options": [
+    "No, never",
+    "Yes, sometimes",
+    "Always",
+    "Only for adults"
+   ],
+   "answer": 1,
+   "fact": "Context matters \u2014 a wheelchair is a need for someone who cannot walk, but might be a want in other situations!"
+  },
+  {
+   "id": "nw-17",
+   "question": "Which of these is a WANT?",
+   "emoji": "\ud83c\udfa1",
+   "options": [
+    "A warm coat",
+    "A trip to the funfair",
+    "Healthy meals",
+    "Somewhere to live"
+   ],
+   "answer": 1,
+   "fact": "A funfair trip is a want \u2014 it is a fun experience but not essential for survival!"
+  },
+  {
+   "id": "nw-18",
+   "question": "What is the most important thing to buy FIRST when you have limited money?",
+   "emoji": "\ud83d\udca1",
+   "options": [
+    "Wants",
+    "Treats",
+    "Needs",
+    "Entertainment"
+   ],
+   "answer": 2,
+   "fact": "Needs always come first \u2014 food, shelter, water and healthcare are more important than any want!"
+  }
+ ],
+ "holidaysCultures": [
+  {
+   "id": "hc-1",
+   "question": "Which festival celebrates the new year in China?",
+   "emoji": "\ud83d\udc09",
+   "options": [
+    "Diwali",
+    "Lunar New Year",
+    "Christmas",
+    "Eid"
+   ],
+   "answer": 1,
+   "fact": "Lunar New Year (Chinese New Year) is celebrated with fireworks, red envelopes and dragon dances!"
+  },
+  {
+   "id": "hc-2",
+   "question": "What is Diwali known as?",
+   "emoji": "\ud83e\ude94",
+   "options": [
+    "The Festival of Rain",
+    "The Festival of Lights",
+    "The Festival of Colours",
+    "The Festival of Music"
+   ],
+   "answer": 1,
+   "fact": "Diwali is the Festival of Lights \u2014 celebrated by Hindus, Sikhs and Jains with lamps, fireworks and sweets!"
+  },
+  {
+   "id": "hc-3",
+   "question": "Which holiday involves giving gifts and decorating a tree?",
+   "emoji": "\ud83c\udf84",
+   "options": [
+    "Eid",
+    "Hanukkah",
+    "Christmas",
+    "Diwali"
+   ],
+   "answer": 2,
+   "fact": "Christmas is celebrated on 25 December \u2014 many people decorate trees and exchange gifts!"
+  },
+  {
+   "id": "hc-4",
+   "question": "What is Eid al-Fitr?",
+   "emoji": "\ud83c\udf19",
+   "options": [
+    "A Hindu harvest festival",
+    "A celebration at the end of Ramadan for Muslims",
+    "A Chinese new year festival",
+    "A Buddhist holiday"
+   ],
+   "answer": 1,
+   "fact": "Eid al-Fitr marks the end of Ramadan (the Muslim month of fasting) \u2014 families feast and give gifts!"
+  },
+  {
+   "id": "hc-5",
+   "question": "What is the name of the Jewish festival of lights?",
+   "emoji": "\ud83d\udd4e",
+   "options": [
+    "Passover",
+    "Rosh Hashanah",
+    "Hanukkah",
+    "Sukkot"
+   ],
+   "answer": 2,
+   "fact": "Hanukkah is the Jewish Festival of Lights \u2014 celebrated for 8 nights by lighting a menorah candle each night!"
+  },
+  {
+   "id": "hc-6",
+   "question": "Which festival involves throwing coloured powder?",
+   "emoji": "\ud83c\udf08",
+   "options": [
+    "Diwali",
+    "Holi",
+    "Eid",
+    "Christmas"
+   ],
+   "answer": 1,
+   "fact": "Holi is a Hindu festival of colours \u2014 people throw bright coloured powder to celebrate spring!"
+  },
+  {
+   "id": "hc-7",
+   "question": "What is culture?",
+   "emoji": "\ud83c\udf0d",
+   "options": [
+    "A type of food",
+    "The language people speak only",
+    "The beliefs, traditions and way of life shared by a group of people",
+    "The clothes people wear only"
+   ],
+   "answer": 2,
+   "fact": "Culture includes a group's food, language, music, traditions, art and celebrations \u2014 it makes each community unique!"
+  },
+  {
+   "id": "hc-8",
+   "question": "What food is traditionally eaten at Chinese New Year for good luck?",
+   "emoji": "\ud83e\udd5f",
+   "options": [
+    "Pizza",
+    "Dumplings",
+    "Sandwiches",
+    "Tacos"
+   ],
+   "answer": 1,
+   "fact": "Dumplings are eaten at Chinese New Year \u2014 their shape resembles ancient gold ingots, symbolising wealth and luck!"
+  },
+  {
+   "id": "hc-9",
+   "question": "Which country celebrates Thanksgiving as a national holiday?",
+   "emoji": "\ud83e\udd83",
+   "options": [
+    "UK",
+    "Australia",
+    "USA",
+    "India"
+   ],
+   "answer": 2,
+   "fact": "Thanksgiving is celebrated in the USA on the fourth Thursday of November \u2014 families give thanks and eat a big meal!"
+  },
+  {
+   "id": "hc-10",
+   "question": "What does the word 'traditional' mean?",
+   "emoji": "\ud83d\udc58",
+   "options": [
+    "Something new and modern",
+    "Something passed down through generations",
+    "Something bought in a shop",
+    "Something worn at school"
+   ],
+   "answer": 1,
+   "fact": "Traditional means something handed down from one generation to the next \u2014 like recipes, clothes and celebrations!"
+  },
+  {
+   "id": "hc-11",
+   "question": "Why is it important to learn about different cultures?",
+   "emoji": "\ud83e\udd1d",
+   "options": [
+    "To copy other people",
+    "To understand, respect and celebrate how different people live",
+    "To travel to other countries",
+    "To learn different languages only"
+   ],
+   "answer": 1,
+   "fact": "Learning about other cultures builds respect and understanding \u2014 it helps us live together peacefully in a diverse world!"
+  },
+  {
+   "id": "hc-12",
+   "question": "What is a tradition?",
+   "emoji": "\ud83c\udf8e",
+   "options": [
+    "A new invention",
+    "A custom or practice passed down through time",
+    "A modern celebration",
+    "A type of food"
+   ],
+   "answer": 1,
+   "fact": "A tradition is something done repeatedly over time \u2014 like a family always making a special meal on birthdays!"
+  },
+  {
+   "id": "hc-13",
+   "question": "Which festival is celebrated by decorating homes with lanterns?",
+   "emoji": "\ud83c\udfee",
+   "options": [
+    "Easter",
+    "Diwali",
+    "Halloween",
+    "Valentine's Day"
+   ],
+   "answer": 1,
+   "fact": "Diwali homes are decorated with diyas (clay lamps) and lanterns \u2014 fireworks light up the night sky!"
+  },
+  {
+   "id": "hc-14",
+   "question": "What do Muslims do during Ramadan?",
+   "emoji": "\ud83c\udf19",
+   "options": [
+    "Exchange gifts",
+    "Fast from sunrise to sunset each day",
+    "Throw coloured powder",
+    "Light candles for 8 nights"
+   ],
+   "answer": 1,
+   "fact": "During Ramadan, Muslims fast from sunrise to sunset for 30 days \u2014 it is a time for prayer and reflection!"
+  },
+  {
+   "id": "hc-15",
+   "question": "Which festival involves wearing costumes and trick-or-treating?",
+   "emoji": "\ud83c\udf83",
+   "options": [
+    "Easter",
+    "Diwali",
+    "Halloween",
+    "Bonfire Night"
+   ],
+   "answer": 2,
+   "fact": "Halloween is celebrated on 31 October \u2014 children dress up in costumes and go trick-or-treating!"
+  },
+  {
+   "id": "hc-16",
+   "question": "What is a national holiday?",
+   "emoji": "\ud83c\udff3\ufe0f",
+   "options": [
+    "A holiday you take at school",
+    "A day off celebrated across a whole country",
+    "A private family celebration",
+    "A religious day only"
+   ],
+   "answer": 1,
+   "fact": "A national holiday is a day celebrated by a whole country \u2014 like Independence Day in the USA!"
+  },
+  {
+   "id": "hc-17",
+   "question": "What is the Islamic greeting used during Eid?",
+   "emoji": "\ud83c\udf1f",
+   "options": [
+    "Shalom",
+    "Merry Christmas",
+    "Eid Mubarak",
+    "Namaste"
+   ],
+   "answer": 2,
+   "fact": "'Eid Mubarak' means 'Blessed Eid' in Arabic \u2014 it is the traditional greeting shared during Eid celebrations!"
+  },
+  {
+   "id": "hc-18",
+   "question": "Why do different countries have different celebrations?",
+   "emoji": "\ud83c\udf0d",
+   "options": [
+    "Because they do not talk to each other",
+    "Each country has its own unique history, religion and traditions",
+    "Because they have different weather",
+    "Because they celebrate on different days by chance"
+   ],
+   "answer": 1,
+   "fact": "Celebrations reflect a country's history, religion and culture \u2014 diversity in celebrations makes the world interesting!"
+  }
+ ],
+ "timelinesHistory": [
+  {
+   "id": "th-1",
+   "question": "What is a timeline?",
+   "emoji": "\ud83d\udcc5",
+   "options": [
+    "A list of important people",
+    "A drawing that shows events in the order they happened",
+    "A type of clock",
+    "A map of history"
+   ],
+   "answer": 1,
+   "fact": "A timeline shows events in the order they happened \u2014 it helps us see how the past led to the present!"
+  },
+  {
+   "id": "th-2",
+   "question": "What does 'past' mean?",
+   "emoji": "\u23ea",
+   "options": [
+    "What will happen in the future",
+    "What is happening now",
+    "What already happened",
+    "What might happen"
+   ],
+   "answer": 2,
+   "fact": "The past is everything that has already happened \u2014 history studies the past to learn from it!"
+  },
+  {
+   "id": "th-3",
+   "question": "What does 'present' mean in time?",
+   "emoji": "\u23fa\ufe0f",
+   "options": [
+    "A gift",
+    "What is happening right now",
+    "What happened yesterday",
+    "What will happen tomorrow"
+   ],
+   "answer": 1,
+   "fact": "The present is right now \u2014 this exact moment! It is between the past and the future."
+  },
+  {
+   "id": "th-4",
+   "question": "What does 'future' mean?",
+   "emoji": "\u23e9",
+   "options": [
+    "What has already happened",
+    "What is happening now",
+    "What will happen later",
+    "What happened long ago"
+   ],
+   "answer": 2,
+   "fact": "The future is what has not happened yet \u2014 it is everything still to come after right now!"
+  },
+  {
+   "id": "th-5",
+   "question": "What is history?",
+   "emoji": "\ud83c\udfdb\ufe0f",
+   "options": [
+    "The study of science",
+    "The study of the past \u2014 events and people from long ago",
+    "The study of maps",
+    "The study of nature"
+   ],
+   "answer": 1,
+   "fact": "History is the study of past events \u2014 we learn from history to understand how the world became what it is today!"
+  },
+  {
+   "id": "th-6",
+   "question": "What is a source in history?",
+   "emoji": "\ud83d\udcdc",
+   "options": [
+    "A river or stream",
+    "Evidence from the past, like a document or object",
+    "A type of school",
+    "A famous person"
+   ],
+   "answer": 1,
+   "fact": "Historical sources are evidence \u2014 diaries, photographs, buildings and objects all help us learn about the past!"
+  },
+  {
+   "id": "th-7",
+   "question": "Which of these is a PRIMARY source?",
+   "emoji": "\ud83d\udcdc",
+   "options": [
+    "A book written 100 years later",
+    "A diary written by someone at the time",
+    "A documentary film",
+    "A modern history textbook"
+   ],
+   "answer": 1,
+   "fact": "A primary source was created at the time of the event \u2014 like diaries, letters, photos or objects from that period!"
+  },
+  {
+   "id": "th-8",
+   "question": "What do we call objects or remains from the past?",
+   "emoji": "\ud83c\udffa",
+   "options": [
+    "Souvenirs",
+    "Artefacts",
+    "Documents",
+    "Memories"
+   ],
+   "answer": 1,
+   "fact": "Artefacts are objects made or used by people in the past \u2014 archaeologists dig them up and study them!"
+  },
+  {
+   "id": "th-9",
+   "question": "Why do we study history?",
+   "emoji": "\ud83d\udca1",
+   "options": [
+    "To memorise dates",
+    "To understand how we got to where we are and learn from the past",
+    "To predict the weather",
+    "To draw timelines only"
+   ],
+   "answer": 1,
+   "fact": "Studying history helps us understand our world, learn from mistakes and appreciate how people lived before us!"
+  },
+  {
+   "id": "th-10",
+   "question": "What does BC mean in history?",
+   "emoji": "\ud83d\udcdc",
+   "options": [
+    "Before Computer",
+    "Before Christ \u2014 counting years before year 1",
+    "British Culture",
+    "Between Countries"
+   ],
+   "answer": 1,
+   "fact": "BC means 'Before Christ' \u2014 years counted backwards from year 1. The larger the BC number, the further back in time!"
+  },
+  {
+   "id": "th-11",
+   "question": "What does AD mean in dates?",
+   "emoji": "\ud83d\udcc5",
+   "options": [
+    "After Date",
+    "Anno Domini \u2014 years counted from year 1 onwards",
+    "A new Discovery",
+    "After Dinosaurs"
+   ],
+   "answer": 1,
+   "fact": "AD stands for 'Anno Domini' (Latin for 'in the year of the Lord') \u2014 the years we use today, like 2025 AD!"
+  },
+  {
+   "id": "th-12",
+   "question": "What is an archaeologist?",
+   "emoji": "\u26cf\ufe0f",
+   "options": [
+    "A scientist who studies stars",
+    "A person who digs up and studies objects from the past",
+    "A history teacher",
+    "A museum curator"
+   ],
+   "answer": 1,
+   "fact": "Archaeologists excavate (dig up) sites to find artefacts and learn about how people lived long ago!"
+  },
+  {
+   "id": "th-13",
+   "question": "What is a museum?",
+   "emoji": "\ud83c\udfdb\ufe0f",
+   "options": [
+    "A type of library",
+    "A place where historical objects and art are kept and displayed",
+    "A government building",
+    "A type of school"
+   ],
+   "answer": 1,
+   "fact": "Museums collect, preserve and display objects from history and art \u2014 visiting them is like stepping into the past!"
+  },
+  {
+   "id": "th-14",
+   "question": "On a timeline, which event comes first?",
+   "emoji": "\u23ea",
+   "options": [
+    "The one furthest to the right",
+    "The one in the middle",
+    "The one furthest to the left",
+    "The most important one"
+   ],
+   "answer": 2,
+   "fact": "On a left-to-right timeline, events on the left happened first \u2014 earliest events are always on the left!"
+  },
+  {
+   "id": "th-15",
+   "question": "What is a century?",
+   "emoji": "\ud83d\udcaf",
+   "options": [
+    "10 years",
+    "50 years",
+    "100 years",
+    "1000 years"
+   ],
+   "answer": 2,
+   "fact": "A century is 100 years \u2014 we are currently living in the 21st century (the 2000s)!"
+  },
+  {
+   "id": "th-16",
+   "question": "What is a decade?",
+   "emoji": "\ud83d\udd1f",
+   "options": [
+    "10 years",
+    "100 years",
+    "1000 years",
+    "1 year"
+   ],
+   "answer": 0,
+   "fact": "A decade is 10 years \u2014 the 1990s was a decade, and so was the 2010s!"
+  },
+  {
+   "id": "th-17",
+   "question": "What is a millennium?",
+   "emoji": "\ud83c\udf0d",
+   "options": [
+    "100 years",
+    "500 years",
+    "1000 years",
+    "10,000 years"
+   ],
+   "answer": 2,
+   "fact": "A millennium is 1000 years \u2014 we celebrated a new millennium in the year 2000!"
+  },
+  {
+   "id": "th-18",
+   "question": "Which of these is a secondary source?",
+   "emoji": "\ud83d\udcda",
+   "options": [
+    "A letter written during a war",
+    "A photograph taken at the time of an event",
+    "A history book written about an event by a modern author",
+    "A soldier's diary"
+   ],
+   "answer": 2,
+   "fact": "A secondary source was created after the event, using primary sources \u2014 like a history textbook written today about a past war!"
+  }
+ ]
+}

@@ -1,0 +1,1890 @@
+{
+ "animalLifeCycles": [
+  {
+   "id": "alc-1",
+   "question": "What comes out of a frog's egg?",
+   "emoji": "\ud83e\udd5a",
+   "options": [
+    "A tadpole",
+    "A tiny frog",
+    "A caterpillar",
+    "A fish"
+   ],
+   "answer": 0,
+   "fact": "Frogs hatch from eggs as tadpoles \u2014 they look like little fish!"
+  },
+  {
+   "id": "alc-2",
+   "question": "What does a caterpillar turn into?",
+   "emoji": "\ud83d\udc1b",
+   "options": [
+    "A bee",
+    "A butterfly",
+    "A worm",
+    "A spider"
+   ],
+   "answer": 1,
+   "fact": "A caterpillar wraps itself in a chrysalis and transforms into a butterfly!"
+  },
+  {
+   "id": "alc-3",
+   "question": "What is a baby dog called?",
+   "emoji": "\ud83d\udc36",
+   "options": [
+    "A lamb",
+    "A cub",
+    "A puppy",
+    "A foal"
+   ],
+   "answer": 2,
+   "fact": "Baby dogs are called puppies. They are born with their eyes closed!"
+  },
+  {
+   "id": "alc-4",
+   "question": "Which of these hatches from an egg?",
+   "emoji": "\ud83d\udc14",
+   "options": [
+    "A cow",
+    "A cat",
+    "A chicken",
+    "A rabbit"
+   ],
+   "answer": 2,
+   "fact": "Chickens lay eggs and the chick grows inside before hatching!"
+  },
+  {
+   "id": "alc-5",
+   "question": "What is the first stage of a butterfly's life?",
+   "emoji": "\ud83e\udd8b",
+   "options": [
+    "Chrysalis",
+    "Egg",
+    "Butterfly",
+    "Caterpillar"
+   ],
+   "answer": 1,
+   "fact": "A butterfly's life starts as a tiny egg laid on a leaf!"
+  },
+  {
+   "id": "alc-6",
+   "question": "A tadpole grows legs and becomes a...",
+   "emoji": "\ud83d\udc38",
+   "options": [
+    "Fish",
+    "Snake",
+    "Frog",
+    "Newt"
+   ],
+   "answer": 2,
+   "fact": "As tadpoles grow, they develop legs and their tail disappears!"
+  },
+  {
+   "id": "alc-7",
+   "question": "What is a baby cat called?",
+   "emoji": "\ud83d\udc31",
+   "options": [
+    "Kit",
+    "Cub",
+    "Kitten",
+    "Foal"
+   ],
+   "answer": 2,
+   "fact": "Baby cats are called kittens. They need their mum's milk to grow!"
+  },
+  {
+   "id": "alc-8",
+   "question": "Which animal goes through metamorphosis?",
+   "emoji": "\ud83e\udd8b",
+   "options": [
+    "Dog",
+    "Butterfly",
+    "Fish",
+    "Horse"
+   ],
+   "answer": 1,
+   "fact": "Metamorphosis means changing shape completely \u2014 like a caterpillar into a butterfly!"
+  },
+  {
+   "id": "alc-9",
+   "question": "What is a baby horse called?",
+   "emoji": "\ud83d\udc34",
+   "options": [
+    "Foal",
+    "Calf",
+    "Lamb",
+    "Kid"
+   ],
+   "answer": 0,
+   "fact": "A baby horse is called a foal. It can walk within hours of being born!"
+  },
+  {
+   "id": "alc-10",
+   "question": "What does a chrysalis contain?",
+   "emoji": "\ud83e\uded8",
+   "options": [
+    "A caterpillar changing into a butterfly",
+    "A spider's eggs",
+    "A bee's honey",
+    "A frog's eggs"
+   ],
+   "answer": 0,
+   "fact": "Inside a chrysalis, the caterpillar's body completely reorganises into a butterfly!"
+  },
+  {
+   "id": "alc-11",
+   "question": "A baby sheep is called a...",
+   "emoji": "\ud83d\udc11",
+   "options": [
+    "Calf",
+    "Lamb",
+    "Kid",
+    "Piglet"
+   ],
+   "answer": 1,
+   "fact": "Baby sheep are called lambs. They are born in spring and love to jump!"
+  },
+  {
+   "id": "alc-12",
+   "question": "Which animal lays eggs AND feeds babies with milk?",
+   "emoji": "\ud83e\udd86",
+   "options": [
+    "Dog",
+    "Platypus",
+    "Butterfly",
+    "Frog"
+   ],
+   "answer": 1,
+   "fact": "The platypus is a mammal that lays eggs \u2014 one of very few mammals that does!"
+  },
+  {
+   "id": "alc-13",
+   "question": "What do most baby birds eat?",
+   "emoji": "\ud83d\udc26",
+   "options": [
+    "Seeds only",
+    "Insects brought by parents",
+    "Honey",
+    "Leaves"
+   ],
+   "answer": 1,
+   "fact": "Parent birds catch insects and worms to feed their chicks in the nest!"
+  },
+  {
+   "id": "alc-14",
+   "question": "How many stages are in a butterfly's life cycle?",
+   "emoji": "\ud83e\udd8b",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "answer": 2,
+   "fact": "Egg \u2192 Caterpillar \u2192 Chrysalis \u2192 Butterfly \u2014 four amazing stages!"
+  },
+  {
+   "id": "alc-15",
+   "question": "What stage comes after the chrysalis?",
+   "emoji": "\ud83e\uded8",
+   "options": [
+    "Egg",
+    "Caterpillar",
+    "Butterfly",
+    "Larva"
+   ],
+   "answer": 2,
+   "fact": "After the chrysalis stage, a beautiful butterfly emerges!"
+  },
+  {
+   "id": "alc-16",
+   "question": "A baby cow is called a...",
+   "emoji": "\ud83d\udc04",
+   "options": [
+    "Lamb",
+    "Foal",
+    "Calf",
+    "Kid"
+   ],
+   "answer": 2,
+   "fact": "Baby cows are called calves. They drink their mother's milk when young!"
+  },
+  {
+   "id": "alc-17",
+   "question": "What is a life cycle?",
+   "emoji": "\ud83d\udd04",
+   "options": [
+    "The stages of an animal's life from birth to death",
+    "How fast an animal runs",
+    "What an animal eats",
+    "Where an animal lives"
+   ],
+   "answer": 0,
+   "fact": "A life cycle shows all the stages an animal goes through during its life!"
+  },
+  {
+   "id": "alc-18",
+   "question": "Which of these is NOT a stage in a frog's life cycle?",
+   "emoji": "\ud83d\udc38",
+   "options": [
+    "Egg",
+    "Tadpole",
+    "Chrysalis",
+    "Frog"
+   ],
+   "answer": 2,
+   "fact": "A chrysalis is part of a butterfly's life cycle, not a frog's!"
+  }
+ ],
+ "plantParts": [
+  {
+   "id": "pp-1",
+   "question": "What part of a plant is underground?",
+   "emoji": "\ud83c\udf31",
+   "options": [
+    "Leaf",
+    "Flower",
+    "Root",
+    "Stem"
+   ],
+   "answer": 2,
+   "fact": "Roots grow underground and soak up water and minerals for the plant!"
+  },
+  {
+   "id": "pp-2",
+   "question": "What do leaves do for a plant?",
+   "emoji": "\ud83c\udf43",
+   "options": [
+    "Make seeds",
+    "Soak up water",
+    "Make food using sunlight",
+    "Hold the plant up"
+   ],
+   "answer": 2,
+   "fact": "Leaves use sunlight, water and air to make food for the plant \u2014 called photosynthesis!"
+  },
+  {
+   "id": "pp-3",
+   "question": "What does the stem do?",
+   "emoji": "\ud83c\udf3f",
+   "options": [
+    "Makes food",
+    "Carries water up the plant",
+    "Absorbs sunlight",
+    "Makes seeds"
+   ],
+   "answer": 1,
+   "fact": "The stem acts like a straw, carrying water and nutrients from the roots to the leaves!"
+  },
+  {
+   "id": "pp-4",
+   "question": "Where does a seed grow?",
+   "emoji": "\ud83c\udf3b",
+   "options": [
+    "In the leaf",
+    "In the flower",
+    "Underground in soil",
+    "In the stem"
+   ],
+   "answer": 2,
+   "fact": "Seeds are planted in soil where they can get water and nutrients to grow!"
+  },
+  {
+   "id": "pp-5",
+   "question": "What colour are most plant leaves?",
+   "emoji": "\ud83c\udf40",
+   "options": [
+    "Red",
+    "Purple",
+    "Green",
+    "Yellow"
+   ],
+   "answer": 2,
+   "fact": "Leaves are green because of chlorophyll \u2014 the special stuff that captures sunlight!"
+  },
+  {
+   "id": "pp-6",
+   "question": "Which part of the plant makes seeds?",
+   "emoji": "\ud83c\udf38",
+   "options": [
+    "Root",
+    "Stem",
+    "Leaf",
+    "Flower"
+   ],
+   "answer": 3,
+   "fact": "Flowers are the reproductive part of a plant \u2014 they make seeds to grow new plants!"
+  },
+  {
+   "id": "pp-7",
+   "question": "What do roots absorb from the soil?",
+   "emoji": "\ud83d\udca7",
+   "options": [
+    "Sunlight",
+    "Water and minerals",
+    "Air",
+    "Seeds"
+   ],
+   "answer": 1,
+   "fact": "Roots have tiny hairs that absorb water and minerals from the soil!"
+  },
+  {
+   "id": "pp-8",
+   "question": "What do plants need to make their own food?",
+   "emoji": "\u2600\ufe0f",
+   "options": [
+    "Sunlight, water and air",
+    "Soil and seeds only",
+    "Rain and wind",
+    "Insects and worms"
+   ],
+   "answer": 0,
+   "fact": "Plants need sunlight, water and carbon dioxide from air to make food by photosynthesis!"
+  },
+  {
+   "id": "pp-9",
+   "question": "What is photosynthesis?",
+   "emoji": "\ud83c\udf3f",
+   "options": [
+    "How plants drink water",
+    "How plants make food from sunlight",
+    "How plants grow roots",
+    "How flowers make colours"
+   ],
+   "answer": 1,
+   "fact": "Photosynthesis is when plants use sunlight, water and air to make their own food \u2014 clever!"
+  },
+  {
+   "id": "pp-10",
+   "question": "Which part of a plant grows towards the sun?",
+   "emoji": "\ud83c\udf3b",
+   "options": [
+    "Root",
+    "Leaf",
+    "Seed",
+    "Flower"
+   ],
+   "answer": 1,
+   "fact": "Leaves grow towards sunlight so they can capture as much energy as possible!"
+  },
+  {
+   "id": "pp-11",
+   "question": "What is inside a seed?",
+   "emoji": "\ud83c\udf30",
+   "options": [
+    "Water",
+    "A tiny plant waiting to grow",
+    "Honey",
+    "Chlorophyll"
+   ],
+   "answer": 1,
+   "fact": "Every seed contains a tiny baby plant (embryo) with enough food to start growing!"
+  },
+  {
+   "id": "pp-12",
+   "question": "What do flowers become after they are pollinated?",
+   "emoji": "\ud83c\udf38",
+   "options": [
+    "Roots",
+    "Leaves",
+    "Fruit or seeds",
+    "New stems"
+   ],
+   "answer": 2,
+   "fact": "After pollination, flowers develop into fruit containing seeds for new plants!"
+  },
+  {
+   "id": "pp-13",
+   "question": "Which animals help pollinate flowers?",
+   "emoji": "\ud83d\udc1d",
+   "options": [
+    "Dogs and cats",
+    "Bees and butterflies",
+    "Fish and frogs",
+    "Worms and snails"
+   ],
+   "answer": 1,
+   "fact": "Bees and butterflies carry pollen from flower to flower as they collect nectar!"
+  },
+  {
+   "id": "pp-14",
+   "question": "Why do plants need water?",
+   "emoji": "\ud83d\udca7",
+   "options": [
+    "To taste nice",
+    "To make food and stay healthy",
+    "To attract insects",
+    "To grow flowers faster"
+   ],
+   "answer": 1,
+   "fact": "Water carries nutrients through the plant and is essential for photosynthesis!"
+  },
+  {
+   "id": "pp-15",
+   "question": "What does a seed need to start growing?",
+   "emoji": "\ud83c\udf31",
+   "options": [
+    "Sunlight only",
+    "Water, warmth and soil",
+    "Flowers and insects",
+    "Cold and ice"
+   ],
+   "answer": 1,
+   "fact": "A seed needs water, warmth and soil to germinate \u2014 start growing!"
+  },
+  {
+   "id": "pp-16",
+   "question": "Which part of the plant first appears when a seed germinates?",
+   "emoji": "\ud83c\udf31",
+   "options": [
+    "Flower",
+    "Root",
+    "Fruit",
+    "Full stem"
+   ],
+   "answer": 1,
+   "fact": "The root pushes down into the soil first to anchor the plant and find water!"
+  },
+  {
+   "id": "pp-17",
+   "question": "What gas do plants release that we breathe?",
+   "emoji": "\ud83d\ude2e",
+   "options": [
+    "Carbon dioxide",
+    "Oxygen",
+    "Nitrogen",
+    "Hydrogen"
+   ],
+   "answer": 1,
+   "fact": "Plants absorb carbon dioxide and release oxygen \u2014 the air we breathe! They clean our air!"
+  },
+  {
+   "id": "pp-18",
+   "question": "What connects the roots to the leaves?",
+   "emoji": "\ud83c\udf3f",
+   "options": [
+    "Flower",
+    "Seed",
+    "Stem",
+    "Fruit"
+   ],
+   "answer": 2,
+   "fact": "The stem is the highway connecting roots to leaves, carrying water and food!"
+  }
+ ],
+ "weatherSeasons": [
+  {
+   "id": "ws-1",
+   "question": "How many seasons are there in a year?",
+   "emoji": "\ud83c\udf42",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "6"
+   ],
+   "answer": 2,
+   "fact": "The four seasons are Spring, Summer, Autumn and Winter!"
+  },
+  {
+   "id": "ws-2",
+   "question": "Which season has the most sunshine and is hottest?",
+   "emoji": "\u2600\ufe0f",
+   "options": [
+    "Spring",
+    "Summer",
+    "Autumn",
+    "Winter"
+   ],
+   "answer": 1,
+   "fact": "Summer is the hottest season \u2014 the sun is higher in the sky and days are longest!"
+  },
+  {
+   "id": "ws-3",
+   "question": "In which season do leaves fall from trees?",
+   "emoji": "\ud83c\udf42",
+   "options": [
+    "Spring",
+    "Summer",
+    "Autumn",
+    "Winter"
+   ],
+   "answer": 2,
+   "fact": "In Autumn, days get shorter and cooler, and deciduous trees drop their leaves!"
+  },
+  {
+   "id": "ws-4",
+   "question": "What falls from the sky in winter?",
+   "emoji": "\u2744\ufe0f",
+   "options": [
+    "Rain only",
+    "Snow and ice",
+    "Flowers",
+    "Leaves"
+   ],
+   "answer": 1,
+   "fact": "In cold winter temperatures, water vapour in clouds freezes into snowflakes!"
+  },
+  {
+   "id": "ws-5",
+   "question": "What instrument measures temperature?",
+   "emoji": "\ud83c\udf21\ufe0f",
+   "options": [
+    "Barometer",
+    "Thermometer",
+    "Scale",
+    "Clock"
+   ],
+   "answer": 1,
+   "fact": "A thermometer measures how hot or cold the air is in degrees!"
+  },
+  {
+   "id": "ws-6",
+   "question": "What causes rain?",
+   "emoji": "\ud83c\udf27\ufe0f",
+   "options": [
+    "Wind pushing water",
+    "Water vapour in clouds cooling and falling",
+    "Snow melting",
+    "Rivers overflowing"
+   ],
+   "answer": 1,
+   "fact": "When tiny water droplets in clouds join together and get heavy enough, they fall as rain!"
+  },
+  {
+   "id": "ws-7",
+   "question": "In which season do flowers start to bloom?",
+   "emoji": "\ud83c\udf38",
+   "options": [
+    "Winter",
+    "Autumn",
+    "Spring",
+    "Summer"
+   ],
+   "answer": 2,
+   "fact": "Spring brings warmer weather and longer days \u2014 perfect for flowers to grow!"
+  },
+  {
+   "id": "ws-8",
+   "question": "What is a thermometer used for?",
+   "emoji": "\ud83c\udf21\ufe0f",
+   "options": [
+    "Measuring rainfall",
+    "Measuring temperature",
+    "Measuring wind speed",
+    "Measuring cloud height"
+   ],
+   "answer": 1,
+   "fact": "A thermometer tells us the temperature \u2014 how warm or cold something is!"
+  },
+  {
+   "id": "ws-9",
+   "question": "Which type of cloud brings rain?",
+   "emoji": "\u2601\ufe0f",
+   "options": [
+    "Fluffy white clouds",
+    "Dark grey storm clouds",
+    "Thin wispy clouds",
+    "Small puffy clouds"
+   ],
+   "answer": 1,
+   "fact": "Dark grey cumulonimbus clouds hold lots of water and bring heavy rain!"
+  },
+  {
+   "id": "ws-10",
+   "question": "What is wind?",
+   "emoji": "\ud83d\udca8",
+   "options": [
+    "Moving water",
+    "Moving air",
+    "Moving clouds",
+    "Falling rain"
+   ],
+   "answer": 1,
+   "fact": "Wind is air moving from areas of high pressure to low pressure!"
+  },
+  {
+   "id": "ws-11",
+   "question": "What season comes after Summer?",
+   "emoji": "\ud83c\udf42",
+   "options": [
+    "Spring",
+    "Winter",
+    "Autumn",
+    "Summer"
+   ],
+   "answer": 2,
+   "fact": "After Summer comes Autumn \u2014 days get shorter and temperatures drop!"
+  },
+  {
+   "id": "ws-12",
+   "question": "What do we call water that falls from clouds?",
+   "emoji": "\ud83d\udca7",
+   "options": [
+    "Dew",
+    "Evaporation",
+    "Precipitation",
+    "Condensation"
+   ],
+   "answer": 2,
+   "fact": "Precipitation is the word for water falling from clouds \u2014 rain, snow, sleet or hail!"
+  },
+  {
+   "id": "ws-13",
+   "question": "Why is it colder in winter?",
+   "emoji": "\u2744\ufe0f",
+   "options": [
+    "The sun moves further away",
+    "Days are shorter and the sun is lower in the sky",
+    "There are more clouds",
+    "The wind blows harder"
+   ],
+   "answer": 1,
+   "fact": "In winter, Earth tilts away from the sun \u2014 days are shorter and the sun is weaker!"
+  },
+  {
+   "id": "ws-14",
+   "question": "What creates a rainbow?",
+   "emoji": "\ud83c\udf08",
+   "options": [
+    "Sunlight shining through raindrops",
+    "Clouds mixing together",
+    "Wind and rain together",
+    "Snow melting quickly"
+   ],
+   "answer": 0,
+   "fact": "Sunlight bends when it passes through raindrops, splitting into all the colours!"
+  },
+  {
+   "id": "ws-15",
+   "question": "What is a weather forecast?",
+   "emoji": "\ud83d\udcfa",
+   "options": [
+    "A rain map",
+    "A prediction of future weather",
+    "A temperature record",
+    "A cloud drawing"
+   ],
+   "answer": 1,
+   "fact": "A weather forecast predicts what the weather will be like in the coming days!"
+  },
+  {
+   "id": "ws-16",
+   "question": "What season comes after Winter?",
+   "emoji": "\ud83c\udf38",
+   "options": [
+    "Summer",
+    "Autumn",
+    "Spring",
+    "Winter"
+   ],
+   "answer": 2,
+   "fact": "After Winter comes Spring \u2014 temperatures rise and plants start growing again!"
+  },
+  {
+   "id": "ws-17",
+   "question": "What is fog?",
+   "emoji": "\ud83c\udf2b\ufe0f",
+   "options": [
+    "A type of rain",
+    "A low cloud near the ground",
+    "Frozen dew",
+    "A type of snow"
+   ],
+   "answer": 1,
+   "fact": "Fog is basically a cloud that forms near the ground \u2014 it makes it hard to see!"
+  },
+  {
+   "id": "ws-18",
+   "question": "Which of these is a type of precipitation?",
+   "emoji": "\ud83c\udf28\ufe0f",
+   "options": [
+    "Wind",
+    "Thunder",
+    "Hail",
+    "Lightning"
+   ],
+   "answer": 2,
+   "fact": "Hail is balls of ice that form in storm clouds and fall to the ground!"
+  }
+ ],
+ "statesOfMatter": [
+  {
+   "id": "sm-1",
+   "question": "What are the three states of matter?",
+   "emoji": "\ud83e\uddca",
+   "options": [
+    "Hot, warm, cold",
+    "Solid, liquid, gas",
+    "Hard, soft, wet",
+    "Ice, water, steam"
+   ],
+   "answer": 1,
+   "fact": "Everything around us is either a solid, liquid or gas \u2014 the three states of matter!"
+  },
+  {
+   "id": "sm-2",
+   "question": "Which state of matter has a fixed shape?",
+   "emoji": "\ud83e\udea8",
+   "options": [
+    "Liquid",
+    "Gas",
+    "Solid",
+    "Steam"
+   ],
+   "answer": 2,
+   "fact": "Solids keep their shape \u2014 a rock stays a rock no matter where you put it!"
+  },
+  {
+   "id": "sm-3",
+   "question": "What state is water in when it flows?",
+   "emoji": "\ud83d\udca7",
+   "options": [
+    "Solid",
+    "Gas",
+    "Liquid",
+    "Plasma"
+   ],
+   "answer": 2,
+   "fact": "Water is a liquid \u2014 it flows and takes the shape of whatever container it's in!"
+  },
+  {
+   "id": "sm-4",
+   "question": "What happens to water when it freezes?",
+   "emoji": "\ud83e\uddca",
+   "options": [
+    "It becomes a gas",
+    "It becomes a solid (ice)",
+    "It disappears",
+    "It becomes heavier"
+   ],
+   "answer": 1,
+   "fact": "When water gets cold enough (0\u00b0C), it freezes into ice \u2014 a solid!"
+  },
+  {
+   "id": "sm-5",
+   "question": "What is steam?",
+   "emoji": "\u2668\ufe0f",
+   "options": [
+    "Liquid water",
+    "Frozen water",
+    "Water as a gas",
+    "Hot solid water"
+   ],
+   "answer": 2,
+   "fact": "Steam is water in its gas state \u2014 water becomes steam when it gets very hot!"
+  },
+  {
+   "id": "sm-6",
+   "question": "What is the process of liquid water turning into gas called?",
+   "emoji": "\u2601\ufe0f",
+   "options": [
+    "Freezing",
+    "Evaporation",
+    "Condensation",
+    "Melting"
+   ],
+   "answer": 1,
+   "fact": "Evaporation is when liquid water heats up and turns into water vapour (gas)!"
+  },
+  {
+   "id": "sm-7",
+   "question": "What happens to ice when it warms up?",
+   "emoji": "\ud83e\uddca",
+   "options": [
+    "It becomes gas",
+    "It melts into liquid water",
+    "It becomes harder",
+    "It floats away"
+   ],
+   "answer": 1,
+   "fact": "Ice melts into liquid water when the temperature rises above 0\u00b0C!"
+  },
+  {
+   "id": "sm-8",
+   "question": "Which of these is a solid?",
+   "emoji": "\ud83e\udea8",
+   "options": [
+    "Milk",
+    "Air",
+    "A rock",
+    "Juice"
+   ],
+   "answer": 2,
+   "fact": "A rock is a solid \u2014 it has a fixed shape and size!"
+  },
+  {
+   "id": "sm-9",
+   "question": "Which of these is a liquid?",
+   "emoji": "\ud83e\uddc3",
+   "options": [
+    "Ice cube",
+    "Orange juice",
+    "Air",
+    "Honey"
+   ],
+   "answer": 1,
+   "fact": "Orange juice is a liquid \u2014 it flows and takes the shape of its container!"
+  },
+  {
+   "id": "sm-10",
+   "question": "Which of these is a gas?",
+   "emoji": "\ud83d\udca8",
+   "options": [
+    "A pebble",
+    "Milk",
+    "The air we breathe",
+    "Honey"
+   ],
+   "answer": 2,
+   "fact": "Air is a gas \u2014 we can't see it but we can feel it when the wind blows!"
+  },
+  {
+   "id": "sm-11",
+   "question": "What is melting?",
+   "emoji": "\ud83c\udf66",
+   "options": [
+    "Gas turning into liquid",
+    "Solid turning into liquid",
+    "Liquid turning into solid",
+    "Liquid turning into gas"
+   ],
+   "answer": 1,
+   "fact": "Melting is when a solid warms up and becomes a liquid \u2014 like ice cream on a hot day!"
+  },
+  {
+   "id": "sm-12",
+   "question": "What is freezing?",
+   "emoji": "\u2744\ufe0f",
+   "options": [
+    "Gas turning into solid",
+    "Liquid turning into solid",
+    "Solid turning into liquid",
+    "Gas turning into liquid"
+   ],
+   "answer": 1,
+   "fact": "Freezing is when a liquid cools down enough to become a solid!"
+  },
+  {
+   "id": "sm-13",
+   "question": "Can gases be seen?",
+   "emoji": "\ud83d\udca8",
+   "options": [
+    "Always yes",
+    "Always no",
+    "Sometimes \u2014 some gases have colour",
+    "Only at night"
+   ],
+   "answer": 2,
+   "fact": "Most gases are invisible, but some have colour \u2014 like the coloured gas inside neon signs!"
+  },
+  {
+   "id": "sm-14",
+   "question": "What shape does a liquid take?",
+   "emoji": "\ud83d\udca7",
+   "options": [
+    "It always stays round",
+    "The shape of its container",
+    "A flat square",
+    "No shape at all"
+   ],
+   "answer": 1,
+   "fact": "Liquids flow and fill the shape of whatever container holds them!"
+  },
+  {
+   "id": "sm-15",
+   "question": "What does heating do to most solids?",
+   "emoji": "\ud83d\udd25",
+   "options": [
+    "Makes them harder",
+    "Can melt them into liquid",
+    "Makes them heavier",
+    "Turns them straight to gas"
+   ],
+   "answer": 1,
+   "fact": "Heating most solids causes them to melt into liquids \u2014 like butter in a warm pan!"
+  },
+  {
+   "id": "sm-16",
+   "question": "Water is special because it can be...",
+   "emoji": "\ud83d\udca7",
+   "options": [
+    "Only a liquid",
+    "Only a solid or liquid",
+    "A solid, liquid or gas",
+    "Only found on Earth"
+   ],
+   "answer": 2,
+   "fact": "Water is unique \u2014 we see it as ice (solid), water (liquid) and steam (gas) every day!"
+  },
+  {
+   "id": "sm-17",
+   "question": "What is condensation?",
+   "emoji": "\ud83e\uded7",
+   "options": [
+    "Liquid turning to gas",
+    "Gas turning into liquid droplets",
+    "Solid melting",
+    "Ice forming quickly"
+   ],
+   "answer": 1,
+   "fact": "Condensation is when water vapour cools and turns into liquid drops \u2014 like on a cold glass!"
+  },
+  {
+   "id": "sm-18",
+   "question": "At what temperature does water freeze?",
+   "emoji": "\ud83c\udf21\ufe0f",
+   "options": [
+    "100\u00b0C",
+    "50\u00b0C",
+    "0\u00b0C",
+    "-100\u00b0C"
+   ],
+   "answer": 2,
+   "fact": "Water freezes at 0 degrees Celsius \u2014 below that temperature, liquid water becomes ice!"
+  }
+ ],
+ "humanBody": [
+  {
+   "id": "hb-1",
+   "question": "How many bones are in the adult human body?",
+   "emoji": "\ud83e\uddb4",
+   "options": [
+    "106",
+    "206",
+    "306",
+    "406"
+   ],
+   "answer": 1,
+   "fact": "Adults have 206 bones! Babies actually have around 300 \u2014 some fuse together as we grow!"
+  },
+  {
+   "id": "hb-2",
+   "question": "What does the heart do?",
+   "emoji": "\u2764\ufe0f",
+   "options": [
+    "Digest food",
+    "Pump blood around the body",
+    "Help you breathe",
+    "Think and feel"
+   ],
+   "answer": 1,
+   "fact": "Your heart is a muscle that pumps blood through your body \u2014 it beats about 100,000 times a day!"
+  },
+  {
+   "id": "hb-3",
+   "question": "What organ do we use to breathe?",
+   "emoji": "\ud83e\udec1",
+   "options": [
+    "Heart",
+    "Stomach",
+    "Lungs",
+    "Brain"
+   ],
+   "answer": 2,
+   "fact": "We breathe with our lungs \u2014 they take in oxygen and release carbon dioxide!"
+  },
+  {
+   "id": "hb-4",
+   "question": "What does the brain do?",
+   "emoji": "\ud83e\udde0",
+   "options": [
+    "Pumps blood",
+    "Digests food",
+    "Controls the whole body",
+    "Filters blood"
+   ],
+   "answer": 2,
+   "fact": "The brain is the control centre of your body \u2014 it controls everything you think, feel and do!"
+  },
+  {
+   "id": "hb-5",
+   "question": "What are our five senses?",
+   "emoji": "\ud83d\udc41\ufe0f",
+   "options": [
+    "See, hear, touch, smell, taste",
+    "Laugh, cry, yawn, blink, sneeze",
+    "Eyes, ears, nose, tongue, skin",
+    "Think, feel, move, breathe, eat"
+   ],
+   "answer": 0,
+   "fact": "Our five senses are sight, hearing, touch, smell and taste \u2014 they help us understand the world!"
+  },
+  {
+   "id": "hb-6",
+   "question": "What is the job of our skeleton?",
+   "emoji": "\ud83d\udc80",
+   "options": [
+    "Make blood",
+    "Digest food",
+    "Support and protect our body",
+    "Pump oxygen"
+   ],
+   "answer": 2,
+   "fact": "Your skeleton supports your body, lets you move and protects organs like your brain and heart!"
+  },
+  {
+   "id": "hb-7",
+   "question": "What organ digests our food?",
+   "emoji": "\ud83e\udec3",
+   "options": [
+    "Heart",
+    "Lungs",
+    "Stomach and intestines",
+    "Brain"
+   ],
+   "answer": 2,
+   "fact": "Your stomach and intestines break down food so your body can absorb nutrients!"
+  },
+  {
+   "id": "hb-8",
+   "question": "How many senses do humans have?",
+   "emoji": "\ud83d\udc43",
+   "options": [
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "answer": 2,
+   "fact": "Humans have five main senses: sight, hearing, touch, smell and taste!"
+  },
+  {
+   "id": "hb-9",
+   "question": "What are muscles for?",
+   "emoji": "\ud83d\udcaa",
+   "options": [
+    "Making blood",
+    "Moving our body",
+    "Keeping us warm only",
+    "Digesting food"
+   ],
+   "answer": 1,
+   "fact": "Muscles pull on bones to make your body move \u2014 you have over 600 muscles!"
+  },
+  {
+   "id": "hb-10",
+   "question": "What carries oxygen around the body?",
+   "emoji": "\ud83e\ude78",
+   "options": [
+    "Water",
+    "Blood",
+    "Air",
+    "Sweat"
+   ],
+   "answer": 1,
+   "fact": "Blood carries oxygen from your lungs to every cell in your body!"
+  },
+  {
+   "id": "hb-11",
+   "question": "Which organ filters waste from our blood?",
+   "emoji": "\ud83e\uded8",
+   "options": [
+    "Heart",
+    "Lungs",
+    "Kidneys",
+    "Stomach"
+   ],
+   "answer": 2,
+   "fact": "Kidneys filter your blood and remove waste as urine \u2014 they clean your blood 200 times a day!"
+  },
+  {
+   "id": "hb-12",
+   "question": "What is the largest organ in the human body?",
+   "emoji": "\ud83e\udef1",
+   "options": [
+    "Heart",
+    "Brain",
+    "Liver",
+    "Skin"
+   ],
+   "answer": 3,
+   "fact": "Skin is your largest organ \u2014 it protects your whole body and helps control temperature!"
+  },
+  {
+   "id": "hb-13",
+   "question": "What do teeth do?",
+   "emoji": "\ud83e\uddb7",
+   "options": [
+    "Pump blood",
+    "Break food into smaller pieces",
+    "Make saliva",
+    "Help you hear"
+   ],
+   "answer": 1,
+   "fact": "Teeth cut, tear and grind food into smaller pieces so you can swallow and digest it!"
+  },
+  {
+   "id": "hb-14",
+   "question": "Why do we need sleep?",
+   "emoji": "\ud83d\ude34",
+   "options": [
+    "To grow taller only",
+    "So our body and brain can rest and repair",
+    "To stop eating",
+    "To keep warm"
+   ],
+   "answer": 1,
+   "fact": "Sleep lets your brain and body repair themselves \u2014 children need about 10 hours a night!"
+  },
+  {
+   "id": "hb-15",
+   "question": "What happens when you exercise?",
+   "emoji": "\ud83c\udfc3",
+   "options": [
+    "Your heart beats slower",
+    "Your heart beats faster and you breathe more",
+    "You stop growing",
+    "Your muscles shrink"
+   ],
+   "answer": 1,
+   "fact": "Exercise makes your heart and lungs work harder to send more oxygen to your muscles!"
+  },
+  {
+   "id": "hb-16",
+   "question": "What is the function of the lungs?",
+   "emoji": "\ud83e\udec1",
+   "options": [
+    "To pump blood",
+    "To take in oxygen and release carbon dioxide",
+    "To digest food",
+    "To make hormones"
+   ],
+   "answer": 1,
+   "fact": "Every breath, your lungs take in oxygen your body needs and breathe out carbon dioxide waste!"
+  },
+  {
+   "id": "hb-17",
+   "question": "Which part of your body helps you balance?",
+   "emoji": "\ud83e\uddb6",
+   "options": [
+    "Eyes only",
+    "Brain and inner ear working together",
+    "Nose",
+    "Teeth"
+   ],
+   "answer": 1,
+   "fact": "Your brain uses information from your inner ear, eyes and muscles to keep you balanced!"
+  },
+  {
+   "id": "hb-18",
+   "question": "Why do we need to eat a variety of foods?",
+   "emoji": "\ud83e\udd57",
+   "options": [
+    "Because it tastes better",
+    "To get all the nutrients our body needs",
+    "To keep our teeth clean",
+    "So we can run faster"
+   ],
+   "answer": 1,
+   "fact": "Different foods give us different nutrients \u2014 proteins, vitamins, minerals \u2014 that our body needs!"
+  }
+ ],
+ "rocksAndSoil": [
+  {
+   "id": "rs-1",
+   "question": "What are rocks made of?",
+   "emoji": "\ud83e\udea8",
+   "options": [
+    "Sand only",
+    "One or more minerals",
+    "Compressed soil layers",
+    "Plants and animals"
+   ],
+   "answer": 1,
+   "fact": "Rocks are made of one or more minerals \u2014 natural solid materials from the Earth!"
+  },
+  {
+   "id": "rs-2",
+   "question": "Which of these is a type of rock?",
+   "emoji": "\ud83d\udc8e",
+   "options": [
+    "Wood",
+    "Granite",
+    "Mud",
+    "Ice"
+   ],
+   "answer": 1,
+   "fact": "Granite is an igneous rock \u2014 it formed when hot magma cooled and hardened!"
+  },
+  {
+   "id": "rs-3",
+   "question": "What is soil made of?",
+   "emoji": "\ud83c\udf0d",
+   "options": [
+    "Only dirt",
+    "Tiny rock pieces, dead plants and animals",
+    "Only sand",
+    "Only clay"
+   ],
+   "answer": 1,
+   "fact": "Soil is a mixture of tiny rock pieces, dead plants, animals, water and air!"
+  },
+  {
+   "id": "rs-4",
+   "question": "What do plants grow in?",
+   "emoji": "\ud83c\udf31",
+   "options": [
+    "Pure rock",
+    "Soil",
+    "Ice",
+    "Sand only"
+   ],
+   "answer": 1,
+   "fact": "Plants grow best in soil \u2014 it gives them minerals, water and support for their roots!"
+  },
+  {
+   "id": "rs-5",
+   "question": "What are fossils?",
+   "emoji": "\ud83e\udd95",
+   "options": [
+    "Types of soil",
+    "Remains of ancient animals or plants preserved in rock",
+    "Very old rocks",
+    "Underground water"
+   ],
+   "answer": 1,
+   "fact": "Fossils are remains or traces of ancient plants and animals preserved in rock over millions of years!"
+  },
+  {
+   "id": "rs-6",
+   "question": "Which rock type formed from cooled lava?",
+   "emoji": "\ud83c\udf0b",
+   "options": [
+    "Sedimentary",
+    "Metamorphic",
+    "Igneous",
+    "Limestone"
+   ],
+   "answer": 2,
+   "fact": "Igneous rocks form when molten rock (magma or lava) cools and hardens!"
+  },
+  {
+   "id": "rs-7",
+   "question": "What makes soil good for growing plants?",
+   "emoji": "\ud83c\udf31",
+   "options": [
+    "It is hard and rocky",
+    "It contains nutrients and holds water",
+    "It is very dry",
+    "It has no animals in it"
+   ],
+   "answer": 1,
+   "fact": "Good soil holds water and nutrients that plants need \u2014 worms help make soil healthy!"
+  },
+  {
+   "id": "rs-8",
+   "question": "What is the hardest natural material?",
+   "emoji": "\ud83d\udc8e",
+   "options": [
+    "Granite",
+    "Marble",
+    "Diamond",
+    "Quartz"
+   ],
+   "answer": 2,
+   "fact": "Diamond is the hardest natural material on Earth \u2014 it can scratch any other material!"
+  },
+  {
+   "id": "rs-9",
+   "question": "What are pebbles?",
+   "emoji": "\ud83e\udea8",
+   "options": [
+    "Large boulders",
+    "Small smooth rocks",
+    "Types of soil",
+    "Pieces of fossil"
+   ],
+   "answer": 1,
+   "fact": "Pebbles are small smooth rocks \u2014 they get smooth when water tumbles them around for years!"
+  },
+  {
+   "id": "rs-10",
+   "question": "Why are worms important for soil?",
+   "emoji": "\ud83e\udeb1",
+   "options": [
+    "They make soil colourful",
+    "They loosen soil and add nutrients from their waste",
+    "They stop plants growing",
+    "They eat all the water"
+   ],
+   "answer": 1,
+   "fact": "Worms burrow through soil making tunnels for air and water, and their waste adds nutrients!"
+  },
+  {
+   "id": "rs-11",
+   "question": "What is sand made from?",
+   "emoji": "\ud83c\udfd6\ufe0f",
+   "options": [
+    "Crushed shells only",
+    "Tiny particles of rock and minerals",
+    "Dried mud",
+    "Crushed plants"
+   ],
+   "answer": 1,
+   "fact": "Sand is made of tiny particles of rock and minerals worn down over millions of years!"
+  },
+  {
+   "id": "rs-12",
+   "question": "Which of these is a property of rocks?",
+   "emoji": "\ud83e\udea8",
+   "options": [
+    "Colour, texture and hardness",
+    "Smell and taste only",
+    "Whether they float",
+    "How fast they grow"
+   ],
+   "answer": 0,
+   "fact": "We can sort rocks by colour, texture (rough or smooth) and hardness!"
+  },
+  {
+   "id": "rs-13",
+   "question": "Where do most rocks come from originally?",
+   "emoji": "\ud83c\udf0b",
+   "options": [
+    "The ocean floor only",
+    "From volcanoes and deep inside the Earth",
+    "Trees and forests",
+    "The sky"
+   ],
+   "answer": 1,
+   "fact": "Most rocks originally formed from magma deep inside the Earth or from volcanic eruptions!"
+  },
+  {
+   "id": "rs-14",
+   "question": "What is clay?",
+   "emoji": "\ud83c\udffa",
+   "options": [
+    "A type of sand",
+    "A smooth sticky type of soil that holds water",
+    "Hard crumbly soil",
+    "A type of pebble"
+   ],
+   "answer": 1,
+   "fact": "Clay soil has very fine particles \u2014 it's sticky when wet and can be moulded into shapes!"
+  },
+  {
+   "id": "rs-15",
+   "question": "How do scientists who study rocks help us?",
+   "emoji": "\ud83d\udd2c",
+   "options": [
+    "They help find oil, gas and minerals underground",
+    "They make weather forecasts",
+    "They study plants",
+    "They predict earthquakes only"
+   ],
+   "answer": 0,
+   "fact": "Geologists study rocks to find useful resources like oil, gas, metals and building materials!"
+  },
+  {
+   "id": "rs-16",
+   "question": "What is erosion?",
+   "emoji": "\ud83c\udf0a",
+   "options": [
+    "When rocks grow bigger",
+    "When wind and water wear away and move rock and soil",
+    "When plants push through rocks",
+    "When soil gets wetter"
+   ],
+   "answer": 1,
+   "fact": "Erosion is when wind, water or ice slowly wears away rock and soil and carries it elsewhere!"
+  },
+  {
+   "id": "rs-17",
+   "question": "Which of these can you find in soil?",
+   "emoji": "\ud83e\udeb1",
+   "options": [
+    "Worms, insects and bacteria",
+    "Only rocks",
+    "Only water",
+    "Only dead leaves"
+   ],
+   "answer": 0,
+   "fact": "Healthy soil is full of tiny creatures \u2014 worms, insects, fungi and billions of bacteria!"
+  },
+  {
+   "id": "rs-18",
+   "question": "What is a volcano?",
+   "emoji": "\ud83c\udf0b",
+   "options": [
+    "A very tall mountain of any kind",
+    "An opening in the Earth where hot magma escapes",
+    "A type of rock formation",
+    "An underground river"
+   ],
+   "answer": 1,
+   "fact": "A volcano is an opening in the Earth's crust where hot melted rock (magma) erupts as lava!"
+  }
+ ],
+ "solarSystem": [
+  {
+   "id": "ss-1",
+   "question": "What is at the centre of our Solar System?",
+   "emoji": "\u2600\ufe0f",
+   "options": [
+    "The Moon",
+    "Earth",
+    "The Sun",
+    "Jupiter"
+   ],
+   "answer": 2,
+   "fact": "The Sun is a star at the centre of our Solar System \u2014 all the planets orbit around it!"
+  },
+  {
+   "id": "ss-2",
+   "question": "How many planets are in our Solar System?",
+   "emoji": "\ud83e\ude90",
+   "options": [
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "answer": 2,
+   "fact": "There are 8 planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune!"
+  },
+  {
+   "id": "ss-3",
+   "question": "Which planet do we live on?",
+   "emoji": "\ud83c\udf0d",
+   "options": [
+    "Mars",
+    "Venus",
+    "Jupiter",
+    "Earth"
+   ],
+   "answer": 3,
+   "fact": "We live on Earth \u2014 the third planet from the Sun and the only one known to have life!"
+  },
+  {
+   "id": "ss-4",
+   "question": "What is the largest planet in our Solar System?",
+   "emoji": "\ud83e\ude90",
+   "options": [
+    "Saturn",
+    "Earth",
+    "Jupiter",
+    "Neptune"
+   ],
+   "answer": 2,
+   "fact": "Jupiter is the biggest planet \u2014 it's so large that all other planets could fit inside it!"
+  },
+  {
+   "id": "ss-5",
+   "question": "Which planet has beautiful rings around it?",
+   "emoji": "\ud83e\ude90",
+   "options": [
+    "Jupiter",
+    "Mars",
+    "Saturn",
+    "Uranus"
+   ],
+   "answer": 2,
+   "fact": "Saturn has spectacular rings made of ice and rock that go all the way around it!"
+  },
+  {
+   "id": "ss-6",
+   "question": "What is the Moon?",
+   "emoji": "\ud83c\udf15",
+   "options": [
+    "A small planet",
+    "A star",
+    "Earth's natural satellite",
+    "A comet"
+   ],
+   "answer": 2,
+   "fact": "The Moon is a natural satellite \u2014 a large ball of rock that orbits around Earth!"
+  },
+  {
+   "id": "ss-7",
+   "question": "Which planet is closest to the Sun?",
+   "emoji": "\u2600\ufe0f",
+   "options": [
+    "Venus",
+    "Earth",
+    "Mars",
+    "Mercury"
+   ],
+   "answer": 3,
+   "fact": "Mercury is the closest planet to the Sun and moves fastest \u2014 a year there is only 88 days!"
+  },
+  {
+   "id": "ss-8",
+   "question": "What is a star?",
+   "emoji": "\u2b50",
+   "options": [
+    "A planet that shines",
+    "A giant ball of hot glowing gas",
+    "A large moon",
+    "A large glowing planet"
+   ],
+   "answer": 1,
+   "fact": "Stars are enormous balls of hot gas producing light and heat through nuclear reactions!"
+  },
+  {
+   "id": "ss-9",
+   "question": "What is our Sun?",
+   "emoji": "\u2600\ufe0f",
+   "options": [
+    "A planet",
+    "A moon",
+    "A star",
+    "A comet"
+   ],
+   "answer": 2,
+   "fact": "Our Sun is a medium-sized star \u2014 it looks big because it's the closest star to Earth!"
+  },
+  {
+   "id": "ss-10",
+   "question": "How long does it take Earth to go around the Sun?",
+   "emoji": "\ud83c\udf0d",
+   "options": [
+    "1 day",
+    "1 month",
+    "1 year",
+    "100 years"
+   ],
+   "answer": 2,
+   "fact": "Earth takes 365 days (one year) to complete its orbit around the Sun!"
+  },
+  {
+   "id": "ss-11",
+   "question": "What causes day and night?",
+   "emoji": "\ud83c\udf17",
+   "options": [
+    "The Moon blocking the Sun",
+    "Earth spinning on its axis",
+    "The Sun moving around Earth",
+    "Clouds covering the Sun"
+   ],
+   "answer": 1,
+   "fact": "Earth spins on its axis \u2014 the side facing the Sun has day, the other side has night!"
+  },
+  {
+   "id": "ss-12",
+   "question": "Which planet is known as the Red Planet?",
+   "emoji": "\ud83d\udd34",
+   "options": [
+    "Venus",
+    "Mars",
+    "Jupiter",
+    "Saturn"
+   ],
+   "answer": 1,
+   "fact": "Mars is called the Red Planet because its surface is covered in reddish iron oxide (rust)!"
+  },
+  {
+   "id": "ss-13",
+   "question": "What is a comet?",
+   "emoji": "\u2604\ufe0f",
+   "options": [
+    "A small planet",
+    "A ball of ice and rock that orbits the Sun",
+    "A type of star",
+    "A moon of Jupiter"
+   ],
+   "answer": 1,
+   "fact": "Comets are balls of ice and dust \u2014 as they near the Sun, the ice melts creating a bright tail!"
+  },
+  {
+   "id": "ss-14",
+   "question": "Which is the smallest planet?",
+   "emoji": "\ud83d\udd35",
+   "options": [
+    "Mars",
+    "Earth",
+    "Mercury",
+    "Pluto"
+   ],
+   "answer": 2,
+   "fact": "Mercury is the smallest planet in our Solar System \u2014 it's not much bigger than our Moon!"
+  },
+  {
+   "id": "ss-15",
+   "question": "What would happen without the Sun's warmth?",
+   "emoji": "\ud83e\udd76",
+   "options": [
+    "Nothing would change",
+    "Earth would freeze and life would not survive",
+    "It would get hotter",
+    "The Moon would disappear"
+   ],
+   "answer": 1,
+   "fact": "Without the Sun, Earth would freeze at -270\u00b0C \u2014 all life depends on the Sun's energy!"
+  },
+  {
+   "id": "ss-16",
+   "question": "How does the Moon shine?",
+   "emoji": "\ud83c\udf15",
+   "options": [
+    "It makes its own light",
+    "It reflects light from the Sun",
+    "It has fire inside",
+    "It absorbs starlight"
+   ],
+   "answer": 1,
+   "fact": "The Moon has no light of its own \u2014 it reflects sunlight like a giant mirror in space!"
+  },
+  {
+   "id": "ss-17",
+   "question": "Which planet has the most moons?",
+   "emoji": "\ud83e\ude90",
+   "options": [
+    "Earth",
+    "Mars",
+    "Saturn",
+    "Mercury"
+   ],
+   "answer": 2,
+   "fact": "Saturn has over 140 confirmed moons \u2014 more than any other planet in our Solar System!"
+  },
+  {
+   "id": "ss-18",
+   "question": "What is the Milky Way?",
+   "emoji": "\ud83c\udf0c",
+   "options": [
+    "A type of cloud",
+    "Our galaxy \u2014 a huge group of stars including our Sun",
+    "A comet's tail",
+    "The asteroid belt"
+   ],
+   "answer": 1,
+   "fact": "The Milky Way is our galaxy \u2014 a spiral of over 200 billion stars, including our Sun!"
+  }
+ ],
+ "foodChains": [
+  {
+   "id": "fc-1",
+   "question": "What is a food chain?",
+   "emoji": "\ud83c\udf3f",
+   "options": [
+    "A type of restaurant",
+    "The order of who eats who in nature",
+    "A map of where animals live",
+    "A diagram of an animal habitat"
+   ],
+   "answer": 1,
+   "fact": "A food chain shows how energy passes from one living thing to another through eating!"
+  },
+  {
+   "id": "fc-2",
+   "question": "What do we call animals that only eat plants?",
+   "emoji": "\ud83d\udc30",
+   "options": [
+    "Carnivores",
+    "Omnivores",
+    "Herbivores",
+    "Predators"
+   ],
+   "answer": 2,
+   "fact": "Herbivores only eat plants \u2014 like rabbits, cows and elephants!"
+  },
+  {
+   "id": "fc-3",
+   "question": "What do we call animals that only eat meat?",
+   "emoji": "\ud83e\udd81",
+   "options": [
+    "Herbivores",
+    "Omnivores",
+    "Carnivores",
+    "Scavengers"
+   ],
+   "answer": 2,
+   "fact": "Carnivores only eat other animals \u2014 like lions, sharks and eagles!"
+  },
+  {
+   "id": "fc-4",
+   "question": "What do we call animals that eat both plants AND meat?",
+   "emoji": "\ud83d\udc3b",
+   "options": [
+    "Herbivores",
+    "Carnivores",
+    "Omnivores",
+    "Predators"
+   ],
+   "answer": 2,
+   "fact": "Omnivores eat both plants and animals \u2014 like bears, foxes and humans!"
+  },
+  {
+   "id": "fc-5",
+   "question": "What always starts a food chain?",
+   "emoji": "\ud83c\udf3f",
+   "options": [
+    "An animal",
+    "A plant",
+    "The sun",
+    "Water"
+   ],
+   "answer": 1,
+   "fact": "Food chains always start with a plant (producer) \u2014 plants get energy from the Sun!"
+  },
+  {
+   "id": "fc-6",
+   "question": "In the food chain grass \u2192 rabbit \u2192 fox, what is the rabbit?",
+   "emoji": "\ud83d\udc30",
+   "options": [
+    "A producer",
+    "A predator",
+    "A consumer",
+    "A decomposer"
+   ],
+   "answer": 2,
+   "fact": "The rabbit is a consumer \u2014 it eats the grass but is also eaten by the fox!"
+  },
+  {
+   "id": "fc-7",
+   "question": "What is a predator?",
+   "emoji": "\ud83e\udd85",
+   "options": [
+    "An animal that only eats plants",
+    "An animal that hunts other animals for food",
+    "An animal that is hunted",
+    "A plant that eats insects"
+   ],
+   "answer": 1,
+   "fact": "A predator is an animal that hunts and eats other animals \u2014 like a hawk hunting mice!"
+  },
+  {
+   "id": "fc-8",
+   "question": "What is prey?",
+   "emoji": "\ud83d\udc2d",
+   "options": [
+    "An animal that hunts others",
+    "An animal that is hunted by predators",
+    "A plant at the start of a food chain",
+    "An animal that eats plants"
+   ],
+   "answer": 1,
+   "fact": "Prey is an animal that gets hunted and eaten by a predator \u2014 like a mouse eaten by an owl!"
+  },
+  {
+   "id": "fc-9",
+   "question": "In the food chain: leaf \u2192 caterpillar \u2192 bird \u2192 hawk \u2014 what does the bird eat?",
+   "emoji": "\ud83d\udc26",
+   "options": [
+    "Leaves",
+    "Hawks",
+    "Caterpillars",
+    "Grass"
+   ],
+   "answer": 2,
+   "fact": "In this food chain, the bird eats caterpillars and is itself eaten by the hawk!"
+  },
+  {
+   "id": "fc-10",
+   "question": "What are decomposers?",
+   "emoji": "\ud83c\udf44",
+   "options": [
+    "Animals that eat plants",
+    "Animals at the top of food chains",
+    "Organisms that break down dead things",
+    "Plants that make food"
+   ],
+   "answer": 2,
+   "fact": "Decomposers like fungi and bacteria break down dead plants and animals, returning nutrients to soil!"
+  },
+  {
+   "id": "fc-11",
+   "question": "What would happen if all plants disappeared?",
+   "emoji": "\ud83c\udf3f",
+   "options": [
+    "Only carnivores would survive",
+    "All animals would eventually die",
+    "Only herbivores would be affected",
+    "Only predators would be affected"
+   ],
+   "answer": 1,
+   "fact": "Without plants, herbivores would starve, then carnivores too \u2014 all life depends on plants!"
+  },
+  {
+   "id": "fc-12",
+   "question": "What is a producer in a food chain?",
+   "emoji": "\ud83c\udf3f",
+   "options": [
+    "An animal that hunts",
+    "A plant that makes its own food",
+    "An animal that eats plants",
+    "A decomposer"
+   ],
+   "answer": 1,
+   "fact": "Producers are plants \u2014 they produce food using sunlight through photosynthesis!"
+  },
+  {
+   "id": "fc-13",
+   "question": "Which of these is an example of a food chain?",
+   "emoji": "\ud83c\udf3e",
+   "options": [
+    "Rain \u2192 cloud \u2192 river \u2192 sea",
+    "Sun \u2192 grass \u2192 cow \u2192 human",
+    "Rock \u2192 soil \u2192 water \u2192 air",
+    "Heat \u2192 light \u2192 wind \u2192 rain"
+   ],
+   "answer": 1,
+   "fact": "Sun \u2192 grass \u2192 cow \u2192 human shows energy passing through a food chain!"
+  },
+  {
+   "id": "fc-14",
+   "question": "What do we call a network of many food chains linked together?",
+   "emoji": "\ud83d\udd78\ufe0f",
+   "options": [
+    "A food circle",
+    "A food web",
+    "A food network",
+    "A food system"
+   ],
+   "answer": 1,
+   "fact": "A food web is many food chains linked together \u2014 most animals eat and are eaten by several others!"
+  },
+  {
+   "id": "fc-15",
+   "question": "In a food chain, where does the energy originally come from?",
+   "emoji": "\u2600\ufe0f",
+   "options": [
+    "Water",
+    "Soil",
+    "The Sun",
+    "Wind"
+   ],
+   "answer": 2,
+   "fact": "All food chain energy starts with the Sun \u2014 plants capture sunlight and pass energy through the chain!"
+  },
+  {
+   "id": "fc-16",
+   "question": "What is an apex predator?",
+   "emoji": "\ud83e\udd88",
+   "options": [
+    "The smallest predator",
+    "The predator at the very top of the food chain with no predators",
+    "A predator that only eats plants",
+    "A baby predator"
+   ],
+   "answer": 1,
+   "fact": "Apex predators like sharks and lions sit at the top of food chains \u2014 nothing hunts them!"
+  },
+  {
+   "id": "fc-17",
+   "question": "Which of these is a herbivore?",
+   "emoji": "\ud83d\udc04",
+   "options": [
+    "Lion",
+    "Shark",
+    "Cow",
+    "Eagle"
+   ],
+   "answer": 2,
+   "fact": "Cows are herbivores \u2014 they only eat grass and plants!"
+  },
+  {
+   "id": "fc-18",
+   "question": "What do owls eat?",
+   "emoji": "\ud83e\udd89",
+   "options": [
+    "Leaves and berries",
+    "Small animals like mice and voles",
+    "Only fish",
+    "Other birds only"
+   ],
+   "answer": 1,
+   "fact": "Owls are carnivores \u2014 they hunt small mammals like mice, voles and shrews at night!"
+  }
+ ]
+}

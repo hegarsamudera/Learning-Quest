@@ -1,0 +1,1182 @@
+{
+ "coloursMixing": [
+  {
+   "id": "cm-1",
+   "question": "What are the three primary colours?",
+   "emoji": "\ud83c\udfa8",
+   "options": [
+    "Red, green, blue",
+    "Red, yellow, blue",
+    "Orange, green, purple",
+    "Pink, white, black"
+   ],
+   "answer": 1,
+   "fact": "The three primary colours are red, yellow and blue \u2014 they cannot be made by mixing other colours!"
+  },
+  {
+   "id": "cm-2",
+   "question": "What colour do you get when you mix red and yellow?",
+   "emoji": "\ud83d\udfe0",
+   "options": [
+    "Purple",
+    "Green",
+    "Orange",
+    "Brown"
+   ],
+   "answer": 2,
+   "fact": "Red + Yellow = Orange! Orange is a secondary colour made by mixing two primary colours together."
+  },
+  {
+   "id": "cm-3",
+   "question": "What colour do you get when you mix blue and yellow?",
+   "emoji": "\ud83d\udfe2",
+   "options": [
+    "Purple",
+    "Green",
+    "Orange",
+    "Brown"
+   ],
+   "answer": 1,
+   "fact": "Blue + Yellow = Green! Green is one of the three secondary colours on the colour wheel."
+  },
+  {
+   "id": "cm-4",
+   "question": "What colour do you get when you mix red and blue?",
+   "emoji": "\ud83d\udfe3",
+   "options": [
+    "Orange",
+    "Green",
+    "Brown",
+    "Purple"
+   ],
+   "answer": 3,
+   "fact": "Red + Blue = Purple! Purple (or violet) is a secondary colour made from two primary colours."
+  },
+  {
+   "id": "cm-5",
+   "question": "What are secondary colours?",
+   "emoji": "\ud83c\udf08",
+   "options": [
+    "Colours you find in nature",
+    "Colours made by mixing two primary colours",
+    "The lightest colours",
+    "The darkest colours"
+   ],
+   "answer": 1,
+   "fact": "Secondary colours (orange, green, purple) are made by mixing two primary colours together!"
+  },
+  {
+   "id": "cm-6",
+   "question": "What do you get when you add white to a colour?",
+   "emoji": "\u2b1c",
+   "options": [
+    "A darker shade",
+    "A tint (lighter colour)",
+    "A brighter colour",
+    "A grey colour"
+   ],
+   "answer": 1,
+   "fact": "Adding white to a colour makes a tint \u2014 a lighter version of that colour, like pink from red + white!"
+  },
+  {
+   "id": "cm-7",
+   "question": "What do you get when you add black to a colour?",
+   "emoji": "\u2b1b",
+   "options": [
+    "A tint",
+    "A shade (darker colour)",
+    "A brighter colour",
+    "A new primary colour"
+   ],
+   "answer": 1,
+   "fact": "Adding black to a colour makes a shade \u2014 a darker version, like dark blue (navy) from blue + black!"
+  },
+  {
+   "id": "cm-8",
+   "question": "What are warm colours?",
+   "emoji": "\ud83d\udd25",
+   "options": [
+    "Blue, green, purple",
+    "Red, orange, yellow",
+    "White, grey, black",
+    "Pink, lilac, mint"
+   ],
+   "answer": 1,
+   "fact": "Warm colours \u2014 red, orange and yellow \u2014 remind us of fire and sunshine. They feel energetic and bold!"
+  },
+  {
+   "id": "cm-9",
+   "question": "What are cool colours?",
+   "emoji": "\u2744\ufe0f",
+   "options": [
+    "Red, orange, yellow",
+    "Blue, green, purple",
+    "Brown, beige, tan",
+    "Gold, silver, bronze"
+   ],
+   "answer": 1,
+   "fact": "Cool colours \u2014 blue, green and purple \u2014 remind us of water and sky. They feel calm and peaceful!"
+  },
+  {
+   "id": "cm-10",
+   "question": "What colour do you get when you mix all three primary colours?",
+   "emoji": "\ud83c\udfa8",
+   "options": [
+    "White",
+    "Rainbow",
+    "Brown or grey",
+    "Black"
+   ],
+   "answer": 2,
+   "fact": "Mixing all three primary colours (red, yellow, blue) together makes brown or muddy grey!"
+  },
+  {
+   "id": "cm-11",
+   "question": "What is the colour wheel?",
+   "emoji": "\ud83c\udfa1",
+   "options": [
+    "A wheel that spins and shows patterns",
+    "A circular diagram showing colours and how they relate to each other",
+    "A type of paint",
+    "A rainbow in a circle"
+   ],
+   "answer": 1,
+   "fact": "The colour wheel arranges colours in a circle showing primary, secondary and how they mix \u2014 artists use it every day!"
+  },
+  {
+   "id": "cm-12",
+   "question": "What are complementary colours?",
+   "emoji": "\ud83d\udd34",
+   "options": [
+    "Colours that are similar",
+    "Colours that are opposite each other on the colour wheel",
+    "Colours that are the same",
+    "Dark and light versions of one colour"
+   ],
+   "answer": 1,
+   "fact": "Complementary colours sit opposite each other on the colour wheel \u2014 like red and green, or blue and orange. Together they pop!"
+  },
+  {
+   "id": "cm-13",
+   "question": "What colour does mixing red and white make?",
+   "emoji": "\ud83c\udf38",
+   "options": [
+    "Orange",
+    "Purple",
+    "Pink",
+    "Peach"
+   ],
+   "answer": 2,
+   "fact": "Red + White = Pink! Pink is a tint of red \u2014 one of the most popular colours in art and fashion!"
+  },
+  {
+   "id": "cm-14",
+   "question": "What is the colour of the sky on a clear day?",
+   "emoji": "\u2600\ufe0f",
+   "options": [
+    "Green",
+    "Blue",
+    "Purple",
+    "Yellow"
+   ],
+   "answer": 1,
+   "fact": "The sky is blue \u2014 sunlight scatters in the atmosphere and blue light bounces most, making the sky appear blue!"
+  },
+  {
+   "id": "cm-15",
+   "question": "Which colour is made by mixing orange and red?",
+   "emoji": "\ud83c\udf05",
+   "options": [
+    "Brown",
+    "Yellow",
+    "Red-orange",
+    "Purple"
+   ],
+   "answer": 2,
+   "fact": "Mixing red and orange makes a red-orange \u2014 a warm sunset colour between the two on the colour wheel!"
+  },
+  {
+   "id": "cm-16",
+   "question": "What is the difference between a 'hue' and a 'shade'?",
+   "emoji": "\ud83c\udfa8",
+   "options": [
+    "They are the same thing",
+    "A hue is a pure colour; a shade is darker (mixed with black)",
+    "A hue is lighter; a shade is brighter",
+    "A shade is mixed with white"
+   ],
+   "answer": 1,
+   "fact": "A hue is a pure colour like red. A shade is that colour darkened with black \u2014 like crimson or maroon!"
+  },
+  {
+   "id": "cm-17",
+   "question": "What tool do artists use to mix paints on?",
+   "emoji": "\ud83c\udfa8",
+   "options": [
+    "Canvas",
+    "Easel",
+    "Palette",
+    "Sketchpad"
+   ],
+   "answer": 2,
+   "fact": "A palette is a flat surface (or tray) that artists use to mix and hold paints \u2014 it can be wood, plastic or paper!"
+  },
+  {
+   "id": "cm-18",
+   "question": "Which famous artist cut off part of his own ear and painted self-portraits?",
+   "emoji": "\ud83c\udf3b",
+   "options": [
+    "Leonardo da Vinci",
+    "Pablo Picasso",
+    "Vincent van Gogh",
+    "Michelangelo"
+   ],
+   "answer": 2,
+   "fact": "Vincent van Gogh was a Dutch artist famous for 'Starry Night' and sunflower paintings \u2014 he used bold, swirling brushstrokes!"
+  }
+ ],
+ "shapesInArt": [
+  {
+   "id": "sa-1",
+   "question": "How many sides does a triangle have?",
+   "emoji": "\ud83d\udd3a",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "answer": 1,
+   "fact": "A triangle has 3 sides and 3 corners \u2014 triangles are one of the strongest shapes in nature and buildings!"
+  },
+  {
+   "id": "sa-2",
+   "question": "How many sides does a square have?",
+   "emoji": "\u2b1b",
+   "options": [
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "answer": 1,
+   "fact": "A square has 4 equal sides and 4 right angles \u2014 all sides are exactly the same length!"
+  },
+  {
+   "id": "sa-3",
+   "question": "What is different between a square and a rectangle?",
+   "emoji": "\ud83d\udfe6",
+   "options": [
+    "Rectangles have more sides",
+    "Rectangles have two longer sides and two shorter sides",
+    "Squares have curved sides",
+    "They are exactly the same"
+   ],
+   "answer": 1,
+   "fact": "Both have 4 right angles, but a rectangle has two longer and two shorter sides \u2014 a square has all four sides equal!"
+  },
+  {
+   "id": "sa-4",
+   "question": "What is a circle?",
+   "emoji": "\u2b55",
+   "options": [
+    "A shape with 4 equal sides",
+    "A perfectly round shape with no corners",
+    "A shape with 3 sides",
+    "A shape with 6 sides"
+   ],
+   "answer": 1,
+   "fact": "A circle is perfectly round \u2014 every point on the edge is the same distance from the centre!"
+  },
+  {
+   "id": "sa-5",
+   "question": "How many sides does a hexagon have?",
+   "emoji": "\ud83d\udd37",
+   "options": [
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "answer": 1,
+   "fact": "A hexagon has 6 sides \u2014 honeycombs are made of hexagons because it is the most efficient shape for storing honey!"
+  },
+  {
+   "id": "sa-6",
+   "question": "What is a 3D version of a square called?",
+   "emoji": "\ud83d\udce6",
+   "options": [
+    "Sphere",
+    "Cylinder",
+    "Cube",
+    "Cone"
+   ],
+   "answer": 2,
+   "fact": "A cube has 6 square faces, 8 corners and 12 edges \u2014 like a dice or a sugar cube!"
+  },
+  {
+   "id": "sa-7",
+   "question": "What shape is a ball?",
+   "emoji": "\u26bd",
+   "options": [
+    "Cube",
+    "Cylinder",
+    "Sphere",
+    "Cone"
+   ],
+   "answer": 2,
+   "fact": "A ball is a sphere \u2014 a perfectly round 3D shape where every point on the surface is equal distance from the centre!"
+  },
+  {
+   "id": "sa-8",
+   "question": "What shape is an ice cream cone?",
+   "emoji": "\ud83c\udf66",
+   "options": [
+    "Sphere",
+    "Cube",
+    "Cylinder",
+    "Cone"
+   ],
+   "answer": 3,
+   "fact": "An ice cream cone is a cone \u2014 a 3D shape with a flat circular base that narrows to a point at the top!"
+  },
+  {
+   "id": "sa-9",
+   "question": "How many corners does a pentagon have?",
+   "emoji": "\u2b50",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "answer": 1,
+   "fact": "A pentagon has 5 sides and 5 corners \u2014 the word 'penta' means five in Greek!"
+  },
+  {
+   "id": "sa-10",
+   "question": "Which famous Dutch artist used geometric shapes in colourful grid paintings?",
+   "emoji": "\ud83c\udfa8",
+   "options": [
+    "Van Gogh",
+    "Mondrian",
+    "Picasso",
+    "Matisse"
+   ],
+   "answer": 1,
+   "fact": "Piet Mondrian painted grids of black lines with red, blue and yellow squares \u2014 his style is called De Stijl!"
+  },
+  {
+   "id": "sa-11",
+   "question": "What shape does a pizza slice look like?",
+   "emoji": "\ud83c\udf55",
+   "options": [
+    "Rectangle",
+    "Square",
+    "Triangle",
+    "Circle"
+   ],
+   "answer": 2,
+   "fact": "A pizza slice is a triangle \u2014 technically a sector (wedge) of a circle!"
+  },
+  {
+   "id": "sa-12",
+   "question": "In art, what does 'pattern' mean?",
+   "emoji": "\ud83d\udd35",
+   "options": [
+    "A mistake in a drawing",
+    "A random mix of shapes",
+    "A design with shapes or colours repeated in a regular order",
+    "A type of paint"
+   ],
+   "answer": 2,
+   "fact": "A pattern repeats shapes or colours in a regular order \u2014 like stripes on a zebra or tiles on a floor!"
+  },
+  {
+   "id": "sa-13",
+   "question": "What is symmetry in art?",
+   "emoji": "\ud83e\udd8b",
+   "options": [
+    "When one side of a shape is the mirror image of the other",
+    "When all colours are the same",
+    "When shapes are very large",
+    "When there are no patterns"
+   ],
+   "answer": 0,
+   "fact": "Symmetry means both sides match perfectly \u2014 butterflies and hearts have symmetry!"
+  },
+  {
+   "id": "sa-14",
+   "question": "How many sides does an octagon have?",
+   "emoji": "\ud83d\uded1",
+   "options": [
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "answer": 2,
+   "fact": "An octagon has 8 sides \u2014 stop signs are octagons! 'Octo' means 8 in Latin."
+  },
+  {
+   "id": "sa-15",
+   "question": "What is the line that divides a shape into two equal halves?",
+   "emoji": "\u2702\ufe0f",
+   "options": [
+    "A diagonal",
+    "A line of symmetry",
+    "A border",
+    "A horizon line"
+   ],
+   "answer": 1,
+   "fact": "A line of symmetry divides a shape into two equal mirror-image halves \u2014 circles have infinite lines of symmetry!"
+  },
+  {
+   "id": "sa-16",
+   "question": "Which shape has no corners or straight edges?",
+   "emoji": "\u2b55",
+   "options": [
+    "Square",
+    "Triangle",
+    "Circle",
+    "Pentagon"
+   ],
+   "answer": 2,
+   "fact": "A circle has no corners or straight edges \u2014 it is perfectly smooth and curved all the way around!"
+  },
+  {
+   "id": "sa-17",
+   "question": "In art, what is a silhouette?",
+   "emoji": "\ud83c\udf07",
+   "options": [
+    "A type of colour",
+    "A dark shape filled with one colour against a light background",
+    "A type of brush",
+    "A 3D sculpture"
+   ],
+   "answer": 1,
+   "fact": "A silhouette is the dark outline shape of something against a light background \u2014 like a shadow!"
+  },
+  {
+   "id": "sa-18",
+   "question": "What is a mosaic?",
+   "emoji": "\ud83c\udfdb\ufe0f",
+   "options": [
+    "A type of painting technique",
+    "A picture or pattern made from small pieces of coloured tile, glass or stone",
+    "A type of 3D sculpture",
+    "A sketch in pencil only"
+   ],
+   "answer": 1,
+   "fact": "A mosaic is art made from tiny pieces of coloured material \u2014 the Romans decorated floors and walls with them!"
+  }
+ ],
+ "musicalNotes": [
+  {
+   "id": "mus-1",
+   "question": "What is music?",
+   "emoji": "\ud83c\udfb6",
+   "options": [
+    "Only singing",
+    "Sounds organised into patterns of rhythm and melody",
+    "Random noise",
+    "Words spoken quickly"
+   ],
+   "answer": 1,
+   "fact": "Music is organised sound \u2014 it uses rhythm, melody, harmony and dynamics to create something beautiful!"
+  },
+  {
+   "id": "mus-2",
+   "question": "What is a musical note?",
+   "emoji": "\ud83c\udfb5",
+   "options": [
+    "A word in a song",
+    "A symbol that represents a sound of a certain pitch and length",
+    "A type of instrument",
+    "A music teacher"
+   ],
+   "answer": 1,
+   "fact": "A musical note is a symbol on sheet music that tells musicians what pitch to play and for how long!"
+  },
+  {
+   "id": "mus-3",
+   "question": "How many notes are in the musical alphabet?",
+   "emoji": "\ud83d\udd24",
+   "options": [
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "answer": 2,
+   "fact": "The musical alphabet has 7 letters: A, B, C, D, E, F and G \u2014 then it repeats starting from A again!"
+  },
+  {
+   "id": "mus-4",
+   "question": "What is the name of the lines music is written on?",
+   "emoji": "\ud83c\udfbc",
+   "options": [
+    "A melody line",
+    "A staff or stave",
+    "A chord chart",
+    "A scale"
+   ],
+   "answer": 1,
+   "fact": "Music is written on a staff (or stave) \u2014 five horizontal lines where notes sit to show their pitch!"
+  },
+  {
+   "id": "mus-5",
+   "question": "What is pitch in music?",
+   "emoji": "\ud83d\udd0a",
+   "options": [
+    "How loud a sound is",
+    "How high or low a sound is",
+    "How fast music is played",
+    "How long a note lasts"
+   ],
+   "answer": 1,
+   "fact": "Pitch is how high or low a sound is \u2014 a piccolo plays high pitch, a tuba plays low pitch!"
+  },
+  {
+   "id": "mus-6",
+   "question": "What does a rest mean in music?",
+   "emoji": "\ud83e\udd2b",
+   "options": [
+    "A note played loudly",
+    "A pause \u2014 a moment of silence",
+    "A very fast section",
+    "The end of a song"
+   ],
+   "answer": 1,
+   "fact": "A rest is a moment of silence in music \u2014 silence is just as important as sound in creating music!"
+  },
+  {
+   "id": "mus-7",
+   "question": "What is tempo?",
+   "emoji": "\u23f1\ufe0f",
+   "options": [
+    "How loud music is",
+    "The speed of music \u2014 how fast or slow it is played",
+    "The pitch of a note",
+    "The key a song is in"
+   ],
+   "answer": 1,
+   "fact": "Tempo is the speed of music \u2014 'allegro' means fast, 'andante' means walking pace, 'adagio' means slow!"
+  },
+  {
+   "id": "mus-8",
+   "question": "What does 'forte' mean in music?",
+   "emoji": "\ud83d\udcaa",
+   "options": [
+    "Softly",
+    "Fast",
+    "Loudly",
+    "Slowly"
+   ],
+   "answer": 2,
+   "fact": "'Forte' means loud in music \u2014 it comes from the Italian word for strong. The opposite is 'piano' (soft)!"
+  },
+  {
+   "id": "mus-9",
+   "question": "What does 'piano' mean in music?",
+   "emoji": "\ud83e\udd2b",
+   "options": [
+    "Loudly",
+    "Softly",
+    "Fast",
+    "An instrument only"
+   ],
+   "answer": 1,
+   "fact": "'Piano' means soft or quiet in music \u2014 the piano instrument was named because it could play both soft and loud!"
+  },
+  {
+   "id": "mus-10",
+   "question": "What is a melody?",
+   "emoji": "\ud83c\udfb5",
+   "options": [
+    "How loud music is",
+    "A sequence of notes that make up the main tune",
+    "All instruments playing together",
+    "The beat of the music"
+   ],
+   "answer": 1,
+   "fact": "A melody is the main tune \u2014 the part you hum or sing along to! Every song has a recognisable melody."
+  },
+  {
+   "id": "mus-11",
+   "question": "What is rhythm?",
+   "emoji": "\ud83e\udd41",
+   "options": [
+    "The pitch of music",
+    "How loud the music is",
+    "The pattern of beats in music",
+    "The words of a song"
+   ],
+   "answer": 2,
+   "fact": "Rhythm is the pattern of long and short sounds in music \u2014 it makes music feel like it moves and flows!"
+  },
+  {
+   "id": "mus-12",
+   "question": "What is a scale in music?",
+   "emoji": "\ud83c\udfb9",
+   "options": [
+    "A measuring tool",
+    "A sequence of musical notes going from low to high or high to low",
+    "A type of rest",
+    "The speed of music"
+   ],
+   "answer": 1,
+   "fact": "A scale is a set of musical notes in order \u2014 like do, re, mi, fa, sol, la, ti, do! Scales are the building blocks of music."
+  },
+  {
+   "id": "mus-13",
+   "question": "What family of instruments includes the piano?",
+   "emoji": "\ud83c\udfb9",
+   "options": [
+    "String",
+    "Wind",
+    "Percussion",
+    "Keyboard"
+   ],
+   "answer": 3,
+   "fact": "Pianos and keyboards are keyboard instruments \u2014 pressing a key makes a hammer hit a string (in a piano) or creates an electronic sound!"
+  },
+  {
+   "id": "mus-14",
+   "question": "What is a chord?",
+   "emoji": "\ud83c\udfb8",
+   "options": [
+    "A single note played alone",
+    "Three or more notes played at the same time",
+    "The speed of music",
+    "A type of scale"
+   ],
+   "answer": 1,
+   "fact": "A chord is when three or more notes are played together at the same time \u2014 they create harmony!"
+  },
+  {
+   "id": "mus-15",
+   "question": "What does 'crescendo' mean?",
+   "emoji": "\ud83d\udcc8",
+   "options": [
+    "Getting quieter",
+    "Getting louder gradually",
+    "Getting faster",
+    "Getting slower"
+   ],
+   "answer": 1,
+   "fact": "A crescendo means gradually getting louder \u2014 music swells up like a wave building to a peak!"
+  },
+  {
+   "id": "mus-16",
+   "question": "What is the beat in music?",
+   "emoji": "\u2764\ufe0f",
+   "options": [
+    "The main tune",
+    "A single note",
+    "The steady pulse you can tap your foot to",
+    "How loud the music is"
+   ],
+   "answer": 2,
+   "fact": "The beat is the steady pulse of music \u2014 like a heartbeat! You tap your foot or clap to the beat!"
+  },
+  {
+   "id": "mus-17",
+   "question": "Which of these is a string instrument?",
+   "emoji": "\ud83c\udfbb",
+   "options": [
+    "Trumpet",
+    "Drum",
+    "Violin",
+    "Flute"
+   ],
+   "answer": 2,
+   "fact": "A violin is a string instrument \u2014 sound is made by drawing a bow across its strings or plucking them!"
+  },
+  {
+   "id": "mus-18",
+   "question": "What does a conductor do?",
+   "emoji": "\ud83c\udfbc",
+   "options": [
+    "Plays the loudest instrument",
+    "Leads the orchestra using a baton to keep everyone in time",
+    "Writes all the music",
+    "Sells tickets to concerts"
+   ],
+   "answer": 1,
+   "fact": "A conductor leads the orchestra \u2014 using a baton and hand gestures to keep all musicians together!"
+  }
+ ],
+ "rhythmBeat": [
+  {
+   "id": "rb-1",
+   "question": "What is the beat?",
+   "emoji": "\u2764\ufe0f",
+   "options": [
+    "The words of a song",
+    "The steady pulse that runs through all music",
+    "How loud music is",
+    "The name of a song"
+   ],
+   "answer": 1,
+   "fact": "The beat is a steady, regular pulse \u2014 like a heartbeat! Every piece of music has a beat you can tap along to."
+  },
+  {
+   "id": "rb-2",
+   "question": "What does it mean to clap 'in time'?",
+   "emoji": "\ud83d\udc4f",
+   "options": [
+    "To clap very fast",
+    "To clap to the steady beat of the music",
+    "To clap as loud as possible",
+    "To clap randomly"
+   ],
+   "answer": 1,
+   "fact": "Clapping in time means matching your claps to the beat \u2014 it shows you can feel the rhythm of the music!"
+  },
+  {
+   "id": "rb-3",
+   "question": "Which instrument is most commonly used to keep the beat?",
+   "emoji": "\ud83e\udd41",
+   "options": [
+    "Violin",
+    "Trumpet",
+    "Drums",
+    "Guitar"
+   ],
+   "answer": 2,
+   "fact": "Drums are the most common beat-keeping instrument \u2014 the drummer's job is to keep everyone in time!"
+  },
+  {
+   "id": "rb-4",
+   "question": "What does a 4/4 time signature mean?",
+   "emoji": "\ud83c\udfbc",
+   "options": [
+    "Four notes in a song",
+    "Four beats in each bar",
+    "Play four times",
+    "Four instruments playing"
+   ],
+   "answer": 1,
+   "fact": "4/4 means there are 4 beats in each bar \u2014 it is the most common time signature, sometimes called 'common time'!"
+  },
+  {
+   "id": "rb-5",
+   "question": "What is a bar (or measure) in music?",
+   "emoji": "\ud83d\udccf",
+   "options": [
+    "A section of music containing a set number of beats",
+    "A rest in music",
+    "The loudest part of a song",
+    "A type of instrument"
+   ],
+   "answer": 0,
+   "fact": "A bar (or measure) is a segment of music with a fixed number of beats \u2014 like a small container of rhythm!"
+  },
+  {
+   "id": "rb-6",
+   "question": "What does syncopation mean?",
+   "emoji": "\ud83c\udfb5",
+   "options": [
+    "Playing very slowly",
+    "Playing on the off-beat between the main beats",
+    "Playing only loud notes",
+    "Playing the same note repeatedly"
+   ],
+   "answer": 1,
+   "fact": "Syncopation puts emphasis on the off-beat \u2014 the unexpected beats. It gives jazz and reggae their bouncy feel!"
+  },
+  {
+   "id": "rb-7",
+   "question": "What is a rhythm pattern?",
+   "emoji": "\ud83d\udd01",
+   "options": [
+    "A set of random sounds",
+    "A sequence of long and short sounds that repeats",
+    "The speed of music",
+    "The pitch of the notes"
+   ],
+   "answer": 1,
+   "fact": "A rhythm pattern is a sequence of beats and rests that repeats \u2014 like a drum pattern in a pop song!"
+  },
+  {
+   "id": "rb-8",
+   "question": "What does it feel like to have a strong sense of rhythm?",
+   "emoji": "\ud83d\udc83",
+   "options": [
+    "Hard to move to music",
+    "Being able to naturally feel and follow the beat in music",
+    "Only being able to play drums",
+    "Knowing the words to every song"
+   ],
+   "answer": 1,
+   "fact": "A strong sense of rhythm means you naturally feel the pulse of music \u2014 it helps you dance, clap and play instruments accurately!"
+  },
+  {
+   "id": "rb-9",
+   "question": "What is call and response in music?",
+   "emoji": "\ud83c\udfa4",
+   "options": [
+    "One voice plays a phrase and another answers",
+    "Two people singing the same thing",
+    "Everyone singing together",
+    "A type of drumbeat"
+   ],
+   "answer": 0,
+   "fact": "Call and response is when one voice or instrument plays a phrase and another answers \u2014 it is common in African music, blues and gospel!"
+  },
+  {
+   "id": "rb-10",
+   "question": "Which of these is a percussion instrument (hit to make sound)?",
+   "emoji": "\ud83e\udd41",
+   "options": [
+    "Guitar",
+    "Flute",
+    "Xylophone",
+    "Violin"
+   ],
+   "answer": 2,
+   "fact": "A xylophone is a percussion instrument \u2014 you hit the wooden bars with mallets to make musical notes!"
+  },
+  {
+   "id": "rb-11",
+   "question": "What does a metronome do?",
+   "emoji": "\u23f1\ufe0f",
+   "options": [
+    "Makes music sound louder",
+    "Keeps a steady beat for musicians to practise with",
+    "Writes down music",
+    "Records music"
+   ],
+   "answer": 1,
+   "fact": "A metronome clicks at a steady tempo to help musicians practise keeping perfect time \u2014 like a mechanical heartbeat!"
+  },
+  {
+   "id": "rb-12",
+   "question": "In a 3/4 time signature, how many beats are in each bar?",
+   "emoji": "\ud83c\udfbc",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "6"
+   ],
+   "answer": 1,
+   "fact": "3/4 time has 3 beats per bar \u2014 it is the time signature of a waltz! ONE-two-three, ONE-two-three."
+  },
+  {
+   "id": "rb-13",
+   "question": "What is an upbeat in music?",
+   "emoji": "\ud83c\udfb5",
+   "options": [
+    "A very loud note",
+    "A note or notes before the first full bar of music",
+    "The last note of a song",
+    "The fastest part of music"
+   ],
+   "answer": 1,
+   "fact": "An upbeat is one or more notes before the first full bar \u2014 like 'Happy Birthday': HAPPY (upbeat) Birthday TO you!"
+  },
+  {
+   "id": "rb-14",
+   "question": "What type of music is known for a strong backbeat on beats 2 and 4?",
+   "emoji": "\ud83c\udfb8",
+   "options": [
+    "Classical music",
+    "Rock and pop music",
+    "Opera",
+    "Folk music"
+   ],
+   "answer": 1,
+   "fact": "Rock and pop music typically have a strong backbeat on beats 2 and 4 \u2014 the snare drum snap you hear in most pop songs!"
+  },
+  {
+   "id": "rb-15",
+   "question": "What does 'largo' mean in music?",
+   "emoji": "\ud83d\udc22",
+   "options": [
+    "Very fast",
+    "At a walking pace",
+    "Very slow and broad",
+    "Medium speed"
+   ],
+   "answer": 2,
+   "fact": "'Largo' means very slow and broad in music \u2014 it is one of the slowest tempo markings, like a slow, serious procession!"
+  },
+  {
+   "id": "rb-16",
+   "question": "What is polyrhythm?",
+   "emoji": "\ud83e\udd41",
+   "options": [
+    "Playing one simple rhythm",
+    "Two or more different rhythms played at the same time",
+    "A very fast rhythm",
+    "A type of rest"
+   ],
+   "answer": 1,
+   "fact": "Polyrhythm is multiple rhythms happening simultaneously \u2014 common in African drumming and Latin music!"
+  },
+  {
+   "id": "rb-17",
+   "question": "What does 'allegro' mean in music?",
+   "emoji": "\ud83d\udc07",
+   "options": [
+    "Very slow",
+    "Moderately slow",
+    "Fast and lively",
+    "Very loud"
+   ],
+   "answer": 2,
+   "fact": "'Allegro' means fast and lively \u2014 it is one of the most common tempo markings in classical music!"
+  },
+  {
+   "id": "rb-18",
+   "question": "Which body part do you most naturally use to feel the beat?",
+   "emoji": "\ud83d\udc63",
+   "options": [
+    "Hands only",
+    "Eyes",
+    "Feet \u2014 by tapping or stomping",
+    "Shoulders"
+   ],
+   "answer": 2,
+   "fact": "Feet naturally tap to a beat \u2014 it is called 'keeping time with your feet'. Even babies bounce to rhythm!"
+  }
+ ],
+ "famousArtists": [
+  {
+   "id": "fa-1",
+   "question": "Who painted the Mona Lisa?",
+   "emoji": "\ud83d\uddbc\ufe0f",
+   "options": [
+    "Michelangelo",
+    "Vincent van Gogh",
+    "Leonardo da Vinci",
+    "Pablo Picasso"
+   ],
+   "answer": 2,
+   "fact": "Leonardo da Vinci painted the Mona Lisa around 1503-1519 \u2014 it is the most famous painting in the world, kept in the Louvre in Paris!"
+  },
+  {
+   "id": "fa-2",
+   "question": "Which artist painted 'Starry Night'?",
+   "emoji": "\ud83c\udf19",
+   "options": [
+    "Claude Monet",
+    "Pablo Picasso",
+    "Vincent van Gogh",
+    "Salvador Dali"
+   ],
+   "answer": 2,
+   "fact": "Vincent van Gogh painted 'The Starry Night' in 1889 \u2014 it shows a swirling night sky with bold, expressive brushstrokes!"
+  },
+  {
+   "id": "fa-3",
+   "question": "Who painted the ceiling of the Sistine Chapel?",
+   "emoji": "\u26ea",
+   "options": [
+    "Leonardo da Vinci",
+    "Raphael",
+    "Michelangelo",
+    "Donatello"
+   ],
+   "answer": 2,
+   "fact": "Michelangelo painted the Sistine Chapel ceiling from 1508 to 1512 \u2014 including the famous scene of God creating Adam!"
+  },
+  {
+   "id": "fa-4",
+   "question": "Which artist is famous for 'Water Lilies'?",
+   "emoji": "\ud83c\udf38",
+   "options": [
+    "Van Gogh",
+    "Claude Monet",
+    "Rembrandt",
+    "Picasso"
+   ],
+   "answer": 1,
+   "fact": "Claude Monet painted over 250 Water Lilies paintings in his garden at Giverny \u2014 he was a leader of Impressionism!"
+  },
+  {
+   "id": "fa-5",
+   "question": "Who invented Cubism \u2014 breaking objects into geometric shapes?",
+   "emoji": "\ud83d\udd37",
+   "options": [
+    "Salvador Dali",
+    "Michelangelo",
+    "Vincent van Gogh",
+    "Pablo Picasso"
+   ],
+   "answer": 3,
+   "fact": "Pablo Picasso (with Georges Braque) invented Cubism \u2014 showing objects from multiple angles at once in flat, geometric shapes!"
+  },
+  {
+   "id": "fa-6",
+   "question": "What is Impressionism?",
+   "emoji": "\ud83c\udf38",
+   "options": [
+    "Art made with very precise detail",
+    "A style capturing light and movement with loose, quick brushstrokes",
+    "Art using only black and white",
+    "Art of geometric shapes"
+   ],
+   "answer": 1,
+   "fact": "Impressionism captures the impression of a moment \u2014 light, colour and movement \u2014 using loose, visible brushstrokes!"
+  },
+  {
+   "id": "fa-7",
+   "question": "Who is the most famous artist from the Renaissance period?",
+   "emoji": "\ud83c\udfdb\ufe0f",
+   "options": [
+    "Picasso",
+    "Van Gogh",
+    "Leonardo da Vinci",
+    "Warhol"
+   ],
+   "answer": 2,
+   "fact": "Leonardo da Vinci was the ultimate Renaissance man \u2014 painter, sculptor, scientist, engineer and inventor all in one!"
+  },
+  {
+   "id": "fa-8",
+   "question": "Who created the sculpture 'David'?",
+   "emoji": "\ud83d\uddff",
+   "options": [
+    "Leonardo da Vinci",
+    "Raphael",
+    "Pablo Picasso",
+    "Michelangelo"
+   ],
+   "answer": 3,
+   "fact": "Michelangelo carved the statue of David from 1501 to 1504 \u2014 it stands over 5 metres tall and is in Florence, Italy!"
+  },
+  {
+   "id": "fa-9",
+   "question": "Which artist is known for painting melting clocks?",
+   "emoji": "\u23f0",
+   "options": [
+    "Monet",
+    "Picasso",
+    "Salvador Dali",
+    "Warhol"
+   ],
+   "answer": 2,
+   "fact": "Salvador Dali painted 'The Persistence of Memory' (1931) with melting clocks \u2014 he was a Surrealist who painted dream-like scenes!"
+  },
+  {
+   "id": "fa-10",
+   "question": "Who made colourful soup can prints?",
+   "emoji": "\ud83e\udd6b",
+   "options": [
+    "Monet",
+    "Dali",
+    "Andy Warhol",
+    "Matisse"
+   ],
+   "answer": 2,
+   "fact": "Andy Warhol was a Pop Art legend \u2014 he made famous prints of Campbell's Soup cans, celebrating everyday objects as art!"
+  },
+  {
+   "id": "fa-11",
+   "question": "What art movement did Monet lead?",
+   "emoji": "\ud83c\udf3f",
+   "options": [
+    "Cubism",
+    "Surrealism",
+    "Pop Art",
+    "Impressionism"
+   ],
+   "answer": 3,
+   "fact": "Claude Monet led Impressionism \u2014 the name came from his painting 'Impression, Sunrise' (1872)!"
+  },
+  {
+   "id": "fa-12",
+   "question": "Which female Mexican artist is famous for self-portraits?",
+   "emoji": "\ud83c\udf3a",
+   "options": [
+    "Georgia O'Keeffe",
+    "Frida Kahlo",
+    "Mary Cassatt",
+    "Yoko Ono"
+   ],
+   "answer": 1,
+   "fact": "Frida Kahlo painted dozens of self-portraits exploring identity, pain and Mexican culture \u2014 one of history's most celebrated female artists!"
+  },
+  {
+   "id": "fa-13",
+   "question": "What nationality was Pablo Picasso?",
+   "emoji": "\ud83c\uddea\ud83c\uddf8",
+   "options": [
+    "French",
+    "Italian",
+    "Spanish",
+    "Dutch"
+   ],
+   "answer": 2,
+   "fact": "Pablo Picasso was born in Malaga, Spain in 1881 \u2014 he spent much of his life in France but remained proud of his Spanish identity!"
+  },
+  {
+   "id": "fa-14",
+   "question": "Which artist is famous for his 'Blue Period'?",
+   "emoji": "\ud83d\udc99",
+   "options": [
+    "Monet",
+    "Van Gogh",
+    "Picasso",
+    "Dali"
+   ],
+   "answer": 2,
+   "fact": "Picasso's Blue Period (1901-1904) featured mostly blue-toned paintings of poverty and sadness \u2014 inspired by the death of his friend!"
+  },
+  {
+   "id": "fa-15",
+   "question": "What is a self-portrait?",
+   "emoji": "\ud83e\ude9e",
+   "options": [
+    "A painting of a landscape",
+    "A painting of a famous building",
+    "An artwork the artist makes of themselves",
+    "A painting of a crowd"
+   ],
+   "answer": 2,
+   "fact": "A self-portrait is an artwork the artist makes of themselves \u2014 Rembrandt, Van Gogh and Kahlo all painted many famous self-portraits!"
+  },
+  {
+   "id": "fa-16",
+   "question": "Who painted 'The Scream'?",
+   "emoji": "\ud83d\ude31",
+   "options": [
+    "Van Gogh",
+    "Edvard Munch",
+    "Picasso",
+    "Dali"
+   ],
+   "answer": 1,
+   "fact": "'The Scream' was painted by Edvard Munch (Norwegian) in 1893 \u2014 the anguished figure is one of art's most recognised images!"
+  },
+  {
+   "id": "fa-17",
+   "question": "What is an art gallery?",
+   "emoji": "\ud83c\udfdb\ufe0f",
+   "options": [
+    "A type of art school",
+    "A place where art is displayed for people to view",
+    "A type of paintbrush",
+    "An artist's home studio"
+   ],
+   "answer": 1,
+   "fact": "An art gallery is a public space where artwork is displayed \u2014 famous ones include the Louvre (Paris) and National Gallery (London)!"
+  },
+  {
+   "id": "fa-18",
+   "question": "What is sculpture?",
+   "emoji": "\ud83d\uddff",
+   "options": [
+    "A painting on a flat surface",
+    "A three-dimensional artwork created from materials like stone, clay or metal",
+    "A type of drawing technique",
+    "A form of photography"
+   ],
+   "answer": 1,
+   "fact": "Sculpture is 3D art \u2014 sculptors carve, model or assemble materials into shapes. Michelangelo and Rodin are famous sculptors!"
+  }
+ ]
+}

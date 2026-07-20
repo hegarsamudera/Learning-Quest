@@ -1,0 +1,234 @@
+/* ============================================================
+   utilities.css — @keyframes animation library + reduced-motion
+   + small-screen media query overrides.
+   (The three duplicate `@media (max-height:700px)` blocks from
+   the old monolith have been consolidated into one here.)
+   ============================================================ */
+
+@keyframes auroraDrift{
+    0%{ background-position:0% 0%, 100% 0%, 50% 100%; }
+    100%{ background-position:10% 10%, 90% 20%, 60% 90%; }
+  }
+
+
+@media (prefers-reduced-motion: reduce){ body::before{ animation:none; } }
+
+
+/* Playful bouncy screen-enter — slight overshoot instead of a flat fade */
+  @keyframes screenEnter{
+    from{ opacity:0; transform:translateX(24px) scale(.97); }
+    to{ opacity:1; transform:translateX(0) scale(1); }
+  }
+
+
+@keyframes fadeUp{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:translateY(0); } }
+
+
+@keyframes pop{ 0%{ transform:scale(.85); opacity:0; } 60%{ transform:scale(1.06); opacity:1; } 100%{ transform:scale(1); } }
+
+
+@keyframes shakeKf{
+    10%,90%{ transform:translateX(-1px); } 20%,80%{ transform:translateX(2px); }
+    30%,50%,70%{ transform:translateX(-5px); } 40%,60%{ transform:translateX(5px); }
+  }
+
+
+/* Gentle infinite float, used for islands / crystals / badges */
+  @keyframes floatY{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-9px); } }
+
+
+/* Pulsing glow ring, used for "you are here" / current / ready states */
+  @keyframes pulseGlow{
+    0%,100%{ box-shadow:0 0 0 0 var(--glow-color, rgba(46,230,214,.55)), var(--shadow-card); }
+    50%{ box-shadow:0 0 0 12px rgba(46,230,214,0), var(--shadow-card); }
+  }
+
+
+/* CSS-only particle/confetti burst for correct answers — 8 radial dots
+     firing outward, purely decorative, no JS/canvas needed */
+  @keyframes particleBurst{
+    0%{ transform:translate(-50%,-50%) scale(0); opacity:1; }
+    70%{ opacity:1; }
+    100%{ transform:translate(calc(-50% + var(--bx,0px)), calc(-50% + var(--by,0px))) scale(1); opacity:0; }
+  }
+
+
+@media (prefers-reduced-motion: reduce){
+    *{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+    body::before{ animation:none !important; }
+  }
+
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+@keyframes starTwinkle{ 0%,100%{ opacity:.35; transform:scale(1); } 50%{ opacity:1; transform:scale(1.4); } }
+
+
+@keyframes confettiPop{
+    0%{ opacity:0; background-size:0% 0%; }
+    30%{ opacity:1; }
+    100%{ opacity:0; background-size:24% 24%; }
+  }
+
+
+@keyframes shakeKf{ 0%{ transform:translateX(0); } 20%{ transform:translateX(-5px); } 40%{ transform:translateX(5px); } 60%{ transform:translateX(-4px); } 80%{ transform:translateX(4px); } 100%{ transform:translateX(0); } }
+
+
+@keyframes caretBlink{ 50%{ opacity:0; } }
+
+
+/* Springy correct-answer card pop */
+  @keyframes cardPopGood{
+    0%   { transform:scale(1) rotate(0deg); }
+    20%  { transform:scale(1.06) rotate(.4deg); }
+    45%  { transform:scale(0.97) rotate(-.3deg); }
+    65%  { transform:scale(1.03) rotate(.2deg); }
+    100% { transform:scale(1) rotate(0deg); }
+  }
+
+
+@keyframes badgeUnlock{
+    0%{ transform:scale(0) rotate(-180deg); opacity:0; }
+    70%{ transform:scale(1.15) rotate(10deg); opacity:1; }
+    100%{ transform:scale(1) rotate(0deg); }
+  }
+
+
+@keyframes badgeGlow{
+    0%,100%{ filter:drop-shadow(0 0 18px rgba(52,211,153,.6)); }
+    50%{ filter:drop-shadow(0 0 30px rgba(52,211,153,.95)); }
+  }
+
+
+@keyframes petReactHappy { 0% { transform: translateY(0) scale(1); } 30% { transform: translateY(-8px) scale(1.25); } 60% { transform: translateY(0) scale(1.1); } 100% { transform: translateY(0) scale(1); } }
+
+
+@keyframes petReactSad { 0% { transform: rotate(0deg) scale(1); } 25% { transform: rotate(-8deg) scale(0.92); } 50% { transform: rotate(6deg) scale(0.92); } 75% { transform: rotate(-4deg) scale(0.95); } 100% { transform: rotate(0deg) scale(1); } }
+
+
+@keyframes confettiFall { 0% { top: -20px; transform: rotate(0deg) translateX(0); opacity: 1; } 100% { top: 110%; transform: rotate(720deg) translateX(40px); opacity: 0; } }
+
+
+@keyframes mapPetBob { 0%, 100% { transform: translateY(0) rotate(-6deg); } 50% { transform: translateY(-5px) rotate(6deg); } }
+
+
+@keyframes trailFlow{ to{ stroke-dashoffset:-22; } }
+
+
+@keyframes trailNodePulse {
+    0%, 100% { box-shadow: 0 6px 18px -4px rgba(0,0,0,.55), 0 0 0 0 rgba(255,255,255,.8), 0 0 20px -2px var(--node-color,#fff); }
+    50% { box-shadow: 0 6px 18px -4px rgba(0,0,0,.55), 0 0 0 10px rgba(255,255,255,0), 0 0 30px 2px var(--node-color,#fff); }
+  }
+
+
+@keyframes auraRainbow {
+    0%   { box-shadow: 0 0 0 5px #FF6B5B, 0 0 18px 8px #FF6B5B44; }
+    25%  { box-shadow: 0 0 0 5px #F4A828, 0 0 18px 8px #F4A82844; }
+    50%  { box-shadow: 0 0 0 5px #1FA391, 0 0 18px 8px #1FA39144; }
+    75%  { box-shadow: 0 0 0 5px #7A6FCB, 0 0 18px 8px #7A6FCB44; }
+    100% { box-shadow: 0 0 0 5px #FF6B5B, 0 0 18px 8px #FF6B5B44; }
+  }
+
+
+@keyframes auraLegendary {
+    0%, 100% { box-shadow: 0 0 0 6px #FFD700, 0 0 28px 14px #FFD70055; }
+    50%       { box-shadow: 0 0 0 8px #FFD700, 0 0 40px 20px #FFD70088; }
+  }
+
+
+@keyframes petBounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+  }
+
+
+@keyframes sparkleShimmer {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+
+
+@keyframes evoBannerPulse {
+    0%, 100% { box-shadow: var(--shadow-card); }
+    50%       { box-shadow: 0 8px 28px -8px #C9A8F5CC; }
+  }
+
+
+@keyframes evolveGlow {
+    0%, 100% { box-shadow: 0 4px 14px -4px #7A6FCB88; }
+    50%       { box-shadow: 0 6px 22px -2px #7A6FCBCC; }
+  }
+
+
+@keyframes sparkleCompanionBob {
+    0%, 100% { transform: translateY(0) rotate(-3deg); }
+    50% { transform: translateY(-7px) rotate(3deg); }
+  }
+
+
+@keyframes sparkleCompanionWiggle {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(3px); }
+  }
+
+
+@keyframes sparkleGlowClose {
+    0%, 100% { filter: drop-shadow(0 0 0 rgba(255,215,0,0)); }
+    50% { filter: drop-shadow(0 0 8px rgba(255,215,0,.85)); }
+  }
+
+
+@keyframes sparkleGlowReady {
+    0%, 100% { filter: drop-shadow(0 0 3px rgba(255,105,220,.6)) drop-shadow(0 0 0 rgba(255,215,0,0)); }
+    50% { filter: drop-shadow(0 0 3px rgba(255,105,220,.6)) drop-shadow(0 0 14px rgba(255,215,0,1)); }
+  }
+
+
+@keyframes sparkleCompanionTapped {
+    0% { transform: scale(1); } 30% { transform: scale(1.35); } 60% { transform: scale(.92); } 100% { transform: scale(1); }
+  }
+
+
+@keyframes loveGlitterFly {
+    0%   { transform: translate(0,0) scale(.6) rotate(0deg); opacity: 1; }
+    100% { transform: translate(var(--lgx), var(--lgy)) scale(1.15) rotate(var(--lgr)); opacity: 0; }
+  }
+
+
+@keyframes sparkleFloat {
+    0%   { transform: translateX(-50%) translateY(0) scale(.8); opacity: 0; }
+    20%  { transform: translateX(-50%) translateY(-14px) scale(1.2); opacity: 1; }
+    100% { transform: translateX(-50%) translateY(-70px) scale(1); opacity: 0; }
+  }
+
+
+@keyframes bh-wiggle {
+    0%,100% { transform: rotate(0deg); }
+    20% { transform: rotate(-8deg); }
+    40% { transform: rotate(8deg); }
+    60% { transform: rotate(-5deg); }
+    80% { transform: rotate(5deg); }
+  }
+
+
+@keyframes it-pulse {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+
+
+@keyframes floatUp { 0% { transform: translateY(0) scale(0.8); opacity: 0; } 20% { transform: translateY(-10px) scale(1.2); opacity: 1; } 100% { transform: translateY(-60px) scale(1); opacity: 0; } }
+
+
+/* Small-height phones (landscape / short screens) — consolidated
+     from what were three separate duplicate @media blocks. */
+  @media (max-height:700px) {
+.bh-chip { width: 28px; height: 28px; font-size: 13px; border-radius: 8px; }
+    .bh-dir-btn { width: 42px; height: 42px; font-size: 18px; }
+    .it-chip { width: 28px; height: 28px; font-size: 13px; border-radius: 8px; }
+    .it-rule-btn { padding: 6px 8px; }
+    .it-rule-icon { font-size: 18px; }
+    .it-rule-text { font-size: 10px; }
+  }

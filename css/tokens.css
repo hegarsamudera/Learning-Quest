@@ -1,0 +1,118 @@
+/* ============================================================
+   tokens.css — design tokens: colors, world palette, radii,
+   shadows, fonts. Change these to re-theme the entire app.
+   ============================================================ */
+
+/* ====================================================================
+     TOKENS
+     ==================================================================== */
+  :root{
+    /* ---- INK / SURFACES — deep-space cosmic base (was: flat admin light theme) ---- */
+    --ink:#F3F1FF;
+    --ink-soft:#AEB4D9;
+    --paper:#0B1220;
+    --card:rgba(30,41,70,.68);
+    --card-solid:#1E2946;
+    --line:rgba(255,255,255,.14);
+
+    --surface-1:#0B1220;
+    --surface-2:#1E2946;
+    --surface-3:#2C3A63;
+    --accent-glow:rgba(255,255,255,.14);
+
+    /* ---- WORLD / SUBJECT COLORS — saturated game palette (was: muted pastel) ---- */
+    --teal:#2EE6D6;      --teal-dark:#12A99C;
+    --amber:#FFC53D;     --amber-dark:#E39A00;
+    --coral:#FF6B9D;     --coral-dark:#E8467F;
+    --violet:#A78BFA;    --violet-dark:#7C5CFA;
+
+    --world-math:#FF6B9D;
+    --world-science:#2EE6D6;
+    --world-coding:#A78BFA;
+    --world-reading:#FFC53D;
+    --world-social:#FF7A5C;
+    --world-arts:#34D399;
+
+    --success:#34D399;  --success-bg:rgba(52,211,153,.16);
+    --danger:#FF5C7A;   --danger-bg:rgba(255,92,122,.16);
+    --retry-bg:rgba(255,197,61,.16); --retry-ink:#FFC53D;
+
+    --radius-xl:24px;
+    --radius-lg:22px;
+    --radius-md:16px;
+    --radius-sm:10px;
+    --shadow-game:0 10px 32px -8px rgba(0,0,0,.55);
+    --shadow-card:0 10px 28px -10px rgba(0,0,0,.5);
+    --shadow-soft:0 4px 14px -4px rgba(0,0,0,.4);
+    --shadow-glow:0 0 24px var(--accent-glow);
+
+    --font-display: ui-rounded, "SF Pro Rounded", "Segoe UI Rounded", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", Consolas, monospace;
+
+    --accent: var(--teal);
+    --accent-dark: var(--teal-dark);
+    --surface: var(--card-solid);
+    --border: var(--line);
+  }
+
+
+[data-accent="amber"]  { --accent:var(--amber);  --accent-dark:var(--amber-dark); }
+
+
+[data-accent="violet"] { --accent:var(--violet); --accent-dark:var(--violet-dark); }
+
+
+[data-accent="teal"]   { --accent:var(--teal);   --accent-dark:var(--teal-dark); }
+
+
+[data-accent="coral"]  { --accent:var(--coral);  --accent-dark:var(--coral-dark); }
+
+
+/* Aurora backdrop — sits behind the whole app, slow drifting glow bands */
+  body::before{
+    content:""; position:fixed; inset:-10%; z-index:-1; pointer-events:none;
+    background:
+      radial-gradient(ellipse 60% 40% at 15% 10%, rgba(167,139,250,.28), transparent 60%),
+      radial-gradient(ellipse 55% 40% at 85% 15%, rgba(46,230,214,.20), transparent 60%),
+      radial-gradient(ellipse 60% 45% at 50% 100%, rgba(255,107,157,.18), transparent 60%),
+      var(--surface-1);
+    animation: auroraDrift 18s ease-in-out infinite alternate;
+    background-size:140% 140%;
+  }
+
+
+html,body{ margin:0; padding:0; overflow-x:hidden; width:100%; }
+
+
+body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    -webkit-font-smoothing:antialiased;
+    height:100vh;
+    height:100dvh;
+    line-height:1.4;
+    overscroll-behavior-y:none;
+  }
+
+
+.reset-modal-body { font-size:13px; color:var(--ink-soft); line-height:1.5; margin-bottom:12px; }
+
+
+.mode-card[data-accent="teal"]   { border-color:rgba(46,230,214,.4); }
+
+
+.mode-card[data-accent="amber"]  { border-color:rgba(255,197,61,.4); }
+
+
+.mode-card[data-accent="coral"]  { border-color:rgba(255,107,157,.4); }
+
+
+.mode-card[data-accent="violet"] { border-color:rgba(167,139,250,.4); }
+
+
+.mode-card-body { padding:10px 12px 12px; display:flex; flex-direction:column; gap:4px; flex:1; }
+
+
+.map-node-body { flex: 1; text-align: left; min-width: 0; }
