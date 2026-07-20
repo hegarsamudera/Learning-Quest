@@ -21,6 +21,7 @@ export class PlayScreen {
   #engine = null;
   #questionAttempts = 0;
   #petCompanion = null;
+  #footerObserver = null;
 
   constructor(root) {
     this.#root = root;
