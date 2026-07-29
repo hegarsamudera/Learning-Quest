@@ -122,6 +122,17 @@
     display:flex; flex-direction:column; position:relative; overflow:hidden;
     contain:layout;
   }
+  /* Wide viewports (tablets in landscape, e.g. iPad, and desktop): the app
+     stays capped at 720px so gameplay proportions don't stretch, but frame
+     it so the extra side space (already showing the aurora backdrop) reads
+     as deliberate rather than like an unstyled narrow column. Layout and
+     fixed-position elements are untouched — this is purely cosmetic. */
+  @media (min-width:900px){
+    .app{
+      max-width:760px;
+      box-shadow:0 0 80px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.06);
+    }
+  }
   .screen{
     flex:1; display:flex; flex-direction:column; min-height:0;
     padding:14px 16px calc(14px + env(safe-area-inset-bottom));
@@ -807,9 +818,15 @@
   .hero-world-connector { width: 10px; height: 2px; background: rgba(255,255,255,.6); }
   .hero-dot-check { position: absolute; bottom: -4px; right: -4px; background: var(--card); border-radius: 50%; font-size: 9px; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; color: #2E7D5B; }
   .journey-hero-text { text-align: center; margin-bottom: 12px; }
-  .journey-hero-title { font-family: var(--font-display); font-weight: 900; font-size: 16px; color: #fff; }
-  .journey-hero-sub { font-size: 12px; color: rgba(255,255,255,.9); margin-top: 2px; }
-  .journey-hero-btn { width: 100%; background: var(--card); color: #7A6FCB; }
+  .journey-hero-title { font-family: var(--font-display); font-weight: 900; font-size: 16px; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.35); }
+  .journey-hero-sub { font-size: 12px; color: rgba(255,255,255,.95); margin-top: 2px; text-shadow: 0 1px 3px rgba(0,0,0,.35); }
+  .journey-hero-btn {
+    width: 100%; background: #fff; color: #4A3F8C;
+    font-size: 17px; padding: 15px 20px;
+    box-shadow: 0 4px 0 rgba(0,0,0,.18), 0 8px 20px rgba(0,0,0,.28);
+    --glow-color: rgba(255,255,255,.65);
+    animation: pulseGlow 2.2s ease-in-out infinite;
+  }
 
   .home-footer-links { display: flex; flex-direction: column; gap: 6px; padding: 0 16px 20px; }
   .home-info-footer {
@@ -13827,6 +13844,12 @@ var Voice = (function() {
   var supported = ("speechSynthesis" in window) && (typeof SpeechSynthesisUtterance !== "undefined");
   var chosenVoice = null;
   var voicesReady = false;
+  // Holds the most recently requested line while a previous one is still
+  // speaking, so it can play right after — without cutting the current
+  // line off mid-word. Only the latest request is kept (not a growing
+  // queue), so rapid-fire triggers (e.g. spam-tapping a wrong answer)
+  // collapse into just the last message instead of piling up.
+  var pendingNext = null;
 
   // Common female voice names across Chrome/Android/iOS/Windows/macOS speech engines.
   var FEMALE_NAME_HINTS = [
@@ -13863,19 +13886,38 @@ var Voice = (function() {
   }
 
   function stop() {
+    pendingNext = null;
     if (supported) speechSynthesis.cancel();
   }
 
-  function say(text, opts) {
-    if (!isEnabled() || !text) return;
-    stop(); // never overlap lines; a new line always interrupts the previous one
-    opts = opts || {};
+  function speakNow(text, opts) {
     var utter = new SpeechSynthesisUtterance(text);
     if (chosenVoice) utter.voice = chosenVoice;
     utter.rate = opts.rate || 0.95;   // a touch slower & clearer for young kids
     utter.pitch = opts.pitch || 1.15; // slightly higher/warmer pitch
     utter.volume = 1;
+    utter.onend = function() {
+      if (pendingNext) {
+        var next = pendingNext;
+        pendingNext = null;
+        speakNow(next.text, next.opts);
+      }
+    };
     speechSynthesis.speak(utter);
+  }
+
+  function say(text, opts) {
+    if (!isEnabled() || !text) return;
+    opts = opts || {};
+    // Never overlap lines — but let the current one finish instead of
+    // chopping it off. If something's already speaking, queue this as
+    // the next line (replacing any earlier pending line) rather than
+    // force-cancelling mid-sentence.
+    if (supported && speechSynthesis.speaking) {
+      pendingNext = { text: text, opts: opts };
+      return;
+    }
+    speakNow(text, opts);
   }
 
   function toggle() {
@@ -14498,7 +14540,7 @@ function buildJourneyMapHeroHTML() {
       '<div class="journey-hero-title">' + escapeHTML(text) + '</div>' +
       '<div class="journey-hero-sub">' + escapeHTML(sub) + '</div>' +
     '</div>' +
-    '<button class="btn btn-primary journey-hero-btn">🗺️ Open Journey Map</button>' +
+    '<button class="btn btn-primary journey-hero-btn">▶️ Let\'s Play!</button>' +
   '</div>';
 }
 
