@@ -837,6 +837,11 @@
   .home-info-footer a { color:var(--accent-dark); font-weight:700; text-decoration:none; }
   .home-info-footer a:hover { text-decoration:underline; }
   .home-browser-note { color:var(--amber-dark) !important; font-weight:600; }
+  .install-app-btn {
+    background: linear-gradient(135deg,#2EE6D6,#12A99C); color:#06332E;
+    font-size:15px; padding:13px 20px;
+    box-shadow: 0 3px 0 rgba(0,0,0,.15), 0 6px 16px -2px rgba(18,169,156,.5);
+  }
 
   /* ====================================================================
      FLOATING DONATE BUTTON
@@ -15502,6 +15507,7 @@ function renderHome() {
     '</div>' +
     '<div class="home-info-footer">' +
       '<p class="home-browser-note">🌐 Your progress autosaves right on this device — install the app for quick access and full offline play.</p>' +
+      (showInstallButton ? '<button class="btn btn-primary install-app-btn" onclick="promptPwaInstall()">⬇️ Install App</button>' : '') +
       '<p class="home-support-note">🐛 Found a bug or want to collab? <a href="https://github.com/YOUR-USERNAME/YOUR-REPO/issues" target="_blank" rel="noopener">Open an issue on GitHub</a></p>' +
     '</div>';
 
@@ -20379,6 +20385,40 @@ RENDERERS.multiplication = {
     document.getElementById("numpadHost").appendChild(checkBtn);
   }
 };
+
+// ====================================================================
+// PWA INSTALL PROMPT — capture the browser's native "beforeinstallprompt"
+// event so the home screen can show its own inviting Install button,
+// rather than making parents dig through the browser's menu to find it.
+// Chrome/Edge/Android only — iOS Safari never fires this event, so on
+// iOS the button simply never appears (those users still install via
+// Share > Add to Home Screen, which needs no JS hook).
+// ====================================================================
+var deferredInstallPrompt = null;
+var showInstallButton = false;
+
+window.addEventListener('beforeinstallprompt', function(e) {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  showInstallButton = true;
+  if (state.screen === 'home') render();
+});
+
+window.addEventListener('appinstalled', function() {
+  deferredInstallPrompt = null;
+  showInstallButton = false;
+  if (state.screen === 'home') render();
+});
+
+function promptPwaInstall() {
+  if (!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  deferredInstallPrompt.userChoice.finally(function() {
+    deferredInstallPrompt = null;
+    showInstallButton = false;
+    if (state.screen === 'home') render();
+  });
+}
 
 // ====================================================================
 // INITIALIZE
