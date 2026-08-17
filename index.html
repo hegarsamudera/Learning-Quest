@@ -12,6 +12,12 @@
 <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 
+<!-- ROBLOX-STYLE SKIN: chunky rounded display font (falls back to system
+     rounded fonts automatically when offline — see --font-display below) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
 <!-- iOS home-screen behavior -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -843,30 +849,6 @@
     box-shadow: 0 3px 0 rgba(0,0,0,.15), 0 6px 16px -2px rgba(18,169,156,.5);
   }
 
-  /* ====================================================================
-     FLOATING DONATE BUTTON
-     ==================================================================== */
-  .donate-float-btn{
-    position:fixed; right:calc(14px + env(safe-area-inset-right)); bottom:calc(14px + env(safe-area-inset-bottom));
-    z-index:9000; display:flex; align-items:center; gap:6px;
-    background:var(--card); color:var(--ink); text-decoration:none;
-    padding:10px 16px 10px 12px; border-radius:999px; border:2px solid var(--amber);
-    box-shadow:0 8px 20px -6px rgba(27,42,74,.35);
-    font-family:var(--font-display); font-weight:800; font-size:13px;
-    transition:transform .12s ease, box-shadow .12s ease;
-  }
-  .donate-float-btn:hover{ transform:translateY(-2px); box-shadow:0 12px 24px -6px rgba(27,42,74,.4); }
-  .donate-float-btn:active{ transform:translateY(0) scale(.96); }
-  .donate-float-icon{ font-size:17px; line-height:1; }
-  .donate-float-label{ white-space:nowrap; }
-  @media (max-width:360px){
-    .donate-float-label{ display:none; }
-    .donate-float-btn{ padding:10px; }
-  }
-  /* Hide the floating Support button whenever an on-screen numpad is mounted
-     (quiz/question screens) so it never overlaps the keypad's bottom row.
-     Reappears automatically once the numpad unmounts (map/home/etc). */
-  body:has(.numpad-wrap) .donate-float-btn{ display:none; }
   .practice-mode-link { font-size: 12px; opacity: .75; }
 
   .world-path-chapter-label {
@@ -1961,6 +1943,92 @@
     backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   }
 
+  /* ====================================================================
+     ROBLOX-STYLE TOY SKIN — one additive pass, zero markup changes.
+     Cascades over every screen automatically because it targets the same
+     shared classes (.btn, .coins-badge, card-ish surfaces, section
+     headers) that every screen already reuses. Keeps the existing dark
+     cosmic backdrop, but makes the UI itself read as chunky toy/game-UI:
+     thick dark outlines, deep bevel shadows, glossy top highlight, bold
+     rounded display font, uppercase button labels.
+     ==================================================================== */
+  :root{
+    --font-display: 'Baloo 2', ui-rounded, "SF Pro Rounded", "Segoe UI Rounded", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --toy-outline: #16121F;
+  }
+
+  /* Chunky toy buttons: blockier corners, thick dark outline, deeper
+     bevel, glossy highlight strip, shouty uppercase label. */
+  .btn{
+    border-radius:16px;
+    border:3px solid var(--toy-outline);
+    text-transform:uppercase; letter-spacing:.04em;
+    position:relative; overflow:hidden;
+  }
+  .btn::before{
+    content:""; position:absolute; top:2px; left:6px; right:6px; height:38%;
+    background:linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,0));
+    border-radius:12px 12px 30px 30px; pointer-events:none;
+  }
+  .btn-primary{ box-shadow:0 6px 0 var(--toy-outline), var(--shadow-soft); }
+  .btn-primary:active{ box-shadow:0 2px 0 var(--toy-outline), var(--shadow-soft); }
+  .btn-danger{ box-shadow:0 6px 0 var(--toy-outline), var(--shadow-soft); }
+  .btn-danger:active{ box-shadow:0 2px 0 var(--toy-outline), var(--shadow-soft); }
+  .btn-secondary{ border:3px solid var(--toy-outline); box-shadow:0 6px 0 rgba(0,0,0,.35); }
+  .btn-secondary:active{ box-shadow:0 2px 0 rgba(0,0,0,.35); transform:translateY(4px) scale(.98); }
+  .btn-ghost{ border:3px dashed var(--line); text-transform:uppercase; letter-spacing:.04em; }
+  .btn-boss{ border:3px solid var(--toy-outline); }
+
+  /* Toy-block card/surface outline pass — explicit list of actual
+     container-level surfaces (not their inner titles/labels/captions,
+     which would look wrong individually boxed). */
+  .trophy-card, .world-boss-card, .daily-quest-board, .evo-gallery-item,
+  .pet-preview-card, .journey-hero, .journey-continue-card, .difficulty-card,
+  .nx-card, .pet-food-item, .pet-shop-item, .pet-inv-item, .reset-modal,
+  .evo-modal, .map-side-node, .all-tiers-done-banner,
+  .boss-unlock-banner, .coin-remaining-banner,
+  .home-streak-banner, .evo-ready-banner, .trail-chapter-banner,
+  .missed-recap, .numpad-display, .score-chip{
+    border-width:3px !important;
+    border-style:solid !important;
+    border-color:var(--toy-outline) !important;
+    box-shadow:0 5px 0 rgba(0,0,0,.35), var(--shadow-card) !important;
+  }
+  /* Small inline chips/badges get a lighter version of the same treatment */
+  .streak-badge, .ach-badge, .difficulty-tier-badge, .difficulty-recommended-badge,
+  .mode-review-badge, .pet-accessory-badge, .report-mode-complete-badge,
+  .bh-bug-badge, .trail-pet-badge{
+    border-width:2px !important;
+    border-style:solid !important;
+    border-color:var(--toy-outline) !important;
+    box-shadow:0 3px 0 rgba(0,0,0,.3) !important;
+  }
+
+  /* Currency pill — bold candy-coin look instead of a flat gold rectangle */
+  .coins-badge{
+    background:linear-gradient(180deg, #FFE380, #FFC53D);
+    color:#5C3D00; border-radius:999px; font-family:var(--font-display);
+    text-transform:uppercase; letter-spacing:.03em;
+    border:3px solid var(--toy-outline) !important;
+    box-shadow:0 4px 0 rgba(0,0,0,.35) !important;
+  }
+
+  /* Section headers read like Roblox category banners: bold pill, punchy */
+  .home-section-header{
+    border-radius:14px; padding:8px 14px; display:inline-block;
+    background:var(--card-solid); font-family:var(--font-display);
+    text-transform:uppercase; letter-spacing:.03em; font-weight:800;
+    border:3px solid var(--toy-outline);
+    box-shadow:0 4px 0 rgba(0,0,0,.35);
+  }
+
+  /* Extra "toy pop" on tap for the big cards/tiles above */
+  .trophy-card:active, .difficulty-card:active, .nx-card:active,
+  .pet-food-item:active, .pet-shop-item:active, .map-side-node:active{
+    transform:translateY(3px);
+    box-shadow:0 2px 0 rgba(0,0,0,.35), var(--shadow-card) !important;
+  }
+
   /* Focus ring needs to pop against the dark cosmic base */
   :focus-visible{ outline-color: var(--accent); }
 
@@ -1969,11 +2037,6 @@
 <body>
 
 <div class="app" id="app"></div>
-
-<a class="donate-float-btn" href="https://trakteer.id/hegarsamudera/gift" target="_blank" rel="noopener noreferrer" aria-label="Support the creator via Trakteer">
-  <span class="donate-float-icon">❤️</span>
-  <span class="donate-float-label">Support</span>
-</a>
 
 <script type="application/json" id="game-data">
 {
@@ -14485,7 +14548,7 @@ function findNextJourneyStep() {
     if (isWorldBossCleared(world.key)) continue;
     if (world.isFinale) return { world: world, kind: "boss" };
     var keys = flattenWorldLessonKeys(world);
-    var nextLesson = keys.filter(function(k) { return !getGameTierProgress(k).isFullyComplete; })[0];
+    var nextLesson = keys.filter(function(k) { return !getGameTierProgress(k).cleared; })[0];
     if (nextLesson) return { world: world, kind: "lesson", key: nextLesson };
     return { world: world, kind: "boss" }; // all lessons done, boss awaits
   }
@@ -15297,6 +15360,39 @@ function getWorldByKey(key) {
   return ALL_WORLDS.filter(function(w) { return w.key === key; })[0] || null;
 }
 
+// Finds what should play next right after finishing a given lesson: the
+// following lesson in the same world's point-to-point path, or — if this
+// was the world's last lesson and the world is now boss-ready — the World
+// Boss for that world. Returns null if there's nothing obvious to jump to
+// (e.g. this lesson isn't part of a Journey world, such as Practice Mode).
+function getNextGameStep(currentKey) {
+  var world = null;
+  ALL_WORLDS.forEach(function(w) {
+    if (flattenWorldLessonKeys(w).indexOf(currentKey) !== -1) world = w;
+  });
+  if (!world) return null;
+  var keys = flattenWorldLessonKeys(world);
+  var idx = keys.indexOf(currentKey);
+  if (idx !== -1 && idx < keys.length - 1) {
+    return { kind: "lesson", key: keys[idx + 1], world: world };
+  }
+  // Last lesson in the world — offer the World Boss once it's unlocked.
+  if (!isWorldBossCleared(world.key) && isWorldReadyForBoss(world)) {
+    return { kind: "boss", world: world };
+  }
+  return null;
+}
+
+// Called from the "Play next game" button on the complete screen.
+function playNextGameStep(currentKey) {
+  var step = getNextGameStep(currentKey);
+  if (!step) { goToSubject(); return; }
+  state.returnScreen = "worldDetail";
+  state.returnWorldKey = step.world.key;
+  if (step.kind === "boss") { startWorldBossGauntlet(step.world.key); return; }
+  chooseGame(step.key);
+}
+
 function flattenWorldLessonKeys(world) {
   var out = [];
   (world.chapters || []).forEach(function(ch) { out = out.concat(ch.keys); });
@@ -15332,10 +15428,10 @@ function isWorldReadyForBoss(world) {
   if (world.isFinale) return isWorldUnlocked(world); // Sky Kingdom just needs World 5 cleared
   var keys = flattenWorldLessonKeys(world);
   if (!keys.length) return false;
-  // Now requires every lesson to be fully 3-starred (Easy+Medium+Hard all
-  // done), matching the point-to-point path where a lesson must be fully
-  // mastered before the next one unlocks.
-  return keys.every(function(k) { return getGameTierProgress(k).isFullyComplete; });
+  // Matches the relaxed point-to-point path rule: a lesson only needs ONE
+  // difficulty (easy, medium OR hard) cleared to count toward unlocking
+  // the World Boss — players no longer have to 3-star every lesson first.
+  return keys.every(function(k) { return getGameTierProgress(k).cleared; });
 }
 
 // Builds the ordered, point-to-point lesson path for a world: each lesson
@@ -15348,7 +15444,7 @@ function getWorldPathState(world) {
   keys.forEach(function(key) {
     var tier = getGameTierProgress(key);
     var status;
-    if (tier.isFullyComplete) status = "cleared";
+    if (tier.cleared) status = "cleared";
     else if (!foundCurrent) { status = "current"; foundCurrent = true; }
     else status = "locked";
     path.push({ key: key, stars: tier.done, status: status });
@@ -15432,6 +15528,11 @@ function getGameTierProgress(key) {
     total: 3,
     percent: Math.round((done / 3) * 100),
     isFullyComplete: done >= 3,
+    // "cleared" is the relaxed unlock threshold: finishing just ONE
+    // difficulty (easy, medium OR hard) is enough to open the next game.
+    // isFullyComplete (all three) is still used for the "all done / lock
+    // + reset" badges further down the home screen and progress report.
+    cleared: done >= 1,
     started: done > 0
   };
 }
@@ -15664,9 +15765,8 @@ function openWorld(worldKey) {
 // ====================================================================
 function tapPracticeLesson(key) {
   state.returnScreen = "practice";
-  var tier = getGameTierProgress(key);
-  if (tier.isFullyComplete) confirmResetGame(key);
-  else chooseGame(key);
+  chooseGame(key);
+  state.isPracticeTeaser = true;
 }
 
 function renderPracticeMode() {
@@ -15682,11 +15782,11 @@ function renderPracticeMode() {
       '<div style="width:40px;"></div>' +
     '</div>' +
     '<p style="text-align:center;padding:12px 20px 4px;font-size:13px;color:var(--ink-soft);">' +
-      'Jump straight to any lesson you\'ve already unlocked — handy for extra review.</p>';
+      'Try a quick 2-question teaser of any lesson in the whole game — nothing locked, nothing counted toward your real progress.</p>';
 
   var anyShown = false;
   ALL_WORLDS.forEach(function(world) {
-    if (!isWorldUnlocked(world) || world.isFinale) return;
+    if (world.isFinale) return;
     var keys = flattenWorldLessonKeys(world);
     if (!keys.length) return;
     anyShown = true;
@@ -15695,7 +15795,7 @@ function renderPracticeMode() {
       var g = gamesByKey3[key];
       if (!g) return;
       var tier = getGameTierProgress(key);
-      var progLabel = tier.isFullyComplete ? "🔒 All done!" : (tier.started ? tier.done + " of " + tier.total + " levels · " + tier.percent + "%" : "Not started yet");
+      var progLabel = "🔍 2-question teaser" + (tier.started ? " · " + tier.percent + "% mastered" : "");
       var cardClick = "tapPracticeLesson('" + key + "')";
       html += '<div class="mode-card" data-accent="' + g.accent + '" onclick="' + cardClick + '">' +
         '<div class="mode-icon" style="background:var(--' + g.accent + ');color:#fff;">' + g.icon + '</div>' +
@@ -15889,6 +15989,7 @@ function tapWorldLessonNode(key, status) {
   }
   state.returnScreen = "worldDetail";
   state.returnWorldKey = state.mapWorldKey;
+  state.isPracticeTeaser = false;
   var tier = getGameTierProgress(key);
   if (tier.isFullyComplete) confirmResetGame(key);
   else chooseGame(key);
@@ -16464,29 +16565,41 @@ function startGame(key) {
 
   // REPLAY CAP — track how many times this game+difficulty has been played.
   // Coins are awarded on play 1 and 2 only. Play 3+ earns 0 coins.
+  // Practice Mode teasers are just a quick preview: they don't touch the
+  // replay counter or the "fresh questions" tracking used by real rounds.
   var difficulty = state.difficulty || "easy";
-  var replayKey = "replayCount_" + key + "_" + difficulty;
-  var replayCount = storageGet(replayKey, 0);
-  replayCount += 1;
-  storageSet(replayKey, replayCount);
-  state.replayCount = replayCount; // 1 = first play, 2 = second, 3+ = no coins
+  if (!state.isPracticeTeaser) {
+    var replayKey = "replayCount_" + key + "_" + difficulty;
+    var replayCount = storageGet(replayKey, 0);
+    replayCount += 1;
+    storageSet(replayKey, replayCount);
+    state.replayCount = replayCount; // 1 = first play, 2 = second, 3+ = no coins
+  } else {
+    state.replayCount = 999; // teaser rounds never earn coins (see handleAnswer)
+  }
 
   var pool = questionsForDifficulty(game, difficulty);
 
-  // PATCH GROUP M — AVOID IMMEDIATE QUESTION REPEATS
-  // If the tier has enough variety, steer away from whichever questions were
-  // shown last time at this same game+difficulty, so back-to-back replays
-  // (common for kids practicing the same tier) don't feel like the exact
-  // same round on repeat.
-  var lastPlayedKey = "lastPlayed_" + key + "_" + difficulty;
-  var lastPlayedIds = storageGet(lastPlayedKey, []);
-  var freshPool = pool.filter(function(q) { return lastPlayedIds.indexOf(q.id) === -1; });
-  // Only use the "fresh" subset if it still leaves a reasonable round size;
-  // otherwise fall back to the full pool (small tiers can't avoid repeats forever).
-  var usablePool = (freshPool.length >= Math.min(4, pool.length)) ? freshPool : pool;
+  if (state.isPracticeTeaser) {
+    // TEASER MODE — just a random 2-question sample so a child can peek at
+    // any game in the whole app without it counting as real progress.
+    state.activeQuestions = shuffleArray(pool.slice()).slice(0, Math.min(2, pool.length));
+  } else {
+    // PATCH GROUP M — AVOID IMMEDIATE QUESTION REPEATS
+    // If the tier has enough variety, steer away from whichever questions were
+    // shown last time at this same game+difficulty, so back-to-back replays
+    // (common for kids practicing the same tier) don't feel like the exact
+    // same round on repeat.
+    var lastPlayedKey = "lastPlayed_" + key + "_" + difficulty;
+    var lastPlayedIds = storageGet(lastPlayedKey, []);
+    var freshPool = pool.filter(function(q) { return lastPlayedIds.indexOf(q.id) === -1; });
+    // Only use the "fresh" subset if it still leaves a reasonable round size;
+    // otherwise fall back to the full pool (small tiers can't avoid repeats forever).
+    var usablePool = (freshPool.length >= Math.min(4, pool.length)) ? freshPool : pool;
 
-  state.activeQuestions = shuffleArray(usablePool.slice());
-  storageSet(lastPlayedKey, state.activeQuestions.map(function(q) { return q.id; }));
+    state.activeQuestions = shuffleArray(usablePool.slice());
+    storageSet(lastPlayedKey, state.activeQuestions.map(function(q) { return q.id; }));
+  }
 
   state.dotsStatus = state.activeQuestions.map(function(){ return "pending"; });
   state.screen = "play";
@@ -16498,6 +16611,7 @@ function chooseGame(key) {
   state.gameKey = key;
   state.difficulty = null;
   state.screen = "difficulty";
+  state.isPracticeTeaser = false;
   // Make sure state.subject is set so back buttons return to the right folder
   if (!state.subject) {
     SUBJECTS.forEach(function(subj) {
@@ -16913,6 +17027,7 @@ function finishGame() {
   var percent = Math.round((state.score / total) * 100);
   var difficulty = state.difficulty || "easy";
 
+  if (!state.isPracticeTeaser) {
   // PATCH GROUP N — PER-DIFFICULTY PROGRESS TRACKING
   var prev = state.progress[game.key];
   var prevByDifficulty = (prev && prev.byDifficulty) ? prev.byDifficulty : {};
@@ -16970,6 +17085,7 @@ function finishGame() {
     delete reviewQueue[game.key];
   }
   storageSet("reviewQueue", reviewQueue);
+  } // end if (!state.isPracticeTeaser)
 
   state.lastResult = { percent: percent, score: state.score, total: total, bestStreak: state.bestStreak };
   state.screen = "complete";
@@ -17011,8 +17127,10 @@ function finishGame() {
   // Daily Quest tracking — normal lessons count toward "finish a lesson";
   // a standalone boss round (outside a gauntlet) counts toward "beat a
   // boss". Gauntlet stages are tracked once as a whole in finishWorldGauntlet().
-  if (!state.isBossLevel) trackDailyLessonDone();
-  else if (!state.gauntlet) trackDailyBossBeaten();
+  if (!state.isPracticeTeaser) {
+    if (!state.isBossLevel) trackDailyLessonDone();
+    else if (!state.gauntlet) trackDailyBossBeaten();
+  }
 
   render();
 }
@@ -17171,37 +17289,45 @@ function renderComplete() {
     }
   }
 
+  var isTeaser = !!state.isPracticeTeaser;
+
   var html = '<div class="screen complete-screen scrollable" data-accent="' + game.accent + '" style="' + buildPlayBackgroundStyle(game.key, difficulty) + '">' +
     buildPlaySceneryWatermarkHTML(game.key) +
     '<div class="complete-mark">' + (r.percent >= 70 ? '🏆' : '👍') + '</div>' +
     '<h2 class="complete-title">' + (r.percent >= 70 ? "Great work!" : "Nice try!") + '</h2>' +
     '<p class="complete-score">' + r.score + ' / ' + r.total + ' correct (' + r.percent + '%)</p>' +
     '<div class="stars">' + starsHtml + '</div>' +
-    '<p class="complete-streak">Best streak: 🔥 ' + r.bestStreak + '</p>' +
-    coinsEarnedHtml +
-    (r.percent >= 50 ? buildStoryBeatHTML(game.key) : '') +
-    (getGameTierProgress(game.key).isFullyComplete
-      ? '<div class="all-tiers-done-banner">🔒 Easy, Medium &amp; Hard are ALL done for ' + escapeHTML(game.label) + '! It\'s locked on the home screen now — reset it there to play again.</div>'
-      : '') +
-    // PATCH GROUP W — BOSS LEVEL UNLOCK
-    // After clearing Hard mode with ≥70%, show a special "Boss Challenge"
-    // button. The boss round is a short mixed-difficulty rapid-fire set
-    // (10 questions drawn randomly from easy+medium+hard banks merged) with
-    // confetti on completion — distinct enough to feel like a real finale.
-    (difficulty === 'hard' && r.percent >= 70
-      ? '<div class="boss-unlock-banner">' +
-          '<div class="boss-unlock-icon">👾</div>' +
-          '<div class="boss-unlock-text"><strong>BOSS LEVEL UNLOCKED!</strong><br>You beat Hard mode — can you handle the Boss Challenge?</div>' +
-          '<button class="btn btn-boss" onclick="startBossLevel(\'' + game.key + '\')">⚔️ Take on the Boss!</button>' +
-        '</div>'
-      : '') +
-    replayStatusHtml +
-    petNudge +
-    recapHtml +
+    (isTeaser
+      ? '<p class="complete-streak">🔍 That was just a 2-question teaser — play it for real from the Journey Map to earn coins and progress!</p>'
+      : '<p class="complete-streak">Best streak: 🔥 ' + r.bestStreak + '</p>' +
+        coinsEarnedHtml +
+        (r.percent >= 50 ? buildStoryBeatHTML(game.key) : '') +
+        (getGameTierProgress(game.key).isFullyComplete
+          ? '<div class="all-tiers-done-banner">🔒 Easy, Medium &amp; Hard are ALL done for ' + escapeHTML(game.label) + '! It\'s locked on the home screen now — reset it there to play again.</div>'
+          : '') +
+        // PATCH GROUP W — BOSS LEVEL UNLOCK
+        // After clearing Hard mode with ≥70%, show a special "Boss Challenge"
+        // button. The boss round is a short mixed-difficulty rapid-fire set
+        // (10 questions drawn randomly from easy+medium+hard banks merged) with
+        // confetti on completion — distinct enough to feel like a real finale.
+        (difficulty === 'hard' && r.percent >= 70
+          ? '<div class="boss-unlock-banner">' +
+              '<div class="boss-unlock-icon">👾</div>' +
+              '<div class="boss-unlock-text"><strong>BOSS LEVEL UNLOCKED!</strong><br>You beat Hard mode — can you handle the Boss Challenge?</div>' +
+              '<button class="btn btn-boss" onclick="startBossLevel(\'' + game.key + '\')">⚔️ Take on the Boss!</button>' +
+            '</div>'
+          : '') +
+        replayStatusHtml +
+        petNudge) +
+    (isTeaser ? '' : recapHtml) +
     '<div class="complete-actions">' +
-      '<button class="btn btn-primary" onclick="startGame(\'' + game.key + '\')">Play again</button>' +
-      '<button class="btn btn-secondary" onclick="state.screen=\'pet\';render()">✨ Visit My Pet</button>' +
-      '<button class="btn btn-ghost" onclick="goToSubject()">Choose another game</button>' +
+    (isTeaser
+      ? '<button class="btn btn-primary" onclick="state.screen=\'practice\';render()">🔍 Try another teaser</button>' +
+        '<button class="btn btn-secondary" onclick="state.screen=\'pet\';render()">✨ Visit My Pet</button>' +
+        '<button class="btn btn-ghost" onclick="state.screen=\'home\';render()">🏠 Return home</button>'
+      : '<button class="btn btn-primary" onclick="playNextGameStep(\'' + game.key + '\')">' + (getNextGameStep(game.key) ? "▶️ Play next game" : "Choose another game") + '</button>' +
+        '<button class="btn btn-secondary" onclick="state.screen=\'pet\';render()">✨ Visit My Pet</button>' +
+        '<button class="btn btn-ghost" onclick="state.screen=\'home\';render()">🏠 Return home</button>') +
     '</div>' +
   '</div>';
 
@@ -17308,6 +17434,7 @@ function collectAllQuestions(game) {
 function startBossLevel(gameKey) {
   var game = DATA.games.filter(function(g){ return g.key === gameKey; })[0];
   if (!game) return;
+  state.isPracticeTeaser = false;
 
   // Pull questions from all three banks and shuffle them together
   var allQs = collectAllQuestions(game);
