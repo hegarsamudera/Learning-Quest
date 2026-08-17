@@ -340,6 +340,37 @@
   .mode-progress-empty   { color:var(--ink-soft); font-weight:600; }
   .mode-progress-locked  { color:var(--success); }
 
+  /* Practice Mode — collapsible per-world sections so the list opens as a
+     short table of contents instead of one long scroll of every lesson
+     in the game. Collapsed by default; tapping a row expands its grid. */
+  .practice-world-section{ margin:0 16px 10px; }
+  .practice-world-toggle{
+    width:100%; display:flex; align-items:center; gap:10px;
+    background:var(--card); border:2px solid var(--line); border-radius:var(--radius-lg);
+    padding:12px 14px; cursor:pointer; text-align:left;
+    font-family:inherit; color:var(--ink);
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .practice-world-toggle:hover{ border-color:var(--accent); }
+  .practice-world-toggle:active{ transform:translateY(1px); }
+  .practice-world-toggle-main{ flex:1; min-width:0; display:flex; flex-direction:column; gap:3px; }
+  .practice-world-toggle-top{ display:flex; align-items:center; gap:10px; }
+  .practice-world-toggle-label{
+    font-family:var(--font-display); font-weight:800; font-size:15px; flex-shrink:0;
+  }
+  .practice-world-toggle-meta{
+    font-size:12px; color:var(--ink-soft); flex:1; text-align:right; margin-right:2px; white-space:nowrap;
+  }
+  .practice-world-toggle-chevron{
+    font-size:14px; color:var(--ink-soft); transition: transform .18s ease; flex-shrink:0;
+  }
+  .practice-world-toggle-chevron.is-open{ transform:rotate(180deg); color:var(--accent); }
+  .practice-world-toggle-preview{
+    font-size:12px; color:var(--ink-soft); opacity:.85; overflow:hidden;
+    text-overflow:ellipsis; white-space:nowrap; padding-left:2px;
+  }
+  .practice-world-section .mode-grid{ margin-top:10px; animation: pop .22s ease both; }
+
   /* Section labels — pill shape, glowing */
   .home-section-header{
     font-family:var(--font-display); font-weight:900; font-size:13px;
@@ -15769,6 +15800,23 @@ function tapPracticeLesson(key) {
   state.isPracticeTeaser = true;
 }
 
+// Which world sections are expanded, keyed by world.key. Lives outside
+// `state` on purpose: it's pure UI/scroll convenience, not something that
+// should be reset with progress or persisted to storage. Starts empty
+// (every section collapsed) so the list opens as a short, scannable table
+// of contents instead of one long wall of cards.
+var practiceExpandedWorlds = {};
+
+function togglePracticeWorld(key) {
+  practiceExpandedWorlds[key] = !practiceExpandedWorlds[key];
+  renderPracticeMode();
+}
+
+function setAllPracticeWorlds(expanded, worldKeys) {
+  worldKeys.forEach(function(k) { practiceExpandedWorlds[k] = expanded; });
+  renderPracticeMode();
+}
+
 function renderPracticeMode() {
   var gamesByKey3 = {};
   DATA.games.forEach(function(g) { gamesByKey3[g.key] = g; });
@@ -15784,28 +15832,76 @@ function renderPracticeMode() {
     '<p style="text-align:center;padding:12px 20px 4px;font-size:13px;color:var(--ink-soft);">' +
       'Try a quick 2-question teaser of any lesson in the whole game — nothing locked, nothing counted toward your real progress.</p>';
 
+  var visibleWorlds = ALL_WORLDS.filter(function(world) {
+    if (world.isFinale) return false;
+    return flattenWorldLessonKeys(world).length > 0;
+  });
+
+  if (visibleWorlds.length) {
+    var worldKeysForToggle = visibleWorlds.map(function(w) { return w.key; });
+    var keysJson = escapeHTML(JSON.stringify(worldKeysForToggle));
+    html += '<div style="display:flex;justify-content:flex-end;gap:14px;padding:2px 20px 4px;">' +
+      '<button class="btn-link" style="font-size:12px;font-weight:700;color:var(--accent);background:none;border:none;padding:0;cursor:pointer;" onclick="setAllPracticeWorlds(true,' + keysJson + ')">Expand all</button>' +
+      '<button class="btn-link" style="font-size:12px;font-weight:700;color:var(--ink-soft);background:none;border:none;padding:0;cursor:pointer;" onclick="setAllPracticeWorlds(false,' + keysJson + ')">Collapse all</button>' +
+    '</div>';
+  }
+
   var anyShown = false;
-  ALL_WORLDS.forEach(function(world) {
-    if (world.isFinale) return;
+  visibleWorlds.forEach(function(world) {
     var keys = flattenWorldLessonKeys(world);
-    if (!keys.length) return;
     anyShown = true;
-    html += '<div class="home-section-header">' + world.icon + ' ' + escapeHTML(world.label) + '</div><div class="mode-grid">';
+
+    var startedCount = 0, masteredCount = 0;
+    var lessonLabels = [];
     keys.forEach(function(key) {
-      var g = gamesByKey3[key];
-      if (!g) return;
       var tier = getGameTierProgress(key);
-      var progLabel = "🔍 2-question teaser" + (tier.started ? " · " + tier.percent + "% mastered" : "");
-      var cardClick = "tapPracticeLesson('" + key + "')";
-      html += '<div class="mode-card" data-accent="' + g.accent + '" onclick="' + cardClick + '">' +
-        '<div class="mode-icon" style="background:var(--' + g.accent + ');color:#fff;">' + g.icon + '</div>' +
-        '<div class="mode-card-body">' +
-          '<div class="mode-label">' + escapeHTML(g.label) + '</div>' +
-          '<div class="mode-desc">' + escapeHTML(g.description) + '</div>' +
-          '<div class="mode-progress">' + progLabel + '</div>' +
-        '</div>' +
-      '</div>';
+      if (tier.started) startedCount++;
+      if (tier.percent >= 100) masteredCount++;
+      var g = gamesByKey3[key];
+      if (g) lessonLabels.push(g.label);
     });
+    var countBits = keys.length + (keys.length === 1 ? " lesson" : " lessons");
+    if (startedCount) countBits += " · " + masteredCount + "/" + keys.length + " mastered";
+
+    var previewCount = 3;
+    var previewText = escapeHTML(lessonLabels.slice(0, previewCount).join(", "));
+    if (lessonLabels.length > previewCount) {
+      previewText += " +" + (lessonLabels.length - previewCount) + " more";
+    }
+
+    var isOpen = !!practiceExpandedWorlds[world.key];
+    html += '<div class="practice-world-section">' +
+      '<button class="practice-world-toggle" onclick="togglePracticeWorld(\'' + world.key + '\')">' +
+        '<div class="practice-world-toggle-main">' +
+          '<div class="practice-world-toggle-top">' +
+            '<span class="practice-world-toggle-label">' + world.icon + ' ' + escapeHTML(world.label) + '</span>' +
+            '<span class="practice-world-toggle-meta">' + countBits + '</span>' +
+            '<span class="practice-world-toggle-chevron' + (isOpen ? ' is-open' : '') + '">▾</span>' +
+          '</div>' +
+          '<div class="practice-world-toggle-preview">' + previewText + '</div>' +
+        '</div>' +
+      '</button>';
+
+    if (isOpen) {
+      html += '<div class="mode-grid">';
+      keys.forEach(function(key) {
+        var g = gamesByKey3[key];
+        if (!g) return;
+        var tier = getGameTierProgress(key);
+        var progLabel = "🔍 2-question teaser" + (tier.started ? " · " + tier.percent + "% mastered" : "");
+        var cardClick = "tapPracticeLesson('" + key + "')";
+        html += '<div class="mode-card" data-accent="' + g.accent + '" onclick="' + cardClick + '">' +
+          '<div class="mode-icon" style="background:var(--' + g.accent + ');color:#fff;">' + g.icon + '</div>' +
+          '<div class="mode-card-body">' +
+            '<div class="mode-label">' + escapeHTML(g.label) + '</div>' +
+            '<div class="mode-desc">' + escapeHTML(g.description) + '</div>' +
+            '<div class="mode-progress">' + progLabel + '</div>' +
+          '</div>' +
+        '</div>';
+      });
+      html += '</div>';
+    }
+
     html += '</div>';
   });
 
