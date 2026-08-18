@@ -20506,7 +20506,7 @@ RENDERERS.placeValueExpanded = {
     parts.forEach(function(k, i) {
       var c = COLORS[k];
       html += '<div style="display:flex;flex-direction:column;align-items:center;gap:4px;">';
-      html += '<input type="number" id="pve_' + k + '" min="0" max="9" ' +
+      html += '<input type="text" id="pve_' + k + '" maxlength="1" pattern="[0-9]*" ' +
         'style="width:56px;height:56px;border-radius:14px;border:3px solid ' + c.border + ';' +
         'background:' + c.bg + ';text-align:center;font-size:24px;font-weight:900;' +
         'font-family:var(--font-display);color:var(--ink);" placeholder="?" inputmode="numeric">';
@@ -20536,14 +20536,43 @@ RENDERERS.placeValueExpanded = {
       return parts.every(function(k){ return vals[k] !== ""; });
     }
 
-    parts.forEach(function(k) {
+    // Single-digit boxes behave like a PIN/OTP input: typing a digit jumps
+    // focus straight to the next box, and Backspace on an empty box jumps
+    // back to the previous one — so kids never have to manually tap each
+    // box in turn.
+    parts.forEach(function(k, idx) {
       var el = document.getElementById("pve_" + k);
-      if (el) el.oninput = function() {
+      if (!el) return;
+      el.oninput = function() {
+        // Strict single digit per box: strip anything that isn't 0-9, then
+        // keep only the most recently typed character.
+        var digitsOnly = el.value.replace(/[^0-9]/g, "");
+        el.value = digitsOnly.slice(-1);
         var vals = getVals();
         var btn = document.getElementById("pveCheck");
         if (btn) btn.disabled = !allFilled(vals);
+
+        if (el.value !== "") {
+          if (idx < parts.length - 1) {
+            var nextEl = document.getElementById("pve_" + parts[idx + 1]);
+            if (nextEl) nextEl.focus();
+          } else {
+            var checkBtn = document.getElementById("pveCheck");
+            if (checkBtn && !checkBtn.disabled) checkBtn.focus();
+          }
+        }
+      };
+      el.onkeydown = function(e) {
+        if (e.key === "Backspace" && el.value === "" && idx > 0) {
+          var prevEl = document.getElementById("pve_" + parts[idx - 1]);
+          if (prevEl) prevEl.focus();
+        }
       };
     });
+
+    // Autofocus the first box so kids can start typing right away.
+    var firstEl = document.getElementById("pve_" + parts[0]);
+    if (firstEl) firstEl.focus();
 
     document.getElementById("pveCheck").onclick = function() {
       var vals = getVals();
