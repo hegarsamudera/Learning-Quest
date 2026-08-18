@@ -1097,15 +1097,32 @@
     50%       { box-shadow: 0 6px 22px -2px #7A6FCBCC; }
   }
 
-  /* Coin + inventory row */
+  /* Coin + inventory row — coins chip is the important one for shopping
+     decisions, so it's visually the star: bigger, gold, gently bouncing
+     to catch a kid's eye instead of blending in with the other chip. */
   .pet-info-row {
-    display: flex; justify-content: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;
+    display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;
   }
   .pet-info-chip {
     font-family: var(--font-display); font-weight: 800; font-size: 13px;
     border-radius: 999px; padding: 6px 14px; display: flex; align-items: center; gap: 5px;
   }
-  .pet-coin-chip { background: #FFF7DD; color: #8A5A00; }
+  .pet-coin-chip {
+    background: linear-gradient(180deg, #FFE380, #FFC53D); color: #5C3D00;
+    font-size: 20px; padding: 10px 20px 10px 16px; gap: 8px;
+    border: 3px solid var(--toy-outline, #6B4A2E); box-shadow: 0 4px 0 rgba(120,90,40,.3);
+    animation: coinChipBounce 2.2s ease-in-out infinite;
+  }
+  .pet-coin-chip .pet-coin-icon { font-size: 26px; line-height: 1; display: inline-block; animation: coinChipSpin 2.2s ease-in-out infinite; }
+  @keyframes coinChipBounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50%      { transform: translateY(-4px) scale(1.04); }
+  }
+  @keyframes coinChipSpin {
+    0%, 40%, 100% { transform: rotate(0deg); }
+    20%           { transform: rotate(-14deg); }
+  }
+  @media (prefers-reduced-motion: reduce){ .pet-coin-chip, .pet-coin-chip .pet-coin-icon{ animation:none !important; } }
   .pet-inv-chip  { background: #F0F4FF; color: #4A5490; }
 
   /* Section labels */
@@ -1133,50 +1150,75 @@
   }
   .pet-section-sub { font-size: 11px; color: var(--ink-soft); text-align: center; margin: -6px 0 10px; }
 
-  /* Food shop grid */
-  .pet-food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
-  .pet-food-item {
-    display: flex; flex-direction: column; align-items: center; gap: 4px; background: var(--card);
-    border-radius: var(--radius-md); padding: 12px 8px; border: 2px solid var(--line);
-    box-shadow: var(--shadow-soft); transition: transform .12s ease, border-color .12s ease;
+  /* ====================================================================
+     PET SCREEN TABS — replaces the old single long scroll (status +
+     inventory grid + shop grid + colors + accessories all stacked) with
+     two clearly-separated activities. The identity/status block above
+     the tabs (visual, name, stage, sparkle bar, evolution path) stays
+     always visible; only "what to do next" is tabbed.
+     ==================================================================== */
+  .pet-tabs { display: flex; gap: 8px; margin: 4px 16px 14px; }
+  .pet-tab-btn {
+    flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 11px 10px; border-radius: 999px; border: 2.5px solid rgba(41,64,82,.16);
+    background: var(--card-solid); font-family: var(--font-display); font-weight: 800; font-size: 14px;
+    color: var(--ink-soft); box-shadow: 0 3px 0 rgba(120,90,40,.12); transition: transform .12s ease;
   }
-  .pet-food-item:active { transform: scale(.96); }
-  .pet-food-item:not(:disabled):hover { border-color: #FFB3D9; }
-  .pet-food-item:disabled { opacity: .45; }
+  .pet-tab-btn:active { transform: translateY(2px); }
+  .pet-tab-btn.active {
+    background: linear-gradient(135deg, var(--sun), var(--orange)); color: #4A2A00;
+    border-color: var(--toy-outline, #6B4A2E); box-shadow: 0 4px 0 rgba(120,90,40,.3);
+  }
+  .pet-tab-badge {
+    font-size: 10px; font-weight: 800; background: rgba(255,255,255,.6); border-radius: 999px;
+    padding: 1px 7px; margin-left: 2px;
+  }
+  .pet-tab-btn.active .pet-tab-badge { background: rgba(255,255,255,.75); }
+  .pet-tab-panel { animation: pop .25s ease both; }
+
+  /* Merged food card — one card per food, replacing the old two separate
+     grids (a "your inventory" grid and a lookalike "shop" grid that read
+     as duplicated UI). Each card shows what you have and both actions
+     it supports, so there's one place to both buy and feed. */
+  .pet-food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 6px; }
+  .pet-food-card {
+    display: flex; flex-direction: column; align-items: center; gap: 3px; background: var(--card-solid);
+    border-radius: var(--radius-md); padding: 12px 8px 10px; border: 2px solid var(--line);
+    box-shadow: var(--shadow-soft); position: relative;
+  }
   .pet-food-icon { font-size: 28px; }
   .pet-food-name { font-size: 12px; font-weight: 700; color: var(--ink); text-align: center; }
-  .pet-food-cost { font-size: 11px; color: #8A5A00; font-weight: 700; }
-  .pet-food-power { font-size: 11px; color: var(--violet); font-weight: 800; }
-  .pet-food-owned { background: #F8F0FF; border-color: var(--violet); }
-
-  /* Inventory feed buttons */
-  .pet-inv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; }
-  .pet-inv-item {
-    display: flex; align-items: center; gap: 8px; background: var(--card);
-    border-radius: var(--radius-sm); padding: 8px 10px; border: 2px solid var(--line);
-    box-shadow: var(--shadow-soft); text-align: left;
+  .pet-food-power { font-size: 10px; color: var(--violet); font-weight: 800; }
+  .pet-food-owned-badge {
+    position: absolute; top: 6px; right: 6px; font-size: 10px; font-weight: 800; color: #fff;
+    background: var(--success); border-radius: 999px; padding: 1px 7px;
   }
-  .pet-inv-icon { font-size: 22px; flex-shrink: 0; }
-  .pet-inv-info { flex: 1; min-width: 0; }
-  .pet-inv-name { font-size: 11px; font-weight: 700; color: var(--ink); }
-  .pet-inv-count { font-size: 10px; color: var(--ink-soft); }
-  .pet-inv-feed-btn {
-    font-size: 10px; font-weight: 800; font-family: var(--font-display);
+  .pet-food-actions { display: flex; gap: 5px; margin-top: 6px; width: 100%; }
+  .pet-food-actions button {
+    flex: 1; font-size: 10.5px; font-weight: 800; font-family: var(--font-display);
+    border: none; border-radius: 999px; padding: 6px 4px; line-height: 1.2;
+  }
+  .pet-food-buy-btn { background: var(--card); color: #8A5A00; border: 2px solid #FFE49C !important; }
+  .pet-food-buy-btn:disabled { opacity: .4; }
+  .pet-food-feed-btn {
     background: linear-gradient(135deg, #FFB3D9, #C9A8F5); color: #4A2070;
-    border: none; border-radius: 999px; padding: 4px 10px; flex-shrink: 0;
   }
-  .pet-inv-feed-btn:active { transform: scale(.93); }
-  .pet-inv-feed-btn:disabled { opacity: .45; }
+  .pet-food-feed-btn:disabled { opacity: .4; }
+  .pet-food-actions button:active:not(:disabled) { transform: scale(.94); }
 
-  /* Color picker */
-  .pet-color-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+  /* Style tab — color picker + accessories, grouped under sub-headers
+     instead of reading as two unrelated shops. */
+  .pet-style-subhead {
+    font-family: var(--font-display); font-weight: 800; font-size: 12.5px; color: var(--ink-soft);
+    text-align: center; margin: 4px 0 8px; text-transform: uppercase; letter-spacing: .03em;
+  }
+  .pet-color-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
   .pet-color-swatch { width: 36px; height: 36px; border-radius: 50%; border: 3px solid transparent; box-shadow: var(--shadow-soft); }
   .pet-color-selected { border-color: var(--ink); transform: scale(1.1); }
 
-  /* Accessory shop */
   .pet-shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
   .pet-shop-item {
-    display: flex; flex-direction: column; align-items: center; gap: 4px; background: var(--card);
+    display: flex; flex-direction: column; align-items: center; gap: 4px; background: var(--card-solid);
     border-radius: var(--radius-md); padding: 12px 8px; border: 2px solid var(--line); box-shadow: var(--shadow-soft);
     transition: transform .12s ease;
   }
@@ -1982,7 +2024,7 @@
   .trophy-card, .report-mode-row, .report-history-row, .map-side-node,
   .world-boss-card, .daily-quest-board, .evo-gallery-item, .pet-preview-card,
   .journey-hero, .journey-continue-card, .difficulty-card, .nx-card,
-  .pet-food-item, .pet-shop-item, .pet-inv-item, .reset-modal, .evo-modal,
+  .pet-food-card, .pet-shop-item, .reset-modal, .evo-modal,
   .missed-recap, .numpad-display, .score-chip{
     backdrop-filter: none; -webkit-backdrop-filter: none;
   }
@@ -2028,7 +2070,7 @@
      which would look wrong individually boxed). */
   .trophy-card, .world-boss-card, .daily-quest-board, .evo-gallery-item,
   .pet-preview-card, .journey-hero, .journey-continue-card, .difficulty-card,
-  .nx-card, .pet-food-item, .pet-shop-item, .pet-inv-item, .reset-modal,
+  .nx-card, .pet-food-card, .pet-shop-item, .reset-modal,
   .evo-modal, .map-side-node, .all-tiers-done-banner,
   .boss-unlock-banner, .coin-remaining-banner,
   .home-streak-banner, .evo-ready-banner, .trail-chapter-banner,
@@ -2068,7 +2110,7 @@
 
   /* Extra "toy pop" on tap for the big cards/tiles above */
   .trophy-card:active, .difficulty-card:active, .nx-card:active,
-  .pet-food-item:active, .pet-shop-item:active, .map-side-node:active{
+  .pet-food-card:active, .pet-shop-item:active, .map-side-node:active{
     transform:translateY(3px);
     box-shadow:0 2px 0 rgba(120,90,40,.14), var(--shadow-card) !important;
   }
@@ -14201,6 +14243,11 @@ var PET_COLORS = {
   rainbow:  { name: "Rainbow",           hex: "linear-gradient(135deg,#FFB3D9,#C9A8F5,#A8D8F5)" }
 };
 
+// UI-only (not persisted): which sub-tab of the redesigned Pet screen is
+// showing. Kept as a simple module var so it survives re-renders within
+// the same visit but resets to "feed" next time the app loads.
+var petActiveTab = "feed";
+
 // --- Pet data in localStorage ---
 // schema: { name, stageIndex, sparklePower, ownedAccessories, equipped, color,
 //           foodInventory: { apple:N, banana:N, ... }, unlockedColors }
@@ -15717,7 +15764,7 @@ function renderSubject() {
 
   // Coin stats mini row
   html += '<div style="display:flex;justify-content:center;gap:10px;padding:10px 16px 0;">' +
-    '<div class="pet-info-chip pet-coin-chip">🪙 ' + gm.coins + ' Coins</div>' +
+    '<div class="pet-info-chip pet-coin-chip"><span class="pet-coin-icon">🪙</span> ' + gm.coins + ' Coins</div>' +
     '<div class="pet-info-chip" style="background:#F0F8FF;color:#4A5490;">🔥 ' + gm.streak + ' Streak</div>' +
   '</div>';
 
@@ -16476,92 +16523,102 @@ function renderPetScreen() {
   // Info row: coins + food inventory count
   var totalFood = Object.keys(inv).reduce(function(t, k) { return t + (inv[k] || 0); }, 0);
   html += '<div class="pet-info-row">';
-  html += '<div class="pet-info-chip pet-coin-chip">🪙 ' + gm.coins + ' Coins</div>';
+  html += '<div class="pet-info-chip pet-coin-chip"><span class="pet-coin-icon">🪙</span> ' + gm.coins + ' Coins</div>';
   html += '<div class="pet-info-chip pet-inv-chip">🍎 ' + totalFood + ' Food</div>';
   html += '</div>';
 
-  // --- FOOD INVENTORY (feed buttons) ---
-  var hasFoodInInv = Object.keys(SPARKLE_FOOD).some(function(k) { return (inv[k] || 0) > 0; });
-  if (hasFoodInInv) {
-    html += '<p class="pet-section-label">Feed Your Pet</p>';
-    html += '<p class="pet-section-sub">Tap food to give it to your pet</p>';
-    html += '<div class="pet-inv-grid">';
+  // --- TABS — everything below the status block is one of two clear
+  // activities, so it's tabbed instead of one long undifferentiated
+  // scroll of look-alike grids. ---
+  var ownedAccCount = (pet.ownedAccessories || []).length;
+  html += '<div class="pet-tabs">' +
+    '<button class="pet-tab-btn' + (petActiveTab === "feed" ? ' active' : '') + '" data-tab="feed">🍎 Feed' +
+      (totalFood > 0 ? '<span class="pet-tab-badge">' + totalFood + '</span>' : '') +
+    '</button>' +
+    '<button class="pet-tab-btn' + (petActiveTab === "style" ? ' active' : '') + '" data-tab="style">🎨 Style' +
+      (ownedAccCount > 0 ? '<span class="pet-tab-badge">' + ownedAccCount + '</span>' : '') +
+    '</button>' +
+  '</div>';
+
+  html += '<div class="pet-tab-panel">';
+  if (petActiveTab === "style") {
+    // --- STYLE TAB: color + accessories together, since both just
+    // change how the pet looks — no reason for them to be separate shops.
+    html += '<p class="pet-style-subhead">Colors</p>';
+    html += '<div class="pet-color-row">';
+    Object.keys(PET_COLORS).forEach(function(key) {
+      var c = PET_COLORS[key];
+      var isUnlocked = unlockedColors.indexOf(key) !== -1;
+      var selected = pet.color === key;
+      if (isUnlocked) {
+        html += '<button class="pet-color-swatch' + (selected ? ' pet-color-selected' : '') + '" style="background:' + c.hex + ';" data-color="' + key + '" title="' + escapeHTML(c.name) + '"></button>';
+      } else {
+        html += '<button class="pet-color-swatch" style="background:#ccc;opacity:.4;cursor:not-allowed;" disabled title="Locked — evolve to unlock"></button>';
+      }
+    });
+    html += '</div>';
+
+    html += '<p class="pet-style-subhead">Outfits</p>';
+    html += '<p class="pet-section-sub">Dress up your pet with coins!</p>';
+    html += '<div class="pet-shop-grid">';
+    Object.keys(PET_ACCESSORIES).forEach(function(key) {
+      var acc = PET_ACCESSORIES[key];
+      var owned = (pet.ownedAccessories || []).indexOf(key) !== -1;
+      var equipped = (pet.equipped || []).indexOf(key) !== -1;
+      var canAfford = gm.coins >= acc.cost;
+      var isFree = acc.cost === 0 && acc.evolutionReward;
+
+      var cls = "pet-shop-item";
+      if (equipped) cls += " pet-shop-equipped";
+      else if (owned) cls += " pet-shop-owned";
+      else if (!canAfford && !isFree) cls += " pet-shop-locked";
+
+      var costText = owned
+        ? (equipped ? "Equipped ✓" : "Tap to wear")
+        : (isFree ? "🎁 Evolution reward" : "🪙 " + acc.cost);
+
+      html += '<button class="' + cls + '" data-accessory="' + key + '"' + (!owned && !canAfford && !isFree ? ' disabled' : '') + '>';
+      html += '<span class="pet-shop-icon">' + acc.icon + '</span>';
+      html += '<span class="pet-shop-name">' + escapeHTML(acc.name) + '</span>';
+      html += '<span class="pet-shop-cost">' + costText + '</span>';
+      html += '</button>';
+    });
+    html += '</div>';
+  } else {
+    // --- FEED TAB: one merged card per food (was two separate,
+    // near-identical "your food" and "shop" grids). Each card shows
+    // what you own and offers both actions it supports.
+    html += '<p class="pet-section-sub">Buy food with coins, then feed it to grow Sparkle Power ✨</p>';
+    html += '<div class="pet-food-grid">';
     Object.keys(SPARKLE_FOOD).forEach(function(key) {
       var food = SPARKLE_FOOD[key];
-      var count = inv[key] || 0;
-      if (count < 1) return;
-      html += '<div class="pet-inv-item">';
-      html += '<span class="pet-inv-icon">' + food.icon + '</span>';
-      html += '<div class="pet-inv-info"><div class="pet-inv-name">' + escapeHTML(food.name) + '</div><div class="pet-inv-count">x' + count + ' · +' + food.power + ' ✨</div></div>';
-      html += '<button class="pet-inv-feed-btn" data-feed="' + key + '">Feed!</button>';
+      var owned = inv[key] || 0;
+      var canAfford = gm.coins >= food.cost;
+      html += '<div class="pet-food-card">';
+      if (owned > 0) html += '<span class="pet-food-owned-badge">x' + owned + '</span>';
+      html += '<span class="pet-food-icon">' + food.icon + '</span>';
+      html += '<span class="pet-food-name">' + escapeHTML(food.name) + '</span>';
+      html += '<span class="pet-food-power">+' + food.power + ' ✨</span>';
+      html += '<div class="pet-food-actions">';
+      html += '<button class="pet-food-buy-btn" data-buy="' + key + '"' + (canAfford ? '' : ' disabled') + '>🪙' + food.cost + '</button>';
+      html += '<button class="pet-food-feed-btn" data-feed="' + key + '"' + (owned > 0 ? '' : ' disabled') + '>Feed!</button>';
+      html += '</div>';
       html += '</div>';
     });
     html += '</div>';
   }
-
-  // --- FOOD SHOP ---
-  html += '<p class="pet-section-label">Food Shop</p>';
-  html += '<p class="pet-section-sub">Buy food with coins, then feed your pet!</p>';
-  html += '<div class="pet-food-grid">';
-  Object.keys(SPARKLE_FOOD).forEach(function(key) {
-    var food = SPARKLE_FOOD[key];
-    var canAfford = gm.coins >= food.cost;
-    var owned = inv[key] || 0;
-    html += '<button class="pet-food-item' + (owned > 0 ? ' pet-food-owned' : '') + '" data-buy="' + key + '"' + (canAfford ? '' : ' disabled') + '>';
-    html += '<span class="pet-food-icon">' + food.icon + '</span>';
-    html += '<span class="pet-food-name">' + escapeHTML(food.name) + (owned > 0 ? ' (x' + owned + ')' : '') + '</span>';
-    html += '<span class="pet-food-cost">🪙 ' + food.cost + '</span>';
-    html += '<span class="pet-food-power">+' + food.power + ' ✨</span>';
-    html += '</button>';
-  });
-  html += '</div>';
-
-  // --- COLOR PICKER ---
-  html += '<p class="pet-section-label">Pick a Color</p>';
-  html += '<div class="pet-color-row">';
-  Object.keys(PET_COLORS).forEach(function(key) {
-    var c = PET_COLORS[key];
-    var isUnlocked = unlockedColors.indexOf(key) !== -1;
-    var selected = pet.color === key;
-    var bg = c.hex.startsWith("linear") ? c.hex : c.hex;
-    if (isUnlocked) {
-      html += '<button class="pet-color-swatch' + (selected ? ' pet-color-selected' : '') + '" style="background:' + bg + ';" data-color="' + key + '" title="' + escapeHTML(c.name) + '"></button>';
-    } else {
-      html += '<button class="pet-color-swatch" style="background:#ccc;opacity:.4;cursor:not-allowed;" disabled title="Locked — evolve to unlock"></button>';
-    }
-  });
-  html += '</div>';
-
-  // --- ACCESSORY SHOP ---
-  html += '<p class="pet-section-label">Accessory Shop</p>';
-  html += '<p class="pet-section-sub">Dress up your pet with coins!</p>';
-  html += '<div class="pet-shop-grid">';
-  Object.keys(PET_ACCESSORIES).forEach(function(key) {
-    var acc = PET_ACCESSORIES[key];
-    var owned = (pet.ownedAccessories || []).indexOf(key) !== -1;
-    var equipped = (pet.equipped || []).indexOf(key) !== -1;
-    var canAfford = gm.coins >= acc.cost;
-    var isFree = acc.cost === 0 && acc.evolutionReward;
-
-    var cls = "pet-shop-item";
-    if (equipped) cls += " pet-shop-equipped";
-    else if (owned) cls += " pet-shop-owned";
-    else if (!canAfford && !isFree) cls += " pet-shop-locked";
-
-    var costText = owned
-      ? (equipped ? "Equipped ✓" : "Tap to wear")
-      : (isFree ? "🎁 Evolution reward" : "🪙 " + acc.cost);
-
-    html += '<button class="' + cls + '" data-accessory="' + key + '"' + (!owned && !canAfford && !isFree ? ' disabled' : '') + '>';
-    html += '<span class="pet-shop-icon">' + acc.icon + '</span>';
-    html += '<span class="pet-shop-name">' + escapeHTML(acc.name) + '</span>';
-    html += '<span class="pet-shop-cost">' + costText + '</span>';
-    html += '</button>';
-  });
-  html += '</div>';
+  html += '</div>'; // end pet-tab-panel
 
   html += '</div>'; // end screen
   app.innerHTML = html;
+
+  // Tab switching
+  document.querySelectorAll(".pet-tab-btn").forEach(function(btn) {
+    btn.onclick = function() {
+      petActiveTab = this.getAttribute("data-tab");
+      renderPetScreen();
+    };
+  });
 
   // --- Wire interactions ---
   var nameInput = document.getElementById("petNameInput");
