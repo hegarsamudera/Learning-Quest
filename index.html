@@ -16461,7 +16461,13 @@ function renderWorldDetail() {
       var pos = positions[i];
 
       if (chapterStartIndex[i]) {
-        html += '<div class="trail-chapter-banner" style="top:' + (pos.y - 58) + 'px;">🚩 ' + escapeHTML(chapterStartIndex[i]) + '</div>';
+        // Clear the node's medallion + connector post + caption bubble
+        // (roughly 100-110px tall, centered on pos.y) with enough margin
+        // that the banner never overlaps it — and clamp to a small
+        // positive top so the very first chapter's banner doesn't get
+        // clipped by the trail card's rounded, overflow-hidden edge.
+        var bannerTop = Math.max(6, pos.y - 90);
+        html += '<div class="trail-chapter-banner" style="top:' + bannerTop + 'px;left:' + pos.x + '%;">🚩 ' + escapeHTML(chapterStartIndex[i]) + '</div>';
       }
 
       html += '<div class="trail-node world-lesson-node' + (isLocked ? ' trail-node-locked' : '') + (isCleared ? ' trail-node-cleared' : '') + (isCurrent ? ' trail-node-current' : '') + '" ' +
