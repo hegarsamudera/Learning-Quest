@@ -768,6 +768,12 @@
   .pet-preview-name { font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--ink); }
   .pet-preview-note { font-size: 12px; color: var(--ink-soft); margin-top: 1px; }
   .pet-preview-arrow { font-size: 22px; color: var(--ink-soft); flex-shrink: 0; }
+  .pet-preview-quickfeed {
+    flex-shrink: 0; background: linear-gradient(135deg, #FFB3D9, #C9A8F5); color: #4A2070;
+    border: none; border-radius: 999px; padding: 8px 12px; font-size: 12px; font-weight: 800;
+    font-family: var(--font-display); white-space: nowrap; -webkit-tap-highlight-color: transparent;
+  }
+  .pet-preview-quickfeed:active { transform: scale(.94); }
 
   /* Journey Map */
   .journey-continue-card { background: linear-gradient(135deg,#FFB45C,#FF8F7A); }
@@ -853,14 +859,19 @@
     margin: 0 16px 16px; padding: 16px; box-shadow: var(--shadow-card); cursor: pointer;
     -webkit-tap-highlight-color: transparent;
   }
-  .journey-hero-strip { display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .journey-hero-strip {
+    display: flex; align-items: center; justify-content: flex-start; margin-bottom: 12px;
+    overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 2px;
+  }
+  .journey-hero-strip::-webkit-scrollbar{ display:none; }
   .hero-world-dot {
-    position: relative; width: 34px; height: 34px; border-radius: 50%; background: var(--dot-color, #fff);
-    display: flex; align-items: center; justify-content: center; font-size: 17px; border: 2px solid rgba(255,255,255,.8);
+    position: relative; width: 30px; height: 30px; border-radius: 50%; background: var(--dot-color, #fff);
+    display: flex; align-items: center; justify-content: center; font-size: 15px; border: 2px solid rgba(255,255,255,.8);
+    flex-shrink: 0;
   }
   .hero-world-dot-locked { opacity: .5; filter: grayscale(.6); }
   .hero-world-dot-current { box-shadow: 0 0 0 4px rgba(255,255,255,.7); transform: scale(1.15); }
-  .hero-world-connector { width: 10px; height: 2px; background: rgba(255,255,255,.6); }
+  .hero-world-connector { width: 8px; height: 2px; background: rgba(255,255,255,.6); flex-shrink: 0; }
   .hero-dot-check { position: absolute; bottom: -4px; right: -4px; background: var(--card); border-radius: 50%; font-size: 9px; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; color: #2E7D5B; }
   .journey-hero-text { text-align: center; margin-bottom: 12px; }
   .journey-hero-title { font-family: var(--font-display); font-weight: 900; font-size: 16px; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.35); }
@@ -1185,26 +1196,44 @@
     display: flex; flex-direction: column; align-items: center; gap: 3px; background: var(--card-solid);
     border-radius: var(--radius-md); padding: 12px 8px 10px; border: 2px solid var(--line);
     box-shadow: var(--shadow-soft); position: relative;
+    cursor: pointer; -webkit-tap-highlight-color: transparent; transition: transform .1s ease, border-color .15s ease;
   }
+  .pet-food-card:active { transform: scale(.96); }
+  .pet-food-card-broke { opacity: .55; }
   .pet-food-icon { font-size: 28px; }
   .pet-food-name { font-size: 12px; font-weight: 700; color: var(--ink); text-align: center; }
   .pet-food-power { font-size: 10px; color: var(--violet); font-weight: 800; }
+  .pet-food-hint { font-size: 10.5px; font-weight: 700; color: #4A2070; margin-top: 4px; text-align: center; }
+  .pet-food-card-broke .pet-food-hint { color: var(--ink-soft); }
   .pet-food-owned-badge {
     position: absolute; top: 6px; right: 6px; font-size: 10px; font-weight: 800; color: #fff;
     background: var(--success); border-radius: 999px; padding: 1px 7px;
   }
-  .pet-food-actions { display: flex; gap: 5px; margin-top: 6px; width: 100%; }
-  .pet-food-actions button {
-    flex: 1; font-size: 10.5px; font-weight: 800; font-family: var(--font-display);
-    border: none; border-radius: 999px; padding: 6px 4px; line-height: 1.2;
+  .pet-food-stock-btn {
+    margin-top: 6px; width: 100%; font-size: 10px; font-weight: 700; font-family: var(--font-display);
+    background: var(--card); color: #8A5A00; border: 2px solid #FFE49C; border-radius: 999px; padding: 5px 4px;
+    -webkit-tap-highlight-color: transparent;
   }
-  .pet-food-buy-btn { background: var(--card); color: #8A5A00; border: 2px solid #FFE49C !important; }
-  .pet-food-buy-btn:disabled { opacity: .4; }
-  .pet-food-feed-btn {
-    background: linear-gradient(135deg, #FFB3D9, #C9A8F5); color: #4A2070;
+  .pet-food-stock-btn:disabled { opacity: .35; }
+  .pet-food-stock-btn:active:not(:disabled) { transform: scale(.94); }
+
+  .pet-food-shake { animation: petFoodShake .5s ease; }
+  @keyframes petFoodShake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
   }
-  .pet-food-feed-btn:disabled { opacity: .4; }
-  .pet-food-actions button:active:not(:disabled) { transform: scale(.94); }
+
+  .pet-feedall-btn {
+    display: block; width: 100%; margin: 4px 0 12px; padding: 12px;
+    background: linear-gradient(135deg, #FFD86B, #FFB45C); color: #4A2A00;
+    border: none; border-radius: var(--radius-md); font-family: var(--font-display);
+    font-weight: 900; font-size: 14px; box-shadow: var(--shadow-soft);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .pet-feedall-btn:active { transform: scale(.97); }
 
   /* Style tab — color picker + accessories, grouped under sub-headers
      instead of reading as two unrelated shops. */
@@ -11594,241 +11623,241 @@
       "icon": "🎉",
       "accent": "coral",
       "subject": "socialstudies",
-      "description": "Celebrate how different people live and celebrate!",
+      "description": "Celebrate Indonesia's holidays, religions and rich culture!",
       "questions": [
         {
           "id": "hc-1",
-          "question": "Which festival celebrates the new year in China?",
-          "emoji": "🐉",
+          "question": "What is Hari Raya Idul Fitri also called in Indonesia?",
+          "emoji": "🌙",
           "options": [
-            "Diwali",
-            "Lunar New Year",
-            "Christmas",
-            "Eid"
+            "Imlek",
+            "Lebaran",
+            "Nyepi",
+            "Waisak"
           ],
           "answer": 1,
-          "fact": "Lunar New Year (Chinese New Year) is celebrated with fireworks, red envelopes and dragon dances!"
+          "fact": "Idul Fitri is often called 'Lebaran' in Indonesia — it marks the end of the fasting month of Ramadan for Muslims!"
         },
         {
           "id": "hc-2",
-          "question": "What is Diwali known as?",
-          "emoji": "🪔",
+          "question": "What do Muslims do during the month of Ramadan?",
+          "emoji": "🌙",
           "options": [
-            "The Festival of Rain",
-            "The Festival of Lights",
-            "The Festival of Colours",
-            "The Festival of Music"
+            "Fast from sunrise to sunset each day",
+            "Light candles for eight nights",
+            "Throw coloured water",
+            "Decorate a pine tree"
           ],
-          "answer": 1,
-          "fact": "Diwali is the Festival of Lights — celebrated by Hindus, Sikhs and Jains with lamps, fireworks and sweets!"
+          "answer": 0,
+          "fact": "During Ramadan, Muslims fast from sunrise to sunset for about a month — it's a time for prayer, patience and giving to others!"
         },
         {
           "id": "hc-3",
-          "question": "Which holiday involves giving gifts and decorating a tree?",
-          "emoji": "🎄",
+          "question": "What special food is often eaten during Lebaran in Indonesia?",
+          "emoji": "🍚",
           "options": [
-            "Eid",
-            "Hanukkah",
-            "Christmas",
-            "Diwali"
+            "Ketupat",
+            "Pizza",
+            "Tacos",
+            "Sushi"
           ],
-          "answer": 2,
-          "fact": "Christmas is celebrated on 25 December — many people decorate trees and exchange gifts!"
+          "answer": 0,
+          "fact": "Ketupat is rice cooked inside a woven palm-leaf pouch — it's a favourite dish during Lebaran celebrations!"
         },
         {
           "id": "hc-4",
-          "question": "What is Eid al-Fitr?",
-          "emoji": "🌙",
+          "question": "Which Indonesian holiday includes sharing meat from a sacrificed animal with family and neighbours?",
+          "emoji": "🐄",
           "options": [
-            "A Hindu harvest festival",
-            "A celebration at the end of Ramadan for Muslims",
-            "A Chinese new year festival",
-            "A Buddhist holiday"
+            "Idul Adha",
+            "Nyepi",
+            "Natal",
+            "Waisak"
           ],
-          "answer": 1,
-          "fact": "Eid al-Fitr marks the end of Ramadan (the Muslim month of fasting) — families feast and give gifts!"
+          "answer": 0,
+          "fact": "Idul Adha (Hari Raya Kurban) is when Muslims share meat with family, neighbours and those in need!"
         },
         {
           "id": "hc-5",
-          "question": "What is the name of the Jewish festival of lights?",
-          "emoji": "🕎",
+          "question": "Natal is celebrated by which religious communities in Indonesia?",
+          "emoji": "🎄",
           "options": [
-            "Passover",
-            "Rosh Hashanah",
-            "Hanukkah",
-            "Sukkot"
+            "Hindus and Buddhists",
+            "Christians (Protestant and Catholic)",
+            "Muslims",
+            "Followers of Konghucu"
           ],
-          "answer": 2,
-          "fact": "Hanukkah is the Jewish Festival of Lights — celebrated for 8 nights by lighting a menorah candle each night!"
+          "answer": 1,
+          "fact": "Natal (Christmas) on 25 December is celebrated by both Protestant and Catholic Christians across Indonesia!"
         },
         {
           "id": "hc-6",
-          "question": "Which festival involves throwing coloured powder?",
-          "emoji": "🌈",
+          "question": "What is Nyepi, celebrated mainly in Bali?",
+          "emoji": "🤫",
           "options": [
-            "Diwali",
-            "Holi",
-            "Eid",
-            "Christmas"
+            "A noisy fireworks festival",
+            "A Hindu Day of Silence and reflection",
+            "A harvest parade",
+            "A boat race"
           ],
           "answer": 1,
-          "fact": "Holi is a Hindu festival of colours — people throw bright coloured powder to celebrate spring!"
+          "fact": "Nyepi is the Balinese Hindu New Year — a Day of Silence when people stay quiet at home to reflect, fast and meditate!"
         },
         {
           "id": "hc-7",
-          "question": "What is culture?",
-          "emoji": "🌍",
+          "question": "Waisak Day celebrates the life of which important figure?",
+          "emoji": "🪷",
           "options": [
-            "A type of food",
+            "The Buddha",
+            "The Prophet Muhammad",
+            "Confucius",
+            "Jesus"
+          ],
+          "answer": 0,
+          "fact": "Waisak celebrates the birth, enlightenment and passing of the Buddha — Buddhists in Indonesia often gather at Borobudur Temple!"
+        },
+        {
+          "id": "hc-8",
+          "question": "Imlek (Chinese New Year) is a celebration closely tied to which religion recognised in Indonesia?",
+          "emoji": "🧧",
+          "options": [
+            "Konghucu (Confucianism)",
+            "Hindu",
+            "Islam",
+            "Katolik"
+          ],
+          "answer": 0,
+          "fact": "Imlek is celebrated with red lanterns and lion dances, and is closely linked to Konghucu (Confucian) tradition in Indonesia!"
+        },
+        {
+          "id": "hc-9",
+          "question": "How many official religions are recognised in Indonesia?",
+          "emoji": "🙏",
+          "options": [
+            "Three",
+            "Four",
+            "Five",
+            "Six"
+          ],
+          "answer": 3,
+          "fact": "Indonesia officially recognises six religions: Islam, Protestant Christianity, Catholicism, Hinduism, Buddhism and Konghucu (Confucianism)!"
+        },
+        {
+          "id": "hc-10",
+          "question": "What does the national motto 'Bhinneka Tunggal Ika' mean?",
+          "emoji": "🇮🇩",
+          "options": [
+            "One nation, one language",
+            "Unity in Diversity",
+            "Strength through struggle",
+            "Peace and harmony"
+          ],
+          "answer": 1,
+          "fact": "'Bhinneka Tunggal Ika' means 'Unity in Diversity' — Indonesians have many religions and cultures, yet remain one nation!"
+        },
+        {
+          "id": "hc-11",
+          "question": "What is Pancasila?",
+          "emoji": "🦅",
+          "options": [
+            "A traditional dance",
+            "Indonesia's national foundation with five guiding principles",
+            "A type of batik pattern",
+            "A national holiday"
+          ],
+          "answer": 1,
+          "fact": "Pancasila has five principles that guide Indonesia, including belief in one God, unity and social justice for all Indonesians!"
+        },
+        {
+          "id": "hc-12",
+          "question": "What is culture?",
+          "emoji": "🌏",
+          "options": [
+            "A type of food only",
             "The language people speak only",
             "The beliefs, traditions and way of life shared by a group of people",
             "The clothes people wear only"
           ],
           "answer": 2,
-          "fact": "Culture includes a group's food, language, music, traditions, art and celebrations — it makes each community unique!"
-        },
-        {
-          "id": "hc-8",
-          "question": "What food is traditionally eaten at Chinese New Year for good luck?",
-          "emoji": "🥟",
-          "options": [
-            "Pizza",
-            "Dumplings",
-            "Sandwiches",
-            "Tacos"
-          ],
-          "answer": 1,
-          "fact": "Dumplings are eaten at Chinese New Year — their shape resembles ancient gold ingots, symbolising wealth and luck!"
-        },
-        {
-          "id": "hc-9",
-          "question": "Which country celebrates Thanksgiving as a national holiday?",
-          "emoji": "🦃",
-          "options": [
-            "UK",
-            "Australia",
-            "USA",
-            "India"
-          ],
-          "answer": 2,
-          "fact": "Thanksgiving is celebrated in the USA on the fourth Thursday of November — families give thanks and eat a big meal!"
-        },
-        {
-          "id": "hc-10",
-          "question": "What does the word 'traditional' mean?",
-          "emoji": "👘",
-          "options": [
-            "Something new and modern",
-            "Something passed down through generations",
-            "Something bought in a shop",
-            "Something worn at school"
-          ],
-          "answer": 1,
-          "fact": "Traditional means something handed down from one generation to the next — like recipes, clothes and celebrations!"
-        },
-        {
-          "id": "hc-11",
-          "question": "Why is it important to learn about different cultures?",
-          "emoji": "🤝",
-          "options": [
-            "To copy other people",
-            "To understand, respect and celebrate how different people live",
-            "To travel to other countries",
-            "To learn different languages only"
-          ],
-          "answer": 1,
-          "fact": "Learning about other cultures builds respect and understanding — it helps us live together peacefully in a diverse world!"
-        },
-        {
-          "id": "hc-12",
-          "question": "What is a tradition?",
-          "emoji": "🎎",
-          "options": [
-            "A new invention",
-            "A custom or practice passed down through time",
-            "A modern celebration",
-            "A type of food"
-          ],
-          "answer": 1,
-          "fact": "A tradition is something done repeatedly over time — like a family always making a special meal on birthdays!"
+          "fact": "Culture includes a community's food, language, music, traditions, art and celebrations — Indonesia has hundreds of unique cultures!"
         },
         {
           "id": "hc-13",
-          "question": "Which festival is celebrated by decorating homes with lanterns?",
-          "emoji": "🏮",
+          "question": "What is batik?",
+          "emoji": "🧵",
           "options": [
-            "Easter",
-            "Diwali",
-            "Halloween",
-            "Valentine's Day"
+            "A traditional Indonesian fabric art made with wax and dye",
+            "A type of Indonesian dance",
+            "A festival of lights",
+            "A traditional musical instrument"
           ],
-          "answer": 1,
-          "fact": "Diwali homes are decorated with diyas (clay lamps) and lanterns — fireworks light up the night sky!"
+          "answer": 0,
+          "fact": "Batik is a traditional Indonesian fabric decorated using wax-resist dyeing — it's recognised by UNESCO as a world cultural treasure!"
         },
         {
           "id": "hc-14",
-          "question": "What do Muslims do during Ramadan?",
-          "emoji": "🌙",
+          "question": "What day does Indonesia celebrate its Independence Day?",
+          "emoji": "🎊",
           "options": [
-            "Exchange gifts",
-            "Fast from sunrise to sunset each day",
-            "Throw coloured powder",
-            "Light candles for 8 nights"
+            "17 August",
+            "1 January",
+            "25 December",
+            "10 November"
           ],
-          "answer": 1,
-          "fact": "During Ramadan, Muslims fast from sunrise to sunset for 30 days — it is a time for prayer and reflection!"
+          "answer": 0,
+          "fact": "Indonesia celebrates Hari Kemerdekaan (Independence Day) on 17 August, marking independence declared in 1945!"
         },
         {
           "id": "hc-15",
-          "question": "Which festival involves wearing costumes and trick-or-treating?",
-          "emoji": "🎃",
+          "question": "What is 'gotong royong'?",
+          "emoji": "🤝",
           "options": [
-            "Easter",
-            "Diwali",
-            "Halloween",
-            "Bonfire Night"
+            "A type of traditional food",
+            "Working together and helping each other as a community",
+            "A religious ceremony only",
+            "A national holiday"
           ],
-          "answer": 2,
-          "fact": "Halloween is celebrated on 31 October — children dress up in costumes and go trick-or-treating!"
+          "answer": 1,
+          "fact": "Gotong royong means working together for the common good — like neighbours helping clean the village or build something together!"
         },
         {
           "id": "hc-16",
-          "question": "What is a national holiday?",
-          "emoji": "🏳️",
+          "question": "What do people often say to each other during Idul Fitri in Indonesia?",
+          "emoji": "🌟",
           "options": [
-            "A holiday you take at school",
-            "A day off celebrated across a whole country",
-            "A private family celebration",
-            "A religious day only"
+            "Merry Christmas",
+            "Mohon Maaf Lahir dan Batin",
+            "Happy Nyepi",
+            "Gong Xi Fa Cai"
           ],
           "answer": 1,
-          "fact": "A national holiday is a day celebrated by a whole country — like Independence Day in the USA!"
+          "fact": "'Mohon Maaf Lahir dan Batin' means asking for forgiveness — it's a special greeting shared during Idul Fitri!"
         },
         {
           "id": "hc-17",
-          "question": "What is the Islamic greeting used during Eid?",
-          "emoji": "🌟",
+          "question": "Why does Indonesia celebrate holidays from six different religions?",
+          "emoji": "🇮🇩",
           "options": [
-            "Shalom",
-            "Merry Christmas",
-            "Eid Mubarak",
-            "Namaste"
+            "Because the government requires everyone to celebrate all of them",
+            "Indonesia is home to people of many religions living together",
+            "Because all Indonesians follow the same religion",
+            "By accident, since holidays are chosen randomly"
           ],
-          "answer": 2,
-          "fact": "'Eid Mubarak' means 'Blessed Eid' in Arabic — it is the traditional greeting shared during Eid celebrations!"
+          "answer": 1,
+          "fact": "Indonesia is home to many religions and ethnic groups — celebrating each other's holidays shows respect and strengthens unity!"
         },
         {
           "id": "hc-18",
-          "question": "Why do different countries have different celebrations?",
-          "emoji": "🌍",
+          "question": "Why is it important to respect people from different religions and cultures in Indonesia?",
+          "emoji": "💛",
           "options": [
-            "Because they do not talk to each other",
-            "Each country has its own unique history, religion and traditions",
-            "Because they have different weather",
-            "Because they celebrate on different days by chance"
+            "To copy their traditions",
+            "To live together peacefully and honour Indonesia's diversity",
+            "Only if they live nearby",
+            "It is not important"
           ],
           "answer": 1,
-          "fact": "Celebrations reflect a country's history, religion and culture — diversity in celebrations makes the world interesting!"
+          "fact": "Indonesia's diversity is one of its greatest strengths — respecting each other keeps the nation peaceful and united!"
         }
       ]
     },
@@ -13060,245 +13089,245 @@
     {
       "key": "famousArtists",
       "type": "scienceQuiz",
-      "label": "Famous Artists",
-      "icon": "🖼️",
+      "label": "Indonesian Heroes",
+      "icon": "🎖️",
       "accent": "violet",
       "subject": "artmusic",
-      "description": "Meet the world's most famous artists!",
+      "description": "Meet the heroes who fought and sacrificed for Indonesia!",
       "questions": [
         {
           "id": "fa-1",
-          "question": "Who painted the Mona Lisa?",
-          "emoji": "🖼️",
+          "question": "Who proclaimed Indonesia's independence together with Mohammad Hatta on 17 August 1945?",
+          "emoji": "🇮🇩",
           "options": [
-            "Michelangelo",
-            "Vincent van Gogh",
-            "Leonardo da Vinci",
-            "Pablo Picasso"
+            "Jenderal Sudirman",
+            "Soekarno",
+            "Pangeran Diponegoro",
+            "Sultan Hasanuddin"
           ],
-          "answer": 2,
-          "fact": "Leonardo da Vinci painted the Mona Lisa around 1503-1519 — it is the most famous painting in the world, kept in the Louvre in Paris!"
+          "answer": 1,
+          "fact": "Soekarno read the Proclamation of Independence on 17 August 1945 and became Indonesia's first President!"
         },
         {
           "id": "fa-2",
-          "question": "Which artist painted 'Starry Night'?",
-          "emoji": "🌙",
+          "question": "Who was Indonesia's first Vice President, and signed the Proclamation of Independence alongside Soekarno?",
+          "emoji": "✍️",
           "options": [
-            "Claude Monet",
-            "Pablo Picasso",
-            "Vincent van Gogh",
-            "Salvador Dali"
+            "Mohammad Hatta",
+            "Ki Hajar Dewantara",
+            "Bung Tomo",
+            "Pattimura"
           ],
-          "answer": 2,
-          "fact": "Vincent van Gogh painted 'The Starry Night' in 1889 — it shows a swirling night sky with bold, expressive brushstrokes!"
+          "answer": 0,
+          "fact": "Mohammad Hatta, often called 'Bung Hatta', became Indonesia's first Vice President and worked closely with Soekarno for independence!"
         },
         {
           "id": "fa-3",
-          "question": "Who painted the ceiling of the Sistine Chapel?",
-          "emoji": "⛪",
+          "question": "Which hero is remembered every 21 April as a pioneer of women's education in Indonesia?",
+          "emoji": "📚",
           "options": [
-            "Leonardo da Vinci",
-            "Raphael",
-            "Michelangelo",
-            "Donatello"
+            "Cut Nyak Dhien",
+            "R.A. Kartini",
+            "Cut Nyak Meutia",
+            "Dewi Sartika"
           ],
-          "answer": 2,
-          "fact": "Michelangelo painted the Sistine Chapel ceiling from 1508 to 1512 — including the famous scene of God creating Adam!"
+          "answer": 1,
+          "fact": "R.A. Kartini fought for the right of Indonesian girls to get an education — Hari Kartini is celebrated every 21 April in her honour!"
         },
         {
           "id": "fa-4",
-          "question": "Which artist is famous for 'Water Lilies'?",
-          "emoji": "🌸",
+          "question": "Which Acehnese heroine kept leading the fight against the Dutch after her husband Teuku Umar died in battle?",
+          "emoji": "🗡️",
           "options": [
-            "Van Gogh",
-            "Claude Monet",
-            "Rembrandt",
-            "Picasso"
+            "Cut Nyak Dhien",
+            "R.A. Kartini",
+            "Dewi Sartika",
+            "Martha Christina Tiahahu"
           ],
-          "answer": 1,
-          "fact": "Claude Monet painted over 250 Water Lilies paintings in his garden at Giverny — he was a leader of Impressionism!"
+          "answer": 0,
+          "fact": "Cut Nyak Dhien continued leading Acehnese fighters against the Dutch for years, even after losing her husband and her sight!"
         },
         {
           "id": "fa-5",
-          "question": "Who invented Cubism — breaking objects into geometric shapes?",
-          "emoji": "🔷",
+          "question": "Which prince led the Java War (Perang Diponegoro) against Dutch rule from 1825 to 1830?",
+          "emoji": "⚔️",
           "options": [
-            "Salvador Dali",
-            "Michelangelo",
-            "Vincent van Gogh",
-            "Pablo Picasso"
+            "Sultan Hasanuddin",
+            "Pattimura",
+            "Pangeran Diponegoro",
+            "Teuku Umar"
           ],
-          "answer": 3,
-          "fact": "Pablo Picasso (with Georges Braque) invented Cubism — showing objects from multiple angles at once in flat, geometric shapes!"
+          "answer": 2,
+          "fact": "Pangeran Diponegoro led one of the biggest wars against Dutch colonial rule in Java, lasting five long years!"
         },
         {
           "id": "fa-6",
-          "question": "What is Impressionism?",
-          "emoji": "🌸",
+          "question": "Which Sultan of Gowa was nicknamed 'Ayam Jantan dari Timur' (Rooster of the East) for fighting the Dutch in Makassar?",
+          "emoji": "🐓",
           "options": [
-            "Art made with very precise detail",
-            "A style capturing light and movement with loose, quick brushstrokes",
-            "Art using only black and white",
-            "Art of geometric shapes"
+            "Sultan Hasanuddin",
+            "Sultan Agung",
+            "Pangeran Antasari",
+            "Sultan Iskandar Muda"
           ],
-          "answer": 1,
-          "fact": "Impressionism captures the impression of a moment — light, colour and movement — using loose, visible brushstrokes!"
+          "answer": 0,
+          "fact": "Sultan Hasanuddin bravely fought the Dutch East India Company (VOC) to defend the Sultanate of Gowa in South Sulawesi!"
         },
         {
           "id": "fa-7",
-          "question": "Who is the most famous artist from the Renaissance period?",
-          "emoji": "🏛️",
+          "question": "Who is known as the 'Bapak Pendidikan Nasional' (Father of National Education) for founding the Taman Siswa schools?",
+          "emoji": "🏫",
           "options": [
-            "Picasso",
-            "Van Gogh",
-            "Leonardo da Vinci",
-            "Warhol"
+            "Dr. Soetomo",
+            "Ki Hajar Dewantara",
+            "Mohammad Yamin",
+            "Cut Nyak Dhien"
           ],
-          "answer": 2,
-          "fact": "Leonardo da Vinci was the ultimate Renaissance man — painter, sculptor, scientist, engineer and inventor all in one!"
+          "answer": 1,
+          "fact": "Ki Hajar Dewantara founded Taman Siswa so more Indonesian children could go to school — his birthday, 2 May, is Hari Pendidikan Nasional!"
         },
         {
           "id": "fa-8",
-          "question": "Who created the sculpture 'David'?",
-          "emoji": "🗿",
+          "question": "Which general led Indonesia's guerrilla resistance while very sick, often carried on a stretcher (tandu)?",
+          "emoji": "🎖️",
           "options": [
-            "Leonardo da Vinci",
-            "Raphael",
-            "Pablo Picasso",
-            "Michelangelo"
+            "Jenderal Sudirman",
+            "Bung Tomo",
+            "Sultan Hasanuddin",
+            "I Gusti Ngurah Rai"
           ],
-          "answer": 3,
-          "fact": "Michelangelo carved the statue of David from 1501 to 1504 — it stands over 5 metres tall and is in Florence, Italy!"
+          "answer": 0,
+          "fact": "Jenderal Sudirman kept leading Indonesian troops through the jungle even while suffering from a serious lung illness!"
         },
         {
           "id": "fa-9",
-          "question": "Which artist is known for painting melting clocks?",
-          "emoji": "⏰",
+          "question": "Whose fiery radio speeches inspired the Battle of Surabaya on 10 November 1945?",
+          "emoji": "📻",
           "options": [
-            "Monet",
-            "Picasso",
-            "Salvador Dali",
-            "Warhol"
+            "Bung Tomo",
+            "Mohammad Hatta",
+            "Pattimura",
+            "Ki Hajar Dewantara"
           ],
-          "answer": 2,
-          "fact": "Salvador Dali painted 'The Persistence of Memory' (1931) with melting clocks — he was a Surrealist who painted dream-like scenes!"
+          "answer": 0,
+          "fact": "Bung Tomo's powerful radio speeches rallied the people of Surabaya — 10 November is now celebrated as Hari Pahlawan (Heroes' Day)!"
         },
         {
           "id": "fa-10",
-          "question": "Who made colourful soup can prints?",
-          "emoji": "🥫",
+          "question": "Which Maluku hero, also known as Thomas Matulessy, led a rebellion against Dutch rule in 1817?",
+          "emoji": "🏝️",
           "options": [
-            "Monet",
-            "Dali",
-            "Andy Warhol",
-            "Matisse"
+            "Pattimura",
+            "Frans Kaisiepo",
+            "Sultan Hasanuddin",
+            "Teuku Umar"
           ],
-          "answer": 2,
-          "fact": "Andy Warhol was a Pop Art legend — he made famous prints of Campbell's Soup cans, celebrating everyday objects as art!"
+          "answer": 0,
+          "fact": "Pattimura led the people of Maluku in an uprising against Dutch rule in 1817 — he is honoured as a national hero!"
         },
         {
           "id": "fa-11",
-          "question": "What art movement did Monet lead?",
-          "emoji": "🌿",
+          "question": "Who composed Indonesia's national anthem, 'Indonesia Raya'?",
+          "emoji": "🎵",
           "options": [
-            "Cubism",
-            "Surrealism",
-            "Pop Art",
-            "Impressionism"
+            "Wage Rudolf Supratman",
+            "Ismail Marzuki",
+            "Ki Hajar Dewantara",
+            "Mohammad Yamin"
           ],
-          "answer": 3,
-          "fact": "Claude Monet led Impressionism — the name came from his painting 'Impression, Sunrise' (1872)!"
+          "answer": 0,
+          "fact": "W.R. Supratman composed 'Indonesia Raya' — it was first played in public in 1928 at the Youth Pledge congress!"
         },
         {
           "id": "fa-12",
-          "question": "Which female Mexican artist is famous for self-portraits?",
-          "emoji": "🌺",
+          "question": "Which doctor founded Budi Utomo in 1908, considered Indonesia's first modern nationalist organisation?",
+          "emoji": "🩺",
           "options": [
-            "Georgia O'Keeffe",
-            "Frida Kahlo",
-            "Mary Cassatt",
-            "Yoko Ono"
+            "Dr. Soetomo",
+            "Dr. Cipto Mangunkusumo",
+            "Dr. Wahidin Sudirohusodo",
+            "Dr. Setiabudi"
           ],
-          "answer": 1,
-          "fact": "Frida Kahlo painted dozens of self-portraits exploring identity, pain and Mexican culture — one of history's most celebrated female artists!"
+          "answer": 0,
+          "fact": "Dr. Soetomo founded Budi Utomo, sparking the beginning of Indonesia's national awakening movement!"
         },
         {
           "id": "fa-13",
-          "question": "What nationality was Pablo Picasso?",
-          "emoji": "🇪🇸",
+          "question": "Which Papuan national hero, pictured on the Rp10,000 banknote, worked for Papua to become part of Indonesia?",
+          "emoji": "🌴",
           "options": [
-            "French",
-            "Italian",
-            "Spanish",
-            "Dutch"
+            "Frans Kaisiepo",
+            "Silas Papare",
+            "Marthen Indey",
+            "Johannes Abraham Dimara"
           ],
-          "answer": 2,
-          "fact": "Pablo Picasso was born in Malaga, Spain in 1881 — he spent much of his life in France but remained proud of his Spanish identity!"
+          "answer": 0,
+          "fact": "Frans Kaisiepo championed Papua's unity with Indonesia and is remembered as one of Indonesia's national heroes!"
         },
         {
           "id": "fa-14",
-          "question": "Which artist is famous for his 'Blue Period'?",
-          "emoji": "💙",
+          "question": "Which Balinese hero led the Puputan Margarana battle against Dutch forces in 1946?",
+          "emoji": "🏔️",
           "options": [
-            "Monet",
-            "Van Gogh",
-            "Picasso",
-            "Dali"
+            "I Gusti Ngurah Rai",
+            "Sultan Hasanuddin",
+            "Pangeran Antasari",
+            "Untung Surapati"
           ],
-          "answer": 2,
-          "fact": "Picasso's Blue Period (1901-1904) featured mostly blue-toned paintings of poverty and sadness — inspired by the death of his friend!"
+          "answer": 0,
+          "fact": "I Gusti Ngurah Rai led Balinese fighters in the Puputan Margarana — his name is now used for Bali's international airport!"
         },
         {
           "id": "fa-15",
-          "question": "What is a self-portrait?",
-          "emoji": "🪞",
+          "question": "Which day of the year is celebrated as Hari Pahlawan (Heroes' Day) in Indonesia?",
+          "emoji": "📅",
           "options": [
-            "A painting of a landscape",
-            "A painting of a famous building",
-            "An artwork the artist makes of themselves",
-            "A painting of a crowd"
+            "17 August",
+            "10 November",
+            "21 April",
+            "2 May"
           ],
-          "answer": 2,
-          "fact": "A self-portrait is an artwork the artist makes of themselves — Rembrandt, Van Gogh and Kahlo all painted many famous self-portraits!"
+          "answer": 1,
+          "fact": "Hari Pahlawan is celebrated on 10 November, marking the Battle of Surabaya where many Indonesians bravely fought!"
         },
         {
           "id": "fa-16",
-          "question": "Who painted 'The Scream'?",
-          "emoji": "😱",
+          "question": "What was Sumpah Pemuda (the Youth Pledge), declared by young Indonesians in 1928?",
+          "emoji": "🤝",
           "options": [
-            "Van Gogh",
-            "Edvard Munch",
-            "Picasso",
-            "Dali"
+            "A pledge to build a new capital city",
+            "A pledge of one homeland, one nation and one language — Indonesia",
+            "A pledge to create a national anthem",
+            "A pledge between two kingdoms"
           ],
           "answer": 1,
-          "fact": "'The Scream' was painted by Edvard Munch (Norwegian) in 1893 — the anguished figure is one of art's most recognised images!"
+          "fact": "In the Youth Pledge, young people from across the archipelago promised one homeland, one nation and one language: Indonesia!"
         },
         {
           "id": "fa-17",
-          "question": "What is an art gallery?",
-          "emoji": "🏛️",
+          "question": "Why do we call these people 'pahlawan nasional' (national heroes)?",
+          "emoji": "🦸",
           "options": [
-            "A type of art school",
-            "A place where art is displayed for people to view",
-            "A type of paintbrush",
-            "An artist's home studio"
+            "Because they were the richest people in Indonesia",
+            "Because they sacrificed greatly for Indonesia's freedom and unity",
+            "Because they were the tallest in Indonesia",
+            "Because they lived the longest"
           ],
           "answer": 1,
-          "fact": "An art gallery is a public space where artwork is displayed — famous ones include the Louvre (Paris) and National Gallery (London)!"
+          "fact": "National heroes are honoured because of their courage and sacrifice in the struggle for Indonesia's independence and unity!"
         },
         {
           "id": "fa-18",
-          "question": "What is sculpture?",
-          "emoji": "🗿",
+          "question": "Why is it important for children to learn about Indonesia's national heroes?",
+          "emoji": "💛",
           "options": [
-            "A painting on a flat surface",
-            "A three-dimensional artwork created from materials like stone, clay or metal",
-            "A type of drawing technique",
-            "A form of photography"
+            "So they can copy exactly what the heroes did",
+            "To remember their sacrifices and carry on their spirit of unity and courage",
+            "Only to pass exams",
+            "It is not important"
           ],
           "answer": 1,
-          "fact": "Sculpture is 3D art — sculptors carve, model or assemble materials into shapes. Michelangelo and Rodin are famous sculptors!"
+          "fact": "Learning about pahlawan nasional helps children appreciate the freedom they enjoy today and carry forward the same spirit of unity!"
         }
       ]
     },
@@ -14487,26 +14516,62 @@ function reactPet(mood) {
 
 // Sparkle Power gained from coins earned in math (1 coin = 0 SP; SP comes from feeding)
 // We call this after feeding in the pet screen.
-function feedPet(foodKey) {
+//
+// FEEDING REDESIGN — previously feeding required a separate "Buy" tap and
+// then a separate "Feed!" tap per single unit, which added up to a lot of
+// taps for something that should feel quick and satisfying. Now:
+//   - tapFeedCard(): tapping a food card feeds it right away — if you don't
+//     own any yet, it buys AND feeds in that same one tap.
+//   - buyFood(): a small secondary "Stock up" action for players who want
+//     to save up food (e.g. save several Magic Stars for one big feeding).
+//   - feedAllPets() / quickFeedFromHome(): consumes the whole inventory in
+//     one tap, from the Pet screen or right from the Home screen preview
+//     card, for whenever food has piled up.
+function showFloatingMsg(text, color) {
+  var el = document.createElement("div");
+  el.className = "sparkle-gain-anim";
+  el.style.color = color || "#C9A8F5";
+  el.textContent = text;
+  document.body.appendChild(el);
+  setTimeout(function() { el.remove(); }, 1400);
+}
+
+function nudgeCantAfford(foodKey) {
+  var card = document.querySelector('[data-food-card="' + foodKey + '"]');
+  if (card) {
+    card.classList.remove("pet-food-shake");
+    void card.offsetWidth; // restart animation even if tapped twice quickly
+    card.classList.add("pet-food-shake");
+    setTimeout(function() { if (card) card.classList.remove("pet-food-shake"); }, 500);
+  }
+  showFloatingMsg("Not enough coins yet! 🪙", "#FF6B5B");
+  SFX.retry();
+}
+
+// One-tap feed: uses an owned unit if you have one, otherwise buys one and
+// feeds it immediately — no separate buy step for the common case.
+function tapFeedCard(foodKey) {
   var food = SPARKLE_FOOD[foodKey];
   if (!food) return;
   var pet = getPetData();
   var inv = pet.foodInventory || {};
-  if ((inv[foodKey] || 0) < 1) return;
+  var owned = inv[foodKey] || 0;
 
-  inv[foodKey] = (inv[foodKey] || 0) - 1;
+  if (owned > 0) {
+    inv[foodKey] = owned - 1;
+  } else if (gm.coins >= food.cost) {
+    gm.coins -= food.cost;
+    storageSet("coins", gm.coins);
+  } else {
+    nudgeCantAfford(foodKey);
+    return;
+  }
   pet.foodInventory = inv;
   var gained = food.power;
   pet.sparklePower = (pet.sparklePower || 0) + gained;
   savePetData(pet);
 
-  // Sparkle gain animation
-  var el = document.createElement("div");
-  el.className = "sparkle-gain-anim";
-  el.textContent = "+✨" + gained + " Sparkle Power!";
-  document.body.appendChild(el);
-  setTimeout(function() { el.remove(); }, 1400);
-
+  showFloatingMsg("+✨" + gained + " Sparkle Power!", "#C9A8F5");
   SFX.coin();
   spawnConfetti(20);
 
@@ -14514,10 +14579,53 @@ function feedPet(foodKey) {
   renderPetScreen();
 }
 
+// Shared core for "consume everything owned" — used by both the Pet
+// screen's Feed All button and the Home screen quick-feed shortcut.
+function consumeAllFoodInventory() {
+  var pet = getPetData();
+  var inv = pet.foodInventory || {};
+  var totalGained = 0, totalUnits = 0;
+  Object.keys(inv).forEach(function(key) {
+    var food = SPARKLE_FOOD[key];
+    var n = inv[key] || 0;
+    if (food && n > 0) {
+      totalGained += food.power * n;
+      totalUnits += n;
+      inv[key] = 0;
+    }
+  });
+  if (totalUnits === 0) return null;
+  pet.foodInventory = inv;
+  pet.sparklePower = (pet.sparklePower || 0) + totalGained;
+  savePetData(pet);
+  return { gained: totalGained, units: totalUnits };
+}
+
+function feedAllPets() {
+  var result = consumeAllFoodInventory();
+  if (!result) return;
+  showFloatingMsg("+✨" + result.gained + " Sparkle Power! (" + result.units + " treats)", "#C9A8F5");
+  SFX.achievement();
+  spawnConfetti(50);
+  renderPetScreen();
+}
+
+// Feeds everything owned right from the Home screen preview card, so a
+// player who stocked up on food doesn't need to open the full Pet screen
+// just to use it.
+function quickFeedFromHome() {
+  var result = consumeAllFoodInventory();
+  if (!result) return;
+  showFloatingMsg("+✨" + result.gained + " Sparkle Power! (" + result.units + " treats)", "#C9A8F5");
+  SFX.achievement();
+  spawnConfetti(30);
+  render();
+}
+
 function buyFood(foodKey) {
   var food = SPARKLE_FOOD[foodKey];
   if (!food) return;
-  if (gm.coins < food.cost) return;
+  if (gm.coins < food.cost) { nudgeCantAfford(foodKey); return; }
   gm.coins -= food.cost;
   storageSet("coins", gm.coins);
   var pet = getPetData();
@@ -14525,6 +14633,7 @@ function buyFood(foodKey) {
   inv[foodKey] = (inv[foodKey] || 0) + 1;
   pet.foodInventory = inv;
   savePetData(pet);
+  showFloatingMsg(food.icon + " Stocked up!", "#8A5A00");
   SFX.achievement();
   renderPetScreen();
 }
@@ -14606,6 +14715,8 @@ function buildPetPreviewCardHTML() {
   var pet = getPetData();
   var stage = getPetStageData(pet);
   var petName = pet.name ? escapeHTML(pet.name) : stage.name;
+  var inv = pet.foodInventory || {};
+  var totalFood = Object.keys(inv).reduce(function(t, k) { return t + (inv[k] || 0); }, 0);
 
   var progressNote;
   if (stage.sparkleToNext) {
@@ -14619,12 +14730,19 @@ function buildPetPreviewCardHTML() {
     progressNote = "👑 Legendary — fully evolved!";
   }
 
+  // If there's stockpiled food, offer a one-tap "feed now" shortcut right
+  // here, so routine feeding doesn't require opening the full Pet screen.
+  var quickFeedBtn = totalFood > 0
+    ? '<button class="pet-preview-quickfeed" onclick="event.stopPropagation();quickFeedFromHome();">🍎 Feed ×' + totalFood + '</button>'
+    : '';
+
   return '<div class="pet-preview-card" onclick="state.screen=\'pet\';render()">' +
     buildPetVisualHTML("pet-visual-small") +
     '<div class="pet-preview-info">' +
       '<div class="pet-preview-name">' + petName + '</div>' +
       '<div class="pet-preview-note">' + progressNote + '</div>' +
     '</div>' +
+    quickFeedBtn +
     '<div class="pet-preview-arrow">›</div>' +
   '</div>';
 }
@@ -14651,7 +14769,7 @@ function buildJourneyContinueCardHTML() {
   var text, sub;
   if (!step) {
     text = "🎉 You've conquered the whole Journey!";
-    sub = "Explore the Side Kingdoms or replay any World Boss.";
+    sub = "Replay any World Boss for extra practice!";
   } else if (step.kind === "boss") {
     text = "👾 " + step.world.label + "'s boss is ready!";
     sub = "Tap to head to the map and take them on.";
@@ -14675,7 +14793,7 @@ function buildJourneyMapHeroHTML() {
   var text, sub;
   if (!step) {
     text = "🎉 You've conquered the whole Journey!";
-    sub = "Explore the Side Kingdoms or replay any World Boss.";
+    sub = "Replay any World Boss for extra practice!";
   } else if (step.kind === "boss") {
     text = "👾 " + step.world.label + "'s boss is ready!";
     sub = "Tap to head to the map and take them on.";
@@ -15374,14 +15492,27 @@ var SUBJECTS = [
 // JOURNEY MAP — Worlds, Chapters, and Boss Gauntlets
 // Reuses every existing game/lesson/boss mechanic; this is purely a new
 // organizing + unlock layer on top of DATA.games and getGameTierProgress.
+//
+// Subjects are interleaved along ONE continuous trail (instead of a
+// math-only main path with optional "side kingdom" detours) so the
+// journey itself keeps switching up subjects — math, then science, then
+// reading, then math again, etc. — rather than feeling like a long math
+// grind before anything else shows up.
 // ====================================================================
 var MAIN_WORLDS = [
   {
     key: "village", label: "Sunny Village", icon: "🏘️", color: "#F4A828",
     chapters: [
-      { label: "Getting to Know Numbers", keys: ["placeValue", "placeValueExpanded", "comparingNumbers"] },
-      { label: "Numbers in Motion", keys: ["numberBonds", "skipCounting", "doublesHalves"] }
+      { label: "Getting to Know Numbers", keys: ["placeValue", "placeValueExpanded", "comparingNumbers", "numberBonds"] }
     ]
+  },
+  {
+    key: "greenwood", label: "Greenwood Grove", icon: "🌱", color: "#4CAF7D",
+    chapters: [{ label: "Life Science", keys: ["animalLifeCycles", "plantParts", "foodChains", "humanBody"] }]
+  },
+  {
+    key: "library", label: "Storyteller's Library", icon: "📖", color: "#E86A9A",
+    chapters: [{ label: "Reading & Words", keys: ["sightWords", "phonics", "spelling", "sentences", "rhymingWords", "nounsVerbs", "punctuation", "readingComprehension"] }]
   },
   {
     key: "forest", label: "Whispering Forest", icon: "🌲", color: "#1FA391",
@@ -15391,18 +15522,30 @@ var MAIN_WORLDS = [
     ]
   },
   {
+    key: "observatory", label: "Starlight Observatory", icon: "🔭", color: "#4A6FA5",
+    chapters: [{ label: "Earth & Space", keys: ["weatherSeasons", "rocksAndSoil", "solarSystem", "statesOfMatter"] }]
+  },
+  {
     key: "bridge", label: "Merchant's Bridge", icon: "🌉", color: "#4A90C0",
     chapters: [
-      { label: "Coins & Prices", keys: ["moneyMath"] },
+      { label: "Counting & Coins", keys: ["skipCounting", "moneyMath"] },
       { label: "Clocks & Calendars", keys: ["tellingTime"] }
     ]
   },
   {
+    key: "atlas", label: "Wanderer's Atlas", icon: "🗺️", color: "#D98A3D",
+    chapters: [{ label: "Our World", keys: ["mapsDirections", "communityHelpers", "worldContinents", "needsWants", "holidaysCultures", "timelinesHistory"] }]
+  },
+  {
     key: "castle", label: "Crystal Castle", icon: "🏰", color: "#7A6FCB",
     chapters: [
-      { label: "Splitting Shapes", keys: ["fractions"] },
+      { label: "Doubling & Splitting", keys: ["doublesHalves", "fractions"] },
       { label: "Groups & Rows", keys: ["multiplication"] }
     ]
+  },
+  {
+    key: "studio", label: "Rainbow Studio", icon: "🎨", color: "#C9A8F5",
+    chapters: [{ label: "Art & Music", keys: ["coloursMixing", "shapesInArt", "musicalNotes", "rhythmBeat", "famousArtists"] }]
   },
   {
     key: "mountain", label: "Cloud Mountain", icon: "⛰️", color: "#FF6B5B",
@@ -15413,39 +15556,17 @@ var MAIN_WORLDS = [
     ]
   },
   {
-    key: "sky", label: "Sky Kingdom", icon: "👑", color: "#C9A8F5",
+    key: "sky", label: "Sky Kingdom", icon: "👑", color: "#F5C56E",
     isFinale: true,
     chapters: [],
     // The finale has no lessons of its own — its Champion's Gauntlet draws
-    // one representative game from each world already cleared.
-    finalBossKeys: ["placeValue", "addition", "moneyMath", "fractions", "codeTheRobot", "multiplication"]
+    // one representative game from every world along the trail, so it
+    // celebrates the full spread of subjects rather than just maths.
+    finalBossKeys: ["placeValue", "animalLifeCycles", "sightWords", "addition", "weatherSeasons", "moneyMath", "mapsDirections", "fractions", "coloursMixing", "codeTheRobot"]
   }
 ];
 
-var SIDE_KINGDOMS = [
-  {
-    key: "greenwood", label: "Greenwood Grove", icon: "🌱", color: "#4CAF7D", pairedAfter: "village",
-    chapters: [{ label: "Life Science", keys: ["animalLifeCycles", "plantParts", "foodChains", "humanBody"] }]
-  },
-  {
-    key: "library", label: "Storyteller's Library", icon: "📖", color: "#F4A828", pairedAfter: "village",
-    chapters: [{ label: "Reading & Words", keys: ["sightWords", "phonics", "spelling", "sentences", "rhymingWords", "nounsVerbs", "punctuation", "readingComprehension"] }]
-  },
-  {
-    key: "observatory", label: "Starlight Observatory", icon: "🔭", color: "#4A6FA5", pairedAfter: "forest",
-    chapters: [{ label: "Earth & Space", keys: ["weatherSeasons", "rocksAndSoil", "solarSystem", "statesOfMatter"] }]
-  },
-  {
-    key: "atlas", label: "Wanderer's Atlas", icon: "🗺️", color: "#4A90C0", pairedAfter: "bridge",
-    chapters: [{ label: "Our World", keys: ["mapsDirections", "communityHelpers", "worldContinents", "needsWants", "holidaysCultures", "timelinesHistory"] }]
-  },
-  {
-    key: "studio", label: "Rainbow Studio", icon: "🎨", color: "#C9A8F5", pairedAfter: "castle",
-    chapters: [{ label: "Art & Music", keys: ["coloursMixing", "shapesInArt", "musicalNotes", "rhythmBeat", "famousArtists"] }]
-  }
-];
-
-var ALL_WORLDS = MAIN_WORLDS.concat(SIDE_KINGDOMS);
+var ALL_WORLDS = MAIN_WORLDS;
 
 function getWorldByKey(key) {
   return ALL_WORLDS.filter(function(w) { return w.key === key; })[0] || null;
@@ -15502,7 +15623,6 @@ function markWorldBossCleared(worldKey) {
 }
 
 function isWorldUnlocked(world) {
-  if (world.pairedAfter) return isWorldBossCleared(world.pairedAfter); // side kingdom
   var idx = MAIN_WORLDS.indexOf(world);
   if (idx <= 0) return true;
   return isWorldBossCleared(MAIN_WORLDS[idx - 1].key);
@@ -15868,13 +15988,21 @@ function tapPracticeLesson(key) {
 var practiceExpandedWorlds = {};
 
 function togglePracticeWorld(key) {
+  var scroller = document.querySelector('.screen.scrollable');
+  var scrollTop = scroller ? scroller.scrollTop : 0;
   practiceExpandedWorlds[key] = !practiceExpandedWorlds[key];
   renderPracticeMode();
+  var newScroller = document.querySelector('.screen.scrollable');
+  if (newScroller) newScroller.scrollTop = scrollTop;
 }
 
 function setAllPracticeWorlds(expanded, worldKeys) {
+  var scroller = document.querySelector('.screen.scrollable');
+  var scrollTop = scroller ? scroller.scrollTop : 0;
   worldKeys.forEach(function(k) { practiceExpandedWorlds[k] = expanded; });
   renderPracticeMode();
+  var newScroller = document.querySelector('.screen.scrollable');
+  if (newScroller) newScroller.scrollTop = scrollTop;
 }
 
 function renderPracticeMode() {
@@ -16248,17 +16376,6 @@ function renderMap() {
   html += buildTrailFogHTML(positions, currentWorldIdx, totalHeight, SLOT);
   html += '</div>'; // trail-wrap
 
-  html += '<div class="map-side-header">☁️ Side Kingdoms</div><div class="map-side-row">';
-  SIDE_KINGDOMS.forEach(function(world) {
-    var unlocked = isWorldUnlocked(world);
-    var cleared = isWorldBossCleared(world.key);
-    html += '<div class="map-side-node' + (unlocked ? '' : ' map-node-locked') + '" style="--node-color:' + world.color + ';" onclick="openWorld(\'' + world.key + '\')">' +
-      '<div class="map-side-icon">' + (unlocked ? iconOrEmoji(world.icon, 26) : svgIcon("🔒", 22)) + '</div>' +
-      '<div class="map-side-label">' + escapeHTML(world.label) + (cleared ? ' ✅' : '') + '</div>' +
-    '</div>';
-  });
-  html += '</div>';
-
   html += '</div>'; // screen
   app.innerHTML = html;
   initTrailParallax();
@@ -16585,24 +16702,34 @@ function renderPetScreen() {
     });
     html += '</div>';
   } else {
-    // --- FEED TAB: one merged card per food (was two separate,
-    // near-identical "your food" and "shop" grids). Each card shows
-    // what you own and offers both actions it supports.
-    html += '<p class="pet-section-sub">Buy food with coins, then feed it to grow Sparkle Power ✨</p>';
+    // --- FEED TAB: tap a food card to feed right away (buys it too, if
+    // you don't already own one) — no separate buy-then-feed steps for
+    // the common case. "Feed All" clears out any stockpiled food in one
+    // tap; "Stock up" (small secondary button) is still there for anyone
+    // who wants to save food for later instead of feeding immediately.
+    html += '<p class="pet-section-sub">Tap a treat to feed your pet — buying happens automatically if you need to!</p>';
+    if (totalFood > 0) {
+      var previewGain = Object.keys(inv).reduce(function(t, k) {
+        var food = SPARKLE_FOOD[k];
+        return t + (food ? food.power * (inv[k] || 0) : 0);
+      }, 0);
+      html += '<button class="pet-feedall-btn" onclick="feedAllPets()">🍽️ Feed All (+' + previewGain + ' ✨)</button>';
+    }
     html += '<div class="pet-food-grid">';
     Object.keys(SPARKLE_FOOD).forEach(function(key) {
       var food = SPARKLE_FOOD[key];
       var owned = inv[key] || 0;
       var canAfford = gm.coins >= food.cost;
-      html += '<div class="pet-food-card">';
+      var tappable = owned > 0 || canAfford;
+      var hint = owned > 0 ? "Tap to feed! 🍽️" : (canAfford ? "Tap: 🪙" + food.cost + " → feed" : "Need 🪙" + food.cost);
+
+      html += '<div class="pet-food-card' + (tappable ? '' : ' pet-food-card-broke') + '" data-food-card="' + key + '" onclick="tapFeedCard(\'' + key + '\')">';
       if (owned > 0) html += '<span class="pet-food-owned-badge">x' + owned + '</span>';
       html += '<span class="pet-food-icon">' + food.icon + '</span>';
       html += '<span class="pet-food-name">' + escapeHTML(food.name) + '</span>';
       html += '<span class="pet-food-power">+' + food.power + ' ✨</span>';
-      html += '<div class="pet-food-actions">';
-      html += '<button class="pet-food-buy-btn" data-buy="' + key + '"' + (canAfford ? '' : ' disabled') + '>🪙' + food.cost + '</button>';
-      html += '<button class="pet-food-feed-btn" data-feed="' + key + '"' + (owned > 0 ? '' : ' disabled') + '>Feed!</button>';
-      html += '</div>';
+      html += '<span class="pet-food-hint">' + hint + '</span>';
+      html += '<button class="pet-food-stock-btn" onclick="event.stopPropagation();buyFood(\'' + key + '\')"' + (canAfford ? '' : ' disabled') + '>🛒 Stock up</button>';
       html += '</div>';
     });
     html += '</div>';
@@ -16630,15 +16757,9 @@ function renderPetScreen() {
     };
   }
 
-  // Feed buttons
-  document.querySelectorAll("[data-feed]").forEach(function(btn) {
-    btn.onclick = function() { feedPet(this.getAttribute("data-feed")); };
-  });
-
-  // Buy food buttons
-  document.querySelectorAll("[data-buy]").forEach(function(btn) {
-    btn.onclick = function() { buyFood(this.getAttribute("data-buy")); };
-  });
+  // Feed and buy interactions are wired via inline onclick attributes
+  // above (tapFeedCard / buyFood / feedAllPets) so the whole food card
+  // is one big, obvious tap target instead of small separate buttons.
 
   // Color swatches
   document.querySelectorAll(".pet-color-swatch:not(:disabled)").forEach(function(btn) {
