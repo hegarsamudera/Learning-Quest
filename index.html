@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0B1220">
+<meta name="theme-color" content="#8ED8F8">
 <title>Learning Quest — Math, Science, Coding and Many More</title>
 <meta name="description" content="An offline, mobile-friendly learning game for kids ages 5-7 covering Math, Science, Coding, Reading, Social Studies and Arts.">
 
@@ -31,46 +31,51 @@
      TOKENS
      ==================================================================== */
   :root{
-    /* ---- INK / SURFACES — deep-space cosmic base (was: flat admin light theme) ---- */
-    --ink:#F3F1FF;
-    --ink-soft:#AEB4D9;
-    --paper:#0B1220;
-    --card:rgba(30,41,70,.68);
-    --card-solid:#1E2946;
-    --line:rgba(255,255,255,.14);
+    /* ---- INK / SURFACES — bright storybook-adventure base (was: dark cosmic glass) ---- */
+    --ink:#294052;
+    --ink-soft:#5B7185;
+    --paper:#FFF8E8;
+    --card:rgba(255,255,255,.86);
+    --card-solid:#FFFFFF;
+    --line:rgba(41,64,82,.14);
 
-    --surface-1:#0B1220;
-    --surface-2:#1E2946;
-    --surface-3:#2C3A63;
-    --accent-glow:rgba(255,255,255,.14);
+    --surface-1:#FFF8E8;
+    --surface-2:#FFFFFF;
+    --surface-3:#FFF1D6;
+    --accent-glow:rgba(255,217,90,.35);
 
-    /* ---- WORLD / SUBJECT COLORS — saturated game palette (was: muted pastel) ---- */
-    --teal:#2EE6D6;      --teal-dark:#12A99C;
-    --amber:#FFC53D;     --amber-dark:#E39A00;
-    --coral:#FF6B9D;     --coral-dark:#E8467F;
-    --violet:#A78BFA;    --violet-dark:#7C5CFA;
+    /* ---- WORLD / SUBJECT COLORS — sunny saturated game palette (was: neon-on-black) ---- */
+    --teal:#3FCBA6;      --teal-dark:#1E9E82;
+    --amber:#FFD95A;     --amber-dark:#E3A600;
+    --coral:#FF8F7A;     --coral-dark:#F2634A;
+    --violet:#B9A7F7;    --violet-dark:#8E75E8;
 
-    --world-math:#FF6B9D;
-    --world-science:#2EE6D6;
-    --world-coding:#A78BFA;
-    --world-reading:#FFC53D;
-    --world-social:#FF7A5C;
-    --world-arts:#34D399;
+    --world-math:#FF8F7A;
+    --world-science:#3FCBA6;
+    --world-coding:#B9A7F7;
+    --world-reading:#FFD95A;
+    --world-social:#FFB45C;
+    --world-arts:#7BC96F;
 
-    --success:#34D399;  --success-bg:rgba(52,211,153,.16);
-    --danger:#FF5C7A;   --danger-bg:rgba(255,92,122,.16);
-    --retry-bg:rgba(255,197,61,.16); --retry-ink:#FFC53D;
+    /* ---- Bright palette primitives, per the design brief ---- */
+    --sky:#8ED8F8; --sky-soft:#BFEAF7; --mint:#8FE3C1; --grass:#7BC96F;
+    --sun:#FFD95A; --orange:#FFB45C; --coral-bright:#FF8F7A; --lavender:#B9A7F7;
+    --cream:#FFF8E8;
+
+    --success:#3FA672;  --success-bg:rgba(63,203,166,.16);
+    --danger:#F2634A;   --danger-bg:rgba(242,99,74,.14);
+    --retry-bg:rgba(255,217,90,.22); --retry-ink:#B87E00;
 
     --radius-xl:24px;
     --radius-lg:22px;
     --radius-md:16px;
     --radius-sm:10px;
-    --shadow-game:0 10px 32px -8px rgba(0,0,0,.55);
-    --shadow-card:0 10px 28px -10px rgba(0,0,0,.5);
-    --shadow-soft:0 4px 14px -4px rgba(0,0,0,.4);
+    --shadow-game:0 10px 28px -10px rgba(120,90,40,.28);
+    --shadow-card:0 8px 20px -10px rgba(120,90,40,.28);
+    --shadow-soft:0 4px 12px -4px rgba(120,90,40,.22);
     --shadow-glow:0 0 24px var(--accent-glow);
 
-    --font-display: ui-rounded, "SF Pro Rounded", "Segoe UI Rounded", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-display: 'Baloo 2', ui-rounded, "SF Pro Rounded", "Segoe UI Rounded", "Segoe UI", system-ui, -apple-system, sans-serif;
     --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", Consolas, monospace;
 
@@ -78,6 +83,7 @@
     --accent-dark: var(--teal-dark);
     --surface: var(--card-solid);
     --border: var(--line);
+    --toy-outline: #3D4F3A;
   }
 
   [data-accent="amber"]  { --accent:var(--amber);  --accent-dark:var(--amber-dark); }
@@ -85,20 +91,21 @@
   [data-accent="teal"]   { --accent:var(--teal);   --accent-dark:var(--teal-dark); }
   [data-accent="coral"]  { --accent:var(--coral);  --accent-dark:var(--coral-dark); }
 
-  /* Aurora backdrop — sits behind the whole app, slow drifting glow bands */
+  /* Sunny-sky backdrop — sits behind the whole app: soft blue sky fading to
+     warm cream near the ground, with a few slow-drifting cloud puffs. */
   body::before{
     content:""; position:fixed; inset:-10%; z-index:-1; pointer-events:none;
     background:
-      radial-gradient(ellipse 60% 40% at 15% 10%, rgba(167,139,250,.28), transparent 60%),
-      radial-gradient(ellipse 55% 40% at 85% 15%, rgba(46,230,214,.20), transparent 60%),
-      radial-gradient(ellipse 60% 45% at 50% 100%, rgba(255,107,157,.18), transparent 60%),
-      var(--surface-1);
-    animation: auroraDrift 18s ease-in-out infinite alternate;
+      radial-gradient(ellipse 50% 30% at 20% 8%, rgba(255,255,255,.9), transparent 60%),
+      radial-gradient(ellipse 40% 24% at 78% 14%, rgba(255,255,255,.75), transparent 60%),
+      radial-gradient(ellipse 45% 26% at 50% 2%, rgba(255,255,255,.6), transparent 60%),
+      linear-gradient(180deg, var(--sky) 0%, var(--sky-soft) 38%, var(--cream) 78%, var(--cream) 100%);
+    animation: auroraDrift 22s ease-in-out infinite alternate;
     background-size:140% 140%;
   }
   @keyframes auroraDrift{
-    0%{ background-position:0% 0%, 100% 0%, 50% 100%; }
-    100%{ background-position:10% 10%, 90% 20%, 60% 90%; }
+    0%{ background-position:0% 0%, 100% 0%, 50% 0%, 0 0; }
+    100%{ background-position:8% 4%, 92% 8%, 58% 2%, 0 0; }
   }
   @media (prefers-reduced-motion: reduce){ body::before{ animation:none; } }
 
@@ -260,17 +267,17 @@
      Inspiration: Prodigy Math's world-select screen + Duolingo's cozy home path. */
   .home-screen{ position:relative; align-items:stretch; overflow-x:hidden; }
   .home-sky-bg { position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:0; }
-  /* CSS-only starfield — twinkling dots via box-shadow trick, no images */
+  /* CSS-only cloud puffs — soft blurred white blobs drifting slowly */
   .cloud{
-    position:absolute; border-radius:50%; background:#fff;
-    box-shadow:0 0 6px 1px rgba(255,255,255,.8);
-    animation: starTwinkle 3.6s ease-in-out infinite;
+    position:absolute; border-radius:50%; background:#fff; opacity:.85;
+    box-shadow:26px 6px 0 -4px #fff, -24px 8px 0 -6px #fff, 6px -10px 0 -8px #fff;
+    filter:blur(.3px); animation: starTwinkle 9s ease-in-out infinite;
   }
   .cloud::before,.cloud::after{ content:none; }
-  .cl-1{ width:3px; height:3px; top:40px; left:8%; animation-duration:4.2s; }
-  .cl-2{ width:2px; height:2px; top:110px; right:12%; animation-duration:3.1s; animation-delay:.6s; opacity:.7; }
-  .cl-3{ width:3px; height:3px; top:190px; left:34%; animation-duration:5s; animation-delay:1.2s; opacity:.85; }
-  @keyframes starTwinkle{ 0%,100%{ opacity:.35; transform:scale(1); } 50%{ opacity:1; transform:scale(1.4); } }
+  .cl-1{ width:46px; height:20px; top:30px; left:6%; animation-duration:12s; }
+  .cl-2{ width:34px; height:16px; top:96px; right:10%; animation-duration:9.5s; animation-delay:.6s; opacity:.7; }
+  .cl-3{ width:40px; height:18px; top:168px; left:32%; animation-duration:14s; animation-delay:1.2s; opacity:.8; }
+  @keyframes starTwinkle{ 0%,100%{ transform:translateX(0); } 50%{ transform:translateX(14px); } }
 
   .home-watermark{ display:none; } /* replaced by aurora backdrop */
 
@@ -672,11 +679,11 @@
   .home-banner-block { margin: 0 16px 12px; display: flex; flex-direction: column; gap: 6px; }
   .home-streak-banner { background: linear-gradient(135deg,#FF6B35,#FFB347); color: #fff; border-radius: 12px; padding: 10px 14px; font-size: 13px; font-weight: 700; text-align: center; box-shadow: 0 2px 8px rgba(255,107,53,0.3); }
   .home-review-nudge { background: #FFF8E7; border: 2px solid #FFD580; color: #7A5500; border-radius: 12px; padding: 8px 14px; font-size: 12px; font-weight: 600; text-align: center; }
-  .boss-unlock-banner { background: linear-gradient(135deg,#1a0533,#3a0a6e); border-radius: 16px; padding: 16px; margin: 12px 0; text-align: center; color: #fff; box-shadow: 0 4px 16px rgba(100,0,200,0.4); }
+  .boss-unlock-banner { background: linear-gradient(135deg,#FF8F7A,#FFB45C); border-radius: 16px; padding: 16px; margin: 12px 0; text-align: center; color: #4A2A00; box-shadow: 0 4px 16px rgba(255,143,122,0.4); }
   .boss-unlock-icon { font-size: 36px; margin-bottom: 6px; }
   .boss-unlock-text { font-size: 13px; margin-bottom: 12px; line-height: 1.4; }
   .btn-boss { background: linear-gradient(135deg,#FF6B35,#FFD700); color: #1a0533; font-weight: 900; font-size: 15px; border: none; border-radius: 12px; padding: 12px 24px; cursor: pointer; box-shadow: 0 4px 12px rgba(255,107,53,0.5); }
-  .boss-complete-screen { background: linear-gradient(160deg,#1a0533 0%,#3a0a6e 60%,#0a1a3e 100%); color: #fff; position: relative; overflow: hidden; }
+  .boss-complete-screen { background: linear-gradient(160deg,#FFB45C 0%,#FF8F7A 55%,#B9A7F7 100%); color: #402A1A; position: relative; overflow: hidden; }
   .boss-complete-confetti { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; }
   .confetti-piece { position: absolute; top: -20px; border-radius: 3px; animation: confettiFall 2s ease-in forwards; }
   @keyframes confettiFall { 0% { top: -20px; transform: rotate(0deg) translateX(0); opacity: 1; } 100% { top: 110%; transform: rotate(720deg) translateX(40px); opacity: 0; } }
@@ -763,8 +770,9 @@
   .pet-preview-arrow { font-size: 22px; color: var(--ink-soft); flex-shrink: 0; }
 
   /* Journey Map */
-  .journey-continue-card { background: linear-gradient(135deg,#7A6FCB,#A8D8F5); }
-  .journey-continue-card .pet-preview-name, .journey-continue-card .pet-preview-note { color: #fff; }
+  .journey-continue-card { background: linear-gradient(135deg,#FFB45C,#FF8F7A); }
+  .journey-continue-card .pet-preview-name, .journey-continue-card .pet-preview-note { color: #4A2A00; }
+  .journey-continue-card .pet-preview-arrow { color: #4A2A00; opacity:.7; }
   .journey-continue-icon { font-size: 30px; flex-shrink: 0; }
   .map-path { display: flex; flex-direction: column; align-items: center; padding: 16px 16px 20px; border-radius: 24px; margin: 0 10px; }
   .map-node { position: relative; }
@@ -902,21 +910,29 @@
     border: 2px solid var(--line); flex-shrink: 0; background:var(--surface-2);
     box-shadow: var(--shadow-game), inset 0 0 0 1px rgba(255,255,255,.05);
   }
-  /* Distant hills for depth, sitting behind everything else in the panel */
-  .trail-hill { position: absolute; border-radius: 50%; opacity: .28; filter: blur(2px); z-index: 0; pointer-events: none; }
+  /* Layered hills for parallax depth, sitting behind the road/scenery.
+     Three bands (far/mid/near): farther hills are smaller, softer and
+     more blurred and drift the least on scroll; nearer hills are bigger,
+     crisper and drift the most — a classic parallax read without any
+     images, just three tinted blurred blobs per band. */
+  .trail-hill { position: absolute; border-radius: 50%; pointer-events: none; will-change: transform; }
+  .trail-hill-far  { opacity: .16; filter: blur(5px); z-index: -3; }
+  .trail-hill-mid  { opacity: .24; filter: blur(3px); z-index: -2; }
+  .trail-hill-near { opacity: .34; filter: blur(1.5px); z-index: -1; }
+  @media (prefers-reduced-motion: reduce){ .trail-hill{ transform:none !important; } }
 
   .trail-road-svg { position: absolute; top: 0; left: 0; z-index: 0; }
   .trail-road-shadow { fill: none; stroke: rgba(0,0,0,.35); stroke-width: 8; stroke-linecap: round; }
-  /* Energy beam road — glowing gradient stroke instead of dirt-path brown */
-  .trail-road-base { fill: none; stroke: #A78BFA; stroke-width: 6; stroke-linecap: round; opacity:.5; filter: drop-shadow(0 0 6px rgba(167,139,250,.6)); }
-  .trail-road-dash { fill: none; stroke: rgba(255,255,255,.85); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 1 10; animation: trailFlow 1.4s linear infinite; }
+  /* Sandy adventure path — warm dirt-trail stroke with a friendly dashed centerline */
+  .trail-road-base { fill: none; stroke: #FFB45C; stroke-width: 7; stroke-linecap: round; opacity:.85; filter: drop-shadow(0 2px 3px rgba(120,90,40,.25)); }
+  .trail-road-dash { fill: none; stroke: rgba(255,255,255,.9); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 1 10; animation: trailFlow 1.4s linear infinite; }
   @keyframes trailFlow{ to{ stroke-dashoffset:-22; } }
   .trail-scenery { position: absolute; font-size: 22px; opacity: .7; pointer-events: none; z-index: 0; transform: translate(-50%,-50%); filter: drop-shadow(0 0 6px rgba(255,255,255,.25)); }
 
-  /* Fog of war — unexplored territory, now a starfield haze instead of grey mist */
+  /* Fog of war — unexplored territory fades into soft cloud cover */
   .trail-fog {
     position: absolute; left: 0; width: 100%; z-index: 4; pointer-events: none;
-    background: linear-gradient(180deg, rgba(11,18,32,0) 0%, rgba(11,18,32,.6) 18%, rgba(11,18,32,.93) 45%, rgba(11,18,32,.98) 100%);
+    background: linear-gradient(180deg, rgba(255,248,232,0) 0%, rgba(255,248,232,.75) 18%, rgba(255,248,232,.96) 45%, rgba(255,248,232,1) 100%);
   }
   .trail-fog-cloud { position: absolute; font-size: 34px; opacity: .55; filter: drop-shadow(0 3px 6px rgba(0,0,0,.5)); }
 
@@ -1180,16 +1196,16 @@
     animation: fadeIn .2s ease both;
   }
   .evo-modal {
-    background: linear-gradient(145deg, #2A1A4A, #4A2070);
+    background: linear-gradient(145deg, #FFF8E8, #F3EBFF);
     border-radius: var(--radius-lg); padding: 28px 22px; max-width: 320px; width: 100%;
-    text-align: center; animation: pop .35s ease both; color: #fff;
-    box-shadow: 0 20px 60px -10px rgba(0,0,0,.6);
+    text-align: center; animation: pop .35s ease both; color: var(--ink);
+    box-shadow: 0 20px 50px -10px rgba(120,90,40,.35);
   }
   .evo-modal-pet { font-size: 90px; line-height: 1; margin-bottom: 8px; animation: petBounce 1s ease-in-out infinite; display: block; }
-  .evo-modal-title { font-family: var(--font-display); font-weight: 800; font-size: 22px; margin-bottom: 4px; color: #FFD700; }
-  .evo-modal-stage { font-size: 14px; opacity: .85; margin-bottom: 10px; }
-  .evo-modal-reward { background: rgba(255,255,255,.15); border-radius: 12px; padding: 10px 14px; margin-bottom: 18px; font-size: 14px; font-weight: 700; }
-  .evo-modal-btn { background: #FFD700; color: #4A2070; font-family: var(--font-display); font-weight: 800; font-size: 16px; border: none; border-radius: 999px; padding: 14px 32px; box-shadow: 0 4px 14px -4px rgba(0,0,0,.3); }
+  .evo-modal-title { font-family: var(--font-display); font-weight: 800; font-size: 22px; margin-bottom: 4px; color: #B87E00; }
+  .evo-modal-stage { font-size: 14px; opacity: .8; margin-bottom: 10px; }
+  .evo-modal-reward { background: rgba(184,126,0,.1); border-radius: 12px; padding: 10px 14px; margin-bottom: 18px; font-size: 14px; font-weight: 700; }
+  .evo-modal-btn { background: #FFD95A; color: #4A2070; font-family: var(--font-display); font-weight: 800; font-size: 16px; border: none; border-radius: 999px; padding: 14px 32px; box-shadow: 0 4px 14px -4px rgba(120,90,40,.35); }
   .evo-modal-btn:active { transform: scale(.96); }
 
   /* ==================================================================
@@ -1960,40 +1976,37 @@
   }
 
   /* ====================================================================
-     GLASS PASS — applies backdrop-filter blur to every remaining surface
-     that uses the --card token, so every list/grid/chip across the app
-     (trophy cards, quest board, pet shop, evolution gallery, difficulty
-     picker, side-map nodes, report rows...) reads as consistent frosted
-     glass rather than a flat opaque box. One rule, zero markup changes.
+     SURFACE PASS — flat, bright, softly-shadowed cards instead of frosted
+     glass (storybook direction avoids glassmorphism/blur on light bg).
      ==================================================================== */
   .trophy-card, .report-mode-row, .report-history-row, .map-side-node,
   .world-boss-card, .daily-quest-board, .evo-gallery-item, .pet-preview-card,
   .journey-hero, .journey-continue-card, .difficulty-card, .nx-card,
   .pet-food-item, .pet-shop-item, .pet-inv-item, .reset-modal, .evo-modal,
   .missed-recap, .numpad-display, .score-chip{
-    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: none; -webkit-backdrop-filter: none;
   }
 
   /* ====================================================================
-     ROBLOX-STYLE TOY SKIN — one additive pass, zero markup changes.
+     STORYBOOK TOY SKIN — one additive pass, zero markup changes.
      Cascades over every screen automatically because it targets the same
      shared classes (.btn, .coins-badge, card-ish surfaces, section
-     headers) that every screen already reuses. Keeps the existing dark
-     cosmic backdrop, but makes the UI itself read as chunky toy/game-UI:
-     thick dark outlines, deep bevel shadows, glossy top highlight, bold
-     rounded display font, uppercase button labels.
+     headers) that every screen already reuses. Chunky rounded buttons,
+     soft warm-brown outlines and candy bevel shadows, bold rounded
+     display font — storybook-game chrome instead of dark cosmic dashboard.
      ==================================================================== */
   :root{
     --font-display: 'Baloo 2', ui-rounded, "SF Pro Rounded", "Segoe UI Rounded", "Segoe UI", system-ui, -apple-system, sans-serif;
-    --toy-outline: #16121F;
+    --toy-outline: #6B4A2E;
+    --toy-shadow: rgba(120,90,40,.35);
   }
 
-  /* Chunky toy buttons: blockier corners, thick dark outline, deeper
-     bevel, glossy highlight strip, shouty uppercase label. */
+  /* Chunky friendly buttons: blockier corners, soft outline, deep bevel,
+     glossy highlight strip. */
   .btn{
     border-radius:16px;
     border:3px solid var(--toy-outline);
-    text-transform:uppercase; letter-spacing:.04em;
+    letter-spacing:.01em;
     position:relative; overflow:hidden;
   }
   .btn::before{
@@ -2005,9 +2018,9 @@
   .btn-primary:active{ box-shadow:0 2px 0 var(--toy-outline), var(--shadow-soft); }
   .btn-danger{ box-shadow:0 6px 0 var(--toy-outline), var(--shadow-soft); }
   .btn-danger:active{ box-shadow:0 2px 0 var(--toy-outline), var(--shadow-soft); }
-  .btn-secondary{ border:3px solid var(--toy-outline); box-shadow:0 6px 0 rgba(0,0,0,.35); }
-  .btn-secondary:active{ box-shadow:0 2px 0 rgba(0,0,0,.35); transform:translateY(4px) scale(.98); }
-  .btn-ghost{ border:3px dashed var(--line); text-transform:uppercase; letter-spacing:.04em; }
+  .btn-secondary{ border:3px solid var(--toy-outline); box-shadow:0 6px 0 var(--toy-shadow); }
+  .btn-secondary:active{ box-shadow:0 2px 0 var(--toy-shadow); transform:translateY(4px) scale(.98); }
+  .btn-ghost{ border:3px dashed var(--line); }
   .btn-boss{ border:3px solid var(--toy-outline); }
 
   /* Toy-block card/surface outline pass — explicit list of actual
@@ -2020,10 +2033,10 @@
   .boss-unlock-banner, .coin-remaining-banner,
   .home-streak-banner, .evo-ready-banner, .trail-chapter-banner,
   .missed-recap, .numpad-display, .score-chip{
-    border-width:3px !important;
+    border-width:2.5px !important;
     border-style:solid !important;
-    border-color:var(--toy-outline) !important;
-    box-shadow:0 5px 0 rgba(0,0,0,.35), var(--shadow-card) !important;
+    border-color:rgba(41,64,82,.16) !important;
+    box-shadow:0 5px 0 rgba(120,90,40,.14), var(--shadow-card) !important;
   }
   /* Small inline chips/badges get a lighter version of the same treatment */
   .streak-badge, .ach-badge, .difficulty-tier-badge, .difficulty-recommended-badge,
@@ -2031,37 +2044,37 @@
   .bh-bug-badge, .trail-pet-badge{
     border-width:2px !important;
     border-style:solid !important;
-    border-color:var(--toy-outline) !important;
-    box-shadow:0 3px 0 rgba(0,0,0,.3) !important;
+    border-color:rgba(255,255,255,.55) !important;
+    box-shadow:0 3px 0 rgba(120,90,40,.18) !important;
   }
 
   /* Currency pill — bold candy-coin look instead of a flat gold rectangle */
   .coins-badge{
     background:linear-gradient(180deg, #FFE380, #FFC53D);
     color:#5C3D00; border-radius:999px; font-family:var(--font-display);
-    text-transform:uppercase; letter-spacing:.03em;
+    letter-spacing:.02em;
     border:3px solid var(--toy-outline) !important;
-    box-shadow:0 4px 0 rgba(0,0,0,.35) !important;
+    box-shadow:0 4px 0 var(--toy-shadow) !important;
   }
 
-  /* Section headers read like Roblox category banners: bold pill, punchy */
+  /* Section headers read like storybook chapter banners: bold pill, punchy */
   .home-section-header{
     border-radius:14px; padding:8px 14px; display:inline-block;
     background:var(--card-solid); font-family:var(--font-display);
-    text-transform:uppercase; letter-spacing:.03em; font-weight:800;
-    border:3px solid var(--toy-outline);
-    box-shadow:0 4px 0 rgba(0,0,0,.35);
+    letter-spacing:.02em; font-weight:800;
+    border:2.5px solid rgba(41,64,82,.16);
+    box-shadow:0 4px 0 rgba(120,90,40,.14);
   }
 
   /* Extra "toy pop" on tap for the big cards/tiles above */
   .trophy-card:active, .difficulty-card:active, .nx-card:active,
   .pet-food-item:active, .pet-shop-item:active, .map-side-node:active{
     transform:translateY(3px);
-    box-shadow:0 2px 0 rgba(0,0,0,.35), var(--shadow-card) !important;
+    box-shadow:0 2px 0 rgba(120,90,40,.14), var(--shadow-card) !important;
   }
 
-  /* Focus ring needs to pop against the dark cosmic base */
-  :focus-visible{ outline-color: var(--accent); }
+  /* Focus ring needs to pop against the bright sunny base */
+  :focus-visible{ outline-color: var(--accent-dark); }
 
 </style>
 </head>
@@ -15949,18 +15962,143 @@ function buildTrailRoadSVG(positions, totalHeight) {
   '</svg>';
 }
 
-// Soft blurred hill silhouettes behind the trail, purely for depth — a
-// couple of overlapping ellipses tinted with the world's own color.
+// ====================================================================
+// HAND-DRAWN SVG ICON SET — flat, rounded, storybook-style vector icons
+// that stand in for the plain platform emoji used on the trail (map
+// scenery, world/lesson medallions, fog clouds). Each entry is just the
+// inner shapes for a 0 0 48 48 viewBox; svgIcon() wraps them. Icons not
+// in this table (the long tail of per-lesson emoji) simply keep using
+// their original emoji glyph — see svgIcon()'s fallback contract.
+// ====================================================================
+var ICON_SVGS = {
+  "🌻": '<circle cx="24" cy="16" r="4" fill="#8B5A2B"/><g fill="#FFD95A">' +
+    '<ellipse cx="24" cy="7" rx="3.4" ry="5.5"/><ellipse cx="24" cy="7" rx="3.4" ry="5.5" transform="rotate(45 24 16)"/>' +
+    '<ellipse cx="24" cy="7" rx="3.4" ry="5.5" transform="rotate(90 24 16)"/><ellipse cx="24" cy="7" rx="3.4" ry="5.5" transform="rotate(135 24 16)"/>' +
+    '<ellipse cx="24" cy="7" rx="3.4" ry="5.5" transform="rotate(180 24 16)"/><ellipse cx="24" cy="7" rx="3.4" ry="5.5" transform="rotate(225 24 16)"/>' +
+    '<ellipse cx="24" cy="7" rx="3.4" ry="5.5" transform="rotate(270 24 16)"/><ellipse cx="24" cy="7" rx="3.4" ry="5.5" transform="rotate(315 24 16)"/></g>' +
+    '<rect x="22.5" y="19" width="3" height="20" rx="1.5" fill="#7BC96F"/><path d="M24 28 Q30 26 31 32" stroke="#7BC96F" stroke-width="2.5" fill="none" stroke-linecap="round"/>',
+  "🌾": '<rect x="22.5" y="10" width="3" height="30" rx="1.5" fill="#B98A3E"/>' +
+    '<g fill="#F4CF7A"><ellipse cx="20" cy="14" rx="3.4" ry="2.2"/><ellipse cx="28" cy="18" rx="3.4" ry="2.2"/><ellipse cx="20" cy="22" rx="3.4" ry="2.2"/>' +
+    '<ellipse cx="28" cy="26" rx="3.4" ry="2.2"/><ellipse cx="20" cy="30" rx="3.4" ry="2.2"/></g>',
+  "🐓": '<ellipse cx="24" cy="28" rx="11" ry="9" fill="#FF8F7A"/><circle cx="32" cy="18" r="6" fill="#FF8F7A"/>' +
+    '<path d="M30 10 Q33 6 36 10 Q33 11 32 13Z" fill="#F2634A"/><path d="M37 17 L43 18 L37 20Z" fill="#FFD95A"/>' +
+    '<circle cx="34" cy="17" r="1.3" fill="#4A2A00"/><path d="M18 34 L15 40 M24 36 L23 42 M30 34 L32 40" stroke="#E3A600" stroke-width="2.5" stroke-linecap="round"/>',
+  "🌲": '<path d="M24 5 L33 20 L29 20 L36 30 L30 30 L38 41 L10 41 L18 30 L12 30 L19 20 L15 20Z" fill="#3FA672"/>' +
+    '<rect x="21.5" y="41" width="5" height="5" rx="1" fill="#8B6A3F"/>',
+  "🍄": '<path d="M10 22 Q10 8 24 8 Q38 8 38 22Z" fill="#F2634A"/><g fill="#FFF8E8"><circle cx="17" cy="16" r="2"/><circle cx="27" cy="12" r="2.3"/><circle cx="32" cy="18" r="1.8"/></g>' +
+    '<rect x="19" y="22" width="10" height="17" rx="4" fill="#FFF3DA"/>',
+  "🦋": '<path d="M24 14 C14 2 2 10 8 22 C2 30 14 34 24 24Z" fill="#B9A7F7"/><path d="M24 14 C34 2 46 10 40 22 C46 30 34 34 24 24Z" fill="#FF8F7A"/>' +
+    '<rect x="22.5" y="10" width="3" height="28" rx="1.5" fill="#4A2A00"/>',
+  "🌊": '<path d="M4 24 Q12 16 20 24 T36 24 T44 24" stroke="#4FB6DE" stroke-width="4" fill="none" stroke-linecap="round"/>' +
+    '<path d="M4 33 Q12 25 20 33 T36 33 T44 33" stroke="#8ED8F8" stroke-width="4" fill="none" stroke-linecap="round"/>',
+  "⛵": '<path d="M24 6 L24 28 L10 28Z" fill="#FFF8E8"/><path d="M25 10 L25 28 L36 28Z" fill="#BFEAF7"/>' +
+    '<path d="M6 32 L42 32 L36 42 L12 42Z" fill="#FFB45C"/><rect x="23" y="6" width="2" height="26" fill="#8B6A3F"/>',
+  "🪙": '<circle cx="24" cy="24" r="16" fill="#FFD95A" stroke="#E3A600" stroke-width="2.5"/><text x="24" y="30" font-size="16" font-weight="900" text-anchor="middle" fill="#E3A600">★</text>',
+  "💎": '<path d="M10 18 L24 6 L38 18 L24 42Z" fill="#B9A7F7"/><path d="M10 18 L38 18 L24 42Z" fill="#8ED8F8"/><path d="M17 18 L24 6 L31 18Z" fill="#D9CCFF"/>',
+  "🕯️": '<rect x="20" y="16" width="8" height="26" rx="2" fill="#FFF3DA"/><path d="M24 6 Q28 12 24 16 Q20 12 24 6Z" fill="#FFB45C"/>',
+  "🏳️": '<rect x="21" y="6" width="3" height="36" rx="1.5" fill="#8B6A3F"/><path d="M24 8 L40 13 L24 18Z" fill="#FF8F7A"/>',
+  "☁️": '<path d="M12 30 Q4 30 4 23 Q4 17 11 17 Q12 9 22 9 Q31 9 33 17 Q42 17 42 26 Q42 30 37 30Z" fill="#FFFFFF"/>',
+  "🪨": '<path d="M6 32 Q4 22 16 18 Q22 8 32 14 Q44 16 42 28 Q44 36 34 38 L12 38 Q4 38 6 32Z" fill="#C9BBA6"/>',
+  "🤖": '<rect x="12" y="16" width="24" height="20" rx="6" fill="#B9A7F7"/><circle cx="19" cy="26" r="3" fill="#fff"/><circle cx="29" cy="26" r="3" fill="#fff"/>' +
+    '<rect x="18" y="33" width="12" height="3" rx="1.5" fill="#4A2A00"/><rect x="22" y="6" width="4" height="8" rx="2" fill="#8E75E8"/><circle cx="24" cy="6" r="3" fill="#FFD95A"/>',
+  "⭐": '<path d="M24 5 L29 18 L43 18 L32 27 L36 41 L24 32 L12 41 L16 27 L5 18 L19 18Z" fill="#FFD95A" stroke="#E3A600" stroke-width="1.5"/>',
+  "🌈": '<path d="M4 40 A20 20 0 0 1 44 40" stroke="#FF8F7A" stroke-width="4.5" fill="none"/>' +
+    '<path d="M9.5 40 A14.5 14.5 0 0 1 38.5 40" stroke="#FFD95A" stroke-width="4.5" fill="none"/>' +
+    '<path d="M15 40 A9 9 0 0 1 33 40" stroke="#8FE3C1" stroke-width="4.5" fill="none"/>',
+  "🌿": '<path d="M24 42 C24 24 12 20 8 8 C24 10 30 22 24 42Z" fill="#7BC96F"/><path d="M24 42 C24 26 36 22 40 10 C26 12 20 24 24 42Z" fill="#8FE3C1"/>',
+  "🐛": '<g fill="#8FE3C1"><circle cx="10" cy="30" r="5"/><circle cx="18" cy="27" r="5.5"/><circle cx="27" cy="30" r="6"/><circle cx="36" cy="27" r="5"/></g>' +
+    '<circle cx="10" cy="30" r="5" fill="#3FA672"/><path d="M8 24 L5 19 M12 24 L13 19" stroke="#3FA672" stroke-width="2" stroke-linecap="round"/>',
+  "🍃": '<path d="M8 30 C8 14 24 10 32 6 C30 20 22 32 8 30Z" fill="#7BC96F"/><path d="M20 38 C20 28 30 26 36 20 C34 30 30 38 20 38Z" fill="#8FE3C1"/>',
+  "📚": '<rect x="7" y="26" width="34" height="6" rx="1.5" fill="#FF8F7A"/><rect x="8" y="19" width="32" height="6" rx="1.5" fill="#FFD95A"/><rect x="9" y="12" width="30" height="6" rx="1.5" fill="#8ED8F8"/>',
+  "🖋️": '<path d="M10 38 L28 20 L33 25 L15 43Z" fill="#B9A7F7"/><path d="M28 20 L33 15 L38 20 L33 25Z" fill="#8E75E8"/><path d="M10 38 L8 44 L14 42Z" fill="#4A2A00"/>',
+  "🕮": '<path d="M24 12 C18 8 10 8 6 11 L6 36 C10 33 18 33 24 37 C30 33 38 33 42 36 L42 11 C38 8 30 8 24 12Z" fill="#FFF8E8" stroke="#B9A7F7" stroke-width="2"/><line x1="24" y1="12" x2="24" y2="37" stroke="#B9A7F7" stroke-width="2"/>',
+  "✨": '<path d="M24 4 L27 20 L43 24 L27 28 L24 44 L21 28 L5 24 L21 20Z" fill="#FFD95A"/>',
+  "🌙": '<path d="M30 6 A18 18 0 1 0 30 42 A14 14 0 0 1 30 6Z" fill="#B9A7F7"/>',
+  "🪐": '<circle cx="24" cy="24" r="10" fill="#FFB45C"/><ellipse cx="24" cy="24" rx="19" ry="5" fill="none" stroke="#8ED8F8" stroke-width="3" transform="rotate(-18 24 24)"/>',
+  "🧭": '<circle cx="24" cy="24" r="17" fill="#FFF8E8" stroke="#8B6A3F" stroke-width="3"/><path d="M24 12 L28 24 L24 36 L20 24Z" fill="#F2634A"/>',
+  "🏔️": '<path d="M2 40 L16 14 L24 26 L32 10 L46 40Z" fill="#B9A7F7"/><path d="M16 14 L21 22 L11 22Z" fill="#FFFFFF"/><path d="M32 10 L37 19 L27 19Z" fill="#FFFFFF"/>',
+  "⛰️": '<path d="M2 40 L16 14 L24 26 L32 10 L46 40Z" fill="#B9A7F7"/><path d="M16 14 L21 22 L11 22Z" fill="#FFFFFF"/><path d="M32 10 L37 19 L27 19Z" fill="#FFFFFF"/>',
+  "🌍": '<circle cx="24" cy="24" r="18" fill="#8ED8F8"/><path d="M10 16 Q18 12 22 18 Q28 14 34 20 Q30 26 22 24 Q14 30 10 24Z" fill="#7BC96F"/>',
+  "🎨": '<path d="M24 6 C10 6 4 16 4 24 C4 32 10 30 14 28 C16 27 20 28 20 32 C20 38 26 42 32 40 C42 37 44 26 44 22 C44 12 36 6 24 6Z" fill="#FFF8E8" stroke="#B9A7F7" stroke-width="2"/>' +
+    '<circle cx="14" cy="16" r="3" fill="#FF8F7A"/><circle cx="24" cy="12" r="3" fill="#FFD95A"/><circle cx="34" cy="16" r="3" fill="#8FE3C1"/><circle cx="36" cy="26" r="3" fill="#B9A7F7"/>',
+  "🎵": '<circle cx="14" cy="36" r="6" fill="#8E75E8"/><circle cx="34" cy="32" r="6" fill="#8E75E8"/><rect x="19" y="10" width="3" height="27" fill="#8E75E8"/><rect x="39" y="6" width="3" height="27" fill="#8E75E8"/><path d="M19 10 L42 6 L42 12 L19 16Z" fill="#8E75E8"/>',
+  "🖌️": '<path d="M32 6 L42 16 L22 36 L14 38 L16 30Z" fill="#B9A7F7"/><path d="M14 38 L10 42 L6 40 L10 34Z" fill="#8B6A3F"/><path d="M32 6 L36 4 L44 12 L42 16Z" fill="#8E75E8"/>',
+  "🏘️": '<rect x="5" y="24" width="14" height="16" fill="#FFB45C"/><path d="M3 24 L12 13 L21 24Z" fill="#F2634A"/>' +
+    '<rect x="24" y="18" width="18" height="22" fill="#FFD95A"/><path d="M21 18 L33 4 L45 18Z" fill="#E3A600"/><rect x="30" y="27" width="6" height="13" fill="#fff"/>',
+  "🌉": '<path d="M4 30 Q24 8 44 30" stroke="#FFB45C" stroke-width="5" fill="none" stroke-linecap="round"/>' +
+    '<rect x="4" y="30" width="40" height="5" rx="2" fill="#8B6A3F"/><rect x="10" y="20" width="3" height="16" fill="#8B6A3F"/><rect x="35" y="20" width="3" height="16" fill="#8B6A3F"/>',
+  "🏰": '<rect x="8" y="22" width="32" height="18" fill="#B9A7F7"/><rect x="6" y="14" width="8" height="10" fill="#8E75E8"/><rect x="34" y="14" width="8" height="10" fill="#8E75E8"/><rect x="20" y="8" width="8" height="16" fill="#8E75E8"/>' +
+    '<path d="M6 14 L10 8 L14 14Z" fill="#F2634A"/><path d="M34 14 L38 8 L42 14Z" fill="#F2634A"/><path d="M20 8 L24 2 L28 8Z" fill="#F2634A"/><rect x="20" y="30" width="8" height="10" fill="#4A2A00"/>',
+  "👑": '<path d="M6 20 L14 32 L24 16 L34 32 L42 20 L38 38 L10 38Z" fill="#FFD95A" stroke="#E3A600" stroke-width="2"/><circle cx="6" cy="18" r="3" fill="#FF8F7A"/><circle cx="24" cy="13" r="3" fill="#FF8F7A"/><circle cx="42" cy="18" r="3" fill="#FF8F7A"/>',
+  "🔒": '<rect x="11" y="21" width="26" height="20" rx="4" fill="#8B7355"/><path d="M15 21 L15 14 A9 9 0 0 1 33 14 L33 21" fill="none" stroke="#8B7355" stroke-width="4"/><circle cx="24" cy="30" r="3.5" fill="#FFF8E8"/><rect x="22.5" y="30" width="3" height="7" fill="#FFF8E8"/>'
+};
+// Returns a sized <svg> for a mapped emoji key, or null so callers can
+// fall back to the original emoji glyph for anything not in the table.
+function svgIcon(emojiKey, size) {
+  var inner = ICON_SVGS[emojiKey];
+  if (!inner) return null;
+  size = size || 24;
+  return '<svg viewBox="0 0 48 48" width="' + size + '" height="' + size + '" style="display:block" aria-hidden="true">' + inner + '</svg>';
+}
+// Renders a mapped icon when available, otherwise the plain emoji —
+// used everywhere a trail/world glyph is placed so unmapped lesson
+// icons still degrade gracefully instead of breaking.
+function iconOrEmoji(emojiKey, size) {
+  return svgIcon(emojiKey, size) || emojiKey;
+}
+
+// Layered blurred hill silhouettes behind the trail, purely for depth — a
+// far/mid/near band of overlapping ellipses tinted with the world's own
+// color, each band sized and blurred differently so scrolling the map
+// produces a subtle parallax drift (see initTrailParallax()).
+var TRAIL_HILL_BANDS = [
+  { cls: "trail-hill-far",  depth: 0.10, wMin: 130, wMin2: 60, xs: [4, 62, 30] },
+  { cls: "trail-hill-mid",  depth: 0.22, wMin: 165, wMin2: 45, xs: [55, 10, 74] },
+  { cls: "trail-hill-near", depth: 0.38, wMin: 190, wMin2: 40, xs: [18, 66, 42] }
+];
 function buildTrailHillsHTML(worldColor, totalHeight) {
   var out = "";
-  var count = Math.max(3, Math.round(totalHeight / 260));
-  for (var i = 0; i < count; i++) {
-    var y = Math.round((i / count) * totalHeight) + (i % 2 === 0 ? 10 : 70);
-    var x = i % 2 === 0 ? 6 : 58;
-    var w = 150 + (i % 3) * 35;
-    out += '<div class="trail-hill" style="left:' + x + '%;top:' + y + 'px;width:' + w + 'px;height:' + Math.round(w * 0.55) + 'px;background:' + worldColor + ';"></div>';
-  }
+  TRAIL_HILL_BANDS.forEach(function(band, bandIdx) {
+    var count = Math.max(3, Math.round(totalHeight / 300));
+    for (var i = 0; i < count; i++) {
+      var y = Math.round((i / count) * totalHeight) + (i % 2 === 0 ? 4 : 60) + bandIdx * 34;
+      var x = band.xs[i % band.xs.length];
+      var w = band.wMin + (i % 3) * band.wMin2;
+      out += '<div class="trail-hill ' + band.cls + '" data-depth="' + band.depth + '" style="left:' + x +
+        '%;top:' + y + 'px;width:' + w + 'px;height:' + Math.round(w * 0.55) + 'px;background:' + worldColor + ';"></div>';
+    }
+  });
   return out;
+}
+
+// Attaches a lightweight scroll-driven parallax to the hill layers of
+// whichever .trail-wrap is currently on screen: far hills drift least,
+// near hills drift most, giving the illustrated backdrop a sense of
+// depth as the map is scrolled. Re-attached on every render() since the
+// DOM node is rebuilt each time; the old listener is discarded with the
+// old node. No-ops under prefers-reduced-motion.
+function initTrailParallax() {
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var wrap = document.querySelector(".trail-wrap");
+  if (!wrap) return;
+  var scroller = wrap.closest(".screen.scrollable") || wrap.parentElement;
+  if (!scroller) return;
+  var hills = wrap.querySelectorAll(".trail-hill");
+  if (!hills.length) return;
+  var ticking = false;
+  function apply() {
+    ticking = false;
+    var wrapTop = wrap.offsetTop;
+    var rel = Math.max(0, scroller.scrollTop - wrapTop + 200);
+    for (var i = 0; i < hills.length; i++) {
+      var depth = parseFloat(hills[i].getAttribute("data-depth")) || 0.2;
+      hills[i].style.transform = "translateY(" + Math.round(rel * depth * -0.06) + "px)";
+    }
+  }
+  scroller.addEventListener("scroll", function() {
+    if (!ticking) { ticking = true; requestAnimationFrame(apply); }
+  }, { passive: true });
+  apply();
 }
 
 // Fog of war: everything past the current stop is softly obscured, just
@@ -15974,8 +16112,8 @@ function buildTrailFogHTML(positions, currentIndex, totalHeight, slotHeight) {
   var cloud1x = Math.max(12, Math.min(88, next.x - 16));
   var cloud2x = Math.max(12, Math.min(88, next.x + 16));
   return '<div class="trail-fog" style="top:' + fogTop + 'px;height:' + fogHeight + 'px;">' +
-    '<div class="trail-fog-cloud" style="left:' + cloud1x + '%;top:10px;">☁️</div>' +
-    '<div class="trail-fog-cloud" style="left:' + cloud2x + '%;top:52px;">☁️</div>' +
+    '<div class="trail-fog-cloud" style="left:' + cloud1x + '%;top:10px;">' + svgIcon("☁️", 40) + '</div>' +
+    '<div class="trail-fog-cloud" style="left:' + cloud2x + '%;top:52px;">' + svgIcon("☁️", 34) + '</div>' +
   '</div>';
 }
 
@@ -15997,7 +16135,7 @@ function buildTrailSceneryHTML(worldKey, positions, totalHeight) {
     var sx = Math.max(6, Math.min(94, midX + side * offset));
     var sy = (p0.y + p1.y) / 2 + (i % 2 === 0 ? -10 : 10);
     var emoji = flavors[i % flavors.length];
-    html += '<div class="trail-scenery" style="left:' + sx + '%;top:' + sy + 'px;">' + emoji + '</div>';
+    html += '<div class="trail-scenery" style="left:' + sx + '%;top:' + sy + 'px;">' + iconOrEmoji(emoji, 26) + '</div>';
   }
   return html;
 }
@@ -16049,7 +16187,7 @@ function renderMap() {
     html += '<div class="trail-node' + (unlocked ? '' : ' trail-node-locked') + (cleared ? ' trail-node-cleared' : '') + (isCurrent ? ' trail-node-current' : '') + '" ' +
       'style="--node-color:' + world.color + ';left:' + pos.x + '%;top:' + pos.y + 'px;" onclick="openWorld(\'' + world.key + '\')">' +
       (isCurrent ? '<div class="trail-pet-badge">' + petLook.emoji + '</div>' : '') +
-      '<div class="trail-node-medallion">' + (unlocked ? world.icon : '🔒') + '</div>' +
+      '<div class="trail-node-medallion">' + (unlocked ? iconOrEmoji(world.icon, 30) : svgIcon("🔒", 26)) + '</div>' +
       '<div class="trail-node-post"></div>' +
       '<div class="trail-node-caption">' +
         '<div class="trail-node-label">' + escapeHTML(world.label) + (cleared ? ' ✅' : '') + '</div>' +
@@ -16068,7 +16206,7 @@ function renderMap() {
     var unlocked = isWorldUnlocked(world);
     var cleared = isWorldBossCleared(world.key);
     html += '<div class="map-side-node' + (unlocked ? '' : ' map-node-locked') + '" style="--node-color:' + world.color + ';" onclick="openWorld(\'' + world.key + '\')">' +
-      '<div class="map-side-icon">' + (unlocked ? world.icon : '🔒') + '</div>' +
+      '<div class="map-side-icon">' + (unlocked ? iconOrEmoji(world.icon, 26) : svgIcon("🔒", 22)) + '</div>' +
       '<div class="map-side-label">' + escapeHTML(world.label) + (cleared ? ' ✅' : '') + '</div>' +
     '</div>';
   });
@@ -16076,6 +16214,7 @@ function renderMap() {
 
   html += '</div>'; // screen
   app.innerHTML = html;
+  initTrailParallax();
 }
 
 function tapWorldLessonNode(key, status) {
@@ -16163,7 +16302,7 @@ function renderWorldDetail() {
 
       html += '<div class="trail-node world-lesson-node' + (isLocked ? ' trail-node-locked' : '') + (isCleared ? ' trail-node-cleared' : '') + (isCurrent ? ' trail-node-current' : '') + '" ' +
         'style="--node-color:var(--' + g.accent + ');left:' + pos.x + '%;top:' + pos.y + 'px;" onclick="tapWorldLessonNode(\'' + p.key + '\',\'' + p.status + '\')">' +
-        '<div class="trail-node-medallion">' + (isLocked ? '🔒' : g.icon) + '</div>' +
+        '<div class="trail-node-medallion">' + (isLocked ? svgIcon("🔒", 26) : iconOrEmoji(g.icon, 28)) + '</div>' +
         '<div class="trail-node-post"></div>' +
         '<div class="trail-node-caption">' +
           '<div class="trail-node-label">' + escapeHTML(g.label) + (isCleared ? ' ✅' : '') + '</div>' +
@@ -16190,6 +16329,7 @@ function renderWorldDetail() {
 
   html += '</div>';
   app.innerHTML = html;
+  initTrailParallax();
 }
 
 function renderGauntletVictory() {
@@ -16200,7 +16340,7 @@ function renderGauntletVictory() {
   var percent = totalQ > 0 ? Math.round((totalScore / totalQ) * 100) : 0;
 
   var worldColor = world ? world.color : "#7A6FCB";
-  var html = '<div class="screen boss-complete-screen scrollable" data-accent="violet" style="background: radial-gradient(circle at 25% 15%, ' + worldColor + '70, transparent 60%), linear-gradient(160deg,#1a0533 0%,#3a0a6e 60%,#0a1a3e 100%);">' +
+  var html = '<div class="screen boss-complete-screen scrollable" data-accent="violet" style="background: radial-gradient(circle at 25% 15%, ' + worldColor + '70, transparent 60%), linear-gradient(160deg,#FFB45C 0%,#FF8F7A 55%,#B9A7F7 100%);">' +
     '<div class="boss-complete-confetti" id="bossConfetti"></div>' +
     '<div class="boss-complete-icon">👑✨👑</div>' +
     '<h2 class="boss-complete-title">WORLD CONQUERED!</h2>' +
@@ -17299,7 +17439,7 @@ function buildPlaySceneryWatermarkHTML(gameKey) {
 function buildBossCompleteBackgroundStyle(gameKey) {
   var theme = getWorldThemeForGame(gameKey);
   return "background: radial-gradient(circle at 25% 15%, " + theme.color + "70, transparent 60%), " +
-    "linear-gradient(160deg,#1a0533 0%,#3a0a6e 60%,#0a1a3e 100%);";
+    "linear-gradient(160deg,#FFB45C 0%,#FF8F7A 55%,#B9A7F7 100%);";
 }
 
 function buildStoryBeatHTML(gameKey) {
