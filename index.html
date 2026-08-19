@@ -15501,18 +15501,22 @@ var SUBJECTS = [
 // ====================================================================
 var MAIN_WORLDS = [
   {
+    key: "greenwood", label: "Greenwood Grove", icon: "🌱", color: "#4CAF7D",
+    chapters: [{ label: "Life Science", keys: ["animalLifeCycles", "plantParts", "foodChains", "humanBody"] }]
+  },
+  {
     key: "village", label: "Sunny Village", icon: "🏘️", color: "#F4A828",
     chapters: [
       { label: "Getting to Know Numbers", keys: ["placeValue", "placeValueExpanded", "comparingNumbers", "numberBonds"] }
     ]
   },
   {
-    key: "greenwood", label: "Greenwood Grove", icon: "🌱", color: "#4CAF7D",
-    chapters: [{ label: "Life Science", keys: ["animalLifeCycles", "plantParts", "foodChains", "humanBody"] }]
-  },
-  {
-    key: "library", label: "Storyteller's Library", icon: "📖", color: "#E86A9A",
-    chapters: [{ label: "Reading & Words", keys: ["sightWords", "phonics", "spelling", "sentences", "rhymingWords", "nounsVerbs", "punctuation", "readingComprehension"] }]
+    key: "mountain", label: "Cloud Mountain", icon: "⛰️", color: "#FF6B5B",
+    chapters: [
+      { label: "Sequences", keys: ["codeTheRobot", "patternDetective"] },
+      { label: "Decisions & Loops", keys: ["bugHunter", "ifThenRobot", "loopLand"] },
+      { label: "Advanced Logic", keys: ["functionFactory", "sortItOut", "trueOrFalse"] }
+    ]
   },
   {
     key: "forest", label: "Whispering Forest", icon: "🌲", color: "#1FA391",
@@ -15520,6 +15524,10 @@ var MAIN_WORLDS = [
       { label: "Adding & Taking Away", keys: ["addition", "subtraction"] },
       { label: "Solving Mysteries", keys: ["missingNumber", "wordProblems"] }
     ]
+  },
+  {
+    key: "library", label: "Storyteller's Library", icon: "📖", color: "#E86A9A",
+    chapters: [{ label: "Reading & Words", keys: ["sightWords", "phonics", "spelling", "sentences", "rhymingWords", "nounsVerbs", "punctuation", "readingComprehension"] }]
   },
   {
     key: "observatory", label: "Starlight Observatory", icon: "🔭", color: "#4A6FA5",
@@ -15546,14 +15554,6 @@ var MAIN_WORLDS = [
   {
     key: "studio", label: "Rainbow Studio", icon: "🎨", color: "#C9A8F5",
     chapters: [{ label: "Art & Music", keys: ["coloursMixing", "shapesInArt", "musicalNotes", "rhythmBeat", "famousArtists"] }]
-  },
-  {
-    key: "mountain", label: "Cloud Mountain", icon: "⛰️", color: "#FF6B5B",
-    chapters: [
-      { label: "Sequences", keys: ["codeTheRobot", "patternDetective"] },
-      { label: "Decisions & Loops", keys: ["bugHunter", "ifThenRobot", "loopLand"] },
-      { label: "Advanced Logic", keys: ["functionFactory", "sortItOut", "trueOrFalse"] }
-    ]
   },
   {
     key: "sky", label: "Sky Kingdom", icon: "👑", color: "#F5C56E",
