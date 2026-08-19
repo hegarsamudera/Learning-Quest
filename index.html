@@ -14576,7 +14576,7 @@ function tapFeedCard(foodKey) {
   spawnConfetti(20);
 
   // Check if evolution is now available — don't evolve, just re-render
-  renderPetScreen();
+  rerenderPreservingScroll(renderPetScreen);
 }
 
 // Shared core for "consume everything owned" — used by both the Pet
@@ -14607,7 +14607,7 @@ function feedAllPets() {
   showFloatingMsg("+✨" + result.gained + " Sparkle Power! (" + result.units + " treats)", "#C9A8F5");
   SFX.achievement();
   spawnConfetti(50);
-  renderPetScreen();
+  rerenderPreservingScroll(renderPetScreen);
 }
 
 // Feeds everything owned right from the Home screen preview card, so a
@@ -14619,7 +14619,7 @@ function quickFeedFromHome() {
   showFloatingMsg("+✨" + result.gained + " Sparkle Power! (" + result.units + " treats)", "#C9A8F5");
   SFX.achievement();
   spawnConfetti(30);
-  render();
+  rerenderPreservingScroll(render);
 }
 
 function buyFood(foodKey) {
@@ -14635,7 +14635,7 @@ function buyFood(foodKey) {
   savePetData(pet);
   showFloatingMsg(food.icon + " Stocked up!", "#8A5A00");
   SFX.achievement();
-  renderPetScreen();
+  rerenderPreservingScroll(renderPetScreen);
 }
 
 function tryEvolve() {
@@ -14914,6 +14914,20 @@ function earnAchievement(id) {
 // ====================================================================
 // PATCH GROUP D — VISUAL HELPERS
 // ====================================================================
+// Re-runs a render function while keeping the current scroll position.
+// app.innerHTML replaces the whole screen on every render, so the
+// scrollable container is a brand-new DOM node each time and its
+// scrollTop resets to 0 unless we save/restore it ourselves. Used for
+// in-place actions (buying, feeding, equipping) where the user is still
+// looking at the same list and shouldn't get yanked back to the top.
+function rerenderPreservingScroll(renderFn) {
+  var scroller = document.querySelector(".screen.scrollable");
+  var scrollTop = scroller ? scroller.scrollTop : 0;
+  renderFn();
+  var newScroller = document.querySelector(".screen.scrollable");
+  if (newScroller) newScroller.scrollTop = scrollTop;
+}
+
 function escapeHTML(str) {
   return String(str).replace(/[&<>'"]/g, function(tag) {
     var charsToReplace = { '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' };
@@ -16773,7 +16787,7 @@ function renderPetScreen() {
       var p = getPetData();
       p.color = this.getAttribute("data-color");
       savePetData(p);
-      renderPetScreen();
+      rerenderPreservingScroll(renderPetScreen);
     };
   });
 
@@ -16804,7 +16818,7 @@ function renderPetScreen() {
         else p.equipped.splice(idx, 1);
       }
       savePetData(p);
-      renderPetScreen();
+      rerenderPreservingScroll(renderPetScreen);
     };
   });
 }
